@@ -11,10 +11,13 @@ import Explore from './components/Explore/Explore';
 import Login from './components/Login/Login/Login';
 import NotFound from './components/Shared/NotFound/NotFound';
 import Footer from './components/Shared/Footer/Footer';
+import Register from './components/Login/Register/Register';
+import AuthProvider from './Context/AuthProvider/AuthProvider';
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <Router>
         <Header />
         <Switch>
@@ -30,8 +33,8 @@ function App() {
           <Route path='/login'>
             <Login />
           </Route>
-          <Route path='/home'>
-            <Home />
+            <Route path='/register'>
+              <Register />
           </Route>
           <Route path='*'>
             <NotFound />
@@ -39,6 +42,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
+      </AuthProvider>
     </div>
   );
 }
