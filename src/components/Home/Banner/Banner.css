@@ -1,0 +1,17 @@
+.banner-info{
+    margin-bottom: 100px;
+}
+
+.banner-info h3{
+    font-size: 4rem;
+}
+
+.banner-btn{
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    font-size: 2em;
+    padding:.8rem 3rem;
+    border-radius: 50px;
+    margin-top: 20px;
+}

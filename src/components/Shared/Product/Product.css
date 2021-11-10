@@ -1,0 +1,10 @@
+.card-img{
+    width: 50%;
+    margin: auto;
+}
+
+.card-description{
+    max-width: 400px ;
+    margin-inline: auto;
+}
+

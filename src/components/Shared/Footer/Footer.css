@@ -1,0 +1,25 @@
+.footer-top{
+    color: white ;
+    background-color:#232F3E ;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+.footer-bottom{
+    color: white;
+    background-color: #131A22;
+    height: 50px;
+    display: grid;
+    align-content: center;
+}
+
+.footer-bottom p{
+    margin-bottom:0 ;
+}
