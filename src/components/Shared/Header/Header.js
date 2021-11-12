@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
+import './Header.css'
 
 
 const style = {
@@ -22,7 +23,11 @@ const Header = () => {
                         <Nav >
                             <Link style={{ ...style, marginRight: "10px" }} to='/home'>Home</Link>
                             <Link style={{ ...style, marginRight: "10px" }} to='/explore'>explore</Link>
-                            <Link style={{ ...style }} to='/login'>Login</Link>
+                            <Link style={{ ...style, marginRight: "10px" }} to='/purchase'>Purchase</Link>
+
+                            {user?.email && <Link style={{ ...style, marginRight: "10px" }} to='/dashboard'>Dashboard</Link>}
+                            {user?.email && <p style={{ ...style, marginRight: "10px", display: 'inline-block', marginBottom: 0 }}>{user.displayName}</p>}
+                            {user?.photoURL && <img className="profile-img" src={user.photoURL} />}
                             {user?.email
                                 ?
                                 <Button onClick={logOut}>Log Out</Button>

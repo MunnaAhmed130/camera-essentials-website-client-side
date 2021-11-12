@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import initializeFirebase from "../Firebase/Firebase.init";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
+import {
+    getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, updateProfile, signOut
+} from "firebase/auth";
+import axios from 'axios';
 
 // initialize firebase
 initializeFirebase();
@@ -13,46 +16,62 @@ const useFirebase = () => {
     const googleProvider = new GoogleAuthProvider();
 
     //user registration
-    const userRegister = (name, email, password) => {
-        createUserWithEmailAndPassword(auth, name, email, password)
+    const userRegister = (email, password, name, history) => {
+        setIsLoading(true);
+        createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                // ...
                 setError('');
+                const newUser = { email, displayName: name };
+                setUser(newUser);
+                //save user to the database
+                saveUser(email, name);
+                console.log(user)
+                // update firebase profile
+                updateProfile(auth.currentUser, {
+                    displayName: name
+                }).then(() => {
+                }).catch((error) => {
+                });
+
+                history.replace('/')
             })
             .catch((error) => {
                 setError(error.message);
-            });
+            })
+            .finally(() => setIsLoading(false));
     }
     // use Login
-    const userLogin = (email, password) => {
+    const userLogin = (email, password, location, history) => {
+        setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                // ...
+
+                const destination = location?.state?.from || '/';
+                history.push(destination);
+                setError('');
+                console.log(user)
             })
             .catch((error) => {
                 setError(error.message);
-            });
+            })
+            .finally(() => setIsLoading(false));
     }
 
     //user Login with Google pop up
-    const googleSignIn = () => {
+    const googleSignIn = (location, history) => {
+        setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
-                // This gives you a Google Access Token. You can use it to access the Google API.
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
-                // The signed-in user info.
                 const user = result.user;
-                // ...
-
+                saveGoogleUser(user.email, user.displayName)
+                const destination = location?.state?.from || '/';
+                history.push(destination);
+                setError('');
             }).catch((error) => {
                 setError(error.message);
                 // ...
-            });
+            })
+            .finally(() => setIsLoading(false));
     }
 
     // observe user state
@@ -60,22 +79,36 @@ const useFirebase = () => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
+                console.log(user)
             } else {
                 setUser({})
             }
-            return () => unsubscribed;
+            setIsLoading(false);
         });
+        return () => unsubscribed;
     }, [])
 
     // log Out user
     const logOut = () => {
-        const auth = getAuth();
+        setIsLoading(true);
         signOut(auth)
             .then(() => {
                 setUser({})
             }).catch((error) => {
                 setError(error.message);
-            });
+            })
+            .finally(() => setIsLoading(false))
+    }
+
+    const saveUser = (email, displayName) => {
+        const user = { email, displayName };
+        axios.post('http://localhost:4000/users', user)
+            .then()
+    }
+    const saveGoogleUser = (email, displayName) => {
+        const user = { email, displayName };
+        axios.put('http://localhost:4000/users', user)
+            .then()
     }
     return {
         user,

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
-import Product from '../../Shared/Product/Product';
-import './Products.css'
+import ManageProduct from '../ManageProduct/ManageProduct';
 
-const Products = () => {
+const ManageProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('http://localhost:4000/products')
@@ -13,14 +12,14 @@ const Products = () => {
     console.log(products)
     return (
         <div>
-            <h2>This is Products{products.length}</h2>
+            <h2>Manage Products</h2>
             <Row xs={1} sm={1} md={2} lg={3} className="products">
                 {
-                    products.map(product => <Product key={product.name} product={product}></Product>)
+                    products.map(product => <ManageProduct key={product.name} product={product}></ManageProduct>)
                 }
             </Row>
         </div>
     );
 };
 
-export default Products;
+export default ManageProducts;
