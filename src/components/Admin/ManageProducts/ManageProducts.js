@@ -15,7 +15,7 @@ const ManageProducts = () => {
             <h2>Manage Products</h2>
             <Row xs={1} sm={1} md={2} lg={3} className="products">
                 {
-                    products.map(product => <ManageProduct key={product.name} product={product}></ManageProduct>)
+                    products.map(product => <ManageProduct key={product._id} product={product}></ManageProduct>)
                 }
             </Row>
         </div>

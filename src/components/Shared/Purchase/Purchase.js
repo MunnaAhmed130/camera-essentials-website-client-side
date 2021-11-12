@@ -4,13 +4,16 @@ import useAuth from '../../../Hooks/useAuth';
 import Header from '../Header/Header';
 import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
-import Button from '@mui/material/Button';
-import { TextField } from '@mui/material';
+import { Button, Alert } from '@mui/material';
+import './Purchase.css'
+import { Col, Container, Row } from 'react-bootstrap';
+import Footer from '../Footer/Footer';
 
 const Purchase = () => {
     const { _id } = useParams();
     const { user } = useAuth();
     const [product, setProduct] = useState([]);
+    const [success, setSuccess] = useState(false);
     const { price } = product;
     const initialInfo = { userName: user.displayName, email: user.email, productName: product.name, price2: product.price, description: product.description, key: product._id, img: product.img }
     const [purchase, setPurchase] = useState(initialInfo)
@@ -41,10 +44,24 @@ const Purchase = () => {
             img
         }
         console.log(purchaseInfo)
-        axios.post('http://localhost:4000/purchases', purchaseInfo)
-            .then(res => console.log(res))
-        e.preventDefault();
+        const proceed = window.confirm('Are you sure, you want to Purchase?')
+        if (proceed) {
+            axios.post('http://localhost:4000/purchases', purchaseInfo)
+                .then(res => {
+                    // res.statusMessage = 'Pending';
+                    console.log(res)
+
+                    if (res.data.insertedId) {
+
+                        setSuccess(true)
+                    }
+                })
+            e.preventDefault();
+        }
     }
+
+
+
 
 
     useEffect(() => {
@@ -69,59 +86,58 @@ const Purchase = () => {
     return (
         <div>
             <Header />
-            <h2>This is purchasing page: {_id}</h2>
-            <form onSubmit={handleSubmit}>
-                <TextField
-                    label="name"
-                    id="filled-size-normal"
-                    name="userName"
-                    onBlur={handleOnBlur}
-                    defaultValue={user.displayName}
-                    variant="standard"
-                /> <br />
-                <TextField
-                    label="email"
-                    id="filled-size-normal"
-                    name="email"
-                    onBlur={handleOnBlur}
-                    defaultValue={user.email}
-                    variant="standard"
-                /> <br />
-                <TextField
-                    label="name"
-                    id="filled-size-normal"
-                    name="productName"
-                    onBlur={handleOnBlur}
-                    value={productName}
-                    variant="standard"
-                /> <br />
-                <TextField
-                    label="address"
-                    id="filled-size-normal"
-                    name="address"
-                    onBlur={handleOnBlur}
-                    placeholder="Address"
-                    variant="standard"
-                /> <br />
-                <TextField
-                    label="phone"
-                    id="filled-size-normal"
-                    name="phone"
-                    onBlur={handleOnBlur}
-                    placeholder="Phone"
-                    variant="standard"
-                /> <br />
-                <TextField
-                    type="number"
-                    id="filled-size-normal"
-                    name="price2"
-                    value={price}
-                    placeholder="price"
-                    variant="standard"
-                /> <br />
-                <Button type="submit" variant="contained">Purchase</Button>
+            <h2 className="purchase-heading">Place Your Order</h2>
+            <Container>
+                <Row>
+                    <Col md={4} sm={12} lg={6} className="purchase-img-container">
+                        <img className="purchase-img" src={img} alt="" />
+                    </Col>
+                    <Col md={8} sm={12} lg={6}>
+                        {success && <Alert severity="success">Order Placed Successfully</Alert>}
+                        <form className="purchase-form" onSubmit={handleSubmit}>
+                            <input
+                                name="userName"
+                                defaultValue={user.displayName}
+                            /> <br />
+                            <input
+                                name="email"
+                                defaultValue={user.email}
+                                variant="outlined"
+                            /> <br />
+                            <input
+                                name="productName"
+                                value={productName}
+                                variant="outlined"
+                            /> <br />
+                            <input
+                                name="address"
+                                onBlur={handleOnBlur}
+                                placeholder="Address"
+                                defaultValue=""
+                                variant="outlined"
+                            /> <br />
+                            <input
+                                name="phone"
+                                onBlur={handleOnBlur}
+                                placeholder="Phone"
+                                defaultValue=""
+                                variant="outlined"
+                            /> <br />
+                            <input
+                                type="number"
+                                name="price2"
+                                value={price}
+                                placeholder="price"
+                                variant="outlined"
+                            /> <br />
+                            <Button type="submit" className="purchase-btn" size="large" variant="contained" >Purchase</Button>
+                        </form>
 
-            </form>
+                    </Col>
+
+                </Row>
+            </Container>
+            <Footer />
         </div >
     );
 };

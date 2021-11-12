@@ -13,8 +13,8 @@ const Products = () => {
     console.log(products)
     return (
         <div>
-            <h2>This is Products{products.length}</h2>
-            <Row xs={1} sm={1} md={2} lg={3} className="products">
+            <h2 className="products-header">Explore the World of fashionable Cameras!</h2>
+            <Row xs={1} sm={1} md={2} lg={2} xl={3} className="products">
                 {
                     products.map(product => <Product key={product.name} product={product}></Product>)
                 }

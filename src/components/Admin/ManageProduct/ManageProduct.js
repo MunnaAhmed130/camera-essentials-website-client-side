@@ -5,7 +5,7 @@ import React from 'react';
 
 const ManageProduct = ({ product }) => {
     const { name, img, description, _id } = product;
-    console.log(_id)
+    // console.log(_id)
     if (!product.length) {
         <CircularProgress />
     }

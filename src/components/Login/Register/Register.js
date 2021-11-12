@@ -1,10 +1,11 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { Button } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
-import { Alert, CircularProgress } from '@mui/material';
+import { Alert, CircularProgress, Button, Box } from '@mui/material';
 import useAuth from '../../../Hooks/useAuth';
 import Header from '../../Shared/Header/Header';
+import './Register.css'
+import Footer from '../../Shared/Footer/Footer';
 
 const Register = () => {
     const { user, error, userRegister, isLoading } = useAuth();
@@ -22,19 +23,22 @@ const Register = () => {
     return (
         <div>
             <Header />
-            <h2>Please Register</h2>
+            <h2 className="register-heading">Please Register</h2>
             {!isLoading &&
-                <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name", { required: true })} defaultValue={user.displayName} /> <br />
-                <input {...register("email", { required: true })} /> <br />
-                <input type="password" {...register("password", { required: true })} /> <br />
-                <input type="password" {...register("password2", { required: true })} /> <br />
+                <form className="register-form" onSubmit={handleSubmit(onSubmit)}>
+                    <input {...register("name", { required: true })} placeholder="Your name" required="required" /> <br />
+                    <input {...register("email", { required: true })} placeholder="Your email" required="required" /> <br />
+                    <input type="password" {...register("password", { required: true })} placeholder="Your password" required="required" /> <br />
+                    <input type="password" {...register("password2", { required: true })} placeholder="Confirm your password" required="required" /> <br />
                 <Link to='./login'>Already Registered? Login</Link> <br />
-                <Button type="submit">Register</Button>
+                <Button className="mb-3" variant="contained" type="submit">Register</Button>
                 </form>}
-            {isLoading && <CircularProgress />}
+            {isLoading && <Box>
+                <CircularProgress /> <br />
+            </Box>}
             {user?.email && <Alert severity="success">This is a success alert — check it out!</Alert>}
             {error && <Alert severity="error">{error}</Alert>}
+            <Footer />
         </div>
     );
 };

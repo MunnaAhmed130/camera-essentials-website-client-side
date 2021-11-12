@@ -3,7 +3,6 @@ import React from 'react';
 import { Col, Card } from 'react-bootstrap';
 
 const AllOrder = ({ allOrder }) => {
-    const { name, img, description } = allOrder;
     return (
         <div>
             <Col>

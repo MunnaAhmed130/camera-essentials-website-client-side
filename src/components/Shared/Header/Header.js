@@ -6,20 +6,20 @@ import './Header.css'
 
 
 const style = {
-    lineHeight: '35px',
+    lineHeight: '40px',
     textDecoration: 'none',
     color: 'white',
-    fontWeight: 600
+    fontWeight: 600,
+    fontSize: '16px'
 }
 const Header = () => {
     const { user, logOut } = useAuth();
     return (
-        <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand>Camera Essentials</Navbar.Brand>
+        <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark">
+            <Container fluid className="nav">
+                <Navbar.Brand className="nav-name">Camera Essentials</Navbar.Brand>
                     <Navbar.Toggle />
-                    <Navbar.Collapse className="justify-content-end">
+                <Navbar.Collapse className="justify-content-end collapse">
                         <Nav >
                             <Link style={{ ...style, marginRight: "10px" }} to='/home'>Home</Link>
                             <Link style={{ ...style, marginRight: "10px" }} to='/explore'>explore</Link>
@@ -27,18 +27,17 @@ const Header = () => {
 
                             {user?.email && <Link style={{ ...style, marginRight: "10px" }} to='/dashboard'>Dashboard</Link>}
                             {user?.email && <p style={{ ...style, marginRight: "10px", display: 'inline-block', marginBottom: 0 }}>{user.displayName}</p>}
-                            {user?.photoURL && <img className="profile-img" src={user.photoURL} />}
+                        {user?.photoURL && <div className="profile-pic"><img className="profile-img" src={user.photoURL} /></div>}
                             {user?.email
                                 ?
-                                <Button onClick={logOut}>Log Out</Button>
+                            <Button className="nav-button" onClick={logOut}>Log Out</Button>
                                 :
                                 <Link style={{ ...style }} to='/login'>Login</Link>
                             }
                         </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-        </div>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 };
 

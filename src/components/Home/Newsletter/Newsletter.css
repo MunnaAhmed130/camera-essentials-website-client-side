@@ -1,0 +1,79 @@
+.newsletter{
+    background-image: url('https://i.ibb.co/R0R2wSk/slider-1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 90%;
+    margin-inline: auto ;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom:20px ;
+}
+
+.newsletter-info{
+    text-align: left;
+    margin-left: 7em;
+}
+
+.newsletter-info h2{
+    display: inline-block;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.newsletter-info h3{
+    display: inline-block;
+}
+
+.newsletter input {
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 2em;
+    font-size: 1.5em;
+    width: 100%;
+    margin-top: 1em;
+    height: 70px;
+    padding-inline: 50px;
+}
+
+@media screen and (max-width:500px) {
+    .newsletter{
+        background-attachment: scroll;
+        background-position: top;
+        background-size: cover;
+        height: 400px;
+        width: 100%;
+        margin-inline: auto ;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-bottom:20px ;
+    }
+    .newsletter-info{
+        text-align: left;
+        margin-left: 0px;
+    }
+    
+    .newsletter-info h2{
+        display: inline-block;
+        font-size: 2em;
+        font-weight: 600;
+    }
+    .newsletter input {
+        background: transparent;
+        border: 1px solid gray;
+        border-radius: 2em;
+        font-size: 1em;
+        width: 50%;
+        margin-top: 1em;
+        height: 40px;
+        padding-inline: 50px;
+    }
+    
+    
+}

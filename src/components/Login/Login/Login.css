@@ -1,0 +1,18 @@
+.login-form input{
+    margin: 10px;
+    height: 40px;
+    width: 400px;
+    border: 1px solid rgba(128, 128, 128, 0.661);
+    font-size: 1.2em;
+    border-radius: 3px;
+}
+
+.login{
+    margin-bottom: 50px;
+}
+
+.login-heading{
+    margin-top: 50px ;
+    margin-bottom: 30px ;
+    font-size: 2.5rem;
+}

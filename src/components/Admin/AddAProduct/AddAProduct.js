@@ -9,6 +9,9 @@ const AddAProduct = () => {
         axios.post('http://localhost:4000/products', data)
             .then(res => {
                 console.log(res)
+                if (res.data.insertedId) {
+                    alert('successfully added a new product')
+                }
             })
     };
 

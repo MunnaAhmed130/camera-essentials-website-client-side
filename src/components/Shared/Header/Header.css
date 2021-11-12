@@ -4,4 +4,36 @@
     object-fit: cover;
     border-radius: 50%;
     margin-right: 10px;
+
+}
+
+
+.nav{
+    margin-inline: 50px;
+}
+
+.nav-name{
+    font-size: 1.5em;
+}
+
+.profile-pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button{
+    padding: .1em 1em;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+@media screen and (max-width:500px) {
+    .nav{
+        margin-inline: 10px;
+    }
+
+    .nav-name{
+        font-size: 1em;
+    }
 }

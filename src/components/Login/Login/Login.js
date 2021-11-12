@@ -1,9 +1,11 @@
-import { Alert, CircularProgress } from '@mui/material';
+import { Alert, CircularProgress, Button } from '@mui/material';
+import { Box } from '@mui/system';
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
+import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import './Login.css'
 
@@ -21,19 +23,24 @@ const Login = () => {
         googleSignIn(location, history);
     }
     return (
-        <div>
+        <div >
             <Header />
-            <h2>Please Login</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("email")} placeholder='Your Email' /> <br />
-                <input {...register("password")} type='password' placeholder='Your Password' /> <br />
-                <Link to='/register'>New User? Please Register</Link>
-                <Button type="submit">Login</Button>
-            </form>
-            {isLoading && <CircularProgress />}
-            {user?.email && <Alert severity="success">This is a success alert — check it out!</Alert>}
-            {error && <Alert severity="error">{error}</Alert>}
-            <Button onClick={handleGoogleSignIn} type="submit">Google Sign In</Button>
+            <div className="login">
+                <h2 className="login-heading">Please Login</h2>
+                <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+                    <input {...register("email")} placeholder='Your Email' required="required" /> <br />
+                    <input {...register("password")} type='password' placeholder='Your Password' required="required" /> <br />
+                    <Link to='/register'>New User? Please Register</Link> <br />
+                    <Button className="login-btn m-3" type="submit" variant="contained">Login</Button>
+                </form>
+                {isLoading && <Box>
+                    <CircularProgress /> <br />
+                </Box>}
+                {user?.email && <Alert severity="success">This is a success alert — check it out!</Alert>}
+                {error && <Alert severity="error">{error}</Alert>}
+                <Button className="mb-5" variant="contained" onClick={handleGoogleSignIn} type="submit">Google Sign In</Button>
+            </div>
+            <Footer />
         </div>
     );
 };
