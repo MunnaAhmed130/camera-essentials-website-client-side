@@ -1,14 +1,11 @@
-import { CircularProgress, Button } from '@mui/material';
+import { Link } from "react-router-dom";
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import './Product.css'
+import { Button } from "@mui/material";
+import './ExploreProducts.css';
 
-const Product = ({ product }) => {
+const ExploreProducts = ({ product }) => {
     const { name, img, description, _id, price } = product;
-    if (!product.length) {
-        <CircularProgress />
-    }
     return (
         <Col className="px-0">
             <Card className="m-3 card" >
@@ -26,4 +23,4 @@ const Product = ({ product }) => {
     );
 };
 
-export default Product;
+export default ExploreProducts;

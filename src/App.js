@@ -5,7 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import Home from './components/Home/Home/Home';
-import Explore from './components/Explore/Explore';
+import Explore from './components/Explore/Explore/Explore';
 import Login from './components/Login/Login/Login';
 import NotFound from './components/Shared/NotFound/NotFound';
 import Register from './components/Login/Register/Register';
@@ -20,6 +20,7 @@ import AddAProduct from './components/Admin/AddAProduct/AddAProduct';
 import AllOrders from './components/Admin/AllOrders/AllOrders';
 import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
 import ManageProducts from './components/Admin/ManageProducts/ManageProducts';
+import Reviews from './components/Home/Reviews/Reviews';
 
 function App() {
   return (
@@ -60,6 +61,9 @@ function App() {
             </Route>
             <Route path='/review'>
               <Review />
+            </Route>
+            <Route path='/reviews'>
+              <Reviews />
             </Route>
             <Route path='/addAProduct'>
               <AddAProduct />

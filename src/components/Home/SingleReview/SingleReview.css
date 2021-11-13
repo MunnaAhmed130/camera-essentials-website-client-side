@@ -1,0 +1,26 @@
+.single-review{
+    border: 1px solid rgba(128, 128, 128, 0.239);
+    box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.429);
+    margin: 10px;   
+    border-radius: 10px;
+
+}
+
+.review-img{
+    width: 70px;
+    height: 70px;
+    border-radius:2px;
+    margin-top: 10px;
+}
+.single-review p{
+    display: inline-block;
+    margin-bottom: 0px;
+    max-width: 200px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.single-review h3{
+    font-size: 1.1rem;
+    display: inline-block;
+}

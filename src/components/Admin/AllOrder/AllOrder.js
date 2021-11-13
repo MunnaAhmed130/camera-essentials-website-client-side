@@ -11,7 +11,7 @@ const AllOrder = ({ allOrder }) => {
                     <Card.Body>
                         <Card.Title className="title">{allOrder?.productName}</Card.Title>
                         <Card.Text>{allOrder?.description}</Card.Text>
-                        <Button variant="outlined">DELETE</Button>
+                        <Button variant="outlined">Ship</Button>
 
                     </Card.Body>
                 </Card>

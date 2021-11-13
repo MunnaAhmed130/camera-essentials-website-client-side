@@ -90,7 +90,7 @@ const useFirebase = () => {
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:4000/users/${user.email}`)
+        fetch(`https://limitless-reaches-30016.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -109,12 +109,12 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName) => {
         const user = { email, displayName };
-        axios.post('http://localhost:4000/users', user)
+        axios.post('https://limitless-reaches-30016.herokuapp.com/users', user)
             .then()
     }
     const saveGoogleUser = (email, displayName) => {
         const user = { email, displayName };
-        axios.put('http://localhost:4000/users', user)
+        axios.put('https://limitless-reaches-30016.herokuapp.com/users', user)
             .then()
     }
     return {

@@ -70,5 +70,11 @@
         "img": "https://i.ibb.co/KKMyy0q/Ricoh-3842-WG-6-GPS-Waterproof-Digital-Camera-Black.jpg",
         "description": "Its waterproof , shockproof ,freezeproof, crushproof, dustproof, and resistant to chemical disinfection.The WG-6 features a 20MP BSI CMOS sensor, a sensitivity range from ISO 125-6400, and UHD 4K30 video recording.",
         "price": "299"
-    }
+    },
+    {
+        "name": "David Woods",
+        "profession": "Professional Photographer",
+        "rating": "5",
+        "description": "lorem"
+}
 ]

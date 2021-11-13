@@ -2,6 +2,7 @@ import { TextField, Button, Alert } from '@mui/material';
 import axios from 'axios';
 import React, { useState } from 'react';
 import useAuth from '../../../Hooks/useAuth';
+import './MakeAdmin.css'
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
@@ -11,7 +12,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email }
-        axios.put('http://localhost:4000/users/admin', user
+        axios.put('https://limitless-reaches-30016.herokuapp.com/users/admin', user
         )
             .then(res => {
 
@@ -25,16 +26,16 @@ const MakeAdmin = () => {
     }
     return (
         <div>
-            <h2>make a new admin</h2>
-            <form onSubmit={handleAdminSubmit}>
-                <TextField
-                    id="standard-basic"
+            <h2 className="admin-heading">Make a New Admin</h2>
+            <form className="admin-form" onSubmit={handleAdminSubmit}>
+                <input
                     label="Email"
+                    placeholder="Enter admin email"
                     onBlur={handleOnBlur}
-                    variant="standard" />
-                <Button type='submit' variant="contained">MakeAdmin</Button>
+                    variant="standard" /> <br />
+                <Button type='submit' variant="contained">Make Admin</Button>
             </form>
-            {success && <Alert severity="success">This is a success alert — check it out!</Alert>}
+            {success && <Alert severity="success">Your have successfully made a new admin</Alert>}
         </div>
     );
 };

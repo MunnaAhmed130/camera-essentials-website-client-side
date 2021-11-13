@@ -46,7 +46,7 @@ const Purchase = () => {
         console.log(purchaseInfo)
         const proceed = window.confirm('Are you sure, you want to Purchase?')
         if (proceed) {
-            axios.post('http://localhost:4000/purchases', purchaseInfo)
+            axios.post('https://limitless-reaches-30016.herokuapp.com/purchases', purchaseInfo)
                 .then(res => {
                     // res.statusMessage = 'Pending';
                     console.log(res)
@@ -65,14 +65,14 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:4000/products/${_id}`)
+        fetch(`https://limitless-reaches-30016.herokuapp.com/products/${_id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
-    }, []);
+    }, [_id]);
 
     // const onSubmit = data => {
     //     console.log(data)
-    //     axios.post('http://localhost:4000/purchases', initialInfo)
+    //     axios.post('https://limitless-reaches-30016.herokuapp.com/purchases', initialInfo)
     //         .then(res => {
     //             console.log(res)
     //             if (res.data.insertedId) {

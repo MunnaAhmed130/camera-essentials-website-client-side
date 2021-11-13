@@ -1,0 +1,16 @@
+.review-form input,textarea {
+    margin-bottom: 10px;
+    width: 70%;
+    max-width: 500px;
+    padding-inline: 10px;
+}
+
+.review-form textarea{
+    height: 100px;
+}
+
+@media screen and (max-width:500px) {
+    .review-form input,textarea{
+        width: 100%;
+    }
+}

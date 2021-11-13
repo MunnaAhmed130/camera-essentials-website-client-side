@@ -1,6 +1,6 @@
 .newsletter{
-    background-image: url('https://i.ibb.co/R0R2wSk/slider-1.jpg');
-    background-attachment: fixed;
+    background-image: url('https://i.ibb.co/rpQRj6X/subscribe-bg-1.jpg');
+    /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,7 +13,7 @@
     justify-content: start;
     margin-bottom:20px ;
 }
-
+/*  https://i.ibb.co/R0R2wSk/slider-1.jpg*/
 .newsletter-info{
     text-align: left;
     margin-left: 7em;
@@ -42,8 +42,7 @@
 
 @media screen and (max-width:500px) {
     .newsletter{
-        background-attachment: scroll;
-        background-position: top;
+        background-position: left;
         background-size: cover;
         height: 400px;
         width: 100%;
@@ -56,7 +55,7 @@
     }
     .newsletter-info{
         text-align: left;
-        margin-left: 0px;
+        margin-left: 15px;
     }
     
     .newsletter-info h2{
@@ -65,12 +64,8 @@
         font-weight: 600;
     }
     .newsletter input {
-        background: transparent;
-        border: 1px solid gray;
-        border-radius: 2em;
         font-size: 1em;
-        width: 50%;
-        margin-top: 1em;
+        width: 70%;
         height: 40px;
         padding-inline: 50px;
     }

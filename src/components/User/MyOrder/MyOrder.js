@@ -9,7 +9,7 @@ const MyOrder = ({ order, setSuccess, setOrders, handleDeleteOrder }) => {
     // console.log(order)
     // const [product, setProduct] = useState([]);
     // useEffect(() => {
-    //     fetch('http://localhost:4000/products')
+    //     fetch('https://limitless-reaches-30016.herokuapp.com/products')
     //         .then(res => res.json())
     //         .then(data => {
     //             console.log(data);

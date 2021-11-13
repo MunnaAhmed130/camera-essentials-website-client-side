@@ -5,7 +5,7 @@ import ManageProduct from '../ManageProduct/ManageProduct';
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/products')
+        fetch('https://limitless-reaches-30016.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -13,7 +13,7 @@ const ManageProducts = () => {
     return (
         <div>
             <h2>Manage Products</h2>
-            <Row xs={1} sm={1} md={2} lg={3} className="products">
+            <Row xs={1} sm={1} md={2} lg={3} className="">
                 {
                     products.map(product => <ManageProduct key={product._id} product={product}></ManageProduct>)
                 }

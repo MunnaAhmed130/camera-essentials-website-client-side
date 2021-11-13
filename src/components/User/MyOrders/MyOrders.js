@@ -10,7 +10,7 @@ const MyOrders = () => {
     const [success, setSuccess] = useState(false);
     const { user } = useAuth();
     useEffect(() => {
-        fetch(`http://localhost:4000/purchases/user?email=${user.email}`)
+        fetch(`https://limitless-reaches-30016.herokuapp.com/purchases/user?email=${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setOrders(data)
@@ -20,7 +20,7 @@ const MyOrders = () => {
     const handleDeleteOrder = _id => {
         const proceed = window.confirm('Are you sure, you want to delete?')
         if (proceed) {
-            const url = `http://localhost:4000/purchases/${_id}`;
+            const url = `https://limitless-reaches-30016.herokuapp.com/purchases/${_id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -40,7 +40,7 @@ const MyOrders = () => {
 
     }
     // useEffect(() => {
-    //     fetch('http://localhost:4000/purchases')
+    //     fetch('https://limitless-reaches-30016.herokuapp.com/purchases')
     //         .then(res => res.json())
     //         .then(data => {
     //             setOrders(data)
