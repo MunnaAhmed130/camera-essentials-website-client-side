@@ -1,4 +1,6 @@
 .review-form input,textarea {
+    border-radius: 3px;
+    border: 1px solid rgba(83, 80, 80, 0.402);
     margin-bottom: 10px;
     width: 70%;
     max-width: 500px;

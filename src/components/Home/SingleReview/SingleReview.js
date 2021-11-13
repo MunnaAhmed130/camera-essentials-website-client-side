@@ -13,15 +13,16 @@ const SingleReview = ({ review }) => {
 
         <Col >
             <Row className="single-review">
-                <Col lg={8}>
-                    <h3>{name}</h3>
-                    <h4>{profession}</h4>
+                <Col>
+                    <div className="reviewer">
+                        <h3>{name}</h3><img className="review-img" src={img} /><br />
+                    </div>
+                    <h4>{profession}</h4><br />
                     <Rating name="read-only" value={value} readOnly />
                     <br />
                     <p className="">{description}</p>
                 </Col>
-                <Col lg={4} style={{ textAlign: 'left' }}>
-                    {img && <img className="review-img" src={img} />}</Col>
+
 
 
             </Row>

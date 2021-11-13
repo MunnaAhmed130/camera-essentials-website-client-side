@@ -1,8 +1,9 @@
-import { Alert } from '@mui/material';
+import { Alert, CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import useAuth from '../../../Hooks/useAuth';
 import MyOrder from '../MyOrder/MyOrder';
+import "./MyOrders.css";
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
@@ -52,7 +53,7 @@ const MyOrders = () => {
         <div>
             <h2>This is my orders</h2>
             {success && <Alert severity="success">Your Order has been successfully deleted</Alert>}
-            <Row xs={1} md={2} lg={3} className="g-4 m-4">
+            <Row xs={1} md={1} lg={2} xl={3} className="gy-4 my-orders">
                 {
                     orders.map(order => <MyOrder key={order._id} setSuccess={setSuccess} setOrders={setOrders} handleDeleteOrder={handleDeleteOrder} order={order}></MyOrder>)
                 }

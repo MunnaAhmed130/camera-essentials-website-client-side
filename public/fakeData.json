@@ -71,10 +71,22 @@
         "description": "Its waterproof , shockproof ,freezeproof, crushproof, dustproof, and resistant to chemical disinfection.The WG-6 features a 20MP BSI CMOS sensor, a sensitivity range from ISO 125-6400, and UHD 4K30 video recording.",
         "price": "299"
     },
+
+
     {
         "name": "David Woods",
         "profession": "Professional Photographer",
         "rating": "5",
-        "description": "lorem"
+        "img": "https://i.ibb.co/s3NXZ1V/man-g1de523124-640.jpg",
+        "description": " If you want to take up photography as a hobby, or aspire to be a photojournalist or wedding pro, you'll want to get a camera that gives you room to grow and learn the craft."
+    },
+    {
+        "name": "Sofia Rocks",
+        "profession": "Professional Photographer",
+        "img": "https://i.ibb.co/q1KKJ5L/woman-g5e3f7c984-640.jpg",
+        "rating": "5",
+        "description": " If you want to take up photography as a hobby, or aspire to be a photojournalist or wedding pro, you'll want to get a camera that gives you room to grow and learn the craft."
 }
 ]
+
+

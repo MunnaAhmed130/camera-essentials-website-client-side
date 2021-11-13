@@ -35,7 +35,7 @@ const Review = () => {
                 <input {...register("name")} placeholder="Your Name" defaultValue={user.displayName} required="required" /> <br />
                 <input {...register("profession")} placeholder="Your Profession" required="required" /> <br />
                 {user.photoURL && <div><input {...register("img")} placeholder="Img url" defaultValue={user.photoURL} /> <br /></div>}
-                <input type="number" {...register("rating")} placeholder="Rating(0-5)" required="required" />  <br />
+                <input type="number" {...register("rating", { min: 0, max: 5 })} placeholder="Rating(0-5)" required="required" />  <br />
                 <textarea type="text" {...register("description")} placeholder="Short description" required="required" /> <br />
                 <Button type="submit" variant="contained">Submit</Button>
             </form>
