@@ -8,10 +8,10 @@ const AddAProduct = () => {
     const { register, handleSubmit } = useForm();
     const [success, setSuccess] = useState(false);
     const onSubmit = data => {
-        console.log(data)
+        // console.log(data)
         axios.post('https://limitless-reaches-30016.herokuapp.com/products', data)
             .then(res => {
-                console.log(res)
+                // console.log(res)
                 if (res.data.insertedId) {
                     setSuccess(true)
                 }

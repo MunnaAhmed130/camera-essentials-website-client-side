@@ -12,7 +12,7 @@ const AllOrders = () => {
             .then(res => res.json())
             .then(data => setAllOrders(data));
     }, [])
-    console.log(allOrders)
+    // console.log(allOrders)
     const handleDeleteOrder = _id => {
         const proceed = window.confirm('Are you sure, you want to delete?')
         if (proceed) {
