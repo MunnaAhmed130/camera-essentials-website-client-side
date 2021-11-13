@@ -15,8 +15,9 @@ const Login = () => {
     const history = useHistory();
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        console.log(data)
-        userLogin(data.email, data.password, location, history)
+        console.log(data);
+        userLogin(data.email, data.password, location, history);
+
     };
     const handleGoogleSignIn = () => {
         googleSignIn(location, history);
