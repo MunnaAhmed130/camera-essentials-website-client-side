@@ -1,20 +1,16 @@
-import { CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import { Carousel, Row } from 'react-bootstrap';
-import useAuth from '../../../Hooks/useAuth';
+import { Row } from 'react-bootstrap';
 import SingleReview from '../SingleReview/SingleReview';
 import './Reviews.css'
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
-    const { isLoading } = useAuth();
     useEffect(() => {
         fetch('https://limitless-reaches-30016.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
     console.log(reviews.name)
-
 
     return (
         <div className="reviews-container">

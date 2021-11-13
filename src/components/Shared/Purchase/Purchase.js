@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import useAuth from '../../../Hooks/useAuth';
 import Header from '../Header/Header';
-import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
 import { Button, Alert } from '@mui/material';
 import './Purchase.css'
@@ -15,6 +14,7 @@ const Purchase = () => {
     const [product, setProduct] = useState([]);
     const [success, setSuccess] = useState(false);
     const { price } = product;
+    // initial Info
     const initialInfo = { userName: user.displayName, email: user.email, productName: product.name, price2: product.price, description: product.description, key: product._id, img: product.img }
     const [purchase, setPurchase] = useState(initialInfo)
     const { userName, email, productName, price2, key, img, description } = initialInfo;
@@ -48,11 +48,8 @@ const Purchase = () => {
         if (proceed) {
             axios.post('https://limitless-reaches-30016.herokuapp.com/purchases', purchaseInfo)
                 .then(res => {
-                    // res.statusMessage = 'Pending';
                     console.log(res)
-
                     if (res.data.insertedId) {
-
                         setSuccess(true)
                     }
                 })
@@ -60,27 +57,11 @@ const Purchase = () => {
         }
     }
 
-
-
-
-
     useEffect(() => {
         fetch(`https://limitless-reaches-30016.herokuapp.com/products/${_id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [_id]);
-
-    // const onSubmit = data => {
-    //     console.log(data)
-    //     axios.post('https://limitless-reaches-30016.herokuapp.com/purchases', initialInfo)
-    //         .then(res => {
-    //             console.log(res)
-    //             if (res.data.insertedId) {
-    //                 alert('Order Successful')
-    //             }
-    //         })
-    // };
-    // console.log(_id);
 
     console.log(product.price)
     return (
@@ -132,9 +113,7 @@ const Purchase = () => {
                             /> <br />
                             <Button type="submit" className="purchase-btn" size="large" variant="contained" >Purchase</Button>
                         </form>
-
                     </Col>
-
                 </Row>
             </Container>
             <Footer />

@@ -14,4 +14,3 @@ const Newsletter = () => {
 };
 
 export default Newsletter;
-// https://i.ibb.co/rpQRj6X/subscribe-bg-1.jpg

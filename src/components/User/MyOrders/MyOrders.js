@@ -1,4 +1,4 @@
-import { Alert, CircularProgress } from '@mui/material';
+import { Alert } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import useAuth from '../../../Hooks/useAuth';
@@ -7,7 +7,6 @@ import "./MyOrders.css";
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
-
     const [success, setSuccess] = useState(false);
     const { user } = useAuth();
     useEffect(() => {
@@ -27,27 +26,16 @@ const MyOrders = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-
                     if (data.deletedCount > 0) {
                         const remainingOrders = orders.filter(order => order._id !== _id)
                         setOrders(remainingOrders)
-
                         setSuccess(true)
                         return
                     }
-
                 })
         }
 
     }
-    // useEffect(() => {
-    //     fetch('https://limitless-reaches-30016.herokuapp.com/purchases')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setOrders(data)
-    //         });
-    // }, [])
-
 
     return (
         <div>

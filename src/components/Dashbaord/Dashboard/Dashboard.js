@@ -1,15 +1,11 @@
 import React from 'react';
-import { AppBar, CssBaseline, Divider, Drawer, IconButton, Button, List, ListItem, ListItemIcon, Toolbar, Typography, ListItemText } from '@mui/material';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import { AppBar, CssBaseline, Divider, Drawer, IconButton, Button, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Box } from '@mui/system';
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Link,
-    useParams,
     useRouteMatch
 } from "react-router-dom";
 import AddAProduct from '../../Admin/AddAProduct/AddAProduct';
@@ -21,7 +17,6 @@ import ManageProducts from '../../Admin/ManageProducts/ManageProducts';
 import useAuth from '../../../Hooks/useAuth';
 import Pay from '../../User/Pay/Pay';
 import Review from '../../User/Review/Review';
-import Header from '../../Shared/Header/Header';
 import './Dashboard.css';
 
 

@@ -3,14 +3,12 @@ import { Button, Carousel } from 'react-bootstrap';
 import './Banner.css';
 
 
-
 const Banner = () => {
     return (
         <div>
             <Carousel >
                 <Carousel.Item interval={1000} >
                     <img
-
                         className="banner-style d-block w-100"
                         src="https://i.ibb.co/yYjfJ9y/slider-4.jpg"
                         alt="First slide"

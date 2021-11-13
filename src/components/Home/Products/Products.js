@@ -1,4 +1,4 @@
-import { CircularProgress, ListItemText } from '@mui/material';
+import { CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import Product from '../../Shared/Product/Product';
@@ -6,11 +6,6 @@ import './Products.css'
 
 const Products = () => {
     const [products, setProducts] = useState([]);
-    // useEffect(() => {
-    //     fetch('https://limitless-reaches-30016.herokuapp.com/products')
-    //         .then(res => res.json())
-    //         .then(data => setProducts(data))
-    // }, [])
     const limit = 6;
     useEffect(() => {
         fetch(`https://limitless-reaches-30016.herokuapp.com/products/query?limit=${limit}`)

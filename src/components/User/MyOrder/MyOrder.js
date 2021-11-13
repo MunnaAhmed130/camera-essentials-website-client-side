@@ -1,34 +1,10 @@
-import { CircularProgress, Button } from '@mui/material';
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import { Button } from '@mui/material';
+import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import useAuth from '../../../Hooks/useAuth';
 
-const MyOrder = ({ order, setSuccess, setOrders, handleDeleteOrder }) => {
-    const { key, _id } = order;
-    // console.log(order)
-    // const [product, setProduct] = useState([]);
-    // useEffect(() => {
-    //     fetch('https://limitless-reaches-30016.herokuapp.com/products')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-
-    //             if (data.length) {
-    //                 const dataFound = data.find(data => data._id === key)
-    //                 setProduct(dataFound)
-
-    //             }
-    //             else {
-    //                 <CircularProgress />
-    //             }
-    //         })
-    // }, [])
-
-    // console.log(product)
+const MyOrder = ({ order, handleDeleteOrder }) => {
+    const { _id } = order;
     console.log(order)
-
-
     return (
         <div>
             <Col>
@@ -38,7 +14,6 @@ const MyOrder = ({ order, setSuccess, setOrders, handleDeleteOrder }) => {
                         <Card.Title className="title">{order?.productName}</Card.Title>
                         <Card.Text>{order?.description}</Card.Text>
                         <Button onClick={() => handleDeleteOrder(_id)} variant="outlined" color="error">DELETE</Button>
-
                     </Card.Body>
                 </Card>
             </Col>

@@ -1,16 +1,14 @@
 import { Rating } from '@mui/material';
 import React from 'react';
-import { Carousel, Col, Row } from 'react-bootstrap';
-import './SingleReview.css'
-const SingleReview = ({ review }) => {
+import { Col, Row } from 'react-bootstrap';
+import './SingleReview.css';
 
+
+const SingleReview = ({ review }) => {
     const { profession, description, name, rating, img } = review;
     const [value, setValue] = React.useState(rating);
     console.log(img);
     return (
-        // <div></div>
-
-
         <Col >
             <Row className="single-review">
                 <Col>
@@ -22,12 +20,8 @@ const SingleReview = ({ review }) => {
                     <br />
                     <p className="">{description}</p>
                 </Col>
-
-
-
             </Row>
         </Col>
-
     );
 };
 

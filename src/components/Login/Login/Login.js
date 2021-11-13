@@ -11,7 +11,6 @@ import './Login.css'
 
 const Login = () => {
     const { user, error, userLogin, googleSignIn, isLoading } = useAuth();
-
     const location = useLocation();
     const history = useHistory();
     const { register, handleSubmit } = useForm();

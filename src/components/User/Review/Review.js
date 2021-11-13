@@ -1,7 +1,6 @@
 import { Alert, Button } from '@mui/material';
 import React, { useState } from 'react';
 import useAuth from '../../../Hooks/useAuth';
-import Header from '../../Shared/Header/Header';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import './Review.css';
@@ -24,13 +23,6 @@ const Review = () => {
         <div>
             <h2>Please Give Us Your valuable opinion!</h2>
             {success && <Alert severity="success">You have successfully add a review</Alert>}
-            {/* <form onSubmit="">
-                <input type="text" placeholder="Your name" defaultValue={user.displayName} /> <br />
-                <input type="text" placeholder="Your profession" /> <br />
-                <input type="number" placeholder="Rating" /> <br />
-                <textarea type="text" placeholder="description" /> <br />
-
-            </form> */}
             <form className="review-form" onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name")} placeholder="Your Name" defaultValue={user.displayName} required="required" /> <br />
                 <input {...register("profession")} placeholder="Your Profession" required="required" /> <br />

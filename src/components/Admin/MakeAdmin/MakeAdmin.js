@@ -1,7 +1,6 @@
-import { TextField, Button, Alert } from '@mui/material';
+import { Button, Alert } from '@mui/material';
 import axios from 'axios';
 import React, { useState } from 'react';
-import useAuth from '../../../Hooks/useAuth';
 import './MakeAdmin.css'
 
 const MakeAdmin = () => {

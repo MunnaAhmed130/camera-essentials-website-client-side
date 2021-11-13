@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import AllOrder from '../AllOrder/AllOrder';
 
+
 const AllOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
     const [success, setSuccess] = useState(false);
@@ -21,18 +22,14 @@ const AllOrders = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-
                     if (data.deletedCount > 0) {
                         const remainingOrders = allOrders.filter(order => order._id !== _id)
                         setAllOrders(remainingOrders)
-
                         setSuccess(true)
                         return
                     }
-
                 })
         }
-
     }
     return (
         <div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Alert, CircularProgress, Button, Box } from '@mui/material';
 import useAuth from '../../../Hooks/useAuth';
 import Header from '../../Shared/Header/Header';

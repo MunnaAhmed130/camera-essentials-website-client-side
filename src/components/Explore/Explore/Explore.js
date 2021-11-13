@@ -1,8 +1,6 @@
 import { CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
-import useAuth from '../../../Hooks/useAuth';
-import Products from '../../Home/Products/Products';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import ExploreProducts from '../ExploreProducts/ExploreProducts';
@@ -10,7 +8,6 @@ import './Explore.css';
 
 const Explore = () => {
     const [products, setProducts] = useState([]);
-    const { isLoading } = useAuth();
     useEffect(() => {
         fetch('https://limitless-reaches-30016.herokuapp.com/products')
             .then(res => res.json())
