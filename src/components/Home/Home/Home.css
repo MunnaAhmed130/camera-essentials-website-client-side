@@ -1,0 +1,52 @@
+.banner-info {
+  margin-bottom: 10em;
+}
+
+.banner-info h3 {
+  font-size: 4rem;
+}
+
+.banner-style {
+  height: 650px;
+  object-fit: cover;
+  object-position: center;
+}
+.banner-btn {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  font-size: 2em;
+  padding: 0.8rem 3rem;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.banner-btn:hover {
+  background-color: #212529;
+  color: white;
+  border: 1px solid transparent;
+}
+
+@media screen and (max-width: 500px) {
+  .banner-btn {
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    padding: 0.8rem 3rem;
+    border-radius: 50px;
+    margin-top: 20px;
+  }
+  .banner-info {
+    margin-bottom: 6em;
+  }
+
+  .banner-style {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .banner-info h3 {
+    font-size: 2rem;
+  }
+}

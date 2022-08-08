@@ -7,7 +7,6 @@ import { Button, Alert } from '@mui/material';
 import './Purchase.css'
 import { Col, Container, Row } from 'react-bootstrap';
 import Footer from '../Footer/Footer';
-import { ResetTv } from '@mui/icons-material';
 
 const Purchase = () => {
     const { _id } = useParams();

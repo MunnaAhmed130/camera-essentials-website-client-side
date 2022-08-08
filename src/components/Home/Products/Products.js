@@ -1,4 +1,6 @@
 import { CircularProgress } from '@mui/material';
+
+import Rating from '@mui/material/Rating';
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import Product from '../../Shared/Product/Product';
