@@ -26,10 +26,10 @@
   color: white;
   border: 1px solid transparent;
 }
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   .banner {
   }
-}
+} */
 @media screen and (max-width: 500px) {
   .banner-btn {
     background-color: white;
