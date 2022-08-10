@@ -1,24 +1,24 @@
-.products{
-    width: 100%;
-    display: flex;
-    margin: auto;
-    padding: 10px 100px;
+.products {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  padding: 10px 100px;
 }
 
-.products-header{
-    font-size: 3rem;
-    padding-top: .5em;
-    margin-bottom: .5em;
+.products-header {
+  font-size: 3rem;
+  padding-top: 0.5em;
+  margin-bottom: 0;
 }
 
-@media screen and (max-width:500px) {
-    .products-header{
-        font-size: 1.7rem;
-        padding-top: .5em;
-        margin-bottom: .5em;
-    }
+@media screen and (max-width: 500px) {
+  .products-header {
+    font-size: 1.7rem;
+    padding-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
 
-    .products{
-        padding: 0;
-    }
+  .products {
+    padding: 0;
+  }
 }

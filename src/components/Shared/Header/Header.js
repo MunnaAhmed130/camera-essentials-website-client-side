@@ -2,24 +2,27 @@ import React, { useState } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+import useTheme from "../../../Hooks/useTheme";
+import DarkMode from "../DarkMode/DarkMode";
 import "./Header.css";
 
 const style = {
   lineHeight: "40px",
   textDecoration: "none",
-  color: "white",
   fontWeight: 600,
   fontSize: "16px",
 };
 const Header = () => {
   const { user, logOut } = useAuth();
-  const [darkMode, setDarkMode] = useState(true);
+  const { darkMode } = useTheme();
+
   return (
     <Navbar
       collapseOnSelect
       expand="xl"
-      bg={darkMode ? "dark" : "light"}
-      variant={darkMode ? "dark" : "light"}
+      // bg={darkMode ? "dark" : "light"}
+      // variant={darkMode ? "dark" : "light"}
+      style={{ zIndex: 1090 }}
     >
       <Container fluid className="nav">
         <Navbar.Brand className="nav-name">Camera Essentials</Navbar.Brand>
@@ -35,6 +38,7 @@ const Header = () => {
             <Link style={{ ...style, marginRight: "10px" }} to="/purchase">
               Purchase
             </Link>
+            <DarkMode></DarkMode>
 
             {user?.email && (
               <Link style={{ ...style, marginRight: "10px" }} to="/dashboard">
@@ -55,7 +59,11 @@ const Header = () => {
             )}
             {user?.photoURL && (
               <div className="profile-pic">
-                <img className="profile-img" src={user.photoURL} />
+                <img
+                  className="profile-img"
+                  src={user.photoURL}
+                  alt="profile-pic"
+                />
               </div>
             )}
             {user?.email ? (

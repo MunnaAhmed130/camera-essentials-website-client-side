@@ -2,37 +2,59 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* product */
+.card {
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.266);
+}
+.card-img {
+  width: 50%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card-name {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.dynamic-route {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  /* max-width: 400px ; */
+  margin-inline: auto;
+  font-weight: 400;
+  font-size: 1em;
+  /* color: rgb(41, 38, 49); */
+}
+
+@media screen and (max-width: 800px) {
+  .card-img {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* dark mode */
+.dark .navbar,
+.dark .explore,
+.dark .products,
+.dark .products-header {
+  /* background-color: #26292d; */
+  background-color: rgb(33, 37, 41);
 }
 
-.App-link {
-  color: #61dafb;
+.dark .product {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(33, 37, 41, 0.537);
+}
+.dark .products-header {
+  color: rgba(255, 255, 255, 0.8);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* light mode */
+.light .navbar {
+  background-color: rgba(239, 237, 237, 0.729);
 }
