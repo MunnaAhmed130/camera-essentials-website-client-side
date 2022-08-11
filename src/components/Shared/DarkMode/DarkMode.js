@@ -4,14 +4,19 @@ import useTheme from "../../../Hooks/useTheme";
 
 const DarkMode = () => {
   const { setDarkMode } = useTheme();
-  // useEffect(() => {}, [setDarkMode]);
-  //   console.log(darkMode);
+
+  const setTheme = (value) => {
+    setDarkMode(value);
+    localStorage.setItem("darkMode", value);
+    console.log(value);
+  };
+
   return (
     <NavDropdown title="Theme" id="basic-nav-dropdown">
-      <NavDropdown.Item href="#action/3.1" onClick={() => setDarkMode(true)}>
+      <NavDropdown.Item href="#" onClick={(e) => setTheme(true)}>
         Dark
       </NavDropdown.Item>
-      <NavDropdown.Item href="#action/3.2" onClick={() => setDarkMode(false)}>
+      <NavDropdown.Item href="#" onClick={(e) => setTheme(false)}>
         Light
       </NavDropdown.Item>
     </NavDropdown>

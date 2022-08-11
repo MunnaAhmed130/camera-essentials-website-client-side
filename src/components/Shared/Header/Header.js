@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
@@ -15,13 +15,17 @@ const style = {
 const Header = () => {
   const { user, logOut } = useAuth();
   const { darkMode } = useTheme();
+  // if (localStorage) {
+  //   let theme = localStorage.getItem("darkTheme");
+  //   setDarkMode(theme);
+  // }
 
   return (
     <Navbar
       collapseOnSelect
       expand="xl"
       // bg={darkMode ? "dark" : "light"}
-      // variant={darkMode ? "dark" : "light"}
+      variant={darkMode ? "dark" : "light"}
       style={{ zIndex: 1090 }}
     >
       <Container fluid className="nav">

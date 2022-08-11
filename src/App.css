@@ -1,7 +1,47 @@
 .App {
   text-align: center;
 }
+/* header */
+.profile-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
 
+.navbar {
+  opacity: 0.95;
+}
+.nav {
+  margin-inline: 50px;
+}
+
+.nav-name {
+  font-size: 1.5em;
+}
+
+.profile-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button {
+  padding: 0.1em 1em;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .nav {
+    margin-inline: 10px;
+  }
+
+  .nav-name {
+    font-size: 1em;
+  }
+}
 /* product */
 .card {
   border: 1px solid transparent;
@@ -64,14 +104,36 @@
 }
 
 /* dark mode */
-.dark .navbar,
+/* .dark .navbar,
 .dark .explore,
 .dark .products,
 .dark .products-header {
-  /* background-color: #26292d; */
+  background-color: #26292d; 
   background-color: rgb(33, 37, 41);
+} */
+
+.dark {
+  background-color: rgba(33, 37, 41, 0.99);
+  color: rgba(255, 255, 255, 0.8);
 }
 
+.dark .newsletter {
+  color: rgba(0, 0, 0, 0.8);
+}
+/* .dark .MuiRating-iconEmpty {
+  outline: solid white;
+} */
+
+.dark .dropdown-menu {
+  /* background-color: #26292d; */
+  background-color: rgb(33, 35, 36);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dark a
+/* .dark .navbar-nav .nav-link */ {
+  color: rgba(255, 255, 255, 0.8);
+}
 .dark .product {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(33, 37, 41, 0.537);
@@ -83,4 +145,8 @@
 /* light mode */
 .light .navbar {
   background-color: rgba(239, 237, 237, 0.729);
+}
+
+.light a {
+  color: rgba(33, 33, 33, 0.732);
 }

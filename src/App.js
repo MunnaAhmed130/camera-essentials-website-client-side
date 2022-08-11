@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home/Home";
@@ -18,75 +18,73 @@ import AllOrders from "./components/Admin/AllOrders/AllOrders";
 import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
 import ManageProducts from "./components/Admin/ManageProducts/ManageProducts";
 import Reviews from "./components/Home/Reviews/Reviews";
-import { ThemeContext } from "./Context/ThemeContext/ThemeContext";
+import ThemeProvider from "./Context/ThemeProvider/ThemeProvider";
+// import useTheme from "./Hooks/useTheme";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
   // const { darkMode } = useTheme();
-  // console.log(darkMode);
+
   return (
     <div className="App">
-      <div className={darkMode ? "dark" : "light"}>
+      <ThemeProvider>
         <AuthProvider>
-          <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
-            <Router>
-              <Switch>
-                <Route exact path="/">
-                  <Home />
-                </Route>
-                <Route path="/home">
-                  <Home />
-                </Route>
-                <Route path="/explore">
-                  <Explore />
-                </Route>
-                <Route path="/login">
-                  <Login />
-                </Route>
-                <Route path="/register">
-                  <Register />
-                </Route>
-                <PrivateRoute path="/dashboard">
-                  <Dashboard />
-                </PrivateRoute>
-                <PrivateRoute path="/purchase/:_id">
-                  <Purchase />
-                </PrivateRoute>
-                <PrivateRoute path="/purchase">
-                  <Purchase />
-                </PrivateRoute>
-                <Route path="/pay">
-                  <Pay />
-                </Route>
-                <Route path="/myOrders">
-                  <MyOrders />
-                </Route>
-                <Route path="/review">
-                  <Review />
-                </Route>
-                <Route path="/reviews">
-                  <Reviews />
-                </Route>
-                <Route path="/addAProduct">
-                  <AddAProduct />
-                </Route>
-                <Route path="/manageProducts">
-                  <ManageProducts />
-                </Route>
-                <Route path="/AllOrders">
-                  <AllOrders />
-                </Route>
-                <Route path="/makeAdmin">
-                  <MakeAdmin />
-                </Route>
-                <Route path="*">
-                  <NotFound />
-                </Route>
-              </Switch>
-            </Router>
-          </ThemeContext.Provider>
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/home">
+                <Home />
+              </Route>
+              <Route path="/explore">
+                <Explore />
+              </Route>
+              <Route path="/login">
+                <Login />
+              </Route>
+              <Route path="/register">
+                <Register />
+              </Route>
+              <PrivateRoute path="/dashboard">
+                <Dashboard />
+              </PrivateRoute>
+              <PrivateRoute path="/purchase/:_id">
+                <Purchase />
+              </PrivateRoute>
+              <PrivateRoute path="/purchase">
+                <Purchase />
+              </PrivateRoute>
+              <Route path="/pay">
+                <Pay />
+              </Route>
+              <Route path="/myOrders">
+                <MyOrders />
+              </Route>
+              <Route path="/review">
+                <Review />
+              </Route>
+              <Route path="/reviews">
+                <Reviews />
+              </Route>
+              <Route path="/addAProduct">
+                <AddAProduct />
+              </Route>
+              <Route path="/manageProducts">
+                <ManageProducts />
+              </Route>
+              <Route path="/AllOrders">
+                <AllOrders />
+              </Route>
+              <Route path="/makeAdmin">
+                <MakeAdmin />
+              </Route>
+              <Route path="*">
+                <NotFound />
+              </Route>
+            </Switch>
+          </Router>
         </AuthProvider>
-      </div>
+      </ThemeProvider>
     </div>
   );
 }
