@@ -16,7 +16,9 @@ const Banner = () => {
             <h3>
               Capture Your <br /> Beautiful Moments
             </h3>
-            <Button className="banner-btn"> Learn More</Button>
+            <Button className="banner-btn" href="http://localhost:3000/explore">
+              Explore
+            </Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={5000}>
@@ -30,7 +32,7 @@ const Banner = () => {
             <h3>
               Capture Your <br /> Beautiful Moments
             </h3>
-            <Button className="banner-btn"> Learn More</Button>
+            <Button className="banner-btn">Explore</Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={5000}>
@@ -44,7 +46,7 @@ const Banner = () => {
             <h3>
               Capture Your <br /> Beautiful Moments
             </h3>
-            <Button className="banner-btn"> Learn More</Button>
+            <Button className="banner-btn">Explore</Button>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

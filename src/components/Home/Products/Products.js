@@ -23,7 +23,7 @@ const Products = () => {
         Explore the World of fashionable Cameras!
       </h2>
       {products.length ? (
-        <Row xs={1} sm={1} md={2} lg={2} xl={3} className="products">
+        <Row xs={1} sm={1} md={2} lg={2} xl={3} xxl={4} className="products">
           {products.map((product) => (
             <Product key={product.name} product={product}></Product>
           ))}

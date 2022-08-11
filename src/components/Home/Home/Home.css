@@ -1,3 +1,6 @@
+.carousel-indicators {
+  display: none;
+}
 .banner-info {
   margin-bottom: 10em;
 }
@@ -17,8 +20,9 @@
   font-weight: 500;
   font-size: 2em;
   padding: 0.8rem 3rem;
-  border-radius: 50px;
+  border-radius: 5px;
   margin-top: 20px;
+  border-color: transparent;
 }
 
 .banner-btn:hover {

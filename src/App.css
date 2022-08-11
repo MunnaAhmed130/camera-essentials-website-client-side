@@ -123,7 +123,9 @@
 /* .dark .MuiRating-iconEmpty {
   outline: solid white;
 } */
-
+.dark .banner-btn {
+  color: rgba(0, 0, 0, 0.8);
+}
 .dark .dropdown-menu {
   /* background-color: #26292d; */
   background-color: rgb(33, 35, 36);

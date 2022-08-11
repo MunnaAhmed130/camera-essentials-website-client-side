@@ -9,13 +9,14 @@ const Product = ({ product }) => {
   if (!product.length) {
     <CircularProgress />;
   }
+  const productInfo = description.slice(0, 120);
   return (
     <Col className="px-0">
       <Card className="m-3 card product">
         <Card.Img variant="top" src={img} className="card-img" />
         <Card.Body>
           <Card.Title className="card-name">{name}</Card.Title>
-          <Card.Text className="card-description">{description}</Card.Text>
+          <Card.Text className="card-description">{productInfo}</Card.Text>
           <h6>Price: &#x24;{price}</h6>
           <Link className="dynamic-route" to={`/purchase/${_id}`}>
             <Button size="large" variant="contained" className="buy-btn">
