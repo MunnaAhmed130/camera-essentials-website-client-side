@@ -8,7 +8,14 @@ import "./Products.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-  const limit = 6;
+  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  let limit;
+  if (viewportWidth >= 1400) {
+    limit = 8;
+  } else {
+    limit = 6;
+  }
+
   useEffect(() => {
     fetch(
       `https://limitless-reaches-30016.herokuapp.com/products/query?limit=${limit}`

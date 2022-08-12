@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <Navbar
       collapseOnSelect
-      expand="xl"
+      expand="lg"
       // bg={darkMode ? "dark" : "light"}
       variant={darkMode ? "dark" : "light"}
       style={{ zIndex: 1090 }}

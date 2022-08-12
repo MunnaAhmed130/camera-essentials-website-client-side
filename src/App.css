@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+
+.btn-primary:focus {
+  border: 1px solid black;
+}
 /* header */
 .profile-img {
   width: 40px;
@@ -112,13 +116,17 @@
   background-color: rgb(33, 37, 41);
 } */
 
+.dark .navbar {
+  background-color: rgb(29, 31, 34);
+}
+
 .dark {
   background-color: rgba(33, 37, 41, 0.99);
   color: rgba(255, 255, 255, 0.8);
 }
 
 .dark .newsletter {
-  color: rgba(0, 0, 0, 0.8);
+  /* color: rgba(0, 0, 0, 0.8); */
 }
 /* .dark .MuiRating-iconEmpty {
   outline: solid white;
@@ -132,6 +140,13 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+.dark .reviews-container {
+  background-color: rgb(29, 31, 34);
+}
+
+.dark .single-review {
+  background-color: rgba(33, 37, 41, 0.99);
+}
 .dark a
 /* .dark .navbar-nav .nav-link */ {
   color: rgba(255, 255, 255, 0.8);
@@ -141,7 +156,7 @@
   background-color: rgba(33, 37, 41, 0.537);
 }
 .dark .products-header {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* light mode */
@@ -149,6 +164,6 @@
   background-color: rgba(239, 237, 237, 0.729);
 }
 
-.light a {
+.light .navbar a {
   color: rgba(33, 33, 33, 0.732);
 }
