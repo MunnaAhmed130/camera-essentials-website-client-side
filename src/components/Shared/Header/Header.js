@@ -39,9 +39,9 @@ const Header = () => {
             <Link style={{ ...style, marginRight: "10px" }} to="/explore">
               explore
             </Link>
-            <Link style={{ ...style, marginRight: "10px" }} to="/purchase">
+            {/* <Link style={{ ...style, marginRight: "10px" }} to="/purchase">
               Purchase
-            </Link>
+            </Link> */}
             <DarkMode></DarkMode>
 
             {user?.email && (

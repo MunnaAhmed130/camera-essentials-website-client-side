@@ -1,6 +1,7 @@
 import { CircularProgress } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
+import useTheme from "../../../Hooks/useTheme";
 import Footer from "../../Shared/Footer/Footer";
 import Header from "../../Shared/Header/Header";
 import ExploreProducts from "../ExploreProducts/ExploreProducts";
@@ -8,6 +9,7 @@ import "./Explore.css";
 
 const Explore = () => {
   const [products, setProducts] = useState([]);
+  const { darkMode } = useTheme();
   useEffect(() => {
     fetch("https://limitless-reaches-30016.herokuapp.com/products")
       .then((res) => res.json())
@@ -15,7 +17,7 @@ const Explore = () => {
   }, []);
 
   return (
-    <div>
+    <div className={darkMode ? "dark" : "light"}>
       <Header />
       <div className="explore">
         <h2 className="products-header">

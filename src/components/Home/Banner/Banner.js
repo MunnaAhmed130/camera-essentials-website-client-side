@@ -1,8 +1,10 @@
 import React from "react";
 import { Button, Carousel } from "react-bootstrap";
+import useTheme from "../../../Hooks/useTheme";
 import "../Home/Home.css";
 
 const Banner = () => {
+  const { darkMode } = useTheme();
   return (
     <div>
       <Carousel fade>
@@ -25,7 +27,11 @@ const Banner = () => {
           <img
             className=" banner d-block w-100"
             // src="https://i.ibb.co/2N0VWQk/here-bg-1.jpg"
-            src="https://i.ibb.co/XZrzkq8/bg-1.jpg"
+            src={
+              darkMode
+                ? "https://i.ibb.co/XZrzkq8/bg-1.jpg"
+                : "https://i.ibb.co/SQ4mNwN/patrick-dozk-Vh-Dyvh-Q-unsplash.jpg"
+            }
             alt="Second slide"
           />
           <Carousel.Caption className="banner-info">
@@ -35,7 +41,7 @@ const Banner = () => {
             <Button className="banner-btn">Explore</Button>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={5000}>
+        {/* <Carousel.Item interval={5000}>
           <img
             className=" banner d-block w-100"
             // src="https://i.ibb.co/LrhG9Mx/slider-3.jpg"
@@ -48,7 +54,7 @@ const Banner = () => {
             </h3>
             <Button className="banner-btn">Explore</Button>
           </Carousel.Caption>
-        </Carousel.Item>
+        </Carousel.Item> */}
       </Carousel>
     </div>
   );
