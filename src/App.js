@@ -24,13 +24,13 @@ import ThemeProvider from "./Context/ThemeProvider/ThemeProvider";
 function App() {
   // const { darkMode } = useTheme();
   let viewportWidth;
-  let setViewportWidth = function () {
-    viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-    console.log(viewportWidth);
-  };
-  window.addEventListener(onclick, function () {
-    setViewportWidth();
-  });
+  // let setViewportWidth = function () {
+  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  console.log(viewportWidth);
+  // };
+  // window.addEventListener("onResize", function () {
+  //   setViewportWidth();
+  // });
   return (
     <div className="App">
       <ThemeProvider>

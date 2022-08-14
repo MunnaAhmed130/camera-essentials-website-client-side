@@ -1,28 +1,125 @@
-.footer-top{
-    color: white ;
-    background-color:#232F3E ;
+.footer-top {
+  /* background-color: #232f3e; */
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  /* background-blend-mode: multiply; */
+  text-align: left;
+  padding-top: 2em;
+  /* padding-inline: 10px; */
 }
 
-.links a{
-    text-decoration: none;
-    color: white;
-    font-weight: 400;
-    display: inline-block;
-    margin-bottom: 5px;
+.dark-bg:after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 0;
+  /* background-position: center;
+  background-size: cover; */
+  opacity: 0.9;
+  background-color: #16202c;
 }
 
-
-.footer-bottom{
-    color: white;
-    background-color: #131A22;
-    height: 50px;
-    display: grid;
-    align-content: center;
+.dark-bg,
+.light-bg {
+  background-image: url("https://i.ibb.co/BVcqW6j/one-camera-lens-on-dark-surface.jpg");
 }
 
-.footer-bottom p{
-    margin-bottom:0 ;
+.light-bg:after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 0;
+  /* background-position: center;
+  background-size: cover; */
+  opacity: 0.95;
+  background-color: #ffffff;
 }
-.footer-top p{
-    margin-bottom:5px ;
+.top-footer {
+  /* margin-inline: 10px; */
+
+  max-width: 1200px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
 }
+
+.footer-info a,
+.footer-info p {
+  /* color: var(--footer-color); */
+  padding-bottom: 0.4rem;
+  margin-bottom: 0px;
+  transition: 0.3s ease;
+}
+
+.footer-info h4 {
+  padding-block: 1rem;
+}
+
+.links a {
+  text-decoration: none;
+  /* font-weight: 400; */
+  display: inline-block;
+  margin-bottom: 5px;
+}
+/* .links a:hover,
+.contacts p:hover {
+  color: rgba(255, 255, 255, 1);
+   font-weight: 500; 
+} */
+
+.icon-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  border-radius: 50%;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 10px;
+  /* color: white; */
+  transition: all 0.5s ease;
+}
+/* .icon-links a:hover {
+  background-color: white;
+  color: black; 
+  box-shadow: 4px 4px 3px 1px black;
+} */
+.icon-links .facebook:hover {
+  color: #4267b2;
+}
+.icon-links .twitter:hover {
+  color: #00acee;
+}
+.icon-links .instagram:hover {
+  color: #c13584;
+}
+.icon-links .linkedIn:hover {
+  color: #0072b1;
+}
+.footer-bottom {
+  /* border-top: 1px solid rgba(255, 255, 255, 0.3); */
+  font-size: 1rem;
+  /* color: var(--footer-color); */
+}
+
+.footer-section p {
+  max-width: 18rem;
+}
+@media screen and (min-width: 994px) {
+  .contacts {
+    padding-left: 1rem;
+  }
+}
+/* #4267B2 fb fa-facebook-f*/
+/* #00acee tw fa-twitter*/
+/* #0072b1 lin fa-linkedin-in*/
+/* #3f729b ins fa-instagram*/

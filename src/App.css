@@ -159,6 +159,36 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* footer */
+.dark .footer-top {
+  color: white;
+}
+
+.dark .footer-top a,
+.dark .footer-top p {
+  color: var(--footer-color);
+}
+.dark .links a:hover,
+.dark .contacts p:hover {
+  color: rgba(255, 255, 255, 1);
+  /* font-weight: 500; */
+}
+.dark .icon-links a {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+.dark .icon-links a:hover {
+  background-color: white;
+  /* color: black; */
+  box-shadow: 4px 4px 3px 1px black;
+}
+
+.dark .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  color: var(--footer-color);
+}
+
 /* light mode */
 .light .navbar {
   background-color: rgba(239, 237, 237, 0.729);
@@ -166,4 +196,45 @@
 
 .light .navbar a {
   color: rgba(33, 33, 33, 0.732);
+}
+
+.light .footer-top {
+  color: black;
+}
+.light .footer-top a,
+.light .footer-top p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.light .footer-info {
+  font-weight: 500;
+}
+.light .links a:hover,
+.light .contacts p:hover {
+  color: rgb(0, 0, 0);
+  /* font-weight: 500; */
+}
+
+.light .icon-links a {
+  border: 1px solid rgba(73, 73, 73, 0.905);
+  color: rgb(62, 62, 62);
+}
+.light .icon-links a:hover {
+  background-color: rgba(226, 226, 226, 0.7);
+  border: 1px solid rgb(255, 255, 255);
+  /* color: black; */
+  box-shadow: 4px 4px 3px 1px rgb(144, 144, 144);
+}
+
+.light .footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0);
+  /* color: var(--footer-color); */
+}
+
+.light .footer-bottom p {
+  color: black;
+  font-weight: 500;
+}
+.light .contacts p {
+  color: black;
 }
