@@ -20,7 +20,7 @@ import useTheme from "../../../Hooks/useTheme";
 const Footer = () => {
   const { darkMode } = useTheme();
   // let footer_bg = darkMode ? "dark-bg" : "light-bg";
-  let darkImg = "https://i.ibb.co/BVcqW6j/one-camera-lens-on-dark-surface.jpg";
+  // let darkImg = "https://i.ibb.co/BVcqW6j/one-camera-lens-on-dark-surface.jpg";
   return (
     <>
       <footer className={`footer-top ${darkMode ? "dark-bg" : "light-bg"}`}>

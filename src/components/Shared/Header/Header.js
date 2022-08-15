@@ -15,6 +15,7 @@ const style = {
 const Header = () => {
   const { user, logOut } = useAuth();
   const { darkMode } = useTheme();
+  console.log(user.photoURL);
   // if (localStorage) {
   //   let theme = localStorage.getItem("darkTheme");
   //   setDarkMode(theme);
@@ -66,7 +67,7 @@ const Header = () => {
                 <img
                   className="profile-img"
                   src={user.photoURL}
-                  alt="profile-pic"
+                  // alt="profile-pic"
                 />
               </div>
             )}
