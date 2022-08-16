@@ -1,5 +1,6 @@
 :root {
   --main-color: rgba(136, 130, 171, 0.676);
+  /* --dark-bg-color:; */
   --footer-color: rgba(255, 255, 255, 0.7);
 }
 * {

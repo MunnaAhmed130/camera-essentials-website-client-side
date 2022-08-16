@@ -7,7 +7,7 @@ import {
   faHome,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import "./Footer.css";
+
 import { Link } from "react-router-dom";
 import {
   faFacebookF,
@@ -16,6 +16,7 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import useTheme from "../../../Hooks/useTheme";
+import "./Footer.css";
 
 const Footer = () => {
   const { darkMode } = useTheme();

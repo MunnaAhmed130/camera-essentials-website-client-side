@@ -1,1 +1,52 @@
+.navbar-dark .navbar-nav .nav-link a {
+  color: rgba(255, 255, 255, 0.55);
+}
 
+.dropdown_menu {
+  position: absolute;
+  top: 58px;
+  width: 8rem;
+  transform: translateX(-50%);
+  background-color: rgb(33, 35, 36);
+  /* border: ; */
+  border-radius: 0.2rem;
+  padding: 0.25rem;
+  overflow: hidden;
+}
+
+.dropdown_menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  /* border: 10px solid; */
+  /* border-color: transparent transparent white transparent; */
+  transform: rotate(55deg);
+  z-index: 2000;
+}
+
+.dropdown_item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  /* border-radius: ; */
+  /* transition: ; */
+  padding: 0.5rem;
+}
+/* .dropdown .btn-primary {
+  background-color: transparent;
+  border: none;
+}
+
+.dropdown-toggle::after {
+  /* border: none; 
+}
+
+.dropdown .btn-primary:active,
+.show > .btn-primary.dropdown-toggle,
+.show > .btn-primary.dropdown-toggle:focus {
+  background-color: none;
+} */

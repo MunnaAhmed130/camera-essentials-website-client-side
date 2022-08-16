@@ -4,18 +4,20 @@ import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import useTheme from "../../../Hooks/useTheme";
 import DarkMode from "../DarkMode/DarkMode";
+import User from "../User/User";
 import "./Header.css";
 
 const style = {
-  lineHeight: "40px",
+  // lineHeight: "40px",
+  padding: ".5rem",
   textDecoration: "none",
-  fontWeight: 600,
+  fontWeight: 400,
   fontSize: "16px",
 };
 const Header = () => {
   const { user, logOut } = useAuth();
   const { darkMode } = useTheme();
-  console.log(user.photoURL);
+  console.log(user);
   // if (localStorage) {
   //   let theme = localStorage.getItem("darkTheme");
   //   setDarkMode(theme);
@@ -38,7 +40,7 @@ const Header = () => {
               Home
             </Link>
             <Link style={{ ...style, marginRight: "10px" }} to="/explore">
-              explore
+              Explore
             </Link>
             {/* <Link style={{ ...style, marginRight: "10px" }} to="/purchase">
               Purchase
@@ -62,16 +64,16 @@ const Header = () => {
                 {user.displayName}
               </p>
             )}
-            {user?.photoURL && (
+            {/* {user?.photoURL && (
               <div className="profile-pic">
                 <img
                   className="profile-img"
                   src={user.photoURL}
-                  // alt="profile-pic"
+                  alt="profile-pic"
                 />
               </div>
-            )}
-            {user?.email ? (
+            )} */}
+            {/* {user?.email ? (
               <Button className="nav-button" onClick={logOut}>
                 Log Out
               </Button>
@@ -79,7 +81,9 @@ const Header = () => {
               <Link style={{ ...style }} to="/login">
                 Login
               </Link>
-            )}
+            )} */}
+
+            {user?.email && <User></User>}
           </Nav>
         </Navbar.Collapse>
       </Container>

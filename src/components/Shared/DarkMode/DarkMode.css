@@ -1,0 +1,11 @@
+.dropdown-menu.show {
+  left: -20px;
+  text-align: center;
+  min-width: 8rem;
+  padding: 0.2rem;
+}
+
+.dropdown-item {
+  padding-inline: 0px;
+  border-radius: 0.2rem;
+}
