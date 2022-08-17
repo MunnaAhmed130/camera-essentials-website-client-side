@@ -6,18 +6,24 @@ const User = () => {
   const [open, setOpen] = useState(false);
   const { user } = useAuth();
   return (
-    <div className="">
-      <div onClick={() => setOpen(!open)}>
-        <a href="#" target="">
-          <img className="profile-img " src={user.photoURL} alt="profile-pic" />
-        </a>
+    <div className={`nav-item dropdown ${open && "show"}`}>
+      {/* <div className="dropdown-btn" onClick={() => setOpen(!open)}> */}
+      <div
+        // href="#"
+        id="basic-nav-dropdown"
+        class="dropdown-toggle nav-link "
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+      >
+        <img className="profile-img " src={user.photoURL} alt="profile-pic" />
       </div>
+      {/* </div> */}
 
-      {open && (
-        <div className="dropdown_menu">
-          <li className="dropdown_item">Hello world</li>
-        </div>
-      )}
+      {/* {open && ( */}
+      <div className={`dropdown-menu ${open && "show"}`}>
+        <li className="dropdown_item">Hello world</li>
+      </div>
+      {/* )} */}
     </div>
   );
 };

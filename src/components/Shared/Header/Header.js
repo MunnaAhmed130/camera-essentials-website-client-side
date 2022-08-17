@@ -36,22 +36,35 @@ const Header = () => {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end collapse">
           <Nav>
-            <Link style={{ ...style, marginRight: "10px" }} to="/home">
+            <Link
+              style={{ ...style, marginRight: "10px" }}
+              className="nav_link"
+              to="/home"
+            >
               Home
             </Link>
-            <Link style={{ ...style, marginRight: "10px" }} to="/explore">
+            <Link
+              style={{ ...style, marginRight: "10px" }}
+              className="nav_link"
+              to="/explore"
+            >
               Explore
             </Link>
             {/* <Link style={{ ...style, marginRight: "10px" }} to="/purchase">
               Purchase
             </Link> */}
-            <DarkMode></DarkMode>
 
             {user?.email && (
-              <Link style={{ ...style, marginRight: "10px" }} to="/dashboard">
+              <Link
+                style={{ ...style, marginRight: "10px" }}
+                className="nav_link"
+                to="/dashboard"
+              >
                 Dashboard
               </Link>
             )}
+
+            <DarkMode></DarkMode>
             {user?.email && (
               <p
                 style={{
@@ -60,6 +73,7 @@ const Header = () => {
                   display: "inline-block",
                   marginBottom: 0,
                 }}
+                className="nav_link"
               >
                 {user.displayName}
               </p>

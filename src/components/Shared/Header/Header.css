@@ -2,13 +2,21 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
+.nav_link {
+  line-height: 40px;
+}
+
+/* .dropdown_item {
+  position: relative;
+}
+
 .dropdown_menu {
   position: absolute;
   top: 58px;
   width: 8rem;
   transform: translateX(-50%);
   background-color: rgb(33, 35, 36);
-  /* border: ; */
+  /* border: ; 
   border-radius: 0.2rem;
   padding: 0.25rem;
   overflow: hidden;
@@ -23,7 +31,7 @@
   height: 20px;
   background-color: #fff;
   /* border: 10px solid; */
-  /* border-color: transparent transparent white transparent; */
+/* border-color: transparent transparent white transparent; 
   transform: rotate(55deg);
   z-index: 2000;
 }
@@ -33,9 +41,9 @@
   display: flex;
   align-items: center;
   /* border-radius: ; */
-  /* transition: ; */
+/* transition: ; 
   padding: 0.5rem;
-}
+} */
 /* .dropdown .btn-primary {
   background-color: transparent;
   border: none;

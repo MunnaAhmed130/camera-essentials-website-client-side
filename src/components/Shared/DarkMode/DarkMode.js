@@ -12,7 +12,7 @@ const DarkMode = () => {
   };
 
   return (
-    <NavDropdown title="Theme" id="basic-nav-dropdown">
+    <NavDropdown title="Theme" id="basic-nav-dropdown" className="nav_link">
       <NavDropdown.Item
         href="#"
         className="nav_dropdown_item"
