@@ -17,11 +17,29 @@
   height: 120px;
   width: 120px;
   border-radius: 50%;
+  transition: all 0.3s ease;
+
   /* padding-block: 1rem; */
+}
+
+.dropdown_img .profile-img:hover {
+  box-shadow: 0px 0px 10px 6px black;
 }
 
 .user_name {
   font-size: 1.2rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
+}
+
+.btn_container button {
+  padding: 0.5em 1.2em;
+  font-weight: 300;
+  font-size: 1rem;
+  /* border: 1px solid rgb(255, 0, 0); */
+  border-radius: 2px;
+  /* color: rgb(255, 0, 0); */
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 2px;
 }

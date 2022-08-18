@@ -1,5 +1,6 @@
+import { Button } from "@mui/material";
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 import useAuth from "../../../Hooks/useAuth";
 import "./User.css";
 
@@ -34,13 +35,19 @@ const User = () => {
         <div className="dropdown_img pt-5 pb-4">
           <img className="profile-img " src={user.photoURL} alt="profile-pic" />
         </div>
-
         <div className="dropdown_item ">
           <h5 className="user_name">{userName}</h5>
         </div>
-        <Button className="nav-button logOut_btn" onClick={logOut}>
-          Log Out
-        </Button>
+        <div className="btn_container">
+          <Button
+            color="error"
+            variant="contained"
+            className="mb-5 logOut_btn "
+            onClick={logOut}
+          >
+            LOG OUT
+          </Button>
+        </div>
       </div>
       {/* )} */}
     </div>

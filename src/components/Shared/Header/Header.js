@@ -30,8 +30,9 @@ const Header = () => {
       // bg={darkMode ? "dark" : "light"}
       variant={darkMode ? "dark" : "light"}
       style={{ zIndex: 1090 }}
+      className=" justify-content-center"
     >
-      <Container fluid className="nav">
+      <Container className="nav">
         <Navbar.Brand className="nav-name">Camera Essentials</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end collapse">
