@@ -1,17 +1,27 @@
 import React, { useState } from "react";
-// import { Dropdown, NavDropdown } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import useAuth from "../../../Hooks/useAuth";
+import "./User.css";
 
 const User = () => {
   const [open, setOpen] = useState(false);
-  const { user } = useAuth();
+
+  const { user, logOut } = useAuth();
+  let name = user.displayName;
+
+  // capitalize first letter of each word
+  const userName = name.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+    letter.toUpperCase()
+  );
+
+  // console.log(userName);
   return (
-    <div className={`nav-item dropdown ${open && "show"}`}>
+    <div className={`nav-item dropdown user_dropdown  ${open && "show"}`}>
       {/* <div className="dropdown-btn" onClick={() => setOpen(!open)}> */}
       <div
         // href="#"
         id="basic-nav-dropdown"
-        class="dropdown-toggle nav-link "
+        class="dropdown-toggle nav-link user_link"
         aria-expanded={open}
         onClick={() => setOpen(!open)}
       >
@@ -21,11 +31,19 @@ const User = () => {
 
       {/* {open && ( */}
       <div className={`dropdown-menu ${open && "show"}`}>
-        <li className="dropdown_item">Hello world</li>
+        <div className="dropdown_img pt-5 pb-4">
+          <img className="profile-img " src={user.photoURL} alt="profile-pic" />
+        </div>
+
+        <div className="dropdown_item ">
+          <h5 className="user_name">{userName}</h5>
+        </div>
+        <Button className="nav-button logOut_btn" onClick={logOut}>
+          Log Out
+        </Button>
       </div>
       {/* )} */}
     </div>
   );
 };
-
 export default User;

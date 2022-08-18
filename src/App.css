@@ -18,14 +18,6 @@
 
 /* header */
 
-.profile-img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 50%;
-  /* margin-right: 10px; */
-}
-
 .navbar {
   opacity: 0.95;
 }
@@ -47,7 +39,15 @@
   padding: 0.1em 1em;
   font-weight: 600;
   font-size: 15px;
+  border-color: transparent;
 }
+
+.logOut_btn {
+  background-color: rgba(127, 6, 6, 0.873);
+}
+
+/* .logOut_btn:hover {
+} */
 
 @media screen and (max-width: 500px) {
   .nav {
@@ -258,9 +258,9 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
-.light .footer-info {
-  /* font-weight: 500; */
-}
+/* .light .footer-info {
+  /* font-weight: 500; *
+} */
 .light .links a:hover,
 .light .contacts p:hover {
   color: rgb(0, 0, 0);

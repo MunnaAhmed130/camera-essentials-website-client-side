@@ -2,8 +2,16 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
+.navbar-brand {
+  padding: 0px;
+  letter-spacing: 1px;
+}
+.nav-name {
+  font-size: 2rem;
+}
 .nav_link {
   line-height: 40px;
+  letter-spacing: 1px;
 }
 
 /* .dropdown_item {

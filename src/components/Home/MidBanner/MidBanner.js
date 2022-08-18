@@ -12,11 +12,12 @@ const MidBanner = () => {
       <div className="iframe-container">
         <iframe
           className="iframe"
-          src="https://www.youtube.com/embed/CPxdxcnMPHA?controls=0&start=6"
+          src="https://www.youtube.com/embed/CPxdxcnMPHA?controls=0&start=6&end=47&rel=0&showinfo=0&vq=hd1080"
           title="YouTube video player"
           frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full"
+          allowFullscreen
+          // muted
         ></iframe>
       </div>
 

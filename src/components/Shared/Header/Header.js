@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import useTheme from "../../../Hooks/useTheme";
@@ -15,7 +15,7 @@ const style = {
   fontSize: "16px",
 };
 const Header = () => {
-  const { user, logOut } = useAuth();
+  const { user } = useAuth();
   const { darkMode } = useTheme();
   console.log(user);
   // if (localStorage) {
@@ -65,7 +65,7 @@ const Header = () => {
             )}
 
             <DarkMode></DarkMode>
-            {user?.email && (
+            {/* {user?.email && (
               <p
                 style={{
                   ...style,
@@ -77,7 +77,7 @@ const Header = () => {
               >
                 {user.displayName}
               </p>
-            )}
+            )} */}
             {/* {user?.photoURL && (
               <div className="profile-pic">
                 <img
@@ -97,7 +97,13 @@ const Header = () => {
               </Link>
             )} */}
 
-            {user?.email && <User></User>}
+            {user?.email ? (
+              <User></User>
+            ) : (
+              <Link style={{ ...style }} className="nav_link" to="/login">
+                Login
+              </Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

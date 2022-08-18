@@ -1,3 +1,14 @@
+p,
+h1,
+h2,
+h3,
+h5,
+h6,
+a,
+button {
+  letter-spacing: 1px;
+}
+
 .carousel-indicators {
   display: none;
 }
@@ -67,11 +78,12 @@
   position: relative;
 } */
 
-/* .iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.iframe {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  width: 700px;
+  min-height: 500px;
+  max-height: 50rem;
   border: 0;
-} */
+}
