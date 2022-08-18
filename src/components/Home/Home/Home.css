@@ -46,6 +46,14 @@ button {
   .banner {
   }
 } */
+
+.iframe-container {
+  position: relative;
+  width: min(100%, 1200px);
+  height: 510px;
+  margin-inline: auto;
+  overflow: hidden;
+}
 @media screen and (max-width: 500px) {
   .banner-btn {
     background-color: white;
@@ -68,6 +76,11 @@ button {
   .banner-info h3 {
     font-size: 2rem;
   }
+
+  .iframe-container {
+    /* width: 100%; */
+    height: 200px;
+  }
 }
 
 /* .mid-banner {
@@ -79,11 +92,20 @@ button {
 } */
 
 .iframe {
-  /* position: absolute; */
+  position: absolute;
   /* top: 0; */
   /* left: 0; */
-  width: 700px;
-  min-height: 500px;
-  max-height: 50rem;
+  top: 0;
+  left: 0;
+  /* 560 */
+  width: 100%;
+  /* 315 */
+  height: 630px;
+  margin-top: -59px;
   border: 0;
+  pointer-events: none;
+}
+
+.ytp-chrome-top {
+  display: hidden;
 }

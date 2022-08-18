@@ -12,14 +12,23 @@ const MidBanner = () => {
       <div className="iframe-container">
         <iframe
           className="iframe"
-          src="https://www.youtube.com/embed/CPxdxcnMPHA?controls=0&start=6&end=47&rel=0&showinfo=0&vq=hd1080"
-          title="YouTube video player"
+          src="https://www.youtube.com/embed/CPxdxcnMPHA?controls=0&mp;start=6&amp;end=46&amp;rel=0&amp;playsinline=1&amp;showinfo=0&amp;vq=hd1080&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=CPxdxcnMPHA&amp;enablejsapi=1"
+          title="video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full"
-          allowFullscreen
+          allowFullScreen
           // muted
         ></iframe>
       </div>
+      {/* <div className="iframe-container">
+        <div className="background"></div>
+      </div> */}
+      {/* <iframe
+        src="https://www.youtube.com/embed/CPxdxcnMPHA?controls=0&amp;rel=0&amp;playsinline=1&amp;widget_referrer=https%3A%2F%2Fpreview.themeforest.net%2F&amp;enablejsapi=1&amp;origin=https%3A%2F%2Ftemplatekit.jegtheme.com&amp;widgetid=1"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full"
+        allowFullScreen
+      ></iframe> */}
 
       {/* </video> */}
     </div>
