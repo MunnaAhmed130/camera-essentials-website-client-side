@@ -22,7 +22,7 @@ const User = () => {
       <div
         // href="#"
         id="basic-nav-dropdown"
-        class="dropdown-toggle nav-link user_link"
+        className="dropdown-toggle nav-link user_link"
         aria-expanded={open}
         onClick={() => setOpen(!open)}
       >
