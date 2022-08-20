@@ -12,15 +12,19 @@ const DarkMode = () => {
   };
 
   return (
-    <NavDropdown title="Theme" id="basic-nav-dropdown" className="nav_link">
+    <NavDropdown title="Theme" id="nav_theme_dropdown" className="nav_link">
       <NavDropdown.Item
         href="#"
-        className="nav_dropdown_item"
+        className="theme_dropdown_option"
         onClick={(e) => setTheme(true)}
       >
         Dark
       </NavDropdown.Item>
-      <NavDropdown.Item href="#" onClick={(e) => setTheme(false)}>
+      <NavDropdown.Item
+        href="#"
+        className="theme_dropdown_option"
+        onClick={(e) => setTheme(false)}
+      >
         Light
       </NavDropdown.Item>
     </NavDropdown>

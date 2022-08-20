@@ -16,7 +16,7 @@ const style = {
 const Header = () => {
   const { user } = useAuth();
   const { darkMode } = useTheme();
-  console.log(user);
+  // console.log(user);
   // if (localStorage) {
   //   let theme = localStorage.getItem("darkTheme");
   //   setDarkMode(theme);

@@ -51,7 +51,8 @@ button {
 } */
 
 .mid-banner {
-  padding-inline: 10px;
+  padding-block: 5rem;
+  padding-inline: 1rem;
 }
 
 .iframe-container {

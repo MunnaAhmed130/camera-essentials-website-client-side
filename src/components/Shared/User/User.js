@@ -17,7 +17,10 @@ const User = () => {
 
   // console.log(userName);
   return (
-    <div className={`nav-item dropdown user_dropdown  ${open && "show"}`}>
+    <div
+      id="user_card"
+      className={`nav-item dropdown user_dropdown  ${open && "show"}`}
+    >
       {/* <div className="dropdown-btn" onClick={() => setOpen(!open)}> */}
       <div
         // href="#"
