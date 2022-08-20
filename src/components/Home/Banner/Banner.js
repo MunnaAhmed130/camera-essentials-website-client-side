@@ -15,9 +15,9 @@ const Banner = () => {
             alt="First slide"
           />
           <Carousel.Caption className="banner-info">
-            <h3>
+            <h2>
               Capture Your <br /> Beautiful Moments
-            </h3>
+            </h2>
             <Button className="banner-btn" href="http://localhost:3000/explore">
               Explore
             </Button>
@@ -35,9 +35,9 @@ const Banner = () => {
             alt="Second slide"
           />
           <Carousel.Caption className="banner-info">
-            <h3>
+            <h2>
               Capture Your <br /> Beautiful Moments
-            </h3>
+            </h2>
             <Button className="banner-btn" href="http://localhost:3000/explore">
               Explore
             </Button>

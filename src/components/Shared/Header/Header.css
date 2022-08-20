@@ -7,11 +7,22 @@
   letter-spacing: 1px;
 }
 .nav-name {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 1vw + 1rem, 2rem);
 }
 .nav_link {
   line-height: 40px;
   letter-spacing: 1px;
+  font-size: clamp(0.875rem, 0.4vw + 0.8rem, 1rem);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100%, 87.5rem);
+  /* width: 100%; */
+  padding-inline: clamp(0px, 2vw, 3rem);
 }
 
 /* .dropdown_item {

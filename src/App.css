@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+a {
+}
+
 .btn-primary:focus {
   border: 1px solid black;
 }
@@ -22,12 +25,12 @@
   opacity: 0.95;
 }
 .nav {
-  margin-inline: 50px;
+  /* margin-inline: 50px; */
 }
 
-.nav-name {
+/* .nav-name {
   font-size: 1.5em;
-}
+} */
 
 .profile-pic {
   display: flex;
@@ -97,11 +100,11 @@
 
 @media screen and (max-width: 500px) {
   .nav {
-    margin-inline: 10px;
+    /* margin-inline: 10px; */
   }
 
   .nav-name {
-    font-size: 1em;
+    /* font-size: 1em; */
   }
 }
 

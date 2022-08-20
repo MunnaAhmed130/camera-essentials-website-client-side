@@ -12,7 +12,6 @@ const style = {
   padding: ".5rem",
   textDecoration: "none",
   fontWeight: 400,
-  fontSize: "16px",
 };
 const Header = () => {
   const { user } = useAuth();
@@ -26,13 +25,14 @@ const Header = () => {
   return (
     <Navbar
       collapseOnSelect
-      expand="lg"
+      expand="md"
       // bg={darkMode ? "dark" : "light"}
       variant={darkMode ? "dark" : "light"}
       style={{ zIndex: 1090 }}
       className=" justify-content-center"
     >
-      <Container className="nav">
+      {/* This div is a customizable container */}
+      <div className="nav">
         <Navbar.Brand className="nav-name">Camera Essentials</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end collapse">
@@ -107,7 +107,7 @@ const Header = () => {
             )}
           </Nav>
         </Navbar.Collapse>
-      </Container>
+      </div>
     </Navbar>
   );
 };

@@ -1,21 +1,21 @@
 .user_dropdown .dropdown-menu.show {
-  left: -200px;
+  left: -12.7rem;
   text-align: center;
-  min-width: 18rem;
+  width: 18rem;
   padding: 0.2rem;
 }
 
 .user_link .profile-img {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   object-fit: cover;
   border-radius: 50%;
   /* margin-right: 10px; */
 }
 
 .dropdown_img .profile-img {
-  height: 120px;
-  width: 120px;
+  height: 7.5em;
+  width: 7.5em;
   border-radius: 50%;
   transition: all 0.3s ease;
 
@@ -27,7 +27,7 @@
 }
 
 .user_name {
-  font-size: 1.2rem;
+  font-size: clamp(16px, 0.56vw + 0.8rem, 1.125rem);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -35,11 +35,19 @@
 .btn_container button {
   padding: 0.5em 1.2em;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 0.4vw + 0.8rem, 1rem);
+
   /* border: 1px solid rgb(255, 0, 0); */
   border-radius: 2px;
   /* color: rgb(255, 0, 0); */
   cursor: pointer;
   outline: none;
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .user_dropdown .dropdown-menu.show {
+    width: min(100%, 18rem);
+    margin-inline: auto;
+  }
 }
