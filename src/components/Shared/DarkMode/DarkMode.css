@@ -6,7 +6,7 @@
 }
 
 .theme_dropdown_option {
-  font-size: clamp(0.875rem, 0.4vw + 0.8rem, 1rem);
+  font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
 }
 .navbar-nav .dropdown-menu {
   position: absolute;

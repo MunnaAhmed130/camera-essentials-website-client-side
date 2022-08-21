@@ -9,17 +9,20 @@ button {
   letter-spacing: 1px;
 }
 
-.carousel-indicators {
-  display: none;
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  /* display: none; */
+  opacity: 0;
 }
-
 .banner-info {
   margin-bottom: 10em;
 }
 
 .banner-info h2 {
-  font-size: clamp(1.5rem, 5vw, 4rem);
+  font-size: clamp(1.5rem, 5.68vw + 0.36rem, 4rem);
 }
+
+/* 24px, ,64px */
 
 .banner {
   /* height: 94vh;
@@ -86,7 +89,7 @@ button {
     margin-top: 20px;
   }
   .banner-info {
-    margin-bottom: 6em;
+    margin-bottom: 9em;
   }
 
   .banner-style {

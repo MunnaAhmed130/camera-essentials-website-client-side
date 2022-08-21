@@ -144,7 +144,7 @@
 }
 
 .products-header {
-  font-size: 3rem;
+  font-size: clamp();
   padding-top: 0.5em;
   margin-bottom: 0;
 }
