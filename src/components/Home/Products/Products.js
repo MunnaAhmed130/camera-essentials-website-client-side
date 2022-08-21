@@ -29,12 +29,20 @@ const Products = () => {
   }, [limit]);
   // console.log(products)
   return (
-    <div className="">
+    <div className="products">
       <h2 className="products-header">
-        Explore the World of fashionable Cameras!
+        Explore The World Of Fashionable Cameras
       </h2>
       {products.length ? (
-        <Row xs={1} sm={1} md={2} lg={2} xl={3} xxl={4} className="products">
+        <Row
+          xs={1}
+          sm={1}
+          md={2}
+          lg={2}
+          xl={3}
+          xxl={4}
+          className="demo-products"
+        >
           {products.map((product) => (
             <Product key={product.name} product={product}></Product>
           ))}

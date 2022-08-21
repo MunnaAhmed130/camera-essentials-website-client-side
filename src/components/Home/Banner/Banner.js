@@ -11,16 +11,25 @@ const Banner = () => {
         <Carousel.Item interval={5000}>
           <img
             className="banner d-block w-100"
-            src="https://i.ibb.co/yYjfJ9y/slider-4.jpg"
+            // src="https://i.ibb.co/yYjfJ9y/slider-4.jpg"
+            // src="https://i.ibb.co/hRC0Lmg/camera-on-tripod-e1651041561801.jpg"
+            src={
+              darkMode
+                ? "https://i.ibb.co/qDgVpsB/d-ng-tr-n-qu-c-HRk-O49-Hle-Gc-unsplash.jpg"
+                : "https://i.ibb.co/hRC0Lmg/camera-on-tripod-e1651041561801.jpg"
+            }
             alt="First slide"
           />
           <Carousel.Caption className="banner-info">
-            <h2>
-              Capture Your <br /> Beautiful Moments
-            </h2>
-            <Button className="banner-btn" href="http://localhost:3000/explore">
-              Explore
-            </Button>
+            <div>
+              <h2>Capture Your Beautiful Moments</h2>
+              <Button
+                className="banner-btn"
+                href="http://localhost:3000/explore"
+              >
+                Explore
+              </Button>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={5000}>
@@ -35,12 +44,15 @@ const Banner = () => {
             alt="Second slide"
           />
           <Carousel.Caption className="banner-info">
-            <h2>
-              Capture Your <br /> Beautiful Moments
-            </h2>
-            <Button className="banner-btn" href="http://localhost:3000/explore">
-              Explore
-            </Button>
+            <div>
+              <h2>Capture Your Beautiful Moments</h2>
+              <Button
+                className="banner-btn"
+                href="http://localhost:3000/explore"
+              >
+                Explore
+              </Button>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         {/* <Carousel.Item interval={5000}>

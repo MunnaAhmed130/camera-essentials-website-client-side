@@ -2,6 +2,10 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
+/* .navbar-light .navbar-nav .nav-link a,
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.9);
+} */
 .navbar-brand {
   padding: 0px;
   letter-spacing: 1px;
@@ -10,11 +14,19 @@
   font-size: clamp(1.25rem, 1.9887vw + 0.72rem, 2rem);
 }
 /* 18px, 1.9887vw + .72,32px */
+
+.nav_link,
+.nav_link a {
+  font-weight: 500;
+}
+
 .nav_link {
   line-height: 40px;
   letter-spacing: 1px;
   /* font-size: clamp(0.875rem, 0.4vw + 0.8rem, 1rem); */
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  text-decoration: none;
+  /* padding: 0.5rem; */
 }
 
 /* 0.875rem, 0.284vw + 0.8rem, 1rem */
@@ -80,3 +92,6 @@
 .show > .btn-primary.dropdown-toggle:focus {
   background-color: none;
 } */
+
+/* https://i.ibb.co/8rZ18cX/camera-and-shadow.jpg
+https://i.ibb.co/SxrRFS3/camera-g319964f60-1280.jpg */

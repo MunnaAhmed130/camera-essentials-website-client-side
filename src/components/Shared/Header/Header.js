@@ -10,8 +10,6 @@ import "./Header.css";
 const style = {
   // lineHeight: "40px",
   padding: ".5rem",
-  textDecoration: "none",
-  fontWeight: 400,
 };
 const Header = () => {
   const { user } = useAuth();

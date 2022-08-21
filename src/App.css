@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: "Bai Jamjuree";
+  /* font-family: "Cantarell"; */
 }
 
 .btn-primary:focus {
@@ -19,7 +21,7 @@
 /* header */
 
 .navbar {
-  opacity: 0.95;
+  /* opacity: 0.95; */
 }
 
 .profile-pic {
@@ -136,25 +138,41 @@
 
 /* products */
 
-.products {
+.demo-products {
   width: 100%;
   display: flex;
   margin: auto;
   padding: 10px 100px;
 }
 
-.products-header {
+/* {
+  font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
+  font-weight: 400;
+  padding-block: 0.5em;
+  margin-top: 1rem;
+  /* margin-bottom: 0.5em; *
+}   */
+
+.products .products-header,
+.explore .products-header {
+  font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
+  font-weight: 400;
+  padding-block: 0.5em;
+  margin-top: 1rem;
+  /* margin-bottom: 0.5em; */
+}
+/* .products-header {
   font-size: clamp();
   padding-top: 0.5em;
   margin-bottom: 0;
-}
+} */
 
 @media screen and (max-width: 500px) {
-  .products-header {
+  /* .products-header {
     font-size: 1.7rem;
     padding-top: 0.5em;
     margin-bottom: 0.5em;
-  }
+  } */
 
   .products {
     padding: 0;
@@ -194,6 +212,7 @@
 .dark .navbar-nav a:focus {
   color: rgba(255, 255, 255, 1);
 }
+
 .dark .navbar {
   background-color: rgb(29, 31, 34);
 }
@@ -287,6 +306,18 @@
   color: rgba(33, 33, 33, 0.732);
 }
 
+/* .light .navbar-nav a {
+  color: rgba(33, 33, 33, 0.732);
+} */
+
+.navbar-light .navbar-nav a:hover,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.light .navbar-nav a:focus {
+  color: rgb(0, 0, 0, 0.99);
+}
 /* light footer */
 
 .light .footer-top {

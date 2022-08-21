@@ -9,17 +9,28 @@ button {
   letter-spacing: 1px;
 }
 
+/* banner */
+
 .carousel .carousel-control-prev,
 .carousel .carousel-control-next {
   /* display: none; */
   opacity: 0;
 }
 .banner-info {
+  display: flex;
+  align-content: center;
+  justify-content: center;
   margin-bottom: 10em;
 }
 
+/* .banner-info div{
+
+} */
+
 .banner-info h2 {
   font-size: clamp(1.5rem, 5.68vw + 0.36rem, 4rem);
+  font-weight: 700;
+  max-width: 700px;
 }
 
 /* 24px, ,64px */
@@ -53,6 +64,10 @@ button {
   }
 } */
 
+/* Demo Products */
+
+/* Mid banner and iframe */
+
 .mid-banner {
   padding-block: 5rem;
   padding-inline: 1rem;
@@ -65,6 +80,29 @@ button {
 
   margin-inline: auto;
   overflow: hidden;
+}
+
+.iframe {
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 560 */
+  width: 100%;
+  /* 315 */
+  /* height: max(100%, 630px); */
+  height: calc(100% + 120px);
+  /* height: 630px; */
+  margin-top: -59px;
+  border: 0;
+  /* pointer-events: none; */
+}
+
+.iframe_disable {
+  pointer-events: none;
 }
 
 @media screen and (max-width: 519px) {
@@ -122,28 +160,6 @@ button {
   position: relative;
 } */
 
-.iframe {
-  position: absolute;
-  /* top: 0; */
-  /* left: 0; */
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  /* 560 */
-  width: 100%;
-  /* 315 */
-  /* height: max(100%, 630px); */
-  height: calc(100% + 120px);
-  /* height: 630px; */
-  margin-top: -59px;
-  border: 0;
-  /* pointer-events: none; */
-}
-
-.iframe_disable {
-  pointer-events: none;
-}
 /* .ytp-chrome-top {
   display: hidden;
 } */
