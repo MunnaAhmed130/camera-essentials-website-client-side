@@ -2,21 +2,57 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-/* .navbar-light .navbar-nav .nav-link a,
-.navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.9);
+.light .navbar {
+  background-color: rgba(239, 237, 237, 0.729);
+}
+
+/* .light .navbar a {
+  color: rgba(0, 0, 0, 0.7);
 } */
+
+/* .light .navbar-nav a {
+  color: rgba(33, 33, 33, 0.732);
+} */
+.navbar-light .navbar-nav a {
+  color: rgb(0, 0, 0, 0.6);
+}
+.navbar-light .navbar-nav a:hover,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.nav_link,
+.theme_link {
+  font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+}
+
+.navbar-light .navbar-nav .active-link {
+  color: rgb(0, 0, 0, 0.3);
+}
+/* navbar brand name */
 .navbar-brand {
   padding: 0px;
   letter-spacing: 1px;
 }
+
 .nav-name {
   font-size: clamp(1.25rem, 1.9887vw + 0.72rem, 2rem);
 }
 /* 18px, 1.9887vw + .72,32px */
 
+/* navbar links */
+.nav {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: max(90%, 60rem);
+  padding-inline: 1rem;
+}
+
 .nav_link,
-.nav_link a {
+.theme_link,
+.theme_link a {
   font-weight: 500;
 }
 
@@ -24,74 +60,111 @@
   line-height: 40px;
   letter-spacing: 1px;
   /* font-size: clamp(0.875rem, 0.4vw + 0.8rem, 1rem); */
-  font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
   text-decoration: none;
-  /* padding: 0.5rem; */
+  padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 /* 0.875rem, 0.284vw + 0.8rem, 1rem */
-.nav {
-  display: flex;
-  flex-wrap: inherit;
-  align-items: center;
-  justify-content: space-between;
-  width: min(100%, 87.5rem);
-  /* width: 100%; */
-  padding-inline: clamp(0px, 2vw, 3rem);
+
+.theme_link .dropdown-menu.show {
+  left: -2.3rem;
+  text-align: center;
+  width: 5rem;
+  padding: 0.2rem;
 }
 
-/* .dropdown_item {
-  position: relative;
+.theme_link {
+  line-height: 40px;
 }
 
-.dropdown_menu {
+.theme_dropdown_option {
+  font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+}
+.navbar-nav .dropdown-menu {
   position: absolute;
-  top: 58px;
-  width: 8rem;
-  transform: translateX(-50%);
-  background-color: rgb(33, 35, 36);
-  /* border: ; 
+}
+.dropdown-item {
+  padding-inline: 0px;
   border-radius: 0.2rem;
-  padding: 0.25rem;
-  overflow: hidden;
 }
 
-.dropdown_menu::before {
-  content: "";
+@media screen and (max-width: 768px) {
+  .theme_link .dropdown-menu.show {
+    margin-inline: auto;
+    left: 0px;
+    right: 4rem;
+  }
+}
+
+.user_dropdown .dropdown-menu.show {
+  left: -10rem;
+
+  text-align: center;
+  width: 15rem;
+  padding: 0.2rem;
+}
+
+#user_card .dropdown-menu {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  /* border: 10px solid; */
-/* border-color: transparent transparent white transparent; 
-  transform: rotate(55deg);
-  z-index: 2000;
 }
 
-.dropdown_item {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  /* border-radius: ; */
-/* transition: ; 
-  padding: 0.5rem;
-} */
-/* .dropdown .btn-primary {
-  background-color: transparent;
-  border: none;
+.user_link .profile-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  /* margin-right: 10px; */
 }
 
-.dropdown-toggle::after {
-  /* border: none; 
+.dropdown_img .profile-img {
+  height: 6rem;
+  width: 6em;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+
+  /* padding-block: 1rem; */
 }
 
-.dropdown .btn-primary:active,
-.show > .btn-primary.dropdown-toggle,
-.show > .btn-primary.dropdown-toggle:focus {
-  background-color: none;
-} */
+.dark .dropdown_img .profile-img:hover {
+  box-shadow: 0px 0px 10px 6px black;
+}
+.light .dropdown_img .profile-img:hover {
+  box-shadow: 3px 3px 8px 0px rgb(0, 0, 0, 0.7);
+}
+
+.user_name {
+  font-size: clamp(1rem, 0.56vw + 0.8rem, 1.125rem);
+  font-weight: 400;
+}
+
+.dark .user_name {
+  color: rgba(255, 255, 255, 0.9);
+}
+.light .user_name {
+  color: rgba(0, 0, 0, 0.9);
+}
+.btn_container button {
+  padding: 0.4em 0.8em;
+  font-weight: 300;
+  font-size: clamp(0.75rem, 0.284vw + 0.69rem, 0.875rem);
+  /* 12px,,14px */
+  /* border: 1px solid rgb(255, 0, 0); */
+  border-radius: 2px;
+  /* color: rgb(255, 0, 0); */
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .user_dropdown .dropdown-menu.show {
+    width: min(100%, 15rem);
+    margin-inline: auto;
+    left: 0px;
+    right: 110px;
+  }
+}
 
 /* https://i.ibb.co/8rZ18cX/camera-and-shadow.jpg
 https://i.ibb.co/SxrRFS3/camera-g319964f60-1280.jpg */

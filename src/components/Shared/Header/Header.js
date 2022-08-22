@@ -1,16 +1,16 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import useTheme from "../../../Hooks/useTheme";
 import DarkMode from "../DarkMode/DarkMode";
 import User from "../User/User";
 import "./Header.css";
 
-const style = {
-  // lineHeight: "40px",
-  padding: ".5rem",
-};
+// const style = {
+//   // lineHeight: "40px",
+//   // padding: ".5rem",
+// };
 const Header = () => {
   const { user } = useAuth();
   const { darkMode } = useTheme();
@@ -35,32 +35,32 @@ const Header = () => {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end collapse">
           <Nav>
-            <Link
-              style={{ ...style, marginRight: "10px" }}
+            <NavLink
               className="nav_link"
+              activeClassName="active-link"
               to="/home"
             >
               Home
-            </Link>
-            <Link
-              style={{ ...style, marginRight: "10px" }}
-              className="nav_link"
+            </NavLink>
+            <NavLink
+              className="nav_link "
+              activeClassName="active-link"
               to="/explore"
             >
               Explore
-            </Link>
+            </NavLink>
             {/* <Link style={{ ...style, marginRight: "10px" }} to="/purchase">
               Purchase
             </Link> */}
 
             {user?.email && (
-              <Link
-                style={{ ...style, marginRight: "10px" }}
+              <NavLink
                 className="nav_link"
+                activeClassName="active-link"
                 to="/dashboard"
               >
                 Dashboard
-              </Link>
+              </NavLink>
             )}
 
             <DarkMode></DarkMode>
@@ -99,9 +99,13 @@ const Header = () => {
             {user?.email ? (
               <User></User>
             ) : (
-              <Link style={{ ...style }} className="nav_link" to="/login">
+              <NavLink
+                className="nav_link"
+                activeClassName="active-link"
+                to="/login"
+              >
                 Login
-              </Link>
+              </NavLink>
             )}
           </Nav>
         </Navbar.Collapse>
