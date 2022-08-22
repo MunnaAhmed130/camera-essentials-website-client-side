@@ -38,7 +38,8 @@ const Header = () => {
             <NavLink
               className="nav_link"
               activeClassName="active-link"
-              to="/home"
+              exact
+              to="/"
             >
               Home
             </NavLink>

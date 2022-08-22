@@ -1,10 +1,3 @@
-.explore-products {
-  width: 100%;
-  display: flex;
-  margin: auto;
-  padding: 10px 100px;
-}
-
 /* 30px, 2.5568vw + 1.36rem ,48px */
 @media screen and (max-width: 500px) {
   /* .explore-products-header {

@@ -36,7 +36,7 @@ const Products = () => {
       {products.length ? (
         <Row
           xs={1}
-          sm={1}
+          sm={2}
           md={2}
           lg={2}
           xl={3}

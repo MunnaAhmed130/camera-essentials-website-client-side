@@ -71,6 +71,10 @@ button {
 .mid-banner {
   padding-block: 5rem;
   padding-inline: 1rem;
+  background-image: url("https://i.ibb.co/8rZ18cX/camera-and-shadow.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 .iframe-container {

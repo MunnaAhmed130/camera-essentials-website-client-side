@@ -32,8 +32,8 @@
 }
 
 .card-name {
-  font-size: 1.3em;
-  font-weight: 600;
+  font-size: clamp(1rem, 0.568vw + 0.886rem, 1.25rem);
+  font-weight: 400;
 }
 
 .dynamic-route {
@@ -52,17 +52,18 @@
 
 @media screen and (max-width: 800px) {
   .card-img {
-    width: 100%;
+    /* width: 100%; */
   }
 }
 
 /* products */
 
-.demo-products {
-  width: 100%;
+.demo-products,
+.explore-products {
+  width: 90%;
   display: flex;
   margin: auto;
-  padding: 10px 100px;
+  /* padding: 10px 100px; */
 }
 
 /* {
@@ -118,52 +119,6 @@
   background-color: #26292d; 
   background-color: rgb(33, 37, 41);
 } */
-
-/* dark header */
-
-.dark .navbar-nav a {
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.dark .navbar-nav a:hover {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.dark .navbar-nav a:focus {
-  color: rgba(255, 255, 255, 1);
-}
-
-.dark .navbar {
-  background-color: rgb(29, 31, 34);
-}
-
-.dark .dropdown-menu {
-  /* background-color: #26292d; */
-  background-color: rgb(33, 35, 36);
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.dark .navbar-nav .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-  color: rgba(0, 0, 0);
-}
-
-.dark .navbar-nav .nav_dropdown_item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* .dark .newsletter {
-  color: rgba(0, 0, 0, 0.8);
-} */
-
-/* .dark .MuiRating-iconEmpty {
-  outline: solid white;
-} */
-
-/* dark banner */
-.dark .banner-btn {
-  color: rgba(0, 0, 0, 0.8);
-}
 
 /* dark product */
 

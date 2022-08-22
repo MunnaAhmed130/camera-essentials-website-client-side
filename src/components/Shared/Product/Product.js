@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import "./Product.css";
 
 const Product = ({ product }) => {
-  const { name, img, description, _id, price } = product;
+  const { name, img, _id, price } = product;
   if (!product.length) {
     <CircularProgress />;
   }
-  const productInfo = description.slice(0, 120);
+  // const productInfo = description.slice(0, 120);
   return (
-    <Col className="px-0">
-      <Card className="m-3 card product">
+    <Col className="">
+      <Card className="my-3 card product">
         <Card.Img variant="top" src={img} className="card-img" />
         <Card.Body>
           <Card.Title className="card-name">{name}</Card.Title>
