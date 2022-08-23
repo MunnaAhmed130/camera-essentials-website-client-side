@@ -4,10 +4,6 @@
   /* font-family: "Cantarell"; */
 }
 
-.btn-primary:focus {
-  border: 1px solid black;
-}
-
 @media screen and (min-width: 400) {
   .dark .footer-top {
     text-align: center;
@@ -16,6 +12,17 @@
   .top-footer {
     text-align: center;
   }
+}
+
+/* bootstrap btn style */
+.btn-primary:focus {
+  border: 1px solid black;
+}
+
+.dynamic-route {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 /* header */
@@ -36,12 +43,6 @@
   font-weight: 400;
 }
 
-.dynamic-route {
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
 .card-description {
   /* max-width: 400px ; */
   margin-inline: auto;
@@ -50,11 +51,11 @@
   /* color: rgb(41, 38, 49); */
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .card-img {
-    /* width: 100%; */
+    /* width: 100%; *
   }
-}
+} */
 
 /* products */
 

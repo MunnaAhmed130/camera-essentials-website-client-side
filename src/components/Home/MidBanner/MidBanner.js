@@ -1,13 +1,22 @@
 import React from "react";
+import useTheme from "../../../Hooks/useTheme";
 
 const MidBanner = () => {
+  const { darkMode } = useTheme();
   let viewportWidth;
   // let setViewportWidth = function () {
   viewportWidth = window.innerWidth;
   return (
-    <div className="mid-banner">
-      <p>post vlogs with camera x9</p>
-      <h2>The Best Digital Camera</h2>
+    <div
+      className={`mid-banner ${
+        darkMode ? "dark-mid-banner" : "light-mid-banner"
+      }`}
+    >
+      <div className="mid-banner-info ">
+        <p className="text-uppercase">post vlogs with camera x9</p>
+        <h2>The Best Digital Camera</h2>
+      </div>
+
       <div className="iframe-container">
         <iframe
           className={`iframe ${viewportWidth > 500 ? "iframe_disable" : ""}`}
