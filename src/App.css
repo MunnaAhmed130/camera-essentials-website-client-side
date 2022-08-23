@@ -165,25 +165,11 @@
   box-shadow: 4px 4px 3px 1px black;
 }
 
-.dark .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  font-size: 1rem;
-  color: var(--footer-color);
-}
-
 /* light mode */
 
 /* light header */
 
 /* light footer */
-
-.light .footer-top {
-  color: black;
-}
-.light .footer-top a,
-.light .footer-top p {
-  color: rgba(0, 0, 0, 0.6);
-}
 
 /* .light .footer-info {
   /* font-weight: 500; *
