@@ -191,15 +191,6 @@
   box-shadow: 4px 4px 3px 1px rgb(144, 144, 144);
 }
 
-.light .footer-bottom {
-  border-top: 1px solid rgba(0, 0, 0);
-  /* color: var(--footer-color); */
-}
-
-.light .footer-bottom p {
-  color: black;
-  font-weight: 500;
-}
 .light .contacts p {
   color: black;
 }
