@@ -11,16 +11,14 @@
 .dark .navbar-nav a:focus {
   color: rgba(255, 255, 255, 1);
 }
-.light .navbar-nav a:focus {
-  color: rgba(255, 255, 255, 1);
-}
+
 .dark .navbar {
-  background-color: rgb(29, 31, 34);
+  background-color: rgb(31, 40, 52);
 }
 
 .dark .dropdown-menu {
   /* background-color: #26292d; */
-  background-color: rgb(33, 35, 36);
+  background-color: rgba(28, 36, 59, 0.8);
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -33,6 +31,44 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.navbar-dark .navbar-nav .nav-link a {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.dark .navbar .nav-name {
+  color: white;
+  opacity: 0.8;
+}
+
+/* light header  */
+
+.light .navbar-nav a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.light .navbar {
+  background-color: rgba(239, 237, 237, 0.729);
+}
+
+.navbar-light .navbar-nav a,
+.navbar-light .navbar-nav .theme_link {
+  color: rgb(0, 0, 0, 0.7);
+}
+
+.navbar-light .navbar-nav a:hover,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.light .nav-name {
+  opacity: 0.9;
+}
+
+.light .dropdown-menu {
+  /* background-color: #26292d; */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 0.8); */
+}
 /* dark banner */
 
 .dark .banner-btn {
@@ -63,6 +99,7 @@
 
 .nav-name {
   font-size: clamp(1.25rem, 1.9887vw + 0.72rem, 2rem);
+  /* opacity: 0.85; */
 }
 
 .user_name {
@@ -83,6 +120,7 @@
 /* navbar brand name */
 .navbar-brand {
   padding: 0px;
+  font-weight: 500;
 }
 
 .navbar-brand,
@@ -115,23 +153,6 @@
 .theme_link {
   line-height: 40px;
   padding-right: 1em;
-}
-
-.navbar-dark .navbar-nav .nav-link a {
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.light .navbar {
-  background-color: rgba(239, 237, 237, 0.729);
-}
-
-.navbar-light .navbar-nav a {
-  color: rgb(0, 0, 0, 0.6);
-}
-
-.navbar-light .navbar-nav a:hover,
-.navbar-light .navbar-nav .nav-link:hover {
-  color: rgba(0, 0, 0, 0.9);
 }
 
 /* dropdown  */
@@ -224,7 +245,7 @@
 
 /* media query */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .theme_link .dropdown-menu.show {
     margin-inline: auto;
     left: 0px;

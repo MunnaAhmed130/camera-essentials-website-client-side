@@ -78,7 +78,7 @@
 .products .products-header,
 .explore .products-header {
   font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
-  font-weight: 400;
+  /* font-weight: 500; */
   padding-block: 0.5em;
   margin-top: 1rem;
   /* margin-bottom: 0.5em; */
@@ -104,7 +104,11 @@
 /* dark mode */
 
 .dark {
-  background-color: rgba(33, 37, 41, 0.99);
+  /* background-color: rgba(33, 37, 41, 0.99); */
+  /* background-color: rgb(31, 41, 52); */
+  background-color: #161f2b;
+  /* background-color: rgba(13, 28, 48, 0.96); */
+  /* background-color: rgba(24, 39, 67, 0.613); */
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -125,7 +129,7 @@
 
 .dark .product {
   color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(33, 37, 41, 0.537);
+  background-color: rgba(35, 42, 49, 0.75);
 }
 
 .dark .products-header {
@@ -139,58 +143,4 @@
 
 .dark .single-review {
   background-color: rgba(33, 37, 41, 0.99);
-}
-
-/* footer */
-.dark .footer-top {
-  color: white;
-}
-
-.dark .footer-top a,
-.dark .footer-top p {
-  color: var(--footer-color);
-}
-.dark .links a:hover,
-.dark .contacts p:hover {
-  color: rgba(255, 255, 255, 1);
-  /* font-weight: 500; */
-}
-.dark .icon-links a {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-}
-.dark .icon-links a:hover {
-  background-color: white;
-  /* color: black; */
-  box-shadow: 4px 4px 3px 1px black;
-}
-
-/* light mode */
-
-/* light header */
-
-/* light footer */
-
-/* .light .footer-info {
-  /* font-weight: 500; *
-} */
-.light .links a:hover,
-.light .contacts p:hover {
-  color: rgb(0, 0, 0);
-  /* font-weight: 500; */
-}
-
-.light .icon-links a {
-  border: 1px solid rgba(73, 73, 73, 0.905);
-  color: rgb(62, 62, 62);
-}
-.light .icon-links a:hover {
-  background-color: rgba(226, 226, 226, 0.7);
-  border: 1px solid rgb(255, 255, 255);
-  /* color: black; */
-  box-shadow: 4px 4px 3px 1px rgb(144, 144, 144);
-}
-
-.light .contacts p {
-  color: black;
 }

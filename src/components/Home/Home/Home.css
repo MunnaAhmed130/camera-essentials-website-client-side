@@ -97,6 +97,7 @@ button {
 .dark-mid-banner,
 .light-mid-banner {
   background-image: url("https://i.ibb.co/8rZ18cX/camera-and-shadow.jpg");
+  background-size: cover;
 }
 
 .light-mid-banner:after {
@@ -132,7 +133,11 @@ button {
 .iframe-container {
   position: relative;
   width: min(100%, 1200px);
-  height: 510px;
+  height: clamp(7.8125rem, 43.636vw + 0.91477rem, 31.8125rem);
+  /* height: 125px; */
+  /*200px / 12.5rem , 35.1136vw + 5.477rem , 509px / 31.8125rem  */
+  /* 150px/ 9.375rem, 40.7954vw + 1.2159rem, 31.8125rem */
+  /* 125px/7.8125rem, 43.636vw - .91477rem,31.8125rem */
 
   margin-inline: auto;
   overflow: hidden;
@@ -152,7 +157,7 @@ button {
   /* height: max(100%, 630px); */
   height: calc(100% + 120px);
   /* height: 630px; */
-  margin-top: -59px;
+  margin-top: -60px;
   border: 0;
   /* pointer-events: none; */
 }
@@ -164,16 +169,18 @@ button {
 /* reviews  */
 
 /* media query  */
-@media screen and (max-width: 519px) {
+/* @media screen and (max-width: 519px) {
   .iframe-container {
     width: 100%;
-    height: 170px;
+    height: 10rem;
+    /* 10.625 
   }
-}
+} */
 @media screen and ((min-width: 520px) and (max-width: 700px)) {
   .iframe-container {
     /* width: 100%; */
-    height: 270px;
+    /* height: 17rem; */
+    /* 16.875 */
   }
 }
 @media screen and (max-width: 500px) {
@@ -197,14 +204,15 @@ button {
 
   .iframe-container {
     width: 100%;
-    height: 200px;
+    /* height: 200px; */
+    /* 12.5 */
   }
 }
 
 @media screen and (min-width: 700px) and (max-width: 992px) {
   .iframe-container {
     /* width: 100%; */
-    height: 400px;
+    /* height: 400px; */
   }
 }
 

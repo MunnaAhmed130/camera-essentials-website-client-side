@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import useTheme from "../../../Hooks/useTheme";
 import DarkMode from "../DarkMode/DarkMode";

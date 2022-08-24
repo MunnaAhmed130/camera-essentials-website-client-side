@@ -21,7 +21,7 @@ const MidBanner = () => {
         <iframe
           className={`iframe ${viewportWidth > 500 ? "iframe_disable" : ""}`}
           type="text/html"
-          src="https://www.youtube-nocookie.com/embed/CPxdxcnMPHA?playlist=CPxdxcnMPHA&amp;start=6&amp;end=47&amp;loop=1&amp;autoplay=1&amp;mute=1&amp;autopause=0&amp;controls=0&amp;rel=0&amp;playsinline=1&amp;vq=hd1080&amp;iv_load_policy=3&amp;origin=http://localhost:3000/&amp;enablejsapi=1&amp;modestbranding=1"
+          src="https://www.youtube-nocookie.com/embed/CPxdxcnMPHA?playlist=CPxdxcnMPHA,9JdigMAsi1A&amp;start=6&amp;end=47&amp;loop=1&amp;autoplay=1&amp;mute=1&amp;autopause=0&amp;controls=0&amp;rel=0&amp;playsinline=1&amp;vq=hd1080&amp;iv_load_policy=3&amp;origin=http://localhost:3000/&amp;enablejsapi=1&amp;modestbranding=1"
           title="video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full"
