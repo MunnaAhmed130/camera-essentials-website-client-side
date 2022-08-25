@@ -4,6 +4,9 @@
   /* font-family: "Cantarell"; */
 }
 
+.branding-img {
+  display: none;
+}
 @media screen and (min-width: 400) {
   .dark .footer-top {
     text-align: center;

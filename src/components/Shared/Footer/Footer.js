@@ -50,7 +50,7 @@ const Footer = () => {
                       rel="noopener noreferrer"
                       className="facebook"
                     >
-                      <FontAwesomeIcon icon={faFacebookF} bounce />
+                      <FontAwesomeIcon icon={faFacebookF} />
                     </a>
                     <a
                       href="https://www.twitter.com"

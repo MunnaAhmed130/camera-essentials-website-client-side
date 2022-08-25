@@ -119,6 +119,11 @@ button {
   z-index: 1;
 }
 
+.react_youtube {
+  position: relative;
+  z-index: 1;
+}
+
 .mid-banner-info p {
   letter-spacing: 3px;
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
