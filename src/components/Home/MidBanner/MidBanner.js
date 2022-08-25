@@ -49,26 +49,26 @@ const MidBanner = () => {
       autoplay: "1",
       playsinline: "1",
       showinfo: "0",
-      // loop: 1,
+      loop: "1",
       mute: "1",
       autopause: "0",
-      // controls: 0,
+      controls: "0",
       rel: "0",
       // start: startSeconds_arr[i],
       // end: endSeconds_arr[i],
       start: section.start,
       end: section.end,
       cc_load_policy: "0",
-      // iv_load_policy: 3,
+      iv_load_policy: "3",
       modestbranding: "1",
-      // autohide: 1,
+      autohide: "1",
       // origin: "https://www.youtube.com",
       //   origin: "http://localhost:3000",
     },
   };
   const _onReady = (e) => {
     player = e.target;
-    player.j.i.playerVars.seekTo(10);
+    // player.j.i.playerVars.seekTo(10);
     // console.log(player.j.i.playerVars);
     console.log(player);
     // player.seekTo(section.start);
@@ -128,7 +128,8 @@ const MidBanner = () => {
         ></iframe> */}
 
         <YouTube
-          className={`iframe ${viewportWidth > 500 ? "iframe_disable" : ""}`}
+          // className={`iframe ${viewportWidth > 500 ? "iframe_disable" : ""}`}
+          className="iframe"
           // defer
           videoId={videoId}
           // videoId="CPxdxcnMPHA"
