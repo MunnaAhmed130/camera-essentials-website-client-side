@@ -6,41 +6,19 @@ import useTheme from "../../../Hooks/useTheme";
 
 const MidBanner = () => {
   const { darkMode } = useTheme();
-  let viewportWidth;
-  // let setViewportWidth = function () {
-  viewportWidth = window.innerWidth;
-  let i = 0;
-  let videoId_arr = ["CPxdxcnMPHA", "9JdigMAsi1A", "WeG8_wg9RIA"];
-  // let startSeconds_arr = [6, 6, 6];
-  // let endSeconds_arr = [8, 8, 8];
+  // let viewportWidth;
+  // viewportWidth = window.innerWidth;
+  var i = 0;
+  let videoId_arr = ["CPxdxcnMPHA", "9JdigMAsi1A"];
+  let videoId = "CPxdxcnMPHA";
+  let startSeconds_arr = [6, 6, 6];
+  let endSeconds_arr = [47, 48, 8];
   let section = {
     start: 6,
     end: 47,
   };
   var player;
-  // function onYouTubeIframeAPIReady() {
-  //   player = new YouTube.Player(
-  //     'player',
-  //     {
 
-  //       height: '360',
-  //       width: '640',
-  //       videoId: 'CPxdxcnMPHA',
-  //       playerVars:{
-  //         autoplay: '1',
-  //         mute: '1'
-  //       },
-  //       events: {
-  //         'onReady': onPlayerReady,
-  //         'onStateChange': onPlayerStateChange
-  //       }
-  //     }
-  //   );
-  // }
-
-  // const restartVideoSection = (player) => {
-  //   player.seekTo(section.start);
-  // };
   const opts = {
     height: "100%",
     width: "100%",
@@ -80,29 +58,35 @@ const MidBanner = () => {
   // console.log(YouTube.PlayerState);
   const onStateChange = (e) => {
     player = e.target;
-    // if (e.data === YouTube.PlayerState.ENDED) {
-    //   i++;
-    //   if (typeof videoId_arr[i] === "undefined") return;
-    //   player.loadVideoById({
-    //     videoId: videoId_arr[i],
-    //     startSeconds: startSeconds_arr[i],
-    //     endSeconds: endSeconds_arr[i],
-    //   });
-    // }
+
+    if (e.data === YouTube.PlayerState.ENDED) {
+      i = 0;
+      // if (typeof videoId_arr[i] === "undefined") return;
+      player.loadVideoById({
+        videoId: videoId_arr[i],
+        startSeconds: section.start,
+        endSeconds: section.end,
+      });
+    }
+
     if (e.data == YouTube.PlayerState.PLAYING) {
       let duration = section.end - section.start;
-      // setTimeout(restartVideoSection(player), duration * 1000);
       setTimeout(restartVideo, duration * 1000);
-      // setTimeout((player) => {
-      //   player.seekTo(section.start);
-      // }, duration * 1000);
     }
-    console.log(player.getPlayerState());
+    // console.log(player.getPlayerState());
   };
   const restartVideo = () => {
-    player.seekTo(section.start);
+    ++i;
+    if (typeof videoId_arr[i] === "undefined") return 0;
+
+    player.loadVideoById({
+      videoId: videoId_arr[i],
+      startSeconds: startSeconds_arr[i],
+      endSeconds: endSeconds_arr[i],
+    });
+    // player.seekTo(section.start);
   };
-  let videoId = videoId_arr[i];
+  // let videoId = videoId_arr[i];
   // console.log(videoId);
   return (
     <div
