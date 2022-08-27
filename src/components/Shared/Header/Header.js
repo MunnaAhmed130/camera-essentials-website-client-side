@@ -30,7 +30,7 @@ const Header = () => {
       className=" justify-content-center"
     >
       {/* This div is a customizable container */}
-      <div className="nav">
+      <div className="nav mx-0">
         <Navbar.Brand className="nav-name">Camera Essentials</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end collapse">

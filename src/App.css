@@ -7,6 +7,7 @@
 .branding-img {
   display: none;
 }
+
 @media screen and (min-width: 400) {
   .dark .footer-top {
     text-align: center;
@@ -37,7 +38,8 @@
   box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.266);
 }
 .card-img {
-  width: 50%;
+  width: min(100%, 200px);
+  height: min(auto, 200px);
   margin: auto;
 }
 
@@ -61,6 +63,10 @@
 } */
 
 /* products */
+.products {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
 
 .demo-products,
 .explore-products {

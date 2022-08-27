@@ -110,3 +110,9 @@
 
   padding-top: 1rem;
 }
+
+@media screen and (max-width: 241px) {
+  .newsletter input {
+    width: 100%;
+  }
+}

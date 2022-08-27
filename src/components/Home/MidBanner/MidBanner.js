@@ -55,7 +55,7 @@ const MidBanner = () => {
   // console.log(YouTube.PlayerState);
   const onStateChange = (e) => {
     player = e.target;
-
+    // eslint-disable-next-line eqeqeq
     if (e.data == YouTube.PlayerState.PLAYING) {
       let duration = endSeconds_arr[i] - section.start;
       setTimeout(restartVideo, duration * 1000);
