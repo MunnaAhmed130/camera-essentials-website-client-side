@@ -1,10 +1,10 @@
-import { CircularProgress } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import useTheme from "../../../Hooks/useTheme";
 import Footer from "../../Shared/Footer/Footer";
 import Header from "../../Shared/Header/Header";
 import Product from "../../Shared/Product/Product";
+import SkeletonProduct from "../../Shared/Skeletons/SkeletonProduct";
 // import ExploreProducts from "../ExploreProducts/ExploreProducts";
 import "./Explore.css";
 
@@ -20,22 +20,11 @@ const Explore = () => {
   return (
     <div className={darkMode ? "dark" : "light"}>
       <Header />
-      <div className="explore">
+      <div className="explore ">
         <h2 className="products-header">
           Explore the World of Fashionable Cameras
         </h2>
-        {/* {products.length ? (
-          <Row xs={1} sm={1} md={2} lg={2} xl={3} className="explore-products">
-            {products.map((product) => (
-              <ExploreProducts
-                key={product._id}
-                product={product}
-              ></ExploreProducts>
-            ))}
-          </Row>
-        ) : (
-          <CircularProgress />
-        )} */}
+
         {products.length ? (
           <Row
             xs={1}
@@ -51,7 +40,17 @@ const Explore = () => {
             ))}
           </Row>
         ) : (
-          <CircularProgress />
+          <Row
+            xxl={4}
+            xl={3}
+            lg={3}
+            md={2}
+            sm={2}
+            xs={1}
+            className="demo-products"
+          >
+            {Array(8).fill(<SkeletonProduct></SkeletonProduct>)}
+          </Row>
         )}
       </div>
       <Footer />
