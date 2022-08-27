@@ -1,5 +1,6 @@
 import React from "react";
 import useTheme from "../../../Hooks/useTheme";
+import Shimmer from "./Shimmer";
 import SkeletonElements from "./SkeletonElements";
 
 const SkeletonProduct = () => {
@@ -11,6 +12,7 @@ const SkeletonProduct = () => {
         <SkeletonElements type="title" />
         <SkeletonElements type="text" />
         <SkeletonElements type="btn" />
+        <Shimmer></Shimmer>
       </div>
     </div>
   );

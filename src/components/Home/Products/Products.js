@@ -5,7 +5,7 @@ import SkeletonProduct from "../../Shared/Skeletons/SkeletonProduct";
 import "./Products.css";
 
 const Products = () => {
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState([]);
   let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   let limit;
   // let count;
@@ -31,7 +31,7 @@ const Products = () => {
       <h2 className="products-header">
         Explore The World Of Fashionable Cameras
       </h2>
-      {products && (
+      {products.length ? (
         <Row
           xs={1}
           sm={2}
@@ -45,13 +45,17 @@ const Products = () => {
             <Product key={product.name} product={product}></Product>
           ))}
         </Row>
-      )}
-
-      {!products && (
-        <Row xxl={4} xl={3} lg={3} md={2} sm={2} className="demo-products">
-          {[1, 2, 3, 4, 5, 6].map((n) => (
-            <SkeletonProduct key={n} />
-          ))}
+      ) : (
+        <Row
+          xxl={4}
+          xl={3}
+          lg={3}
+          md={2}
+          sm={2}
+          xs={1}
+          className="demo-products"
+        >
+          {Array(limit).fill(<SkeletonProduct></SkeletonProduct>)}
         </Row>
       )}
     </div>
