@@ -1,11 +1,15 @@
-import { Button } from "@mui/material";
+import { Button, Rating } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Product.css";
 
 const Product = ({ product }) => {
-  const { name, img, _id, price } = product;
+  const { name, img, _id, rating, discount, price } = product;
+  const [value, setValue] = React.useState(rating);
+  // const discount = -20;
+
   // if (!product.length) {
   //   <CircularProgress />;
   // }
@@ -14,11 +18,24 @@ const Product = ({ product }) => {
     <Col className="">
       <Card className="my-3 card product">
         {/* {img.length && ( */}
-        <Card.Img variant="top" src={img} className="card-img" />
+        <div className="card_img_container">
+          <Card.Img variant="top" src={img} className="card-img" />
+          {discount && <span className="discount_ribbon">{discount}%</span>}
+        </div>
+
         {/* )} */}
         <Card.Body>
           <Card.Title className="card-name">{name}</Card.Title>
           {/* <Card.Text className="card-description">{productInfo}</Card.Text> */}
+          <Rating
+            className="rating"
+            // style={{ borderColor: "white" }}
+            name="read-only"
+            value={value}
+            precision={0.1}
+            emptyIcon={<StarIcon className="empty_rating" />}
+            readOnly
+          />
           <h6>Price: &#x24;{price}</h6>
           <Link className="dynamic-route" to={`/purchase/${_id}`}>
             <Button size="large" variant="contained" className="buy-btn">

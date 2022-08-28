@@ -93,11 +93,42 @@
   margin-top: 1rem;
   /* margin-bottom: 0.5em; */
 }
-/* .products-header {
-  font-size: clamp();
-  padding-top: 0.5em;
-  margin-bottom: 0;
-} */
+
+.products .card_img_container,
+.explore .card_img_container {
+  width: min(100%, 200px);
+  height: min(auto, 200px);
+  margin-inline: auto;
+  position: relative;
+}
+
+.products .card_img_container .discount_ribbon,
+.explore .card_img_container .discount_ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: orangered;
+  color: white;
+  font-size: 0.8rem;
+  padding-block: 0.2rem;
+  padding-inline: 0.5rem;
+  border-radius: 2px;
+}
+.products .rating,
+.explore .rating {
+  color: rgb(255, 188, 65);
+}
+.products .rating,
+.products .empty_rating {
+  font-size: 1.3rem;
+}
+
+.light .products .product .empty_rating {
+  color: rgba(200, 200, 200, 0.609);
+}
+.dark .products .product .empty_rating {
+  color: rgba(255, 194, 133, 0.609);
+}
 
 @media screen and (max-width: 500px) {
   /* .products-header {

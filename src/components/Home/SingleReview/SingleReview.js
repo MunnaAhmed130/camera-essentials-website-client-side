@@ -13,7 +13,7 @@ const SingleReview = ({ review }) => {
         <Col>
           <div className="reviewer">
             <h3>{name}</h3>
-            {img && <img className="review-img" src={img} />}
+            {img && <img className="review-img" src={img} alt="reviewer img" />}
             <br />
           </div>
           <h4>{profession}</h4>
