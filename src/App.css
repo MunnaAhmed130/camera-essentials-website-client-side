@@ -19,9 +19,9 @@
 }
 
 /* bootstrap btn style */
-.btn-primary:focus {
+/* .btn-primary:focus {
   border: 1px solid black;
-}
+} */
 
 .dynamic-route {
   text-decoration: none;
@@ -29,6 +29,13 @@
   margin-bottom: 10px;
 }
 
+.dynamic-route button {
+  background-color: rgba(21, 21, 21, 0.904);
+}
+
+.dynamic-route button:hover {
+  background-color: black;
+}
 /* header */
 
 /* product */
@@ -56,6 +63,10 @@
   /* color: rgb(41, 38, 49); */
 }
 
+.card_price {
+  font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  font-weight: 400;
+}
 /* @media screen and (max-width: 800px) {
   .card-img {
     /* width: 100%; *
@@ -94,16 +105,18 @@
   /* margin-bottom: 0.5em; */
 }
 
-.products .card_img_container,
-.explore .card_img_container {
+.product .card_img_container {
   width: min(100%, 200px);
   height: min(auto, 200px);
   margin-inline: auto;
   position: relative;
 }
 
-.products .card_img_container .discount_ribbon,
-.explore .card_img_container .discount_ribbon {
+.product .delete-text {
+  color: rgb(181, 181, 181);
+}
+
+.product .card_img_container .discount_ribbon {
   position: absolute;
   top: 0;
   right: 0;
@@ -114,20 +127,22 @@
   padding-inline: 0.5rem;
   border-radius: 2px;
 }
-.products .rating,
-.explore .rating {
+
+.product .rating {
   color: rgb(255, 188, 65);
 }
-.products .rating,
-.products .empty_rating {
-  font-size: 1.3rem;
+
+.product .rating,
+.product .empty_rating {
+  font-size: 1.2rem;
 }
 
-.light .products .product .empty_rating {
-  color: rgba(200, 200, 200, 0.609);
+.light .product .empty_rating {
+  color: rgba(200, 200, 200, 0.5);
 }
-.dark .products .product .empty_rating {
-  color: rgba(255, 194, 133, 0.609);
+
+.dark .product .empty_rating {
+  color: rgba(255, 194, 133, 0.45);
 }
 
 @media screen and (max-width: 500px) {
