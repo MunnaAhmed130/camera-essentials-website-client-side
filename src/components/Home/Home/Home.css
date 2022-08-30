@@ -38,7 +38,7 @@ button {
 .banner {
   /* height: 94vh;
   max-height: 800px; */
-  height: min(94vh, 53.125rem);
+  height: min(90vh, 53.125rem);
   object-fit: cover;
   object-position: center;
 }

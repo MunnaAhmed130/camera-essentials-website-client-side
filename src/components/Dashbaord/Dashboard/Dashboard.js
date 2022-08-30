@@ -1,11 +1,11 @@
 import React from "react";
 import {
   AppBar,
+  Button,
   CssBaseline,
   Divider,
   Drawer,
   IconButton,
-  Button,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -22,10 +22,12 @@ import useAuth from "../../../Hooks/useAuth";
 import Pay from "../../User/Pay/Pay";
 import Review from "../../User/Review/Review";
 import "./Dashboard.css";
+import useTheme from "../../../Hooks/useTheme";
 
 const drawerWidth = 240;
 
 const Dashboard = (props) => {
+  const { darkMode } = useTheme();
   const { window } = props;
   const { admin, logOut } = useAuth();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -36,7 +38,7 @@ const Dashboard = (props) => {
   };
 
   const drawer = (
-    <div>
+    <div className={`${darkMode ? "dark" : "light"}`}>
       <Toolbar />
       <Divider />
       <div className="side-links">
@@ -58,7 +60,7 @@ const Dashboard = (props) => {
               <Link to={`${url}/makeAdmin`}>Make Admin</Link>
             </Box>
           )} */}
-          <Box>
+          <Box className="dashboard_link">
             <Link to={`${url}/allOrders`}>All Orders</Link> <br />
             <Link to={`${url}/addAProduct`}>Add A Product</Link> <br />
             <Link to={`${url}/manageProducts`}>Manage Products</Link> <br />
@@ -79,11 +81,12 @@ const Dashboard = (props) => {
   const container =
     window !== undefined ? () => window().document.body : undefined;
   return (
-    <div>
-      <Box sx={{ display: "flex" }}>
+    <div className={darkMode ? "dark" : "light"}>
+      <Box className="" sx={{ display: "flex" }}>
         <CssBaseline />
         <AppBar
           position="fixed"
+          className="appbar"
           sx={{
             width: { sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },

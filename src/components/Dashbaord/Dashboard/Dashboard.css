@@ -1,14 +1,24 @@
-.side-links a{
-    display: inline-block;
-    font-size: 1.1em;
-    font-weight: 500;
-    text-decoration: none;
-    margin: 5px 0px ;
-   
+.side-links a {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 5px 0px;
+  color: black;
 }
 
-.side-links{
- margin-top: 2em;
- margin-left: 3em;
- text-align: left;
+.dark .side-links a {
+  color: white;
+}
+
+.dark .appbar {
+  background-color: rgba(35, 42, 49, 0.75);
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.side-links {
+  margin-top: 2em;
+  margin-left: 3em;
+  text-align: left;
 }

@@ -17,12 +17,14 @@ const Product = ({ product }) => {
   // }
   // const productInfo = description.slice(0, 120);
   return (
-    <Col className="">
+    <Col className="card_col">
       <Card className="my-3 card product">
         {/* {img.length && ( */}
         <div className="card_img_container">
-          <Card.Img variant="top" src={img} className="card-img" />
-          {discount && <span className="discount_ribbon">- {discount}%</span>}
+          <Link className="img_route" to={`/purchase/${_id}`}>
+            <Card.Img variant="top" src={img} className="card-img" />
+            {discount && <span className="discount_ribbon">- {discount}%</span>}
+          </Link>
         </div>
 
         {/* )} */}

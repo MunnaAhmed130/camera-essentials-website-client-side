@@ -23,14 +23,24 @@
   border: 1px solid black;
 } */
 
-.dynamic-route {
+.dynamic-route,
+.card_route {
   text-decoration: none;
   display: inline-block;
-  margin-bottom: 10px;
+}
+
+.card_route {
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .dynamic-route button {
   background-color: rgba(21, 21, 21, 0.904);
+  margin-bottom: 10px;
+}
+
+.dark .product .dynamic-route button {
+  background-color: rgba(15, 0, 26, 0.7);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .dynamic-route button:hover {
@@ -39,10 +49,13 @@
 /* header */
 
 /* product */
-
+.card_col {
+  /* margin-inline: center; */
+}
 .card {
   border: 1px solid transparent;
   box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.266);
+  /* width: min(400px, 100%); */
 }
 .card-img {
   width: min(100%, 200px);
@@ -76,8 +89,8 @@
 /* products */
 .products,
 .explore {
-  padding-top: 40px;
-  padding-bottom: 100px;
+  padding-block: 40px;
+  /* padding-block: clamp(0.875rem, 0.284vw + 0.82rem, 1rem); */
 }
 
 .demo-products,
@@ -100,8 +113,8 @@
 .explore .products-header {
   font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
   /* font-weight: 500; */
-  padding-block: 0.5em;
-  margin-top: 1rem;
+  /* padding-block: 0.5em; */
+  margin: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
   /* margin-bottom: 0.5em; */
 }
 
@@ -116,6 +129,10 @@
   color: rgb(181, 181, 181);
 }
 
+.dark .product .delete-text {
+  color: rgba(181, 181, 181, 0.5);
+}
+
 .product .card_img_container .discount_ribbon {
   position: absolute;
   top: 0;
@@ -123,9 +140,11 @@
   background-color: orangered;
   color: white;
   font-size: 0.8rem;
-  padding-block: 0.2rem;
-  padding-inline: 0.5rem;
-  border-radius: 2px;
+
+  padding-top: 0.1em;
+  padding-bottom: 0.3em;
+  padding-inline: 0.2em;
+  border-radius: 0px 0px 0.25em 0.25em;
 }
 
 .product .rating {
