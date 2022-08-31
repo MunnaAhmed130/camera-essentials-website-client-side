@@ -7,6 +7,7 @@ import "./Product.css";
 
 const Product = ({ product }) => {
   const { name, img, _id, rating, discount, price } = product;
+
   const [value, setValue] = React.useState(rating);
   // const discount = -20;
   const discountPrice = (price * discount) / 100;

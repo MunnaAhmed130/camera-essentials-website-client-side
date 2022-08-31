@@ -50,7 +50,7 @@ const Explore = () => {
             className="demo-products"
           >
             {/* {Array(8).fill(<SkeletonProduct></SkeletonProduct>)} */}
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((n) => (
               <SkeletonProduct key={n}></SkeletonProduct>
             ))}
           </Row>

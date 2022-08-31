@@ -66,9 +66,9 @@ const Products = () => {
           className="demo-products"
         >
           {/* {Array(limit).fill(<SkeletonProduct key={limit.}></SkeletonProduct>)} */}
-          {/* {limitArray.map((n) => (
+          {limitArray.map((n) => (
             <SkeletonProduct key={n}></SkeletonProduct>
-          ))} */}
+          ))}
         </Row>
       )}
     </div>

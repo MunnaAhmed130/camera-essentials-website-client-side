@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import useAuth from "../../../Hooks/useAuth";
 import Header from "../Header/Header";
 import { useParams } from "react-router";
 import "./Purchase.css";
+import { Button, Rating } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
 import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../Footer/Footer";
 import useTheme from "../../../Hooks/useTheme";
+import PurchaseItem from "./PurchaseItem";
 
 const Purchase = () => {
   const { _id } = useParams();
@@ -15,75 +18,92 @@ const Purchase = () => {
   const [product, setProduct] = useState([]);
   const [success, setSuccess] = useState(false);
   // const [value, setValue] = React.useState(rating);
+  // useEffect(() => {
+  //   fetch(`https://limitless-reaches-30016.herokuapp.com/products/${_id}`)
+  //     .then((res) => res.json())
+  //     .then((data) => setProduct(data));
+  // }, [_id]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const url = `https://limitless-reaches-30016.herokuapp.com/products/${_id}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setProduct(data);
+    };
+    fetchData();
+  }, [_id]);
 
-  const { price, discount } = product;
-  if (discount) {
-    const discountedPrice = (price * discount) / 100;
-    console.log(discountedPrice);
-  }
-  console.log(price);
+  console.log(product);
+  const { name, price, discount, description, img, rating } = product;
+
+  const [value, setValue] = React.useState(rating);
+
+  // const value = useRef(rating);
+
+  // useEffect(() => {
+  //   setValue(rating);
+  // }, []);
+
+  // console.log(price);
+  // console.log(value);
+
   // initial Info
   const initialInfo = {
     userName: user.displayName,
     email: user.email,
     productName: product.name,
-    price2: price,
-    description: product.description,
+    // productPrice: itemPrice,
+    // description: product.description,
+    // rating: rating,
     key: product._id,
     img: product.img,
   };
+  // const [value, setValue] = React.useState(rating);
 
-  const [purchase, setPurchase] = useState(initialInfo);
-  const { userName, email, productName, price2, key, img, description } =
-    initialInfo;
-  console.log(initialInfo);
-  const [userInfo, setUserInfo] = useState({});
-  const { address, phone } = userInfo;
-  const handleOnBlur = (e) => {
-    const field = e.target.name;
-    const value = e.target.value;
-    const newInfo = { ...purchase };
-    newInfo[field] = value;
-    setPurchase(newInfo);
-    setUserInfo(newInfo);
-    // console.log(newInfo);
-  };
-  const handleSubmit = (e) => {
-    //collect data
-    const purchaseInfo = {
-      userName,
-      email,
-      productName,
-      description,
-      price2,
-      address: address,
-      phone: phone,
-      key,
-      img,
-    };
-    console.log(purchaseInfo);
-    const proceed = window.confirm("Are you sure, you want to Purchase?");
-    if (proceed) {
-      axios
-        .post(
-          "https://limitless-reaches-30016.herokuapp.com/purchases",
-          purchaseInfo
-        )
-        .then((res) => {
-          console.log(res);
-          if (res.data.insertedId) {
-            setSuccess(true);
-          }
-        });
-      e.preventDefault();
-    }
-  };
-
-  useEffect(() => {
-    fetch(`https://limitless-reaches-30016.herokuapp.com/products/${_id}`)
-      .then((res) => res.json())
-      .then((data) => setProduct(data));
-  }, [_id]);
+  // const [purchase, setPurchase] = useState(initialInfo);
+  // const { userName, email, productName, productPrice, key, img } = initialInfo;
+  // console.log(initialInfo);
+  // const [userInfo, setUserInfo] = useState({});
+  // const { address, phone } = userInfo;
+  // const handleOnBlur = (e) => {
+  //   const field = e.target.name;
+  //   const value = e.target.value;
+  //   const newInfo = { ...purchase };
+  //   newInfo[field] = value;
+  //   setPurchase(newInfo);
+  //   setUserInfo(newInfo);
+  //   // console.log(newInfo);
+  // };
+  // const handleSubmit = (e) => {
+  //   //collect data
+  //   const purchaseInfo = {
+  //     userName,
+  //     email,
+  //     productName,
+  //     // description,
+  //     productPrice,
+  //     address: address,
+  //     phone: phone,
+  //     key,
+  //     img,
+  //   };
+  //   console.log(purchaseInfo);
+  //   const proceed = window.confirm("Are you sure, you want to Purchase?");
+  //   if (proceed) {
+  //     axios
+  //       .post(
+  //         "https://limitless-reaches-30016.herokuapp.com/purchases",
+  //         purchaseInfo
+  //       )
+  //       .then((res) => {
+  //         console.log(res);
+  //         if (res.data.insertedId) {
+  //           setSuccess(true);
+  //         }
+  //       });
+  //     e.preventDefault();
+  //   }
+  // };
 
   // console.log(product.price);
   return (
@@ -91,10 +111,7 @@ const Purchase = () => {
       <Header />
       <div className="purchase_section">
         <h2 className="purchase-heading">Place Your Order</h2>
-        <img className="item-img" src={img} alt="" />
-        <h3>{productName}</h3>
-        <p>{price}</p>
-        <p>{description}</p>
+        {product.name && <PurchaseItem product={product}></PurchaseItem>}
       </div>
 
       {/* <Container>
