@@ -3,7 +3,6 @@ import axios from "axios";
 import useAuth from "../../../Hooks/useAuth";
 import Header from "../Header/Header";
 import { useParams } from "react-router";
-import { Button, Alert } from "@mui/material";
 import "./Purchase.css";
 import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../Footer/Footer";
@@ -15,13 +14,20 @@ const Purchase = () => {
   const { darkMode } = useTheme();
   const [product, setProduct] = useState([]);
   const [success, setSuccess] = useState(false);
-  const { price } = product;
+  // const [value, setValue] = React.useState(rating);
+
+  const { price, discount } = product;
+  if (discount) {
+    const discountedPrice = (price * discount) / 100;
+    console.log(discountedPrice);
+  }
+  console.log(price);
   // initial Info
   const initialInfo = {
     userName: user.displayName,
     email: user.email,
     productName: product.name,
-    price2: product.price,
+    price2: price,
     description: product.description,
     key: product._id,
     img: product.img,
@@ -40,7 +46,7 @@ const Purchase = () => {
     newInfo[field] = value;
     setPurchase(newInfo);
     setUserInfo(newInfo);
-    console.log(newInfo);
+    // console.log(newInfo);
   };
   const handleSubmit = (e) => {
     //collect data
@@ -79,12 +85,19 @@ const Purchase = () => {
       .then((data) => setProduct(data));
   }, [_id]);
 
-  console.log(product.price);
+  // console.log(product.price);
   return (
     <div className={darkMode ? "dark" : "light"}>
       <Header />
-      <h2 className="purchase-heading">Place Your Order</h2>
-      <Container>
+      <div className="purchase_section">
+        <h2 className="purchase-heading">Place Your Order</h2>
+        <img className="item-img" src={img} alt="" />
+        <h3>{productName}</h3>
+        <p>{price}</p>
+        <p>{description}</p>
+      </div>
+
+      {/* <Container>
         <Row>
           <Col md={4} sm={12} lg={6} className="purchase-img-container">
             <img className="purchase-img" src={img} alt="" />
@@ -142,7 +155,7 @@ const Purchase = () => {
             </form>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
       <Footer />
     </div>
   );

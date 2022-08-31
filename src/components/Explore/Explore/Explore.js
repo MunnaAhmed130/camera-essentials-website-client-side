@@ -49,7 +49,10 @@ const Explore = () => {
             xs={1}
             className="demo-products"
           >
-            {Array(8).fill(<SkeletonProduct></SkeletonProduct>)}
+            {/* {Array(8).fill(<SkeletonProduct></SkeletonProduct>)} */}
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
+              <SkeletonProduct key={n}></SkeletonProduct>
+            ))}
           </Row>
         )}
       </div>

@@ -26,6 +26,16 @@ const Products = () => {
       .then((data) => setProducts(data));
   }, [limit]);
   // console.log(products)
+  let limitArray = [];
+  for (let i = 1; i <= limit; ++i) {
+    limitArray.push(i);
+  }
+  // console.log(limitArray);
+  // const arr = Array(limit).fill(14);
+  // for (let a in arr) {
+  //   console.log(arr.indexOf(a));
+  // }
+  // console.log(arr);
   return (
     <div className="products">
       <h2 className="products-header">
@@ -55,7 +65,10 @@ const Products = () => {
           xs={1}
           className="demo-products"
         >
-          {Array(limit).fill(<SkeletonProduct></SkeletonProduct>)}
+          {/* {Array(limit).fill(<SkeletonProduct key={limit.}></SkeletonProduct>)} */}
+          {/* {limitArray.map((n) => (
+            <SkeletonProduct key={n}></SkeletonProduct>
+          ))} */}
         </Row>
       )}
     </div>
