@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useAuth from "../../../Hooks/useAuth";
 import { Row, Col } from "react-bootstrap";
 import { Button, Rating } from "@mui/material";
@@ -7,6 +7,7 @@ import StarIcon from "@mui/icons-material/Star";
 const PurchaseItem = ({ product }) => {
   const { user } = useAuth();
   const { price, discount, img, name, description, rating } = product;
+  const [open, setOpen] = useState(false);
   const [value, setValue] = React.useState(product.rating);
   console.log(value);
 
@@ -29,15 +30,46 @@ const PurchaseItem = ({ product }) => {
             <p>{description}</p>
             {/* {discount ? <p>{discountedPrice}</p> : <p>{itemPrice}</p>} */}
             <p>${itemPrice}</p>
-            <Rating
-              className="rating"
-              // style={{ borderColor: "white" }}
-              name="read-only"
-              value={value}
-              precision={0.1}
-              emptyIcon={<StarIcon className="empty_rating" />}
-              readOnly
-            />
+            <div
+              id="user_card"
+              className={`nav-item dropdown user_dropdown  ${open && "show"}`}
+            >
+              {/* <div className="dropdown-btn" onClick={() => setOpen(!open)}> */}
+              <div
+                // href="#"
+                id="basic-nav-dropdown"
+                className="dropdown-toggle nav-link user_link"
+                aria-expanded={open}
+                onClick={() => setOpen(!open)}
+              >
+                <Rating
+                  className="rating"
+                  // style={{ borderColor: "white" }}
+                  name="read-only"
+                  value={value}
+                  precision={0.1}
+                  emptyIcon={<StarIcon className="empty_rating" />}
+                  readOnly
+                />
+              </div>
+              {/* </div> */}
+
+              {/* {open && ( */}
+              <div className={`dropdown-menu ${open && "show"}`}>
+                <div className="dropdown_img pt-5 pb-4">
+                  <img
+                    className="profile-img "
+                    src={user.photoURL}
+                    alt="profile-pic"
+                  />
+                </div>
+                <div className="dropdown_item ">
+                  {/* <h5 className="user_name">{userName}</h5> */}
+                </div>
+              </div>
+              {/* )} */}
+            </div>
+
             <br />
             <Button variant="contained">button</Button>
           </div>
