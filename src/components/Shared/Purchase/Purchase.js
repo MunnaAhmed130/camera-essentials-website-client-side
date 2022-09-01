@@ -1,22 +1,20 @@
-import React, { useEffect, useRef, useState } from "react";
-import axios from "axios";
-import useAuth from "../../../Hooks/useAuth";
+import React, { useEffect, useState } from "react";
+// import axios from "axios";
 import Header from "../Header/Header";
 import { useParams } from "react-router";
-import "./Purchase.css";
-import { Button, Rating } from "@mui/material";
-import StarIcon from "@mui/icons-material/Star";
-import { Col, Container, Row } from "react-bootstrap";
+// import { Button, Rating } from "@mui/material";
+// import StarIcon from "@mui/icons-material/Star";
+// import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../Footer/Footer";
 import useTheme from "../../../Hooks/useTheme";
 import PurchaseItem from "./PurchaseItem";
+import "./Purchase.css";
 
 const Purchase = () => {
   const { _id } = useParams();
-  const { user } = useAuth();
   const { darkMode } = useTheme();
   const [product, setProduct] = useState([]);
-  const [success, setSuccess] = useState(false);
+  // const [success, setSuccess] = useState(false);
   // const [value, setValue] = React.useState(rating);
   // useEffect(() => {
   //   fetch(`https://limitless-reaches-30016.herokuapp.com/products/${_id}`)
@@ -34,9 +32,9 @@ const Purchase = () => {
   }, [_id]);
 
   console.log(product);
-  const { name, price, discount, description, img, rating } = product;
+  // const { name, price, discount, description, img, rating } = product;
 
-  const [value, setValue] = React.useState(rating);
+  // const [value, setValue] = React.useState(rating);
 
   // const value = useRef(rating);
 
@@ -48,16 +46,16 @@ const Purchase = () => {
   // console.log(value);
 
   // initial Info
-  const initialInfo = {
-    userName: user.displayName,
-    email: user.email,
-    productName: product.name,
-    // productPrice: itemPrice,
-    // description: product.description,
-    // rating: rating,
-    key: product._id,
-    img: product.img,
-  };
+  // const initialInfo = {
+  //   userName: user.displayName,
+  //   email: user.email,
+  //   productName: product.name,
+  //   // productPrice: itemPrice,
+  //   // description: product.description,
+  //   // rating: rating,
+  //   key: product._id,
+  //   img: product.img,
+  // };
   // const [value, setValue] = React.useState(rating);
 
   // const [purchase, setPurchase] = useState(initialInfo);
@@ -107,7 +105,7 @@ const Purchase = () => {
 
   // console.log(product.price);
   return (
-    <div className={darkMode ? "dark" : "light"}>
+    <div className={`purchase ${darkMode ? "dark" : "light"}`}>
       <Header />
       <div className="purchase_section">
         <h2 className="purchase-heading">Place Your Order</h2>

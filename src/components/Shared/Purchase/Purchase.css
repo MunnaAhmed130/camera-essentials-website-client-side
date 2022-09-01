@@ -2,6 +2,14 @@
   padding-block: 2rem;
 }
 
+.item-info {
+  text-align: left;
+}
+/* .purchase .purchase-item .rating,
+.purchase-item .empty_rating {
+  font-size: 1.2rem;
+} */
+
 .purchase-form {
   /* border: 1px solid black;     */
   padding-top: 50px;
