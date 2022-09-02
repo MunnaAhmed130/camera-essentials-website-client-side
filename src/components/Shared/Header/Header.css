@@ -19,8 +19,8 @@
 }
 
 .dark .navbar-nav .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-  color: rgba(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: rgb(13, 7, 7);
 }
 
 .dark .navbar-nav .nav_dropdown_item {

@@ -1,17 +1,47 @@
 .purchase_section {
-  padding-block: 5rem;
+  padding-block: 10rem;
 }
 
+.main_price,
+.discounted_price {
+  font-size: 1.5rem;
+  vertical-align: -0.4rem;
+}
+
+.item_title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.item_description {
+  font-size: 1.1rem;
+  width: min(45rem, 100%);
+}
 .rating_dropdown .dropdown-menu.show {
   left: -5rem;
-
   text-align: center;
   width: 15rem;
   padding: 0.2rem;
 }
 
+.rating_dropdown .dropdown-toggle::after {
+  vertical-align: 0.4rem;
+}
 .item-info {
   text-align: left;
+}
+
+.item_btn_container button {
+  margin-right: 1rem;
+  /* background-color: rgba(20, 20, 20, 0.948); */
+  background-color: #00122a;
+  padding: 0.7em 1.5em;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.item_btn_container button:hover {
+  background-color: black;
 }
 /* .purchase .purchase-item .rating,
 .purchase-item .empty_rating {

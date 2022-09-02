@@ -22,7 +22,7 @@ const Product = ({ product }) => {
       <Card className="my-3 card product">
         {/* {img.length && ( */}
         <div className="card_img_container">
-          <Link className="img_route" to={`/purchase/${_id}`}>
+          <Link className="img_route" to={`/explore_product/${_id}`}>
             <Card.Img variant="top" src={img} className="card-img" />
             {discount && <span className="discount_ribbon">- {discount}%</span>}
           </Link>
@@ -51,7 +51,7 @@ const Product = ({ product }) => {
               {viewportWidth < 300 && <br />}
             </p>
           )}
-          <Link className="dynamic-route" to={`/purchase/${_id}`}>
+          <Link className="dynamic-route" to={`/explore_product/${_id}`}>
             <Button size="large" variant="contained" className="buy-btn">
               Add To Cart
             </Button>

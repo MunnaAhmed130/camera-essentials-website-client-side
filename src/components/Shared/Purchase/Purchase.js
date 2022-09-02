@@ -9,6 +9,7 @@ import Footer from "../Footer/Footer";
 import useTheme from "../../../Hooks/useTheme";
 import PurchaseItem from "./PurchaseItem";
 import "./Purchase.css";
+import ExploreProductItem from "../../Explore/ExploreProduct/ExploreProductItem";
 
 const Purchase = () => {
   const { _id } = useParams();
@@ -109,7 +110,9 @@ const Purchase = () => {
       <Header />
       <div className="purchase_section">
         {/* <h2 className="purchase-heading">Place Your Order</h2> */}
-        {product.name && <PurchaseItem product={product}></PurchaseItem>}
+        {product.name && (
+          <ExploreProductItem product={product}></ExploreProductItem>
+        )}
       </div>
 
       {/* <Container>

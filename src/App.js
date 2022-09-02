@@ -46,6 +46,12 @@ function App() {
               <Route path="/explore">
                 <Explore />
               </Route>
+              <PrivateRoute path="/explore_product/:_id">
+                <Purchase />
+              </PrivateRoute>
+              <PrivateRoute path="/explore/product">
+                <Purchase />
+              </PrivateRoute>
               <Route path="/login">
                 <Login />
               </Route>

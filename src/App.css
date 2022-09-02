@@ -155,10 +155,12 @@
 }
 
 .product .rating,
-.product .empty_rating,
-.purchase-item .rating,
-.purchase-item .empty_rating {
+.product .empty_rating {
   font-size: 1.2rem;
+}
+.explore-item .rating,
+.explore-item .empty_rating {
+  font-size: 1.4rem;
 }
 
 .light .empty_rating {
