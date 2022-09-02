@@ -2,6 +2,14 @@
   padding-block: 5rem;
 }
 
+.rating_dropdown .dropdown-menu.show {
+  left: -5rem;
+
+  text-align: center;
+  width: 15rem;
+  padding: 0.2rem;
+}
+
 .item-info {
   text-align: left;
 }

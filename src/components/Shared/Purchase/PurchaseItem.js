@@ -19,7 +19,7 @@ const PurchaseItem = ({ product }) => {
     console.log(discountedPrice);
   }
   return (
-    <div className="purchase-item">
+    <div className="explore-item">
       <Row xs={1} sm={2} md={2} lg={2} xl={2} xxl={2} className="demo-products">
         <Col>
           <img className="item-img" src={img} alt="" />
@@ -29,16 +29,25 @@ const PurchaseItem = ({ product }) => {
             <h3>{name}</h3>
             <p>{description}</p>
             {/* {discount ? <p>{discountedPrice}</p> : <p>{itemPrice}</p>} */}
-            <p>${itemPrice}</p>
+            {!discount ? (
+              <p className="item_price"> &#x24;{price}</p>
+            ) : (
+              <p className="item_price">
+                Price: &#x24;
+                {discountedPrice}&nbsp;
+                <del className="delete-text">&#x24;{price}</del>
+                {/* {viewportWidth < 300 && <br />} */}
+              </p>
+            )}
             <div
               id="user_card"
-              className={`nav-item dropdown user_dropdown  ${open && "show"}`}
+              className={`nav-item dropdown rating_dropdown  ${open && "show"}`}
             >
               {/* <div className="dropdown-btn" onClick={() => setOpen(!open)}> */}
               <div
                 // href="#"
                 id="basic-nav-dropdown"
-                className="dropdown-toggle nav-link user_link"
+                className="dropdown-toggle "
                 aria-expanded={open}
                 onClick={() => setOpen(!open)}
               >
@@ -56,13 +65,7 @@ const PurchaseItem = ({ product }) => {
 
               {/* {open && ( */}
               <div className={`dropdown-menu ${open && "show"}`}>
-                <div className="dropdown_img pt-5 pb-4">
-                  <img
-                    className="profile-img "
-                    src={user.photoURL}
-                    alt="profile-pic"
-                  />
-                </div>
+                <div className="dropdown_img pt-5 pb-4"></div>
                 <div className="dropdown_item ">
                   {/* <h5 className="user_name">{userName}</h5> */}
                 </div>

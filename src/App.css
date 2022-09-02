@@ -125,11 +125,13 @@
   position: relative;
 }
 
-.product .delete-text {
+.product .delete-text,
+.explore-item .delete-text {
   color: rgb(181, 181, 181);
 }
 
-.dark .product .delete-text {
+.dark .product .delete-text,
+.dark .explore-item .delete-text {
   color: rgba(181, 181, 181, 0.5);
 }
 
