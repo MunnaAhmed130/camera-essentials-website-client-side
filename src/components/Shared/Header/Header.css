@@ -43,7 +43,8 @@
 }
 
 .navbar-light .navbar-nav a,
-.navbar-light .navbar-nav .theme_link {
+.navbar-light .navbar-nav .theme_link,
+.navbar-light .navbar-nav .nav-link {
   color: rgb(0, 0, 0, 0.7);
 }
 

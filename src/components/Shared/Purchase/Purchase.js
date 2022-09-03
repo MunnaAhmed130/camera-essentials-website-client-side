@@ -7,9 +7,9 @@ import { Button } from "@mui/material";
 import { Alert, Col, Container, Row } from "react-bootstrap";
 import Footer from "../Footer/Footer";
 import useTheme from "../../../Hooks/useTheme";
-import PurchaseItem from "./PurchaseItem";
+// import PurchaseItem from "./PurchaseItem";
 import "./Purchase.css";
-import ExploreProductItem from "../../Explore/ExploreProduct/ExploreProductItem";
+// import ExploreProductItem from "../../Explore/ExploreProduct/ExploreProductItem";
 import useAuth from "../../../Hooks/useAuth";
 import axios from "axios";
 
@@ -37,17 +37,6 @@ const Purchase = () => {
 
   console.log(product);
   const { name, price, discount, description, rating } = product;
-
-  // const [value, setValue] = React.useState(rating);
-
-  // const value = useRef(rating);
-
-  // useEffect(() => {
-  //   setValue(rating);
-  // }, []);
-
-  // console.log(price);
-  // console.log(value);
 
   // initial Info
   const initialInfo = {
@@ -116,67 +105,66 @@ const Purchase = () => {
         {/* {product.name && (
           <ExploreProductItem product={product}></ExploreProductItem>
         )} */}
+        <Container>
+          <Row>
+            <Col md={4} sm={12} lg={6} className="purchase-img-container">
+              <img className="purchase-img" src={img} alt="" />
+            </Col>
+            <Col md={8} sm={12} lg={6}>
+              {success && (
+                <Alert severity="success">Order Placed Successfully</Alert>
+              )}
+              <form className="purchase-form" onSubmit={handleSubmit}>
+                <input name="userName" defaultValue={user.displayName} /> <br />
+                <input
+                  name="email"
+                  defaultValue={user.email}
+                  variant="outlined"
+                />{" "}
+                <br />
+                <input
+                  name="productName"
+                  value={productName}
+                  variant="outlined"
+                />{" "}
+                <br />
+                <input
+                  name="address"
+                  onBlur={handleOnBlur}
+                  placeholder="Address"
+                  defaultValue=""
+                  variant="outlined"
+                />{" "}
+                <br />
+                <input
+                  name="phone"
+                  onBlur={handleOnBlur}
+                  placeholder="Phone"
+                  defaultValue=""
+                  variant="outlined"
+                />{" "}
+                <br />
+                <input
+                  type="number"
+                  name="price2"
+                  value={price}
+                  placeholder="price"
+                  variant="outlined"
+                />{" "}
+                <br />
+                <Button
+                  type="submit"
+                  className="purchase-btn"
+                  size="large"
+                  variant="contained"
+                >
+                  Purchase
+                </Button>
+              </form>
+            </Col>
+          </Row>
+        </Container>
       </div>
-
-      <Container>
-        <Row>
-          <Col md={4} sm={12} lg={6} className="purchase-img-container">
-            <img className="purchase-img" src={img} alt="" />
-          </Col>
-          <Col md={8} sm={12} lg={6}>
-            {success && (
-              <Alert severity="success">Order Placed Successfully</Alert>
-            )}
-            <form className="purchase-form" onSubmit={handleSubmit}>
-              <input name="userName" defaultValue={user.displayName} /> <br />
-              <input
-                name="email"
-                defaultValue={user.email}
-                variant="outlined"
-              />{" "}
-              <br />
-              <input
-                name="productName"
-                value={productName}
-                variant="outlined"
-              />{" "}
-              <br />
-              <input
-                name="address"
-                onBlur={handleOnBlur}
-                placeholder="Address"
-                defaultValue=""
-                variant="outlined"
-              />{" "}
-              <br />
-              <input
-                name="phone"
-                onBlur={handleOnBlur}
-                placeholder="Phone"
-                defaultValue=""
-                variant="outlined"
-              />{" "}
-              <br />
-              <input
-                type="number"
-                name="price2"
-                value={price}
-                placeholder="price"
-                variant="outlined"
-              />{" "}
-              <br />
-              <Button
-                type="submit"
-                className="purchase-btn"
-                size="large"
-                variant="contained"
-              >
-                Purchase
-              </Button>
-            </form>
-          </Col>
-        </Row>
-      </Container>
       <Footer />
     </div>
   );

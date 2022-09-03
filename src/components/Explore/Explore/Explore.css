@@ -1,13 +1,18 @@
+/* explore product section  */
 .explore-product-section {
-  margin-block: 5rem;
+  margin-block: 8rem;
 }
 
+.explore-item {
+  width: min(1400px, 100%);
+  margin-inline: auto;
+}
 .main_price,
 .discounted_price {
   font-size: 1.5rem;
   font-weight: 700;
   vertical-align: -0.4rem;
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .item_title {
@@ -16,7 +21,7 @@
 }
 .item_description {
   font-size: 1.1rem;
-  width: min(48rem, 100%);
+  /* width: min(48rem, 100%); */
 }
 .rating_dropdown .dropdown-menu.show {
   left: -5rem;
