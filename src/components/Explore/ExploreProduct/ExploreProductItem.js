@@ -23,12 +23,12 @@ const ExploreProductItem = ({ product }) => {
   }
   return (
     <div className="explore-item">
-      <Container>
-        <Row xs={1} sm={1} md={2} lg={2} xl={2} xxl={2} className="w-100">
-          <Col md={12} lg={5} xl={4} xxl={4}>
-            <img className="item-img" src={img} alt="" />
+      <Container className="item_container">
+        <Row xs={1} sm={1} md={2} lg={2} xl={2} xxl={2} className=" item_row">
+          <Col md={12} lg={5} xl={4} xxl={4} className="item_img_container  ">
+            <img className="item_img" src={img} alt="" />
           </Col>
-          <Col md={12} lg={7} xl={8} xxl={8}>
+          <Col md={12} lg={7} xl={8} xxl={8} className="item_info_container">
             <div className="item-info">
               <h3 className="item_title">{name}</h3>
               <p className="item_description">{description}</p>

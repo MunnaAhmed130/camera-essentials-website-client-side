@@ -3,10 +3,22 @@
   margin-block: 8rem;
 }
 
+.item_container {
+  /* border: 1px solid black; */
+}
+.item_row {
+  /* padding-inline: 10px; */
+  /* border: 1px solid black; */
+}
+.item_info_container {
+  /* border: 1px solid black; */
+}
+
 .explore-item {
   width: min(1400px, 100%);
   margin-inline: auto;
 }
+
 .main_price,
 .discounted_price {
   font-size: 1.5rem;
@@ -15,8 +27,17 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
+.item_img_container {
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+.item_img {
+  max-width: 100%;
+}
 .item_title {
   font-size: 2.5rem;
+  /* font-size: 1.2rem; */
   margin-bottom: 1rem;
 }
 .item_description {
@@ -62,3 +83,9 @@
 }
 
 /* 30px, 2.5568vw + 1.36rem ,48px */
+
+@media screen and (max-width: 992px) {
+  .item-info {
+    text-align: center;
+  }
+}
