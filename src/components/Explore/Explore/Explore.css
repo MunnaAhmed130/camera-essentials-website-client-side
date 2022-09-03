@@ -1,7 +1,13 @@
+.explore-product-section {
+  margin-block: 5rem;
+}
+
 .main_price,
 .discounted_price {
   font-size: 1.5rem;
+  font-weight: 700;
   vertical-align: -0.4rem;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .item_title {
@@ -10,7 +16,7 @@
 }
 .item_description {
   font-size: 1.1rem;
-  width: min(45rem, 100%);
+  width: min(48rem, 100%);
 }
 .rating_dropdown .dropdown-menu.show {
   left: -5rem;
@@ -19,6 +25,16 @@
   padding: 0.2rem;
 }
 
+.rating_dropdown {
+  width: 8.5rem;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.rating_count {
+  vertical-align: 0.4rem;
+  font-weight: 600;
+}
 .rating_dropdown .dropdown-toggle::after {
   vertical-align: 0.4rem;
 }
@@ -29,7 +45,7 @@
 .item_btn_container button {
   margin-right: 1rem;
   /* background-color: rgba(20, 20, 20, 0.948); */
-  background-color: #00122a;
+  /* background-color: #00122a; */
   padding: 0.7em 1.5em;
   color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;

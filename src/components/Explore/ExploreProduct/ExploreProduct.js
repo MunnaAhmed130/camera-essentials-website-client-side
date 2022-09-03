@@ -1,10 +1,7 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import { Card, Col } from "react-bootstrap";
-import { Button } from "@mui/material";
 import useTheme from "../../../Hooks/useTheme";
 import Header from "../../Shared/Header/Header";
-import PurchaseItem from "../../Shared/Purchase/PurchaseItem";
 import Footer from "../../Shared/Footer/Footer";
 import ExploreProductItem from "./ExploreProductItem";
 import "../Explore/Explore.css";
@@ -25,9 +22,9 @@ const ExploreProduct = () => {
 
   console.log(product);
   return (
-    <div className={`purchase ${darkMode ? "dark" : "light"}`}>
+    <div className={`explore-product ${darkMode ? "dark" : "light"}`}>
       <Header />
-      <div className="purchase_section">
+      <div className="explore-product-section">
         {/* <h2 className="purchase-heading">Place Your Order</h2> */}
         {product.name && (
           <ExploreProductItem product={product}></ExploreProductItem>

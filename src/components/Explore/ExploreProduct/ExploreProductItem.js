@@ -9,7 +9,9 @@ const ExploreProductItem = ({ product }) => {
   const { user } = useAuth();
   const { price, discount, img, name, _id, description, rating } = product;
   const [open, setOpen] = useState(false);
-  const [value, setValue] = React.useState(product.rating);
+
+  // eslint-disable-next-line no-unused-vars
+  const [value, setValue] = React.useState(rating);
   console.log(value);
 
   let itemPrice = price;
@@ -17,7 +19,7 @@ const ExploreProductItem = ({ product }) => {
   if (discount) {
     discountedPrice = price - (price * discount) / 100;
     itemPrice = discountedPrice;
-    console.log(discountedPrice);
+    // console.log(discountedPrice);
   }
   return (
     <div className="explore-item">
@@ -33,14 +35,14 @@ const ExploreProductItem = ({ product }) => {
             {!discount ? (
               <p className="item_price">
                 {" "}
-                <span className="main_price"></span> &#x24;{price}
+                <span className="main_price"></span> &#x24;{itemPrice}
               </p>
             ) : (
               <p className="item_price">
                 Price:{" "}
                 <span className="discounted_price">
                   &#x24;
-                  {discountedPrice}
+                  {itemPrice}
                 </span>{" "}
                 <del className="delete-text">&#x24;{price}</del>
                 {/* {viewportWidth < 300 && <br />} */}
@@ -79,13 +81,16 @@ const ExploreProductItem = ({ product }) => {
               </div>
               {/* )} */}
             </div>
+            <span className="rating_count">{rating} out of 960 Ratings</span>
 
             <br />
             <div className="item_btn_container">
               <Link className="dynamic-route" to={`/purchase/${_id}`}>
                 <Button variant="contained">BUY NOW</Button>
               </Link>
-              <Button variant="contained">ADD TO CART</Button>
+              <Link className="dynamic-route" to={`/purchase/${_id}`}>
+                <Button variant="contained">ADD TO CART</Button>
+              </Link>
             </div>
           </div>
         </Col>
