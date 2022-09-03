@@ -2,14 +2,14 @@ import { Link, useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { Card, Col } from "react-bootstrap";
 import { Button } from "@mui/material";
-import "./ExploreProducts.css";
 import useTheme from "../../../Hooks/useTheme";
 import Header from "../../Shared/Header/Header";
 import PurchaseItem from "../../Shared/Purchase/PurchaseItem";
 import Footer from "../../Shared/Footer/Footer";
 import ExploreProductItem from "./ExploreProductItem";
+import "../Explore/Explore.css";
 
-const ExploreProducts = () => {
+const ExploreProduct = () => {
   const { _id } = useParams();
   const { darkMode } = useTheme();
   const [product, setProduct] = useState([]);
@@ -38,4 +38,4 @@ const ExploreProducts = () => {
   );
 };
 
-export default ExploreProducts;
+export default ExploreProduct;

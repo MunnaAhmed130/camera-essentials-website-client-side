@@ -19,6 +19,7 @@ import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
 import ManageProducts from "./components/Admin/ManageProducts/ManageProducts";
 import Reviews from "./components/Home/Reviews/Reviews";
 import ThemeProvider from "./Context/ThemeProvider/ThemeProvider";
+import ExploreProduct from "./components/Explore/ExploreProduct/ExploreProduct";
 // import useTheme from "./Hooks/useTheme";
 
 function App() {
@@ -47,10 +48,10 @@ function App() {
                 <Explore />
               </Route>
               <PrivateRoute path="/explore_product/:_id">
-                <Purchase />
+                <ExploreProduct />
               </PrivateRoute>
               <PrivateRoute path="/explore/product">
-                <Purchase />
+                <ExploreProduct />
               </PrivateRoute>
               <Route path="/login">
                 <Login />

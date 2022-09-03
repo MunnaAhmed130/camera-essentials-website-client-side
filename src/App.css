@@ -1,11 +1,8 @@
+/* app style  */
 .App {
   text-align: center;
   font-family: "Bai Jamjuree";
   /* font-family: "Cantarell"; */
-}
-
-.branding-img {
-  display: none;
 }
 
 @media screen and (min-width: 400) {
@@ -18,21 +15,14 @@
   }
 }
 
-/* bootstrap btn style */
-/* .btn-primary:focus {
-  border: 1px solid black;
-} */
-
-.dynamic-route,
-.card_route {
+/* product dynamic route */
+.dynamic-route {
   text-decoration: none;
-  display: inline-block;
 }
 
-.card_route {
-  color: rgba(0, 0, 0, 0.9);
+.dynamic-route .card-name {
+  color: rgba(0, 0, 0, 0.95);
 }
-
 .dynamic-route button {
   background-color: rgba(21, 21, 21, 0.904);
   margin-bottom: 10px;
@@ -46,77 +36,8 @@
 .dynamic-route button:hover {
   background-color: black;
 }
-/* header */
 
-/* product */
-/* .card_col {
-   margin-inline: center; 
-} */
-.card {
-  border: 1px solid transparent;
-  box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.266);
-  /* width: min(400px, 100%); */
-}
-.card-img {
-  width: min(100%, 200px);
-  height: min(auto, 200px);
-  margin: auto;
-}
-
-.card-name {
-  font-size: clamp(1rem, 0.568vw + 0.886rem, 1.25rem);
-  font-weight: 400;
-}
-
-.card-description {
-  /* max-width: 400px ; */
-  margin-inline: auto;
-  font-weight: 400;
-  font-size: 1em;
-  /* color: rgb(41, 38, 49); */
-}
-
-.card_price {
-  font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
-  font-weight: 400;
-}
-/* @media screen and (max-width: 800px) {
-  .card-img {
-    /* width: 100%; *
-  }
-} */
-
-/* products */
-.products,
-.explore {
-  padding-block: 40px;
-  /* padding-block: clamp(0.875rem, 0.284vw + 0.82rem, 1rem); */
-}
-
-.demo-products,
-.explore-products {
-  width: 90%;
-  display: flex;
-  margin: auto;
-  /* padding: 10px 100px; */
-}
-
-/* {
-  font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
-  font-weight: 400;
-  padding-block: 0.5em;
-  margin-top: 1rem;
-  /* margin-bottom: 0.5em; *
-}   */
-
-.products .products-header,
-.explore .products-header {
-  font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
-  /* font-weight: 500; */
-  /* padding-block: 0.5em; */
-  margin: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
-  /* margin-bottom: 0.5em; */
-}
+/* product  */
 
 .product .card_img_container {
   width: min(100%, 200px);
@@ -169,6 +90,63 @@
 
 .dark .empty_rating {
   color: rgba(255, 194, 133, 0.45);
+}
+.card {
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.266);
+  /* width: min(400px, 100%); */
+}
+.card-img {
+  width: min(100%, 200px);
+  height: min(auto, 200px);
+  margin: auto;
+}
+
+.card-name {
+  font-size: clamp(1rem, 0.568vw + 0.886rem, 1.25rem);
+  font-weight: 400;
+}
+
+.card-description {
+  /* max-width: 400px ; */
+  margin-inline: auto;
+  font-weight: 400;
+  font-size: 1em;
+  /* color: rgb(41, 38, 49); */
+}
+
+.card_price {
+  font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  font-weight: 400;
+}
+
+/* products and explore */
+.products,
+.explore {
+  padding-block: 40px;
+  /* padding-block: clamp(0.875rem, 0.284vw + 0.82rem, 1rem); */
+}
+
+.demo-products,
+.explore-products {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  /* padding: 10px 100px; */
+}
+
+/* {
+  font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
+  font-weight: 400;
+  padding-block: 0.5em;
+  margin-top: 1rem;
+  /* margin-bottom: 0.5em; *
+}   */
+
+.products .products-header,
+.explore .products-header {
+  font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
+  margin: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
 }
 
 /* .light .empty_rating {

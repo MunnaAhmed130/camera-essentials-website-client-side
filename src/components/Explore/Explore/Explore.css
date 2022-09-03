@@ -41,14 +41,3 @@
 }
 
 /* 30px, 2.5568vw + 1.36rem ,48px */
-@media screen and (max-width: 500px) {
-  /* .explore-products-header {
-    font-size: 1.7rem;
-    padding-top: 0.5em;
-    margin-bottom: 0.5em;
-  } */
-
-  .explore-products {
-    padding: 0;
-  }
-}

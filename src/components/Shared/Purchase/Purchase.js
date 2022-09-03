@@ -109,10 +109,10 @@ const Purchase = () => {
     <div className={`purchase ${darkMode ? "dark" : "light"}`}>
       <Header />
       <div className="purchase_section">
-        {/* <h2 className="purchase-heading">Place Your Order</h2> */}
-        {product.name && (
+        <h2 className="purchase-heading">Place Your Order</h2>
+        {/* {product.name && (
           <ExploreProductItem product={product}></ExploreProductItem>
-        )}
+        )} */}
       </div>
 
       {/* <Container>

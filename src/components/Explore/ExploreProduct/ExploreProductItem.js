@@ -3,10 +3,11 @@ import useAuth from "../../../Hooks/useAuth";
 import { Row, Col } from "react-bootstrap";
 import { Button, Rating } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
+import { Link } from "react-router-dom";
 
 const ExploreProductItem = ({ product }) => {
   const { user } = useAuth();
-  const { price, discount, img, name, description, rating } = product;
+  const { price, discount, img, name, _id, description, rating } = product;
   const [open, setOpen] = useState(false);
   const [value, setValue] = React.useState(product.rating);
   console.log(value);
@@ -81,7 +82,9 @@ const ExploreProductItem = ({ product }) => {
 
             <br />
             <div className="item_btn_container">
-              <Button variant="contained">BUY NOW</Button>
+              <Link className="dynamic-route" to={`/purchase/${_id}`}>
+                <Button variant="contained">BUY NOW</Button>
+              </Link>
               <Button variant="contained">ADD TO CART</Button>
             </div>
           </div>

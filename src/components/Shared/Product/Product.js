@@ -20,21 +20,18 @@ const Product = ({ product }) => {
   return (
     <Col className="card_col">
       <Card className="my-3 card product">
-        {/* {img.length && ( */}
         <div className="card_img_container">
-          <Link className="img_route" to={`/explore_product/${_id}`}>
-            <Card.Img variant="top" src={img} className="card-img" />
-            {discount && <span className="discount_ribbon">- {discount}%</span>}
-          </Link>
+          <Card.Img variant="top" src={img} className="card-img" />
+          {discount && <span className="discount_ribbon">- {discount}%</span>}
         </div>
 
-        {/* )} */}
         <Card.Body>
-          <Card.Title className="card-name">{name}</Card.Title>
-          {/* <Card.Text className="card-description">{productInfo}</Card.Text> */}
+          <Link className="dynamic-route" to={`/explore_product/${_id}`}>
+            <Card.Title className="card-name">{name}</Card.Title>
+          </Link>
+
           <Rating
             className="rating"
-            // style={{ borderColor: "white" }}
             name="read-only"
             value={value}
             precision={0.1}
