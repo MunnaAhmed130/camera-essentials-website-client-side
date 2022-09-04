@@ -1,11 +1,9 @@
-/* footer background image */
 .footer a,
 .footer p {
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
 }
 
-.main-footer {
-}
+/* footer background image */
 .footer {
   /* background-color: #232f3e; */
   position: relative;
@@ -52,6 +50,7 @@
   background-color: rgba(248, 248, 248, 0.9);
 }
 
+/* main footer  */
 .main-footer {
   /* margin-inline: 10px; */
 
@@ -80,11 +79,6 @@
   display: inline-block;
   margin-bottom: 5px;
 }
-/* .links a:hover,
-.contacts p:hover {
-  color: rgba(255, 255, 255, 1);
-   font-weight: 500; 
-} */
 
 .icon-links a {
   display: inline-block;

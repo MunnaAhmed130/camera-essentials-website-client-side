@@ -5,17 +5,7 @@
   /* font-family: "Cantarell"; */
 }
 
-@media screen and (min-width: 400) {
-  .dark .footer-top {
-    text-align: center;
-    color: red;
-  }
-  .top-footer {
-    text-align: center;
-  }
-}
-
-/* product dynamic route */
+/* dynamic route */
 .dynamic-route {
   text-decoration: none;
 }
@@ -23,6 +13,7 @@
 .dynamic-route .card-name {
   color: rgba(0, 0, 0, 0.95);
 }
+
 .dynamic-route button {
   background-color: rgba(21, 21, 21, 0.904);
   color: rgba(255, 255, 255, 0.85);
@@ -41,7 +32,6 @@
 }
 
 /* product  */
-
 .product .card_img_container {
   width: min(100%, 200px);
   height: min(auto, 200px);

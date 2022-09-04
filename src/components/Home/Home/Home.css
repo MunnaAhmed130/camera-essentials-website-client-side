@@ -10,22 +10,18 @@ button {
 }
 
 /* banner */
-
 .carousel .carousel-control-prev,
 .carousel .carousel-control-next {
   /* display: none; */
   opacity: 0;
 }
+
 .banner-info {
   display: flex;
   align-content: center;
   justify-content: center;
   margin-bottom: 10em;
 }
-
-/* .banner-info div{
-
-} */
 
 .banner-info h2 {
   font-size: clamp(1.5rem, 5.68vw + 0.36rem, 4rem);
@@ -59,15 +55,8 @@ button {
   color: white;
   border: 1px solid black;
 }
-/* @media screen and (min-width: 1200px) {
-  .banner {
-  }
-} */
-
-/* Demo Products */
 
 /* Mid banner and iframe */
-
 .mid-banner {
   position: relative;
   padding-block: 5rem;
@@ -150,15 +139,11 @@ button {
 
 .iframe {
   position: absolute;
-  /* top: 0; */
-  /* left: 0; */
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  /* 560 */
   width: 100%;
-  /* 315 */
   /* height: max(100%, 630px); */
   height: calc(100% + 120px);
   /* height: 630px; */
@@ -171,23 +156,6 @@ button {
   pointer-events: none;
 }
 
-/* reviews  */
-
-/* media query  */
-/* @media screen and (max-width: 519px) {
-  .iframe-container {
-    width: 100%;
-    height: 10rem;
-    /* 10.625 
-  }
-} */
-@media screen and ((min-width: 520px) and (max-width: 700px)) {
-  .iframe-container {
-    /* width: 100%; */
-    /* height: 17rem; */
-    /* 16.875 */
-  }
-}
 @media screen and (max-width: 500px) {
   .banner-btn {
     background-color: white;
@@ -209,26 +177,5 @@ button {
 
   .iframe-container {
     width: 100%;
-    /* height: 200px; */
-    /* 12.5 */
   }
 }
-
-@media screen and (min-width: 700px) and (max-width: 992px) {
-  .iframe-container {
-    /* width: 100%; */
-    /* height: 400px; */
-  }
-}
-
-/* .mid-banner {
-  width: 100%;
-  height: 100%;
-}
-.iframe-container {
-  position: relative;
-} */
-
-/* .ytp-chrome-top {
-  display: hidden;
-} */
