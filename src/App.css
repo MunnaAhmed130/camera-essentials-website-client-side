@@ -18,6 +18,7 @@
   background-color: rgba(21, 21, 21, 0.904);
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 10px;
+  font-weight: 600;
   transition: all 0.3s ease-in-out;
 }
 
@@ -116,10 +117,10 @@
 /* products and explore */
 .products,
 .explore {
-  padding-top: 0.875rem;
+  padding-top: clamp(0.875rem, 2.9545vw + 0.284rem, 2.5rem);
   padding-bottom: 2.5rem;
   /* padding-inline: clamp(0.875rem, 0.284vw + 0.82rem, 1rem); */
-  /* .874rem/ , ,  */
+  /* .875rem/14px/320vw , 2.9545vw + .284rem  ,2.5rem/40px/1200vw  */
 }
 
 .demo-products,
@@ -140,10 +141,10 @@
 
 .products .products-header,
 .explore .products-header {
-  width: 90%;
+  width: 95%;
   margin-inline: auto;
   font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
-  margin-block: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  padding-block: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
   /* margin-block: 2rem; */
   /* margin-block: 1rem; */
 }
