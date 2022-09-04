@@ -126,8 +126,10 @@
 /* products and explore */
 .products,
 .explore {
-  padding-block: 40px;
-  /* padding-block: clamp(0.875rem, 0.284vw + 0.82rem, 1rem); */
+  padding-top: 0.875rem;
+  padding-bottom: 2.5rem;
+  /* padding-inline: clamp(0.875rem, 0.284vw + 0.82rem, 1rem); */
+  /* .874rem/ , ,  */
 }
 
 .demo-products,
@@ -148,8 +150,12 @@
 
 .products .products-header,
 .explore .products-header {
+  width: 90%;
+  margin-inline: auto;
   font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
-  margin: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  margin-block: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  /* margin-block: 2rem; */
+  /* margin-block: 1rem; */
 }
 
 /* .light .empty_rating {
@@ -168,7 +174,7 @@
   } */
 
   .products {
-    padding: 0;
+    /* padding: 0; */
   }
 }
 

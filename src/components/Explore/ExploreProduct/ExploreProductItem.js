@@ -35,16 +35,16 @@ const ExploreProductItem = ({ product }) => {
               {/* {discount ? <p>{discountedPrice}</p> : <p>{itemPrice}</p>} */}
               {!discount ? (
                 <p className="item_price">
-                  {" "}
-                  <span className="main_price"></span> &#x24;{itemPrice}
+                  Price:
+                  <span className="main_price"> &#x24;{itemPrice}</span>
                 </p>
               ) : (
                 <p className="item_price">
-                  Price:{" "}
+                  Price:
                   <span className="discounted_price">
                     &#x24;
                     {itemPrice}
-                  </span>{" "}
+                  </span>
                   <del className="delete-text">&#x24;{price}</del>
                   {/* {viewportWidth < 300 && <br />} */}
                 </p>
