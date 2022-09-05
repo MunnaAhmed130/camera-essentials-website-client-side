@@ -23,28 +23,29 @@ const ExploreProductItem = ({ product }) => {
   }
   return (
     <div className="explore-item">
-      <Container className="item_container">
+      <Container className="item_container" fluid>
         <Row xs={1} sm={1} md={2} lg={2} xl={2} xxl={2} className=" item_row">
-          <Col md={12} lg={5} xl={4} xxl={4} className="item_img_container  ">
+          <Col md={12} lg={4} xl={4} xxl={4} className="item_img_container  ">
             <img className="item_img" src={img} alt="" />
           </Col>
-          <Col md={12} lg={7} xl={8} xxl={8} className="item_info_container">
+          <Col md={12} lg={8} xl={8} xxl={8} className="item_info_container">
             <div className="item-info">
               <h3 className="item_title">{name}</h3>
               <p className="item_description">{description}</p>
               {/* {discount ? <p>{discountedPrice}</p> : <p>{itemPrice}</p>} */}
               {!discount ? (
                 <p className="item_price">
-                  Price:
+                  Price:&nbsp;
                   <span className="main_price"> &#x24;{itemPrice}</span>
                 </p>
               ) : (
                 <p className="item_price">
-                  Price:
+                  Price:&nbsp;
                   <span className="discounted_price">
                     &#x24;
                     {itemPrice}
                   </span>
+                  &nbsp;
                   <del className="delete-text">&#x24;{price}</del>
                   {/* {viewportWidth < 300 && <br />} */}
                 </p>

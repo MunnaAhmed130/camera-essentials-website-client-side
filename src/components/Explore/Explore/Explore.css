@@ -1,20 +1,19 @@
 /* explore product section  */
 .explore-product-section {
-  margin-block: 8rem;
-  /* margin-block: 1.5rem; */
-  /* 1.5rem ,, 8rem  */
+  margin-block: clamp(2rem, 14.2857vw + -0.857rem, 8rem);
+  /* 2rem/32px/320vw ,14.2857vw + -.857rem, 8rem/128px/992vw */
 }
 
-.item_container {
-  /* border: 1px solid black; */
+/* .item_container {
+   border: 1px solid black; 
 }
 .item_row {
-  /* padding-inline: 10px; */
-  /* border: 1px solid black; */
+   padding-inline: 10px;
+    border: 1px solid black;
 }
 .item_info_container {
-  /* border: 1px solid black; */
-}
+   border: 1px solid black;
+} */
 
 .explore-item {
   width: min(1400px, 100%);
@@ -24,6 +23,8 @@
 .item_price,
 .item_description {
   font-weight: 400;
+  font-size: clamp(0.875rem, 0.6696vw + 0.741rem, 1.0625rem);
+  /* .875rem,14px/320vw,.6696vw + .741rem, 1.0625rem/17px/768vw */
 }
 
 .light .item_price {
@@ -32,9 +33,13 @@
 
 .main_price,
 .discounted_price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  vertical-align: -0.4rem;
+  font-size: 1.5625rem;
+  /* font-size: 1.3125rem; */
+  font-weight: 600;
+  vertical-align: -0.32rem;
+  /* vertical-align: -0.28125rem; */
+  /* 21px/1.3125rem/320vw,  , 25px/1.5625rem/768vw */
+  /* -4.5px/-.28125rem/320vw, ,-4.8px/-.3rem/  */
 }
 
 .light .main_price,
@@ -55,15 +60,15 @@
   opacity: 0.9;
 }
 .item_title {
-  /* font-size: 2.5rem; */
+  font-size: clamp(1.5rem, 1.48148vw + 1.2037rem, 2.5rem);
   /* font-size: 1.5rem; */
   font-weight: 700;
   /* font-size: 1.2rem; */
-  /* 40px/ */
+  /* 24px/1.5rem/320vw, 1.48148vw + 1.2037rem ,40px/2.5rem/1400vw */
   margin-bottom: 1rem;
 }
 .item_description {
-  font-size: 1.1rem;
+  /* font-size: 18px; */
   /* width: min(48rem, 100%); */
 }
 .rating_dropdown .dropdown-menu.show {
@@ -81,6 +86,8 @@
 }
 
 .rating_count {
+  display: inline-block;
+  padding-bottom: 1rem;
   vertical-align: 0.4rem;
   font-weight: 600;
 }
@@ -117,12 +124,19 @@
     padding-bottom: 1rem;
   }
 }
-@media screen and (max-width: 992px) {
+
+@media screen and (max-width: 991px) {
   .item-info {
     text-align: center;
   }
 
   .item_img_container {
-    padding-bottom: 10px;
+    padding-bottom: 2rem;
+  }
+
+  .explore-product-section {
+    /* margin-block: 8rem; */
+    /* margin-block: 4rem; */
+    /* 1.5rem/320vw ,, 8rem/1200vw  */
   }
 }
