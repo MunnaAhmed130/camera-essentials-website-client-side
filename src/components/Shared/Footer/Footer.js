@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="">
             <Container fluid className="p-0">
               <Row
-                className="footer-info w-100 m-0  "
+                className="footer-info w-100 m-0"
                 lg={4}
                 md={2}
                 sm={2}
@@ -90,7 +90,7 @@ const Footer = () => {
                     <Link to="#">Contact</Link> <br />
                   </div>
                 </Col>
-                <Col xl={3} lg={2} className="p-0 pb-5">
+                <Col xl={3} lg={3} className="p-0 pb-5">
                   <div className="links information">
                     <h4>Information</h4>
                     <Link to="#">Privacy Policy</Link> <br />
@@ -101,7 +101,7 @@ const Footer = () => {
                     <Link to="#">Return Policy</Link> <br />
                   </div>
                 </Col>
-                <Col xl={3} lg={4} className="p-0 pb-5">
+                <Col xl={3} lg={3} className="p-0 pb-5">
                   <div className="contacts">
                     <h4>Get In Touch</h4>
                     <p>

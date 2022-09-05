@@ -33,6 +33,8 @@
 }
 
 /* product  */
+
+/* product img  */
 .product .card_img_container {
   width: min(100%, 200px);
   height: min(auto, 200px);
@@ -40,6 +42,13 @@
   position: relative;
 }
 
+.card-img {
+  width: min(100%, 200px);
+  height: min(auto, 200px);
+  margin: auto;
+}
+
+/* product delete price */
 .product .delete-text,
 .explore-item .delete-text {
   color: rgb(181, 181, 181);
@@ -50,6 +59,7 @@
   color: rgba(181, 181, 181, 0.5);
 }
 
+/* product discount ribbon */
 .product .card_img_container .discount_ribbon {
   position: absolute;
   top: 0;
@@ -64,6 +74,7 @@
   border-radius: 0px 0px 0.25em 0.25em;
 }
 
+/* product rating */
 .product .rating,
 .explore-product .rating {
   color: rgb(255, 188, 65);
@@ -85,17 +96,15 @@
 .dark .empty_rating {
   color: rgba(255, 194, 133, 0.45);
 }
+
+/* product card */
 .card {
   border: 1px solid transparent;
   box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.266);
   /* width: min(400px, 100%); */
 }
-.card-img {
-  width: min(100%, 200px);
-  height: min(auto, 200px);
-  margin: auto;
-}
 
+/* product card info */
 .card-name {
   font-size: clamp(1rem, 0.568vw + 0.886rem, 1.25rem);
   font-weight: 400;
@@ -111,10 +120,22 @@
 
 .card_price {
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
-  font-weight: 400;
+  font-weight: 500;
 }
 
-/* products and explore */
+.card_price .main_price,
+.card_price .discount_price {
+  font-size: 1.25rem;
+  vertical-align: -0.2rem;
+  font-weight: 600;
+}
+
+.card_price .dollar_sign {
+  font-size: 0.9rem;
+  vertical-align: 0.025rem;
+  font-weight: 600;
+}
+/* home products and explore */
 .products,
 .explore {
   padding-top: clamp(0.875rem, 2.9545vw + 0.284rem, 2.5rem);
@@ -131,14 +152,7 @@
   /* padding: 10px 100px; */
 }
 
-/* {
-  font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
-  font-weight: 400;
-  padding-block: 0.5em;
-  margin-top: 1rem;
-  /* margin-bottom: 0.5em; *
-}   */
-
+/* product section header style */
 .products .products-header,
 .explore .products-header {
   width: 95%;
@@ -172,11 +186,8 @@
 /* dark mode */
 
 .dark {
-  /* background-color: rgba(33, 37, 41, 0.99); */
   /* background-color: rgb(31, 41, 52); */
   background-color: #161f2b;
-  /* background-color: rgba(13, 28, 48, 0.96); */
-  /* background-color: rgba(24, 39, 67, 0.613); */
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -185,16 +196,7 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* .dark .navbar,
-.dark .explore,
-.dark .products,
-.dark .products-header {
-  background-color: #26292d; 
-  background-color: rgb(33, 37, 41);
-} */
-
 /* dark product */
-
 .dark .product {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(35, 42, 49, 0.75);

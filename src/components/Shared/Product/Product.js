@@ -39,12 +39,16 @@ const Product = ({ product }) => {
             readOnly
           />
           {!discount ? (
-            <p className="card_price">Price: &#x24;{price}</p>
+            <p className="card_price">
+              Price: <span className="dollar_sign">&#x24;</span>
+              <span className="main_price">{price}</span>
+            </p>
           ) : (
             <p className="card_price">
-              Price: &#x24;
-              {discountedPrice}&nbsp;
-              <del className="delete-text">&#x24;{price}</del>
+              Price: <span className="dollar_sign">&#x24;</span>
+              <span className="main_price">{discountedPrice}</span>
+              &nbsp;
+              <del className="delete-text">{price}</del>
               {viewportWidth < 300 && <br />}
             </p>
           )}
