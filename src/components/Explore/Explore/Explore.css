@@ -1,9 +1,27 @@
-/* explore product section  */
+/* explore product section */
 .explore-product-section {
   margin-block: clamp(2rem, 14.2857vw + -0.857rem, 8rem);
   /* 2rem/32px/320vw ,14.2857vw + -.857rem, 8rem/128px/992vw */
 }
 
+/* explore product item */
+.explore-item {
+  width: min(1400px, 100%);
+  margin-inline: auto;
+}
+
+.item_img_container {
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+.item_img {
+  max-width: 100%;
+}
+
+.item-info {
+  text-align: left;
+}
 /* .item_container {
    border: 1px solid black; 
 }
@@ -15,20 +33,21 @@
    border: 1px solid black;
 } */
 
-.explore-item {
-  width: min(1400px, 100%);
-  margin-inline: auto;
-}
-
 .item_price,
 .item_description {
-  font-weight: 400;
+  font-weight: 500;
   font-size: clamp(0.875rem, 0.6696vw + 0.741rem, 1.0625rem);
   /* .875rem,14px/320vw,.6696vw + .741rem, 1.0625rem/17px/768vw */
 }
 
+/* item price */
 .light .item_price {
   color: black;
+}
+
+.item_price .dollar_sign {
+  font-size: 0.925rem;
+  font-weight: 600;
 }
 
 .main_price,
@@ -36,7 +55,7 @@
   font-size: 1.5625rem;
   /* font-size: 1.3125rem; */
   font-weight: 600;
-  vertical-align: -0.32rem;
+  vertical-align: -0.4rem;
   /* vertical-align: -0.28125rem; */
   /* 21px/1.3125rem/320vw,  , 25px/1.5625rem/768vw */
   /* -4.5px/-.28125rem/320vw, ,-4.8px/-.3rem/  */
@@ -45,15 +64,6 @@
 .light .main_price,
 .light .discounted_price {
   color: rgba(0, 0, 0, 0.8);
-}
-
-.item_img_container {
-  text-align: center;
-  /* border: 1px solid black; */
-}
-
-.item_img {
-  max-width: 100%;
 }
 
 .dark .item_img {
@@ -67,10 +77,11 @@
   /* 24px/1.5rem/320vw, 1.48148vw + 1.2037rem ,40px/2.5rem/1400vw */
   margin-bottom: 1rem;
 }
+
 .item_description {
-  /* font-size: 18px; */
-  /* width: min(48rem, 100%); */
+  width: min(45rem, 100%);
 }
+
 .rating_dropdown .dropdown-menu.show {
   left: -5rem;
   text-align: center;
@@ -93,9 +104,6 @@
 }
 .rating_dropdown .dropdown-toggle::after {
   vertical-align: 0.4rem;
-}
-.item-info {
-  text-align: left;
 }
 
 .item_btn_container button {
@@ -123,6 +131,10 @@
     display: inline-block;
     padding-bottom: 1rem;
   }
+
+  .item_description {
+    /* margin-inline: none; */
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -134,9 +146,7 @@
     padding-bottom: 2rem;
   }
 
-  .explore-product-section {
-    /* margin-block: 8rem; */
-    /* margin-block: 4rem; */
-    /* 1.5rem/320vw ,, 8rem/1200vw  */
+  .item_description {
+    margin-inline: auto;
   }
 }

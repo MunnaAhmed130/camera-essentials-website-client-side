@@ -21,13 +21,13 @@ const Product = ({ product }) => {
     <Col className="card_col">
       <Card className="my-3 card product">
         <div className="card_img_container">
-          <Card.Img variant="top" src={img} className="card-img" />
+          <Card.Img variant="top" src={img} className="card_img" />
           {discount && <span className="discount_ribbon">- {discount}%</span>}
         </div>
 
         <Card.Body>
           <Link className="dynamic-route" to={`/explore_product/${_id}`}>
-            <Card.Title className="card-name">{name}</Card.Title>
+            <Card.Title className="card_name">{name}</Card.Title>
           </Link>
 
           <Rating
