@@ -36,7 +36,7 @@ const Footer = () => {
                 sm={2}
                 xs={1}
               >
-                <Col xl={4} lg={4} className="p-0 pb-5">
+                <Col xl={4} lg={4} className="p-0">
                   <div className="footer-section">
                     <h4>Why Always Us</h4>
                     <p className="p-0 m-0">
@@ -80,7 +80,7 @@ const Footer = () => {
                     </div>
                   </div>
                 </Col>
-                <Col xl={2} lg={2} className="p-0 pb-5">
+                <Col xl={2} lg={2} className="p-0">
                   <div className="links">
                     <h4>Quick LInks</h4>
                     <Link to="#">Service</Link> <br />
@@ -90,7 +90,7 @@ const Footer = () => {
                     <Link to="#">Contact</Link> <br />
                   </div>
                 </Col>
-                <Col xl={3} lg={3} className="p-0 pb-5">
+                <Col xl={3} lg={3} className="p-0">
                   <div className="links information">
                     <h4>Information</h4>
                     <Link to="#">Privacy Policy</Link> <br />
@@ -101,23 +101,31 @@ const Footer = () => {
                     <Link to="#">Return Policy</Link> <br />
                   </div>
                 </Col>
-                <Col xl={3} lg={3} className="p-0 pb-5">
+                <Col xl={3} lg={3} className="p-0">
                   <div className="contacts">
                     <h4>Get In Touch</h4>
                     <p>
-                      <FontAwesomeIcon icon={faHome} />
-                      &nbsp; &nbsp;Nishinomiya, Japan
+                      <span>
+                        <FontAwesomeIcon icon={faHome} />
+                      </span>
+                      &nbsp; &nbsp; Nishinomiya, Japan
                     </p>
                     <p>
-                      <FontAwesomeIcon icon={faPhone} />
+                      <span>
+                        <FontAwesomeIcon icon={faPhone} />
+                      </span>
                       &nbsp; &nbsp; (+880) 188 822 2633
                     </p>
                     <p>
-                      <FontAwesomeIcon icon={faEnvelope} />
+                      <span>
+                        <FontAwesomeIcon icon={faEnvelope} />
+                      </span>
                       &nbsp; &nbsp; support@camess.com
                     </p>
                     <p>
-                      <FontAwesomeIcon icon={faClock} />
+                      <span>
+                        <FontAwesomeIcon icon={faClock} />
+                      </span>
                       &nbsp; &nbsp; Everyday 08:00 - 18:00
                     </p>
                   </div>
