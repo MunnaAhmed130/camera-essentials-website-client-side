@@ -35,7 +35,7 @@ const ExploreProductItem = ({ product }) => {
               {/* {discount ? <p>{discountedPrice}</p> : <p>{itemPrice}</p>} */}
               {!discount ? (
                 <p className="item_price">
-                  Price:&nbsp;
+                  Price:&nbsp;<span className="dollar_sign">&#x24;</span>
                   <span className="main_price">{itemPrice}</span>
                 </p>
               ) : (

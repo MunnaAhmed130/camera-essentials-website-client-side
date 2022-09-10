@@ -165,8 +165,11 @@
 }
 @media screen and (min-width: 330px) {
   .item_btn_container a:first-child {
-    margin-right: 1rem;
+    margin-right: 0.7rem;
   }
+}
+
+@media screena and (max-width: 330px) {
 }
 
 @media screen and (min-width: 768px) {

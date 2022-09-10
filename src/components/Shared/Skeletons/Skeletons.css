@@ -109,12 +109,13 @@
   /* display: inline-block; */
 }
 .product_item .skeleton.button {
-  width: 10rem;
+  /* width: min(10rem, 100%); */
+  width: 9rem;
   display: inline-block;
   background-color: rgba(19, 21, 26, 0.45);
 }
 .product_item .skeleton.button:first-child {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 @media screen and (max-width: 991px) {

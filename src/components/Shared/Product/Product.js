@@ -3,7 +3,6 @@ import StarIcon from "@mui/icons-material/Star";
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./Product.css";
 
 const Product = ({ product }) => {
   const { name, img, _id, rating, discount, price } = product;
@@ -21,11 +20,17 @@ const Product = ({ product }) => {
     <Col className="card_col">
       <Card className="my-3 card product">
         <div className="card_img_container">
-          <Card.Img variant="top" src={img} className="card_img" />
+          <Card.Img
+            variant="top"
+            src={img}
+            width="200"
+            height="200"
+            className="card_img"
+          />
           {discount && <span className="discount_ribbon">- {discount}%</span>}
         </div>
 
-        <Card.Body>
+        <Card.Body className="product_card_body">
           <Link className="dynamic-route" to={`/explore_product/${_id}`}>
             <Card.Title className="card_name">{name}</Card.Title>
           </Link>
