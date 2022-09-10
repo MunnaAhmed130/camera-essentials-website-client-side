@@ -32,7 +32,7 @@ const ExploreProduct = () => {
         ) : (
           <SkeletonProductItem></SkeletonProductItem>
         )}
-        <SkeletonProductItem></SkeletonProductItem>
+        {/* <SkeletonProductItem></SkeletonProductItem> */}
       </div>
       <Footer />
     </div>
