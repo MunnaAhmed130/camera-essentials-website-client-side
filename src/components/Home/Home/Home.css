@@ -116,6 +116,7 @@ button {
 .mid-banner-info p {
   letter-spacing: 3px;
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  font-weight: 500;
 }
 
 .mid-banner-info h2 {
@@ -178,4 +179,14 @@ button {
   .iframe-container {
     width: 100%;
   }
+}
+
+/* reviews  */
+
+.review_info {
+}
+
+.review_info h2 {
+  font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
+  font-weight: 500;
 }

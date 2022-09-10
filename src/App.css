@@ -107,6 +107,9 @@
 /* product card info */
 .card_name {
   font-size: clamp(1rem, 0.568vw + 0.886rem, 1.25rem);
+}
+
+.light .card_name {
   color: #161f2b;
 }
 
@@ -208,7 +211,7 @@
 }
 
 /* dark review */
-.dark .reviews-container {
+.dark .reviews_container {
   background-color: rgb(29, 31, 34);
 }
 

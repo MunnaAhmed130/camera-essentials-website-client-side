@@ -83,10 +83,9 @@ const ExploreProductItem = ({ product }) => {
                 {/* )} */}
               </div>
               <span className="rating_count">{rating} out of 960 Ratings</span>
-
               <br />
               <div className="item_btn_container">
-                <Link className="dynamic-route" to={`/purchase/${_id}`}>
+                <Link className="dynamic-route " to={`/purchase/${_id}`}>
                   <Button variant="contained">BUY NOW</Button>
                 </Link>
                 <Link className="dynamic-route" to={`/purchase/${_id}`}>

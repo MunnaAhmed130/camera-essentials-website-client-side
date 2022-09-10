@@ -6,15 +6,15 @@ import "./Reviews.css";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://limitless-reaches-30016.herokuapp.com/reviews")
+    fetch("https://limitless-reaches-30016.herokuapp.com/reviews/query?limit=3")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
   // console.log(reviews.name)
 
   return (
-    <div className="reviews-container">
-      <div className="review-info">
+    <div className="reviews_container">
+      <div className="review_info">
         <h2>Some Valuable Opinions!</h2>
         <h3>Reviews</h3>
       </div>

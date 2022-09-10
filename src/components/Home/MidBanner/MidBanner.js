@@ -91,7 +91,7 @@ const MidBanner = () => {
       }`}
     >
       <div className="mid-banner-info ">
-        <p className="text-uppercase">post vlogs with camera x9</p>
+        <p className="text-uppercase  ">post vlogs with camera x9</p>
         <h2>The Best Digital Camera</h2>
       </div>
 

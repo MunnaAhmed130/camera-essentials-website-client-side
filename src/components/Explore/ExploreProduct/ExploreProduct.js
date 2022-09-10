@@ -5,6 +5,7 @@ import Header from "../../Shared/Header/Header";
 import Footer from "../../Shared/Footer/Footer";
 import ExploreProductItem from "./ExploreProductItem";
 import "../Explore/Explore.css";
+import SkeletonProductItem from "../../Shared/Skeletons/SkeletonProductItem";
 
 const ExploreProduct = () => {
   const { _id } = useParams();
@@ -26,9 +27,12 @@ const ExploreProduct = () => {
       <Header />
       <div className="explore-product-section">
         {/* <h2 className="purchase-heading">Place Your Order</h2> */}
-        {product.name && (
+        {product.name ? (
           <ExploreProductItem product={product}></ExploreProductItem>
+        ) : (
+          <SkeletonProductItem></SkeletonProductItem>
         )}
+        <SkeletonProductItem></SkeletonProductItem>
       </div>
       <Footer />
     </div>
