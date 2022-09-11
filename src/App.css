@@ -160,8 +160,9 @@
 
 .demo-products,
 .explore-products {
-  width: 90%;
+  width: min(100%, 82rem);
   display: flex;
+  padding-inline: 1rem;
   margin: auto;
   /* padding: 10px 100px; */
 }

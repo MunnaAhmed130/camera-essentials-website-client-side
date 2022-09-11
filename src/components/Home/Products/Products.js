@@ -45,9 +45,9 @@ const Products = () => {
         <Row
           xs={1}
           sm={2}
-          md={2}
+          md={3}
           lg={3}
-          xl={3}
+          xl={4}
           xxl={4}
           className="demo-products"
         >
@@ -58,9 +58,9 @@ const Products = () => {
       ) : (
         <Row
           xxl={4}
-          xl={3}
+          xl={4}
           lg={3}
-          md={2}
+          md={3}
           sm={2}
           xs={1}
           className="demo-products"

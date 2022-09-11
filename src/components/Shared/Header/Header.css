@@ -108,7 +108,7 @@
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
-  width: max(90%, 60rem);
+  width: min(100%, 80rem);
   /* padding-inline: 1em; */
 }
 
