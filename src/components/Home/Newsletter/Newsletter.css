@@ -69,7 +69,11 @@
 }
 
 .newsletter-info input::placeholder {
-  color: white;
+  color: black;
+}
+
+.dark .newsletter-info input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .newsletter-info input:focus {
@@ -93,7 +97,7 @@
 
 .newsletter input {
   background: transparent;
-  border: 1px solid white;
+  border: 1px solid rgba(0, 0, 0, 0.7);
   color: white;
   border-radius: 2em;
   font-size: clamp(1rem, 0.284vw + 0.943rem, 1.125rem);
@@ -105,9 +109,12 @@
   opacity: 0.8;
 }
 
+.dark .newsletter input {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
 .newsletter-info p {
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
-
   padding-top: 1rem;
 }
 

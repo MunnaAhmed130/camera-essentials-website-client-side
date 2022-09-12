@@ -153,8 +153,10 @@
 @media screen and (min-width: 992px) {
   .information,
   .contacts {
-    /* margin-left: 4rem; */
-    /* 0px/0rem/992px*/
+    margin-left: clamp(0rem, 27.9069vw + -17.3rem, 4.5rem);
+    margin-left: clamp(0rem, 26.86567vw + -16.6567rem, 4.5rem);
+    /* 0px/0rem/992vw,27.9069vw + -17.3rem  , 72px/4.5rem/1250vw */
+    /* 0px/0rem/992vw,26.865vw + -16.656rem  , 72px/4.5rem/1260vw */
   }
 }
 

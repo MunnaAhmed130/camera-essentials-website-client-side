@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import Product from "../../Shared/Product/Product";
 import SkeletonProduct from "../../Shared/Skeletons/SkeletonProduct";
-import "./Products.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -17,7 +16,7 @@ const Products = () => {
   // console.log(viewportWidth);
   // console.log(count);
 
-  viewportWidth >= 1400 ? (limit = 8) : (limit = 6);
+  viewportWidth >= 1200 ? (limit = 8) : (limit = 6);
   useEffect(() => {
     fetch(
       `https://limitless-reaches-30016.herokuapp.com/products/query?limit=${limit}`

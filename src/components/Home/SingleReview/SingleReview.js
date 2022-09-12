@@ -1,7 +1,7 @@
 import { Rating } from "@mui/material";
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import "./SingleReview.css";
+// import "./SingleReview.css";
 
 const SingleReview = ({ review }) => {
   const { profession, description, name, rating, img } = review;
