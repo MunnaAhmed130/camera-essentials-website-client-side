@@ -253,13 +253,19 @@ button {
   border-radius: 50%;
   object-fit: cover;
 }
-.single-review p {
+.single-review p,
+.description_text {
   display: inline-block;
   margin-bottom: 3rem;
   max-width: 40rem;
   margin-inline: 2rem;
   /* width: 100%; */
   /* word-wrap: break-word; */
+}
+
+.see_more {
+  color: rgba(22, 32, 44, 0.5);
+  font-weight: 500;
 }
 
 .swiper .swiper-button-next::after,

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import { Rating } from "@mui/material";
 // import SingleReview from "../SingleReview/SingleReview";
-
+import ShowMoreText from "react-show-more-text";
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -70,7 +70,21 @@ const Reviews = () => {
                   readOnly
                 />
                 <br />
-                <p className="">{reviewer.description}</p>
+                <ShowMoreText
+                  /* Default options */
+                  lines={3}
+                  more="Show more"
+                  less="Show less"
+                  className="description_text"
+                  anchorClass="see_more"
+                  // onClick={this.executeOnClick}
+                  expanded={false}
+                  // width={280}
+                  truncatedEndingComponent={"... "}
+                >
+                  {reviewer.description}
+                </ShowMoreText>
+                {/* <p className="">{reviewer.description}</p> */}
               </div>
               {/* </Col> */}
             </SwiperSlide>
