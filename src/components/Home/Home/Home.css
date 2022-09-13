@@ -182,10 +182,33 @@ button {
 }
 
 /* reviews  */
-.reviews {
-  /* width: min(100%, 81rem); */
-  /* margin: auto; */
+.swiper {
+  width: min(100%, 90rem);
+  margin-inline: auto;
+  padding-top: 10rem;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
 }
+
+.single-review {
+  width: min(50rem, 90%);
+  /* margin-top: 1rem; */
+  display: inline-block;
+  margin-inline: 20rem;
+}
+
+.reviews {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  /* background-color: rgba(128, 128, 128, 0.239); */
+}
+/* .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -10px;
+} */
 
 .review_info {
   padding-top: 2em;
@@ -194,6 +217,7 @@ button {
 
 .reviews_container {
   padding-bottom: 3em;
+  background-color: rgba(218, 218, 218, 0.3);
 }
 
 .review_info h2 {
@@ -204,9 +228,12 @@ button {
 /* single review */
 .single-review {
   border: 1px solid rgba(128, 128, 128, 0.239);
-  box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.429);
+  /* box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.429); */
+  background-color: white;
   margin: 10px;
   border-radius: 10px;
+  position: relative;
+  text-align: center;
 }
 
 .reviewer {
@@ -214,28 +241,52 @@ button {
 }
 
 .review-img {
-  border: none;
-  width: 50px;
-  height: 50px;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  /* right: 0; */
+  /* bottom: 0; */
+  margin-inline: -40px;
+  border: 5px solid white;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
 .single-review p {
   display: inline-block;
-  margin-bottom: 20px;
-  max-width: 300px;
-  width: 100%;
-  word-wrap: break-word;
+  margin-bottom: 3rem;
+  max-width: 40rem;
+  margin-inline: 2rem;
+  /* width: 100%; */
+  /* word-wrap: break-word; */
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+  color: #16202c70;
+  /* display: none; */
+  font-size: 2rem;
+}
+@media screen and (max-width: 640px) {
+  .swiper .swiper-button-next::after,
+  .swiper .swiper-button-prev::after {
+    display: none;
+  }
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: rgb(95, 95, 95);
 }
 
 .single-review h3 {
   font-size: 1.3em;
-  display: inline-block;
-  margin-top: 10px;
-  margin-right: 10px;
+  /* display: inline-block; */
+  margin-top: 3rem;
+  /* margin-right: 10px; */
 }
 
 .single-review h4 {
   font-size: 0.9em;
-  display: inline-block;
+  /* display: inline-block; */
 }
