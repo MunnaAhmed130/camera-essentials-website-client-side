@@ -27,8 +27,8 @@ const Reviews = () => {
   return (
     <div className="reviews_container">
       <div className="review_info">
-        <h2>Some Valuable Opinions!</h2>
-        <h3>Reviews</h3>
+        <h2>Some Valuable Opinions</h2>
+        <h3 className="text-uppercase">Reviews</h3>
       </div>
       <Swiper
         // install Swiper modules
@@ -72,7 +72,7 @@ const Reviews = () => {
                 <br />
                 <ShowMoreText
                   /* Default options */
-                  lines={3}
+                  lines={5}
                   more="Show more"
                   less="Show less"
                   className="description_text"

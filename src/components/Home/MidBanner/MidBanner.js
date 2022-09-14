@@ -119,6 +119,14 @@ const MidBanner = () => {
           // onEnd={(e) => iframeOnEnd(e)}
         />
       </div>
+      <div className="credit">
+        <p className="m-0">
+          Credit:{" "}
+          <a href="https://www.youtube.com/c/AUXOUT" className="text-uppercase">
+            Auxout
+          </a>
+        </p>
+      </div>
     </div>
   );
 };

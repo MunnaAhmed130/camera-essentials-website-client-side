@@ -147,10 +147,6 @@
     display: inline-block;
     padding-bottom: 1rem;
   }
-
-  .item_description {
-    /* margin-inline: none; */
-  }
 }
 
 @media screen and (max-width: 991px) {
@@ -169,13 +165,11 @@
     margin-inline: auto;
   }
 }
+
 @media screen and (min-width: 250px) {
   .item_btn_container a:first-child {
     margin-right: 0.7rem;
   }
-}
-
-@media screena and (max-width: 330px) {
 }
 
 @media screen and (min-width: 768px) {
