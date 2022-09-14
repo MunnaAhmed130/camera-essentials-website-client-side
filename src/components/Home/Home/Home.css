@@ -59,8 +59,9 @@ button {
 /* Mid banner and iframe */
 .mid-banner {
   position: relative;
-  /* padding-bottom: 5rem; */
+  padding-top: 4rem;
   padding-top: clamp(5rem, 6.8vw + 3.63rem, 8rem);
+  /*80px, 6.3vw + 3.63rem  , 8rem/128px/1024vw  */
   /*80px, 6.3vw + 3.63rem  ,128px  */
   padding-inline: 1em;
 
@@ -116,8 +117,9 @@ button {
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
   font-weight: 500;
   letter-spacing: 3px;
-  /* padding-block: 4rem; */
-  padding-block: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
+  padding-block: clamp(2rem, 4.545vw + 1.09rem, 4rem);
+  /* 32px/ 2rem /320vw , 4.545vw + 1.09rem ,64px/4rem/1024vw  */
+  /* padding-block: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem); */
   color: rgba(22, 32, 44, 1);
 }
 
@@ -149,7 +151,7 @@ button {
   /* height: 125px; */
   /*200px / 12.5rem , 35.1136vw + 5.477rem , 509px / 31.8125rem  */
   /* 150px/ 9.375rem, 40.7954vw + 1.2159rem, 31.8125rem */
-  /* 125px/7.8125rem, 43.636vw - .91477rem,31.8125rem */
+  /* 125px/7.8125rem, 43.636vw + .91477rem,31.8125rem */
   margin-inline: auto;
   overflow: hidden;
 }
