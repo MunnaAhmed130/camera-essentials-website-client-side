@@ -159,6 +159,7 @@ button {
   /* 125px/7.8125rem, 43.636vw + .91477rem,31.8125rem */
   margin-inline: auto;
   overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(66, 66, 66, 0.4);
 }
 
 .iframe {
@@ -282,7 +283,7 @@ button {
 /* single review */
 .single-review {
   /* border: 1px solid rgba(128, 128, 128, 0.239); */
-  /* box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.429); */
+  box-shadow: 0px 0.5rem 1rem rgba(128, 128, 128, 0.429);
   background-color: white;
   margin: 10px;
   border-radius: 10px;

@@ -110,9 +110,18 @@
   /* line-height: 39px; */
   /* 34px/2.125rem/320vw, .71vw + 1.9829rem  ,39px/2.4375rem/1024vw  */
   margin-right: 10px;
-  border: 1px solid rgba(73, 73, 73, 0.905);
+  border: 1px solid rgba(73, 73, 73, 0.525);
+  /* border-bottom: 1px solid rgb(103, 103, 103); */
+  /* border-top: 1px solid black; */
   color: rgb(62, 62, 62);
   transition: all 0.5s ease;
+}
+
+.icon-links a:hover {
+  background-color: rgba(226, 226, 226, 0.7);
+  border: 1px solid transparent;
+  /* color: black; */
+  box-shadow: 0 0.25rem 0.5rem rgba(103, 103, 103, 0.593);
 }
 
 .icon-links .facebook:hover {
@@ -168,14 +177,6 @@
   color: black;
   font-weight: 500;
   /* color: var(--footer-color); */
-}
-
-/* light theme */
-.light .icon-links a:hover {
-  background-color: rgba(226, 226, 226, 0.7);
-  border: 1px solid rgb(255, 255, 255);
-  /* color: black; */
-  box-shadow: 4px 4px 3px 1px rgb(144, 144, 144);
 }
 
 /* dark theme */
