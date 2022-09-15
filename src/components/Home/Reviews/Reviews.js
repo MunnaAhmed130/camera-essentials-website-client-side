@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import { Rating } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
 // import SingleReview from "../SingleReview/SingleReview";
 import ShowMoreText from "react-show-more-text";
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -32,10 +33,16 @@ const Reviews = () => {
       </div>
       <Swiper
         // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        // effect="fade"
         spaceBetween={0}
         slidesPerView={1}
         loop={true}
+        // autoplay
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         hashNavigation={{
           watchState: true,
         }}
@@ -66,23 +73,29 @@ const Reviews = () => {
                 <h4>{reviewer.profession}</h4>
                 <Rating
                   name="read-only"
+                  className="rating"
+                  precision={0.1}
+                  emptyIcon={<StarIcon className="empty_rating" />}
                   value={Number(reviewer.rating)}
                   readOnly
                 />
                 <br />
                 <ShowMoreText
                   /* Default options */
-                  lines={5}
+                  lines={3}
                   more="Show more"
                   less="Show less"
                   className="description_text"
                   anchorClass="see_more"
                   // onClick={this.executeOnClick}
                   expanded={false}
-                  // width={280}
+                  // width less value looks bad in responsiveness
+                  width={10000}
                   truncatedEndingComponent={"... "}
                 >
+                  {/* <p> */}
                   {reviewer.description}
+                  {/* </p> */}
                 </ShowMoreText>
                 {/* <p className="">{reviewer.description}</p> */}
               </div>

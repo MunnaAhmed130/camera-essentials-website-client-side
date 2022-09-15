@@ -9,7 +9,8 @@
 }
 
 .dark .navbar {
-  background-color: rgb(31, 40, 52);
+  /* background-color: rgb(31, 40, 52); */
+  background-color: #161f2b;
 }
 
 .dark .dropdown-menu {
@@ -39,7 +40,8 @@
 /* light header  */
 
 .light .navbar {
-  background-color: rgba(239, 237, 237, 0.9);
+  /* background-color: rgba(239, 237, 237, 0.9); */
+  background-color: #bdbdbd59;
 }
 
 .navbar-light .navbar-nav a,

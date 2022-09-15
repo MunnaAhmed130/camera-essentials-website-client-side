@@ -18,7 +18,7 @@ const Product = ({ product }) => {
   // const productInfo = description.slice(0, 120);
   return (
     <Col className="card_col">
-      <Card className="my-3 card product">
+      <Card className="mt-3 card product">
         <div className="card_img_container">
           <Card.Img
             variant="top"
