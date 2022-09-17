@@ -59,9 +59,9 @@ button {
 /* Mid banner and iframe */
 .mid-banner {
   position: relative;
-  padding-top: 4rem;
-  /* padding-top: clamp(5rem, 6.8vw + 3.63rem, 8rem); */
-  /*64px/ 4rem/, 6.3vw + 3.63rem  , 8rem/128px/1024vw  */
+  /* padding-top: 4rem; */
+  padding-top: clamp(4rem, 9.09vw + 2.1818rem, 8rem);
+  /*64px/ 4rem/320vw, 9.09vw + 2.1818rem  , 8rem/128px/1024vw  */
   /*80px, 6.3vw + 3.63rem  ,128px  */
   padding-inline: 1em;
 
@@ -80,8 +80,8 @@ button {
   z-index: 0;
   /* background-position: center;
   background-size: cover; */
-  opacity: 0.95;
-  background-color: #16202c;
+  opacity: 0.88;
+  background-color: #091e37;
 }
 
 .dark-mid-banner,
@@ -158,7 +158,11 @@ button {
   /* 125px/7.8125rem , 43.636vw + .91477rem, 509px/ 31.8125rem/1230vw */
   margin-inline: auto;
   overflow: hidden;
-  box-shadow: 0 0.5rem 1rem rgba(66, 66, 66, 0.4);
+  box-shadow: 0 0.5rem 2rem rgba(66, 66, 66, 0.5);
+}
+
+.dark .iframe-container {
+  box-shadow: -0.2rem 0.7rem 2rem 0 rgba(24, 24, 24, 0.72);
 }
 
 .iframe {
