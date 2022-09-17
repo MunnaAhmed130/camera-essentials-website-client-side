@@ -155,7 +155,6 @@ button {
   width: min(100%, 1200px);
   height: clamp(6.5625rem, 42.526vw + -0.8796rem, 31.8125rem);
   /* 105px/ 6.5625rem/280vw, 42.526vw + -.8796rem, 509px/ 31.8125rem/1230vw */
-  /* 125px/7.8125rem , 43.636vw + .91477rem, 509px/ 31.8125rem/1230vw */
   margin-inline: auto;
   overflow: hidden;
   box-shadow: 0 0.5rem 2rem rgba(66, 66, 66, 0.5);
@@ -262,14 +261,11 @@ button {
   padding-top: 4rem;
   padding-bottom: 2rem;
   /* padding-block: 2rem; */
-  background-color: rgba(218, 218, 218, 0.4);
+  background-color: rgba(241, 241, 241, 0.572);
 }
 
 .dark .reviews_container {
-  /* background-color: rgba(31, 25, 44, 0.755); */
-  background-color: rgb(32, 48, 62);
-  background-color: #35465b98;
-  /* background-color: #232f3f98; */
+  background-color: var(--dark-bg-color);
 }
 
 .review_info h2 {
@@ -303,6 +299,7 @@ button {
 
 .dark .single-review {
   background-color: #1c2837;
+  box-shadow: var(--dark-card-box-shadow);
 }
 
 /* .reviewer {

@@ -188,7 +188,7 @@
 .dark .explore {
   /* background-color: #232f3f98; */
   /* background-color: rgb(35, 54, 75); */
-  background-color: var(--dark-products-bg-color);
+  background-color: var(--dark-bg-color);
   /* background-color: #161f2b; */
 }
 
