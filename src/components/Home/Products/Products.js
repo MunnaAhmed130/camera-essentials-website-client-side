@@ -70,6 +70,11 @@ const Products = () => {
           ))}
         </Row>
       )}
+      {/* <Row xxl={4} xl={4} lg={3} md={3} sm={2} xs={1} className="demo-products">
+        {limitArray.map((n) => (
+          <SkeletonProduct key={n}></SkeletonProduct>
+        ))}
+      </Row> */}
     </div>
   );
 };

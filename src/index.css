@@ -1,8 +1,19 @@
 :root {
   --main-color: rgba(136, 130, 171, 0.676);
+  --light-card-box-shadow: 0 0.5rem 1rem rgba(128, 128, 128, 0.266);
   /* --dark-bg-color:; */
   --light-color: rgba(255, 255, 255, 0.5);
+  --dark-card-bg-color: rgba(28, 39, 55, 0.8);
+  --dark-products-bg-color: rgb(35, 54, 75);
+  --dark-card-box-shadow: -7px 10px 9px 1px rgba(0, 0, 0, 0.15);
 }
+/*
+ main color: rgba(136, 130, 171, 0.676)
+ light card box shadow: 0 0.5rem 1rem rgba(128, 128, 128, 0.266);
+ dark products bg color: rgb(35, 54, 75)
+ dark card bg color: rgba(28, 39, 55, 0.8);
+ dark card box shadow: -7px 10px 9px 1px rgba(0, 0, 0, 0.15);
+ */
 
 /* bai-jamjuree-300 - latin */
 @font-face {
@@ -16,6 +27,7 @@
       url("../public/asset/fonts/bai-jamjuree/bai-jamjuree-v11-latin-300.woff")
       format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
 /* bai-jamjuree-regular - latin */
 @font-face {
   font-family: "Bai Jamjuree";
@@ -28,6 +40,7 @@
       url("../public/asset/fonts/bai-jamjuree/bai-jamjuree-v11-latin-regular.woff")
       format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
 /* bai-jamjuree-500 - latin */
 @font-face {
   font-family: "Bai Jamjuree";
@@ -40,6 +53,7 @@
       url("../public/asset/fonts/bai-jamjuree/bai-jamjuree-v11-latin-500.woff")
       format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
 /* bai-jamjuree-600 - latin */
 @font-face {
   font-family: "Bai Jamjuree";
@@ -52,6 +66,7 @@
       url("../public/asset/fonts/bai-jamjuree/bai-jamjuree-v11-latin-600.woff")
       format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
 /* bai-jamjuree-700 - latin */
 @font-face {
   font-family: "Bai Jamjuree";

@@ -60,8 +60,8 @@ button {
 .mid-banner {
   position: relative;
   padding-top: 4rem;
-  padding-top: clamp(5rem, 6.8vw + 3.63rem, 8rem);
-  /*80px, 6.3vw + 3.63rem  , 8rem/128px/1024vw  */
+  /* padding-top: clamp(5rem, 6.8vw + 3.63rem, 8rem); */
+  /*64px/ 4rem/, 6.3vw + 3.63rem  , 8rem/128px/1024vw  */
   /*80px, 6.3vw + 3.63rem  ,128px  */
   padding-inline: 1em;
 
@@ -100,8 +100,8 @@ button {
   z-index: 0;
   /* background-position: center;
   background-size: cover; */
-  opacity: 0.8;
-  background-color: #dbdbdb;
+  opacity: 0.9;
+  background-color: #dbdbdbe7;
 }
 
 .iframe-container,
@@ -149,14 +149,13 @@ button {
   /* font-size: 2.5rem; */
   margin-bottom: 1em;
 }
+
 .iframe-container {
   position: relative;
   width: min(100%, 1200px);
-  height: clamp(7.8125rem, 43.636vw + 0.91477rem, 31.8125rem);
-  /* height: 125px; */
-  /*200px / 12.5rem , 35.1136vw + 5.477rem , 509px / 31.8125rem  */
-  /* 150px/ 9.375rem, 40.7954vw + 1.2159rem, 31.8125rem */
-  /* 125px/7.8125rem, 43.636vw + .91477rem,31.8125rem */
+  height: clamp(6.5625rem, 42.526vw + -0.8796rem, 31.8125rem);
+  /* 105px/ 6.5625rem/280vw, 42.526vw + -.8796rem, 509px/ 31.8125rem/1230vw */
+  /* 125px/7.8125rem , 43.636vw + .91477rem, 509px/ 31.8125rem/1230vw */
   margin-inline: auto;
   overflow: hidden;
   box-shadow: 0 0.5rem 1rem rgba(66, 66, 66, 0.4);
@@ -172,7 +171,8 @@ button {
   /* height: max(100%, 630px); */
   height: calc(100% + 120px);
   /* height: 630px; */
-  margin-top: -60px;
+  margin-top: -60.3px;
+  /* margin-top: -3.76875em; */
   border: 0;
   pointer-events: none;
 }

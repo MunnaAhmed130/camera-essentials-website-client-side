@@ -120,9 +120,9 @@
 .item_btn_container button {
   /* background-color: rgba(20, 20, 20, 0.948); */
   /* background-color: #00122a; */
-  padding: 0.7em 1.5em;
+  padding: 0.5em 1.5em;
   color: rgba(255, 255, 255, 0.8);
-  /* font-size: 1rem; */
+  font-size: 0.9375rem;
   /* font-weight: 600; */
 }
 /* .item_btn_container a:first-child {

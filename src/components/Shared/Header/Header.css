@@ -41,7 +41,8 @@
 
 .light .navbar {
   /* background-color: rgba(239, 237, 237, 0.9); */
-  background-color: #bdbdbd59;
+  /* background-color: #bdbdbd59; */
+  background-color: rgba(128, 128, 128, 0.12);
 }
 
 .navbar-light .navbar-nav a,
