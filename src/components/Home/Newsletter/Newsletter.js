@@ -22,12 +22,12 @@ const Newsletter = () => {
       >
         <Col className="newsletter-info ">
           <div>
-            <h2>SUBSCRIBE OUR NEWLETTER</h2> <br />
+            <h2>SUBSCRIBE TO OUR NEWLETTER</h2> <br />
             <h3>GET UPDATE FOR NEWS, OFFERS</h3> <br />
             <form>
               <input type="email" placeholder="Email" />
             </form>
-            <p className=" text-uppercase">Don't worry, We don't spam</p>
+            <p className=" text-uppercase m-0">Don't worry, We don't spam</p>
           </div>
         </Col>
         {/* <Col>

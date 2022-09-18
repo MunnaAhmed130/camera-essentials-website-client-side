@@ -1,8 +1,11 @@
 :root {
   --main-color: rgba(136, 130, 171, 0.676);
   --light-card-box-shadow: 0 0.5rem 1rem rgba(128, 128, 128, 0.266);
-  /* --dark-bg-color:; */
-  --light-color: rgba(255, 255, 255, 0.5);
+  /* font size  */
+  --fs-normal: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  --fs-heading: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
+  /* dark bg  */
+  --dark-footer-color: rgba(255, 255, 255, 0.55);
   --dark-card-bg-color: rgba(28, 39, 55, 0.8);
   --dark-bg-color: rgb(35, 54, 75);
   --dark-card-box-shadow: -7px 10px 9px 1px rgba(0, 0, 0, 0.15);

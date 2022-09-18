@@ -206,8 +206,8 @@
 .explore .products-header {
   width: 95%;
   margin-inline: auto;
-  font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
-  padding-block: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  font-size: var(--fs-heading);
+  padding-block: var(--fs-normal);
   /* margin-block: 2rem; */
   /* margin-block: 1rem; */
 }
