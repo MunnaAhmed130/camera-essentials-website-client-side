@@ -3,9 +3,9 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home/Home";
 import Explore from "./components/Explore/Explore/Explore";
-import Login from "./components/Login/Login/Login";
+// import Login from "./components/Login/Login/Login";
 import NotFound from "./components/Shared/NotFound/NotFound";
-import Register from "./components/Login/Register/Register";
+// import Register from "./components/Login/Register/Register";
 import AuthProvider from "./Context/AuthProvider/AuthProvider";
 import PrivateRoute from "./components/Shared/PrivateRoute/PrivateRoute";
 import Purchase from "./components/Shared/Purchase/Purchase";
@@ -20,6 +20,8 @@ import ManageProducts from "./components/Admin/ManageProducts/ManageProducts";
 import Reviews from "./components/Home/Reviews/Reviews";
 import ThemeProvider from "./Context/ThemeProvider/ThemeProvider";
 import ExploreProduct from "./components/Explore/ExploreProduct/ExploreProduct";
+import Login from "./components/Authentication/Login";
+import Register from "./components/Authentication/Register";
 // import useTheme from "./Hooks/useTheme";
 
 function App() {
