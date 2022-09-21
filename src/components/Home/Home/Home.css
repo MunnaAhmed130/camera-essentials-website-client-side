@@ -12,10 +12,14 @@ button {
 /* Banner */
 .carousel .carousel-control-prev,
 .carousel .carousel-control-next {
-  /* display: none; */
+  display: none;
   opacity: 0;
 }
 
+.carousel-caption {
+  right: 0;
+  left: 0;
+}
 .banner-info {
   display: flex;
   align-content: center;
@@ -31,24 +35,30 @@ button {
 
 /* 24px, ,64px */
 
-.banner {
+.banner_img {
   /* height: 94vh;
   max-height: 800px; */
   height: min(90vh, 53.125rem);
   object-fit: cover;
   object-position: center;
+  filter: brightness(60%);
 }
+
 .banner-btn {
   background-color: transparent;
-  color: black;
+  color: rgba(255, 255, 255, 0.801);
   font-weight: 500;
   font-size: 2em;
   padding: 0.8rem 3rem;
   border-radius: 5px;
   margin-top: 20px;
-  border: 1px solid black;
+  border: 1px solid rgba(255, 255, 255, 0.902);
   transition: 0.5 ease;
 }
+
+/* .dark .banner-btn {
+  color: white;
+} */
 
 .banner-btn:hover {
   background-color: #24232368;

@@ -12,7 +12,8 @@ import useAuth from "../../../Hooks/useAuth";
 import useTheme from "../../../Hooks/useTheme";
 import Footer from "../../Shared/Footer/Footer";
 import Header from "../../Shared/Header/Header";
-import "./Login.css";
+// import "./Login.css";
+import "./Authentication.css";
 
 const Login = () => {
   const { user, error, userLogin, googleSignIn, isLoading } = useAuth();

@@ -14,9 +14,11 @@
   /* background-color: rgba(21, 21, 21, 0.904); */
   background-color: #161f2b;
   color: rgba(255, 255, 255, 0.85);
-  /* font-size: clamp(0.75rem, 0.568vw + 0.636rem, 1rem); */
-  font-size: 14px;
-  /* 12 14 */
+  /* font-size: clamp(0.75rem, 0.284vw + 0.693rem, 0.875rem); */
+  font-size: clamp(0.75rem, 0.142vw + 0.72159rem, 0.8125rem);
+
+  /* font-size: 13px; */
+  /* 12px/.75rem/320vw ,.142vw + .72159rem , 13px/.8125rem/1024vw */
   margin-bottom: 0.8em;
   font-weight: 600;
   transition: all 0.3s ease-in;
