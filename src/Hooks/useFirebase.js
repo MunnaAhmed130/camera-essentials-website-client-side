@@ -43,6 +43,7 @@ const useFirebase = () => {
         history.replace("/");
       })
       .catch((error) => {
+        // console.log(error);
         setError(error.message);
       })
       .finally(() => setIsLoading(false));

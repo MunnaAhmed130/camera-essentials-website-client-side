@@ -7,96 +7,90 @@ import useTheme from "../../Hooks/useTheme";
 import Header from "../Shared/Header/Header";
 import Footer from "../Shared/Footer/Footer";
 import "./Authentication.css";
-// import useAuth from "../../../Hooks/useAuth";
-// import Header from "../../Shared/Header/Header";
-// import "./Register.css";
-// import Footer from "../../Shared/Footer/Footer";
-// import useTheme from "../../../Hooks/useTheme";
 
 const Register = () => {
-    const { user, error, userRegister, isLoading } = useAuth();
-    const history = useHistory();
-    const { darkMode } = useTheme();
-    const { register, handleSubmit } = useForm();
-    const onSubmit = (data) => {
-        console.log(data);
-        if (data.password !== data.password2) {
-            alert("your password did not match");
-            return;
-        }
-        userRegister(data.email, data.password, data.name, history);
-        console.log(user);
-    };
-    return (
-        <div className={darkMode ? "dark" : "light"}>
-            <Header />
-            <div className="register">
-                <h2 className="register-heading">Please Register</h2>
-                {!isLoading && (
-                    <form
-                        className="register-form"
-                        onSubmit={handleSubmit(onSubmit)}
-                    >
-                        <input
-                            {...register("name", { required: true })}
-                            placeholder="Your name"
-                            required="required"
-                        />{" "}
-                        <br />
-                        <input
-                            {...register("email", { required: true })}
-                            placeholder="Your email"
-                            required="required"
-                        />{" "}
-                        <br />
-                        <input
-                            type="password"
-                            {...register("password", { required: true })}
-                            placeholder="Your password"
-                            required="required"
-                        />{" "}
-                        <br />
-                        <input
-                            type="password"
-                            {...register("password2", { required: true })}
-                            placeholder="Confirm your password"
-                            required="required"
-                        />{" "}
-                        <br />
-                        <p className="m-0">
-                            By continuing, you agree to{" "}
-                            <a href="/login" alt="">
-                                Conditions of Use
-                            </a>{" "}
-                            and <a href="/login">Privacy Notice</a>.
-                        </p>
-                        <Link to="./login">Already Registered? Login</Link>{" "}
-                        <br />
-                        <Button
-                            className="mb-3"
-                            variant="contained"
-                            type="submit"
-                        >
-                            Register
-                        </Button>
-                    </form>
-                )}
-                {isLoading && (
-                    <Box>
-                        <CircularProgress /> <br />
-                    </Box>
-                )}
-                {user?.email && (
-                    <Alert severity="success">
-                        This is a success alert — check it out!
-                    </Alert>
-                )}
-                {error && <Alert severity="error">{error}</Alert>}
-            </div>
+  const { user, error, userRegister, isLoading } = useAuth();
+  console.log(isLoading);
+  const history = useHistory();
+  const { darkMode } = useTheme();
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    if (data.password !== data.password2) {
+      alert("your password did not match");
+      return;
+    }
+    userRegister(data.email, data.password, data.name, history);
+    console.log(user);
+  };
+  return (
+    <div className={darkMode ? "dark" : "light"}>
+      <Header />
+      <div className="register">
+        <h2 className="register-heading">Please Register</h2>
+        {/* {!isLoading && ( */}
+        <form className="register-form" onSubmit={handleSubmit(onSubmit)}>
+          <input
+            {...register("name", { required: true })}
+            type="text"
+            placeholder="Your name"
+            required="required"
+          />{" "}
+          <br />
+          <input
+            {...register("email", { required: true })}
+            type="email"
+            placeholder="Your email"
+            required="required"
+          />{" "}
+          <br />
+          <input
+            type="password"
+            {...register("password", { required: true })}
+            placeholder="Your password"
+            required="required"
+          />{" "}
+          <br />
+          <input
+            type="password"
+            {...register("password2", { required: true })}
+            placeholder="Confirm your password"
+            required="required"
+          />{" "}
+          <br />
+          <p className="m-0">
+            By continuing, you agree to{" "}
+            <a href="/login" alt="">
+              Terms and Conditions
+            </a>{" "}
+            and <a href="/login">Privacy Policy</a>.
+          </p>
+          <Button
+            className="mb-3 register-btn"
+            variant="contained"
+            type="submit"
+          >
+            Register
+          </Button>
+          <br />
+        </form>
+        {/* )} */}
+        {isLoading && (
+          <Box>
+            <CircularProgress /> <br />
+          </Box>
+        )}
+        {user?.email && (
+          <Alert severity="success">
+            This is a success alert — check it out!
+          </Alert>
+        )}
+        {error && <Alert severity="error">{error}</Alert>}
+      </div>
 
-            <Footer />
-        </div>
-    );
+      <Footer />
+    </div>
+  );
 };
 
 export default Register;

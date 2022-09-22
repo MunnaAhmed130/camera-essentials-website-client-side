@@ -4,34 +4,43 @@
   padding-block: 5rem;
 }
 
-.dark .login {
+.dark .login,
+.dark .register {
   color: white;
   background-color: var(--dark-bg-color);
 }
 
 .login > *,
 .register > * {
-  font-weight: 500;
+  font-weight: 600;
 }
 
-a {
+.login a,
+.register a {
   text-decoration: none;
+  font-weight: 600;
+  /* color: rgba(0, 0, 0, 0.888); */
 }
 
-.dark .login a {
+.dark .login a,
+.dark .register a {
   /* color: rgba(193, 193, 255, 0.766); */
   color: #0f6fff;
+  color: #276fdc;
+  /* color: rgb(225, 225, 225); */
 }
 
-.login-form {
+.login-form,
+.register-form {
   max-width: 450px;
   padding-inline: 10px;
   margin-inline: auto;
 }
 
-.login-form input {
-  margin-block: 10px;
-  padding-inline: 10px;
+.login-form input,
+.register-form input {
+  margin-block: 1rem;
+  padding-inline: 1rem;
   height: 40px;
   width: 100%;
   border: 1px solid rgba(128, 128, 128, 0.661);
@@ -44,8 +53,11 @@ a {
     background-color: red;
   } */
 
+.register-form input[type="text"],
 .login-form input[type="email"],
-input[type="password"] {
+.register-form input[type="email"],
+.login-form input[type="password"],
+.register-form input[type="password"] {
   background-color: rgba(237, 237, 237, 0.4);
   font-weight: 500;
   /* background: white; */
@@ -58,32 +70,42 @@ input[type="password"] {
 .dark input[type="email"],
 .dark input[type="password"] {
   /* background-color: none; */
-  color: black;
+  color: white;
 }
 
 .dark input::placeholder {
   color: white;
 }
 
-.login-form input:focus-visible {
+.login-form input:focus-visible,
+.register-form input:focus-visible {
   outline: 0px solid rgb(96, 96, 96);
   border-bottom: 1px solid rgb(0, 0, 0);
 }
 
+input:focus::placeholder {
+  color: transparent;
+}
+
 .login-form p,
+.register-form p,
 .or {
   text-align: left;
   font-size: var(--fs-normal);
+  font-size: 0.9375rem;
+  /* font-size: clamp(0.75rem, 0.142vw + 0.72159rem, 0.8125rem); */
+  /* font-size: clamp(0.75rem, 0.284vw + 0.693rem, 0.875rem); */
 }
 
-.login-heading {
+.login-heading,
+.register-heading {
   /* margin-top: 50px; */
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5em;
   /* font-size: 2.5rem; */
   font-size: var(--fs-heading);
 }
 
-.register-form input {
+/* .register-form input {
   padding: 5px;
   margin: 10px;
   height: 40px;
@@ -108,4 +130,4 @@ input[type="password"] {
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 2.5rem;
-}
+} */

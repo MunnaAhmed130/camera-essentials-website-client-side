@@ -14,91 +14,90 @@ import Footer from "../Shared/Footer/Footer";
 import "./Authentication.css";
 
 const Login = () => {
-    const { user, error, userLogin, googleSignIn, isLoading } = useAuth();
-    const location = useLocation();
-    const history = useHistory();
-    const { darkMode } = useTheme();
-    const { register, handleSubmit } = useForm();
-    const onSubmit = (data) => {
-        console.log(data);
-        userLogin(data.email, data.password, location, history);
-    };
-    const handleGoogleSignIn = () => {
-        googleSignIn(location, history);
-    };
-    return (
-        <div className={darkMode ? "dark" : "light"}>
-            <Header />
-            <div className="login">
-                <h2 className="login-heading">Please Login</h2>
-                <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
-                    <input
-                        {...register("email")}
-                        type="email"
-                        placeholder="Your Email"
-                        required="required"
-                    />{" "}
-                    <br />
-                    <input
-                        {...register("password")}
-                        type="password"
-                        placeholder="Your Password"
-                        required="required"
-                    />{" "}
-                    <br />
-                    <p className="m-0">
-                        By continuing, you agree to{" "}
-                        <a href="/login" alt="">
-                            Conditions of Use
-                        </a>{" "}
-                        and <a href="/login">Privacy Notice</a>.
-                    </p>
-                    <Button
-                        className="login-btn m-3"
-                        type="submit"
-                        variant="contained"
-                    >
-                        Login
-                    </Button>
-                </form>
-                {isLoading && (
-                    <Box>
-                        <CircularProgress /> <br />
-                    </Box>
-                )}
-                {user?.email && (
-                    <Alert severity="success">
-                        This is a success alert — check it out!
-                    </Alert>
-                )}
-                {error && <Alert severity="error">{error}</Alert>}
-                <div>
-                    <span className="d-inline-block mb-1 or">
-                        or Sign In using
-                    </span>
-                    {/* <hr /> */}
-                </div>
-
-                <Button
-                    className="mb-5"
-                    variant="contained"
-                    onClick={handleGoogleSignIn}
-                    type="submit"
-                >
-                    {" "}
-                    <span className="login-icon">
-                        <FontAwesomeIcon icon={faGoogle} />
-                    </span>
-                    oogle&nbsp; Sign In
-                </Button>
-                <br />
-                <Link to="/register" className="d-inline-block mb-2">
-                    New User? Please Register
-                </Link>
-            </div>
-            <Footer />
+  const { user, error, userLogin, googleSignIn, isLoading } = useAuth();
+  // console.log(error.message);
+  const location = useLocation();
+  const history = useHistory();
+  const { darkMode } = useTheme();
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    userLogin(data.email, data.password, location, history);
+  };
+  const handleGoogleSignIn = () => {
+    googleSignIn(location, history);
+  };
+  return (
+    <div className={darkMode ? "dark" : "light"}>
+      <Header />
+      <div className="login">
+        <h2 className="login-heading">Please Login</h2>
+        <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+          <input
+            {...register("email")}
+            type="email"
+            placeholder="Your Email"
+            required="required"
+          />{" "}
+          <br />
+          <input
+            {...register("password")}
+            type="password"
+            placeholder="Your Password"
+            required="required"
+          />{" "}
+          <br />
+          <p className="m-0">
+            By Signing in, you agree to{" "}
+            <a href="/login" alt="">
+              Terms and Conditions
+            </a>{" "}
+            and <a href="/login">Privacy Policy</a>.
+          </p>
+          <Button className="login-btn m-3" type="submit" variant="contained">
+            Login
+          </Button>
+        </form>
+        {isLoading && (
+          <Box>
+            <CircularProgress /> <br />
+          </Box>
+        )}
+        {user?.email && (
+          <Alert severity="success">
+            This is a success alert — check it out!
+          </Alert>
+        )}
+        {error && <Alert severity="error">{error}</Alert>}
+        <div>
+          <span className="d-inline-block mb-1 or">or Sign In using</span>
+          {/* <hr /> */}
         </div>
-    );
+
+        <Button
+          className="mb-5 login-btn"
+          variant="contained"
+          onClick={handleGoogleSignIn}
+          type="submit"
+        >
+          {" "}
+          <span className="login-icon">
+            <FontAwesomeIcon icon={faGoogle} />
+          </span>
+          oogle&nbsp; Sign In
+        </Button>
+        <br />
+        <p>
+          {" "}
+          New User?{" "}
+          <Link to="/register" className="d-inline-block mb-2">
+            Please Register
+          </Link>
+        </p>
+      </div>
+      <Footer />
+    </div>
+  );
 };
 
 export default Login;
