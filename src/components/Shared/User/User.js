@@ -29,14 +29,34 @@ const User = () => {
         aria-expanded={open}
         onClick={() => setOpen(!open)}
       >
-        <img className="profile-img " src={user.photoURL} alt="profile-pic" />
+        {user.photoURL ? (
+          <img className="profile-img " src={user.photoURL} alt="profile-pic" />
+        ) : (
+          <img
+            className="profile-img "
+            src="https://i.ibb.co/QvyFpsc/default-avatar-profile-icon-vector-social-media-user-image.jpg"
+            alt=""
+          />
+        )}
       </div>
       {/* </div> */}
 
       {/* {open && ( */}
       <div className={`dropdown-menu ${open && "show"}`}>
         <div className="dropdown_img pt-5 pb-4">
-          <img className="profile-img " src={user.photoURL} alt="profile-pic" />
+          {user.photoURL ? (
+            <img
+              className="profile-img "
+              src={user.photoURL}
+              alt="profile-pic"
+            />
+          ) : (
+            <img
+              className="profile-img "
+              src="https://i.ibb.co/QvyFpsc/default-avatar-profile-icon-vector-social-media-user-image.jpg"
+              alt=""
+            />
+          )}
         </div>
         <div className="dropdown_item ">
           <h5 className="user_name">{name}</h5>

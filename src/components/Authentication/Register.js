@@ -86,6 +86,13 @@ const Register = () => {
           </Alert>
         )}
         {error && <Alert severity="error">{error}</Alert>}
+        <p>
+          {" "}
+          Already Have an Account?{" "}
+          <Link to="/login" className="d-inline-block mb-2">
+            Please Login
+          </Link>
+        </p>
       </div>
 
       <Footer />
