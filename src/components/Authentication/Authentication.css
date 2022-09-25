@@ -1,13 +1,43 @@
 .login,
 .register {
+  --footer-color: rgba(255, 255, 255, 0.75);
   /* margin-bottom: 50px; */
-  padding-block: 5rem;
+  position: relative;
+  padding-block: 7rem;
+  background-image: url("https://i.ibb.co/m8KzJs5/camera-and-lenses.jpg");
+  /* filter: brightness(90%); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
+.login.light-bg:after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 0;
+  /* opacity: 0.2; */
+  background-color: #f4f4f4e3;
+}
+
+.login.dark-bg:after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 0;
+  /* opacity: 0.2; */
+  background-color: #031429;
+}
 .dark .login,
 .dark .register {
-  color: white;
-  background-color: var(--dark-bg-color);
+  color: var(--dark-auth-color);
+  /* background-color: var(--dark-bg-color); */
 }
 
 .login > *,
@@ -18,7 +48,7 @@
 .login a,
 .register a {
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   /* color: rgba(0, 0, 0, 0.888); */
 }
 
@@ -26,21 +56,23 @@
 .dark .register a {
   /* color: rgba(193, 193, 255, 0.766); */
   color: #0f6fff;
-  color: #276fdc;
+  color: #6462e3;
   /* color: rgb(225, 225, 225); */
 }
 
-.login-form,
-.register-form {
+.login-form-container,
+.register-form-container {
   max-width: 450px;
   padding-inline: 10px;
   margin-inline: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .login-form input,
 .register-form input {
   margin-block: 1rem;
-  padding-inline: 1rem;
+  /* padding-inline: 1rem; */
   height: 40px;
   width: 100%;
   border: 1px solid rgba(128, 128, 128, 0.661);
@@ -59,6 +91,7 @@
 .login-form input[type="password"],
 .register-form input[type="password"] {
   background-color: rgba(237, 237, 237, 0.4);
+  background-color: transparent;
   font-weight: 500;
   /* background: white; */
   border: none;
@@ -70,11 +103,11 @@
 .dark input[type="email"],
 .dark input[type="password"] {
   /* background-color: none; */
-  color: white;
+  color: var(--dark-auth-color);
 }
 
 .dark input::placeholder {
-  color: white;
+  color: var(--dark-auth-color);
 }
 
 .login-form input:focus-visible,
@@ -83,18 +116,27 @@
   border-bottom: 1px solid rgb(0, 0, 0);
 }
 
+.dark .login-form input:focus-visible,
+.dark .register-form input:focus-visible {
+  border-bottom: 1px solid white;
+}
+
 input:focus::placeholder {
   color: transparent;
 }
 
 .login-form p,
-.register-form p,
-.or {
+.register-form p {
   text-align: left;
   font-size: var(--fs-normal);
-  font-size: 0.9375rem;
+  /* font-size: 0.9375rem; */
   /* font-size: clamp(0.75rem, 0.142vw + 0.72159rem, 0.8125rem); */
   /* font-size: clamp(0.75rem, 0.284vw + 0.693rem, 0.875rem); */
+}
+
+.alt-sign {
+  /* font-size: clamp(0.75rem, 0.284vw + 0.693rem, 0.875rem); */
+  font-size: 15.5px;
 }
 
 .login-heading,

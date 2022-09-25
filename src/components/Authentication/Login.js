@@ -30,70 +30,74 @@ const Login = () => {
   return (
     <div className={darkMode ? "dark" : "light"}>
       <Header />
-      <div className="login">
-        <h2 className="login-heading">Please Login</h2>
-        <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
-          <input
-            {...register("email")}
-            type="email"
-            placeholder="Your Email"
-            required="required"
-          />{" "}
-          <br />
-          <input
-            {...register("password")}
-            type="password"
-            placeholder="Your Password"
-            required="required"
-          />{" "}
-          <br />
-          <p className="m-0">
-            By Signing in, you agree to{" "}
-            <a href="/login" alt="">
-              Terms and Conditions
-            </a>{" "}
-            and <a href="/login">Privacy Policy</a>.
-          </p>
-          <Button className="login-btn m-3" type="submit" variant="contained">
-            Login
-          </Button>
-        </form>
-        {isLoading && (
-          <Box>
-            <CircularProgress /> <br />
-          </Box>
-        )}
-        {user?.email && (
-          <Alert severity="success">
-            This is a success alert — check it out!
-          </Alert>
-        )}
-        {error && <Alert severity="error">{error}</Alert>}
-        <div>
-          <span className="d-inline-block mb-1 or">or Sign In using</span>
-          {/* <hr /> */}
-        </div>
+      <div className={`login ${darkMode ? "dark-bg" : "light-bg"}`}>
+        <div className="login-form-container">
+          <h2 className="login-heading">Please Login</h2>
+          <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+            <input
+              {...register("email")}
+              type="email"
+              placeholder="Your Email"
+              required="required"
+            />{" "}
+            <br />
+            <input
+              {...register("password")}
+              type="password"
+              placeholder="Your Password"
+              required="required"
+            />{" "}
+            <br />
+            <p className="m-0">
+              By Signing in, you agree to{" "}
+              <a href="/login" alt="">
+                Terms and Conditions
+              </a>{" "}
+              and <a href="/login">Privacy Policy</a>.
+            </p>
+            <Button className="login-btn m-3" type="submit" variant="contained">
+              Login
+            </Button>
+          </form>
+          {isLoading && (
+            <Box>
+              <CircularProgress /> <br />
+            </Box>
+          )}
+          {user?.email && (
+            <Alert severity="success">
+              This is a success alert — check it out!
+            </Alert>
+          )}
+          {error && <Alert severity="error">{error}</Alert>}
+          <div>
+            <span className="d-inline-block mb-1 alt-sign">
+              or Sign In using
+            </span>
+            {/* <hr /> */}
+          </div>
 
-        <Button
-          className="mb-5 login-btn"
-          variant="contained"
-          onClick={handleGoogleSignIn}
-          type="submit"
-        >
-          {" "}
-          <span className="login-icon">
-            <FontAwesomeIcon icon={faGoogle} />
-          </span>
-          oogle&nbsp; Sign In
-        </Button>
-        <br />
-        <p>
-          {" "}
-          New User?{" "}
-          <Link to="/register" className="d-inline-block mb-2">
-            Please Register
-          </Link>
-        </p>
+          <Button
+            className="mb-4 login-btn"
+            variant="contained"
+            onClick={handleGoogleSignIn}
+            type="submit"
+          >
+            {" "}
+            <span className="login-icon">
+              <FontAwesomeIcon icon={faGoogle} />
+            </span>
+            oogle&nbsp; Sign In
+          </Button>
+          <br />
+          <p>
+            {" "}
+            New User? <br />
+            <Link to="/register" className="d-inline-block mb-2">
+              Please Register
+            </Link>
+          </p>
+        </div>
       </div>
       <Footer />
     </div>
