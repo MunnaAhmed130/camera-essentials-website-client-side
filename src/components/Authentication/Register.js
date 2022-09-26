@@ -67,7 +67,7 @@ const Register = () => {
               and <a href="/login">Privacy Policy</a>.
             </p>
             <Button
-              className="m-3 register-btn"
+              className="my-4 register-btn"
               variant="contained"
               type="submit"
             >

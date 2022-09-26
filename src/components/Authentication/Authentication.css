@@ -57,7 +57,7 @@
 .login-form-container,
 .register-form-container {
   max-width: 450px;
-  width: min(clamp(20rem, 18.4659vw + 14.235rem, 28.125rem), 90%);
+  width: min(clamp(20rem, 18.4659vw + 14.235rem, 28.125rem), 95%);
   /* 320px/20rem/425vw , 18.4659vw + 14.235rem ,450px/28.125rem/1024vw */
   padding-inline: 10px;
   margin-inline: auto;
@@ -173,8 +173,8 @@ input:focus::placeholder {
 .register .register-btn {
   padding: 0.5em 1.8em;
   /* font-size: var(--fs-normal); */
-  /* font-size: clamp(0.75rem, 0.568vw + 0.636rem, 1rem); */
-  font-size: 14px;
+  font-size: clamp(0.875rem, 0.142vw + 0.84659rem, 0.9375rem);
+  /* font-size: 15px; */
   font-weight: 600;
   background-color: rgba(19, 19, 19, 0.9);
 }
