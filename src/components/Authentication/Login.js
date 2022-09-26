@@ -55,7 +55,11 @@ const Login = () => {
               </a>{" "}
               and <a href="/login">Privacy Policy</a>.
             </p>
-            <Button className="login-btn m-3" type="submit" variant="contained">
+            <Button
+              className="login-btn my-4"
+              type="submit"
+              variant="contained"
+            >
               Login
             </Button>
           </form>
@@ -71,7 +75,7 @@ const Login = () => {
           )}
           {error && <Alert severity="error">{error}</Alert>}
           <div>
-            <span className="d-inline-block mb-1 alt-sign">
+            <span className="d-inline-block mb-1 alt-sign-in">
               or Sign In using
             </span>
             {/* <hr /> */}
@@ -90,10 +94,10 @@ const Login = () => {
             oogle&nbsp; Sign In
           </Button>
           <br />
-          <p>
+          <p className="mb-0">
             {" "}
             New User? <br />
-            <Link to="/register" className="d-inline-block mb-2">
+            <Link to="/register" className="d-inline-block ">
               Please Register
             </Link>
           </p>
