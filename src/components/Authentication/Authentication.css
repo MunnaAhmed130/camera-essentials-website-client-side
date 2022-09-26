@@ -125,6 +125,12 @@ input:focus::placeholder {
   color: var(--dark-auth-color);
 }
 
+.dark input[type="text"],
+.dark input[type="email"],
+.dark input[type="password"] {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
 .login-form input:focus-visible,
 .register-form input:focus-visible {
   outline: 0px solid rgb(96, 96, 96);
@@ -133,7 +139,7 @@ input:focus::placeholder {
 
 .dark .login-form input:focus-visible,
 .dark .register-form input:focus-visible {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 /* auth links  */
@@ -175,6 +181,7 @@ input:focus::placeholder {
 .dark .alt-sign-in,
 .dark .register p {
   /* color: var(--dark-auth-color); */
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.75);
 }
 
