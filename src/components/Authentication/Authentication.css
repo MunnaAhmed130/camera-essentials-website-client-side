@@ -83,8 +83,6 @@
 .login-form input,
 .register-form input {
   margin-block: 0.75rem;
-  /* color: white; */
-  /* padding-inline: 1rem; */
   height: 40px;
   width: 100%;
   font-size: var(--fs-normal);
@@ -105,14 +103,10 @@ input:focus::placeholder {
 .register-form input[type="email"],
 .login-form input[type="password"],
 .register-form input[type="password"] {
-  /* background-color: rgba(237, 237, 237, 0.4); */
   background-color: transparent;
   font-weight: 500;
-  /* background: white; */
   border: none;
-  /* border-bottom: 1px solid rgb(179, 179, 179); */
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  /* border-bottom: 1px solid var(--dark-auth-color); */
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -121,7 +115,6 @@ input:focus::placeholder {
 .dark input[type="email"],
 .dark input[type="password"],
 .dark input::placeholder {
-  /* background-color: none; */
   color: var(--dark-auth-color);
 }
 
@@ -142,31 +135,32 @@ input:focus::placeholder {
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
+/* google autofil  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 /* auth links  */
 .login a,
 .register a {
   text-decoration: none;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.95);
-  /* color: rgba(0, 0, 0, 0.888); */
 }
 
 .dark .login a,
 .dark .register a {
-  /* color: rgba(193, 193, 255, 0.766); */
-  /* color: #005de9; */
   font-weight: 600;
   color: rgba(255, 255, 255, 0.95);
-  /* color: rgb(225, 225, 225); */
 }
 
 /* auth p  */
 .login-form p,
 .register-form p {
   text-align: left;
-  /* font-size: 0.9375rem; */
-  /* font-size: clamp(0.75rem, 0.142vw + 0.72159rem, 0.8125rem); */
-  /* font-size: clamp(0.75rem, 0.284vw + 0.693rem, 0.875rem); */
 }
 
 .login p,
@@ -180,9 +174,8 @@ input:focus::placeholder {
 .dark .login p,
 .dark .alt-sign-in,
 .dark .register p {
-  /* color: var(--dark-auth-color); */
+  color: var(--dark-auth-color);
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.75);
 }
 
 /* auth btn  */
@@ -190,9 +183,7 @@ input:focus::placeholder {
 .register .register-btn {
   color: rgba(255, 255, 255, 0.8);
   padding: 0.5em 1.8em;
-  /* font-size: var(--fs-normal); */
   font-size: clamp(0.875rem, 0.142vw + 0.84659rem, 0.9375rem);
-  /* font-size: 15px; */
   font-weight: 600;
   background-color: rgba(19, 19, 19, 0.9);
 }
