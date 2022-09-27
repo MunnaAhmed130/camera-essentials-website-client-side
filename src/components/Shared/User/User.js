@@ -35,7 +35,7 @@ const User = () => {
           <img
             className="profile-img "
             src="https://i.ibb.co/QvyFpsc/default-avatar-profile-icon-vector-social-media-user-image.jpg"
-            alt=""
+            alt="profile-pic"
           />
         )}
       </div>

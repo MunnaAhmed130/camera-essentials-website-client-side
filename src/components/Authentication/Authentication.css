@@ -94,7 +94,8 @@ input::placeholder {
   font-weight: 500;
 }
 
-input:focus::placeholder {
+input:focus::placeholder,
+.dark input:focus::placeholder {
   color: transparent;
 }
 
@@ -140,7 +141,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  transition: background-color 5000s ease-in-out 0s;
+  transition: all 5000s ease-in-out 0s;
 }
 
 /* auth links  */
