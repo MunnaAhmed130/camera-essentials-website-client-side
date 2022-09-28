@@ -16,6 +16,7 @@ const Product = ({ product }) => {
   //   <CircularProgress />;
   // }
   // const productInfo = description.slice(0, 120);
+  // https://images2.imgbox.com/1f/20/K6kMXzul_o.png
   return (
     <Col className="card_col">
       <Card className="mt-3 card product">

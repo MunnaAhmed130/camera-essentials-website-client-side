@@ -18,11 +18,13 @@ import AllOrders from "./components/Admin/AllOrders/AllOrders";
 import MakeAdmin from "./components/Admin/MakeAdmin/MakeAdmin";
 import ManageProducts from "./components/Admin/ManageProducts/ManageProducts";
 import Reviews from "./components/Home/Reviews/Reviews";
-import ThemeProvider from "./Context/ThemeProvider/ThemeProvider";
+import DarkThemeProvider from "./Context/ThemeProvider/DarkThemeProvider";
 import ExploreProduct from "./components/Explore/ExploreProduct/ExploreProduct";
 import Login from "./components/Authentication/Login";
 import Register from "./components/Authentication/Register";
 // import useTheme from "./Hooks/useTheme";
+// Material UI
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 function App() {
   // const { darkMode } = useTheme();
@@ -34,74 +36,87 @@ function App() {
   // window.addEventListener("onResize", function () {
   //   setViewportWidth();
   // });
+  const theme = createTheme({
+    typography: {
+      fontFamily: [
+        "Bai Jamjuree",
+        "Roboto",
+        '"Helvetica Neue"',
+        "Arial",
+        "sans-serif",
+      ].join(","),
+    },
+  });
   return (
-    <div className="App">
-      <ThemeProvider>
-        <AuthProvider>
-          <Router>
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/home">
-                <Home />
-              </Route>
-              <Route path="/explore">
-                <Explore />
-              </Route>
-              <PrivateRoute path="/explore_product/:_id">
-                <ExploreProduct />
-              </PrivateRoute>
-              <PrivateRoute path="/explore/product">
-                <ExploreProduct />
-              </PrivateRoute>
-              <Route path="/login">
-                <Login />
-              </Route>
-              <Route path="/register">
-                <Register />
-              </Route>
-              <PrivateRoute path="/dashboard">
-                <Dashboard />
-              </PrivateRoute>
-              <PrivateRoute path="/purchase/:_id">
-                <Purchase />
-              </PrivateRoute>
-              <PrivateRoute path="/purchase">
-                <Purchase />
-              </PrivateRoute>
-              <Route path="/pay">
-                <Pay />
-              </Route>
-              <Route path="/myOrders">
-                <MyOrders />
-              </Route>
-              <Route path="/review">
-                <Review />
-              </Route>
-              <Route path="/reviews">
-                <Reviews />
-              </Route>
-              <Route path="/addAProduct">
-                <AddAProduct />
-              </Route>
-              <Route path="/manageProducts">
-                <ManageProducts />
-              </Route>
-              <Route path="/AllOrders">
-                <AllOrders />
-              </Route>
-              <Route path="/makeAdmin">
-                <MakeAdmin />
-              </Route>
-              <Route path="*">
-                <NotFound />
-              </Route>
-            </Switch>
-          </Router>
-        </AuthProvider>
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <DarkThemeProvider>
+          <AuthProvider>
+            <Router>
+              <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                <Route path="/home">
+                  <Home />
+                </Route>
+                <Route path="/explore">
+                  <Explore />
+                </Route>
+                <PrivateRoute path="/explore_product/:_id">
+                  <ExploreProduct />
+                </PrivateRoute>
+                <PrivateRoute path="/explore/product">
+                  <ExploreProduct />
+                </PrivateRoute>
+                <Route path="/login">
+                  <Login />
+                </Route>
+                <Route path="/register">
+                  <Register />
+                </Route>
+                <PrivateRoute path="/dashboard">
+                  <Dashboard />
+                </PrivateRoute>
+                <PrivateRoute path="/purchase/:_id">
+                  <Purchase />
+                </PrivateRoute>
+                <PrivateRoute path="/purchase">
+                  <Purchase />
+                </PrivateRoute>
+                <Route path="/pay">
+                  <Pay />
+                </Route>
+                <Route path="/myOrders">
+                  <MyOrders />
+                </Route>
+                <Route path="/review">
+                  <Review />
+                </Route>
+                <Route path="/reviews">
+                  <Reviews />
+                </Route>
+                <Route path="/addAProduct">
+                  <AddAProduct />
+                </Route>
+                <Route path="/manageProducts">
+                  <ManageProducts />
+                </Route>
+                <Route path="/AllOrders">
+                  <AllOrders />
+                </Route>
+                <Route path="/makeAdmin">
+                  <MakeAdmin />
+                </Route>
+                <Route path="*">
+                  <NotFound />
+                </Route>
+              </Switch>
+            </Router>
+          </AuthProvider>
+        </DarkThemeProvider>
+      </div>
+    </ThemeProvider>
   );
 }
 

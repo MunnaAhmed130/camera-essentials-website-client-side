@@ -1,7 +1,11 @@
 /* explore product section */
 .explore-product-section {
-  margin-block: clamp(2rem, 14.2857vw + -0.857rem, 8rem);
+  padding-block: clamp(2rem, 14.2857vw + -0.857rem, 8rem);
   /* 2rem/32px/320vw ,14.2857vw + -.857rem, 8rem/128px/992vw */
+}
+
+.dark .explore-product-section {
+  background-color: var(--dark-bg-color);
 }
 
 /* explore product item */
@@ -10,6 +14,7 @@
   margin-inline: auto;
 }
 
+/* product img container  */
 .item_img_container {
   text-align: center;
   display: flex;
@@ -23,6 +28,11 @@
   object-fit: cover;
 }
 
+.dark .item_img {
+  opacity: 0.9;
+}
+
+/* product item info  */
 .item-info {
   text-align: left;
 }
@@ -82,10 +92,6 @@
 .light .main_price,
 .light .discounted_price {
   color: rgba(0, 0, 0, 0.8);
-}
-
-.dark .item_img {
-  opacity: 0.9;
 }
 
 .item_description {
