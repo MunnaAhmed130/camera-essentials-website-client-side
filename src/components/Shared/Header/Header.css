@@ -13,12 +13,6 @@
   background-color: #161f2b;
 }
 
-.dark .dropdown-menu {
-  /* background-color: #26292d; */
-  background-color: rgb(31, 40, 52);
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .dark .navbar-nav .dropdown-item:hover {
   background-color: rgba(255, 255, 255, 0.7);
   color: rgb(13, 7, 7);
@@ -35,6 +29,13 @@
 .dark .navbar .nav-name {
   color: white;
   opacity: 0.8;
+}
+
+/* dark dropdown menu  */
+.dark .dropdown-menu {
+  /* background-color: #26292d; */
+  background-color: rgb(31, 40, 52);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* light header  */
@@ -198,7 +199,8 @@
 }
 
 /* user image */
-.user_link .profile-img {
+.user_link .profile-img,
+.user_link .default-profile-img {
   width: 2.5rem;
   height: 2.5rem;
   object-fit: cover;
@@ -206,7 +208,13 @@
   /* margin-right: 10px; */
 }
 
-.dropdown_img .profile-img {
+.dark .default-profile-img,
+.dark .default-user-profile-img {
+  opacity: 0.8;
+}
+
+.dropdown_img .profile-img,
+.dropdown_img .default-user-profile-img {
   height: 6rem;
   width: 6em;
   border-radius: 50%;

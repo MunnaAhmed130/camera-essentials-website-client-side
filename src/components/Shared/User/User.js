@@ -2,11 +2,12 @@ import { Button } from "@mui/material";
 import React, { useState } from "react";
 // import { Button } from "react-bootstrap";
 import useAuth from "../../../Hooks/useAuth";
-import "./User.css";
+import useTheme from "../../../Hooks/useTheme";
 
 const User = () => {
   const [open, setOpen] = useState(false);
 
+  const { darkMode } = useTheme();
   const { user, logOut } = useAuth();
   let name = user.displayName;
 
@@ -19,7 +20,8 @@ const User = () => {
   return (
     <div
       id="user_card"
-      className={`nav-item dropdown user_dropdown  ${open && "show"}`}
+      className={`nav-item dropdown user_dropdown
+       ${open && "show"} `}
     >
       {/* <div className="dropdown-btn" onClick={() => setOpen(!open)}> */}
       <div
@@ -33,8 +35,12 @@ const User = () => {
           <img className="profile-img " src={user.photoURL} alt="profile-pic" />
         ) : (
           <img
-            className="profile-img "
-            src="https://i.ibb.co/QvyFpsc/default-avatar-profile-icon-vector-social-media-user-image.jpg"
+            className="default-profile-img "
+            src={
+              darkMode
+                ? "https://i.ibb.co/GCxxYjQ/Pngtree-blue-default-avatar-small0.png"
+                : "https://i.ibb.co/QvyFpsc/default-avatar-profile-icon-vector-social-media-user-image.jpg"
+            }
             alt="profile-pic"
           />
         )}
@@ -52,8 +58,12 @@ const User = () => {
             />
           ) : (
             <img
-              className="profile-img "
-              src="https://i.ibb.co/QvyFpsc/default-avatar-profile-icon-vector-social-media-user-image.jpg"
+              className="default-user-profile-img "
+              src={
+                darkMode
+                  ? "https://i.ibb.co/GCxxYjQ/Pngtree-blue-default-avatar-small0.png"
+                  : "https://i.ibb.co/QvyFpsc/default-avatar-profile-icon-vector-social-media-user-image.jpg"
+              }
               alt=""
             />
           )}
