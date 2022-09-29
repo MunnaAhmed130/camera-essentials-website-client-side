@@ -49,6 +49,9 @@
 .purchase-form-container {
   /* border: 1px solid white; */
   padding-inline: 0px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 
 .purchase-form {
@@ -71,7 +74,7 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid black;
-  color: black;
+  /* color: black; */
 }
 
 .dark .purchase-form input {
@@ -83,12 +86,9 @@
   outline: 0px solid white;
 }
 
-.purchase-form input:-webkit-autofill {
-  -webkit-background-clip: text;
-}
-
 button.purchase-btn {
   background-color: black;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 425px) {
