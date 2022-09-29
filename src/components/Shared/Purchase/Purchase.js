@@ -105,65 +105,68 @@ const Purchase = () => {
         {/* {product.name && (
           <ExploreProductItem product={product}></ExploreProductItem>
         )} */}
-        <Container>
-          <Row>
-            <Col md={4} sm={12} lg={6} className="purchase-img-container">
-              <img className="purchase-img" src={img} alt="" />
-            </Col>
-            <Col md={8} sm={12} lg={6}>
-              {success && (
-                <Alert severity="success">Order Placed Successfully</Alert>
-              )}
-              <form className="purchase-form" onSubmit={handleSubmit}>
-                <input name="userName" defaultValue={user.displayName} /> <br />
-                <input
-                  name="email"
-                  defaultValue={user.email}
-                  variant="outlined"
-                />{" "}
-                <br />
-                <input
-                  name="productName"
-                  value={productName}
-                  variant="outlined"
-                />{" "}
-                <br />
-                <input
-                  name="address"
-                  onBlur={handleOnBlur}
-                  placeholder="Address"
-                  defaultValue=""
-                  variant="outlined"
-                />{" "}
-                <br />
-                <input
-                  name="phone"
-                  onBlur={handleOnBlur}
-                  placeholder="Phone"
-                  defaultValue=""
-                  variant="outlined"
-                />{" "}
-                <br />
-                <input
-                  type="number"
-                  name="price2"
-                  value={price}
-                  placeholder="price"
-                  variant="outlined"
-                />{" "}
-                <br />
-                <Button
-                  type="submit"
-                  className="purchase-btn"
-                  size="large"
-                  variant="contained"
-                >
-                  Purchase
-                </Button>
-              </form>
-            </Col>
-          </Row>
-        </Container>
+        <div className="purchase-info-container">
+          <Container fluid className="purchase-row-container">
+            <Row className="purchase-col-container">
+              <Col md={6} sm={12} lg={6} className="purchase-img-container">
+                <img className="purchase-img" src={img} alt="" />
+              </Col>
+              <Col md={6} sm={12} lg={6} className="purchase-form-container">
+                {success && (
+                  <Alert severity="success">Order Placed Successfully</Alert>
+                )}
+                <form className="purchase-form" onSubmit={handleSubmit}>
+                  <input name="userName" defaultValue={user.displayName} />{" "}
+                  <br />
+                  <input
+                    name="email"
+                    defaultValue={user.email}
+                    variant="outlined"
+                  />{" "}
+                  <br />
+                  <input
+                    name="productName"
+                    value={productName}
+                    variant="outlined"
+                  />{" "}
+                  <br />
+                  <input
+                    name="address"
+                    onBlur={handleOnBlur}
+                    placeholder="Address"
+                    defaultValue=""
+                    variant="outlined"
+                  />{" "}
+                  <br />
+                  <input
+                    name="phone"
+                    onBlur={handleOnBlur}
+                    placeholder="Phone"
+                    defaultValue=""
+                    variant="outlined"
+                  />{" "}
+                  <br />
+                  <input
+                    type="number"
+                    name="price2"
+                    value={price}
+                    placeholder="price"
+                    variant="outlined"
+                  />{" "}
+                  <br />
+                  <Button
+                    type="submit"
+                    className="purchase-btn"
+                    size="large"
+                    variant="contained"
+                  >
+                    Purchase
+                  </Button>
+                </form>
+              </Col>
+            </Row>
+          </Container>
+        </div>
       </div>
       <Footer />
     </div>
