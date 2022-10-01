@@ -1,14 +1,20 @@
-/*  auth background and theme */
 .login,
 .register {
   --border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   --border-bottom-focus: 1px solid rgba(0, 0, 0, 0.5);
   --auth-color: rgba(0, 0, 0, 0.95);
-  --dark-auth-color: rgba(255, 255, 255, 0.75);
-  --dark-auth-link: rgba(255, 255, 255, 0.9);
-  --dark-border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  --dark-border-bottom-focus: 1px solid rgba(255, 255, 255, 0.7);
+}
 
+.dark .login,
+.dark .register {
+  --auth-color: rgba(255, 255, 255, 0.75);
+  --dark-auth-link: rgba(255, 255, 255, 0.9);
+  --border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  --border-bottom-focus: 1px solid rgba(255, 255, 255, 0.7);
+}
+/*  auth background and theme */
+.login,
+.register {
   /* margin-bottom: 50px; */
   position: relative;
   padding-block: clamp(3.5rem, 7.9545vw + 1.9rem, 7rem);
@@ -121,14 +127,14 @@ input:focus::placeholder,
 .dark input[type="email"],
 .dark input[type="password"],
 .dark input::placeholder {
-  color: var(--dark-auth-color);
+  color: var(--auth-color);
 }
 
-.dark input[type="text"],
+/* .dark input[type="text"],
 .dark input[type="email"],
 .dark input[type="password"] {
-  border-bottom: var(--dark-border-bottom);
-}
+  border-bottom: var(--border-bottom);
+} */
 
 .login-form input:focus-visible,
 .register-form input:focus-visible {
@@ -136,27 +142,23 @@ input:focus::placeholder,
   border-bottom: var(--border-bottom-focus);
 }
 
-.dark .login-form input:focus-visible,
+/* .dark .login-form input:focus-visible,
 .dark .register-form input:focus-visible {
-  border-bottom: var(--dark-border-bottom-focus);
-}
+  border-bottom: var(--border-bottom-focus);
+} */
 
 /* google autofil  */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  transition: all 5000s ease-in-out 0s;
-  -webkit-text-fill-color: black;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--auth-color);
+  border-bottom: var(--border-bottom);
 }
 
-.dark input:-webkit-autofill,
-.dark input:-webkit-autofill:hover,
-.dark input:-webkit-autofill:focus,
-.dark input:-webkit-autofill:active {
-  -webkit-text-fill-color: var(--dark-auth-color);
-  /* border-bottom: 1px solid var(--dark-auth-color); */
-  transition: all 5000s ease-in-out 0s;
+input:-webkit-autofill:focus-visible {
+  border-bottom: var(--border-bottom-focus);
 }
 
 /* auth links  */
@@ -190,7 +192,7 @@ input:-webkit-autofill:active {
 .dark .login p,
 .dark .alt-sign-in,
 .dark .register p {
-  color: var(--dark-auth-color);
+  color: var(--auth-color);
   font-weight: 400;
 }
 
