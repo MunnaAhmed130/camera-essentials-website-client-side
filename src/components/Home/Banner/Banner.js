@@ -6,28 +6,28 @@ import "../Home/Home.css";
 const Banner = () => {
   const { darkMode } = useTheme();
   return (
-    <div>
+    <div className={`banner ${darkMode ? "dark" : "light"}`}>
       <Carousel fade>
         <Carousel.Item interval={5000}>
           <img
             className="banner_img d-block w-100"
-            // src="https://i.ibb.co/yYjfJ9y/slider-4.jpg"
+            // src="https://i.ibb.co/qDgVpsB/d-ng-tr-n-qu-c-HRk-O49-Hle-Gc-unsplash.jpg"
             // src="https://i.ibb.co/hRC0Lmg/camera-on-tripod-e1651041561801.jpg"
-            src={
-              darkMode
-                ? "https://i.ibb.co/qDgVpsB/d-ng-tr-n-qu-c-HRk-O49-Hle-Gc-unsplash.jpg"
-                : "https://i.ibb.co/hRC0Lmg/camera-on-tripod-e1651041561801.jpg"
-            }
+            src="https://i.ibb.co/hRC0Lmg/camera-on-tripod-e1651041561801.jpg"
             alt="First slide"
           />
           <Carousel.Caption className="banner-info">
             <div>
               <h2>Capture Your Beautiful Moments</h2>
               <Button
-                className="banner-btn"
+                className="banner-btn me-3"
                 href="http://localhost:3000/explore"
               >
                 Explore
+              </Button>
+              <Button className="banner-btn" href="">
+                {" "}
+                About Us
               </Button>
             </div>
           </Carousel.Caption>
@@ -35,22 +35,22 @@ const Banner = () => {
         <Carousel.Item interval={5000}>
           <img
             className=" banner_img d-block w-100"
-            // src="https://i.ibb.co/2N0VWQk/here-bg-1.jpg"
-            src={
-              darkMode
-                ? "https://i.ibb.co/XZrzkq8/bg-1.jpg"
-                : "https://i.ibb.co/SQ4mNwN/patrick-dozk-Vh-Dyvh-Q-unsplash.jpg"
-            }
+            // src="https://i.ibb.co/XZrzkq8/bg-1.jpg"
+            src="https://i.ibb.co/SQ4mNwN/patrick-dozk-Vh-Dyvh-Q-unsplash.jpg"
             alt="Second slide"
           />
           <Carousel.Caption className="banner-info">
             <div>
               <h2>Capture Your Beautiful Moments</h2>
               <Button
-                className="banner-btn"
+                className="banner-btn me-3"
                 href="http://localhost:3000/explore"
               >
                 Explore
+              </Button>
+              <Button className="banner-btn" href="">
+                {" "}
+                About Us
               </Button>
             </div>
           </Carousel.Caption>

@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import React, { useState } from "react";
+import Dropdown from "react-bootstrap/Dropdown";
 // import { Button } from "react-bootstrap";
 import useAuth from "../../../Hooks/useAuth";
 import useTheme from "../../../Hooks/useTheme";
@@ -18,18 +19,10 @@ const User = () => {
 
   // console.log(userName);
   return (
-    <div
-      id="user_card"
-      className={`nav-item dropdown user_dropdown
-       ${open && "show"} `}
-    >
-      {/* <div className="dropdown-btn" onClick={() => setOpen(!open)}> */}
-      <div
-        // href="#"
-        id="basic-nav-dropdown"
-        className="dropdown-toggle nav-link user_link"
-        aria-expanded={open}
-        onClick={() => setOpen(!open)}
+    <Dropdown id="user_card" className="user_dropdown">
+      <Dropdown.Toggle
+        // id="dropdown-basic"
+        className=" nav-link user_link "
       >
         {user.photoURL ? (
           <img className="profile-img " src={user.photoURL} alt="profile-pic" />
@@ -44,11 +37,9 @@ const User = () => {
             alt="profile-pic"
           />
         )}
-      </div>
-      {/* </div> */}
+      </Dropdown.Toggle>
 
-      {/* {open && ( */}
-      <div className={`dropdown-menu ${open && "show"}`}>
+      <Dropdown.Menu>
         <div className="dropdown_img pt-5 pb-4">
           {user.photoURL ? (
             <img
@@ -81,9 +72,8 @@ const User = () => {
             LOG OUT
           </Button>
         </div>
-      </div>
-      {/* )} */}
-    </div>
+      </Dropdown.Menu>
+    </Dropdown>
   );
 };
 export default User;

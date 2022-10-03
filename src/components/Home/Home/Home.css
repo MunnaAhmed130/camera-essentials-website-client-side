@@ -10,6 +10,17 @@ button {
 }
 
 /* Banner */
+.banner {
+  --brightness: brightness(60%);
+}
+.banner.dark {
+  --brightness: brightness(35%);
+}
+
+.carousel-item {
+  position: relative;
+}
+
 .carousel .carousel-control-prev,
 .carousel .carousel-control-next {
   display: none;
@@ -21,14 +32,19 @@ button {
   left: 0;
 }
 .banner-info {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 10em;
+  /* padding-top: 2rem; */
+  margin-inline: 10px;
 }
 
 .banner-info h2 {
   font-size: clamp(1.5rem, 5.68vw + 0.36rem, 4rem);
+  margin-top: 4rem;
   font-weight: 700;
   max-width: 700px;
 }
@@ -41,17 +57,18 @@ button {
   height: min(90vh, 53.125rem);
   object-fit: cover;
   object-position: center;
-  filter: brightness(60%);
+  filter: var(--brightness);
 }
 
-.banner-btn {
+a.banner-btn {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.801);
-  font-weight: 500;
-  font-size: 2em;
-  padding: 0.8rem 3rem;
-  border-radius: 5px;
-  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+  /* 16px   / 1rem  /  320vw,       1.2784vw +  .744318rem  ,        25px / 1.5625rem / 1024vw  */
+  font-size: clamp(1rem, 1.2784vw + 0.744318rem, 1.5625rem);
+  padding: 0.5em 1em;
+  border-radius: 2px;
+  margin-top: 1em;
   border: 1px solid rgba(255, 255, 255, 0.902);
   transition: 0.5 ease;
 }
@@ -59,13 +76,27 @@ button {
 /* .dark .banner-btn {
   color: white;
 } */
-
 .banner-btn:hover {
-  background-color: #24232368;
-  color: white;
-  border: 1px solid black;
+  background-color: white;
+  border: 1px solid transparent;
+  font-weight: 600;
+  color: black;
 }
 
+@media screen and (max-width: 500px) {
+  .banner-btn {
+    /* font-size: 1rem; */
+    /* padding: 0.8rem 3rem; */
+    /* border-radius: 50px; */
+    /* margin-top: 20px; */
+  }
+
+  .banner-style {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
 /* Mid banner and iframe */
 .mid-banner {
   position: relative;
@@ -192,30 +223,6 @@ button {
 
 .iframe_disable {
   pointer-events: none;
-}
-
-@media screen and (max-width: 500px) {
-  .banner-btn {
-    background-color: white;
-    color: black;
-    font-size: 1rem;
-    padding: 0.8rem 3rem;
-    border-radius: 50px;
-    margin-top: 20px;
-  }
-  .banner-info {
-    margin-bottom: 9em;
-  }
-
-  .banner-style {
-    height: 500px;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .iframe-container {
-    width: 100%;
-  }
 }
 
 /* Reviews  */
