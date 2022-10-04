@@ -1,4 +1,17 @@
-/* navbar */
+/* nav and navbar */
+
+.nav {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100%, 80rem);
+  /* padding-inline: 1em; */
+}
+
+.navbar {
+  padding-inline: 1em;
+}
 
 .light .navbar {
   /* background-color: rgba(239, 237, 237, 0.9); */
@@ -11,7 +24,27 @@
   background-color: #161f2b;
 }
 
-/* navbar a */
+/* navbar brand  */
+
+.navbar-brand {
+  padding: 0px;
+  font-weight: 500;
+}
+.nav-name {
+  font-size: clamp(1.25rem, 1.9887vw + 0.72rem, 2rem);
+  margin: 0;
+  /* opacity: 0.85; */
+}
+.light .nav-name {
+  opacity: 0.9;
+}
+
+.dark .navbar .nav-name {
+  color: white;
+  opacity: 0.8;
+}
+
+/* navbar links */
 .navbar-light .navbar-nav a,
 .navbar-light .navbar-nav .theme_link,
 .navbar-light .navbar-nav .nav-link,
@@ -37,120 +70,6 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-/* navbar dropdown  */
-
-.dark .navbar-nav .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: rgb(13, 7, 7);
-}
-
-.dark .navbar-nav .nav_dropdown_item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* navbar brand  */
-.navbar-brand {
-  padding: 0px;
-  font-weight: 500;
-}
-.light .nav-name {
-  opacity: 0.9;
-}
-
-.dark .navbar .nav-name {
-  color: white;
-  opacity: 0.8;
-}
-
-/* dark dropdown menu  */
-.dark .dropdown-menu {
-  /* background-color: #26292d; */
-  background-color: rgb(31, 40, 52);
-  color: rgba(255, 255, 255, 0.8);
-}
-.light .dropdown-menu {
-  /* background-color: #26292d; */
-  background-color: rgba(255, 255, 255, 0.95);
-  /* color: rgba(255, 255, 255, 0.8); */
-}
-
-/* active classes */
-
-/* .navbar-light .navbar-nav .active-link {
-  color: rgb(0, 0, 0, 0.3);
-}
-
-.navbar-dark .navbar-nav .active-link {
-  color: rgba(255, 255, 255, 0.35);
-} */
-
-/* responsive typography */
-
-.nav_link,
-.theme_link,
-.theme_dropdown_option {
-  font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
-  font-weight: 500;
-  letter-spacing: 2px;
-}
-
-.nav-name {
-  font-size: clamp(1.25rem, 1.9887vw + 0.72rem, 2rem);
-  margin: 0;
-  /* opacity: 0.85; */
-}
-
-.user_name {
-  font-size: clamp(1rem, 0.56vw + 0.8rem, 1.125rem);
-  font-weight: 400;
-}
-
-/* nav and navbar  */
-
-.nav {
-  display: flex;
-  flex-wrap: inherit;
-  align-items: center;
-  justify-content: space-between;
-  width: min(100%, 80rem);
-  /* padding-inline: 1em; */
-}
-
-.navbar {
-  padding-inline: 1em;
-}
-
-/* navbar brand name */
-
-.navbar-brand,
-.nav-link,
-.theme_link a {
-  letter-spacing: 2px;
-  background-color: transparent;
-  border: none;
-}
-
-.nav-link:hover {
-  background-color: transparent;
-}
-
-button.nav-link.dropdown-toggle {
-  background-color: transparent;
-}
-/* navbar links */
-.show > .btn-primary.dropdown-toggle,
-button.nav-link:active:focus,
-.show > .btn-primary.dropdown-toggle:focus {
-  background-color: transparent;
-  border: transparent;
-  box-shadow: none;
-}
-/* .nav_link,
-.theme_link,
-.theme_link a {
-  font-weight: 500;
-} */
-
 .nav_link,
 .theme_link {
   padding-right: clamp(1em, 1em + 0.5vw, 1.5em);
@@ -169,18 +88,52 @@ button.nav-link:active:focus,
   padding-right: 1em;
 }
 
-/* dropdown  */
-
-.dropdown-item {
-  padding-inline: 0px;
-  border-radius: 0.2rem;
+.navbar-brand,
+.nav-link,
+.theme_link a {
+  letter-spacing: 2px;
+  background-color: transparent;
+  border: none;
 }
 
-.navbar-light .navbar-nav .dropdown-item:active {
-  background-color: rgb(0, 0, 0, 0.2);
+.nav-link:hover {
+  background-color: transparent;
 }
 
-/* .dropdown-menu */
+/* active classes */
+
+.navbar-light .navbar-nav .active-link {
+  color: rgb(0, 0, 0, 0.3);
+}
+
+.navbar-dark .navbar-nav .active-link {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* dropdown button  */
+
+button.nav-link.dropdown-toggle {
+  background-color: transparent;
+}
+
+.show > .btn-primary.dropdown-toggle,
+button.nav-link:active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  background-color: transparent;
+  border: transparent;
+  box-shadow: none;
+}
+/* user dropdown toggle  */
+.user_link.dropdown-toggle::after {
+  margin-left: 0.5em;
+  vertical-align: 0.1rem;
+}
+
+/* theme dropdown toggle  */
+.theme_link .dropdown-toggle::after {
+  vertical-align: 0.2rem;
+}
+/*  dropdown menu  */
 
 .navbar-nav .dropdown-menu {
   position: absolute;
@@ -200,22 +153,64 @@ button.nav-link:active:focus,
   padding: 0.2rem;
 }
 
-/* #user_card .dropdown-menu {
-  position: absolute;
-} */
-
-/* user dropdown toggle  */
-.user_link.dropdown-toggle::after {
-  margin-left: 0.5em;
-  vertical-align: 0.1rem;
+.dark .dropdown-menu {
+  /* background-color: #26292d; */
+  background-color: rgb(31, 40, 52);
+  color: rgba(255, 255, 255, 0.8);
 }
 
-/* theme dropdown toggle  */
-.theme_link .dropdown-toggle::after {
-  vertical-align: 0.2rem;
+.light .dropdown-menu {
+  /* background-color: #26292d; */
+  background-color: rgba(255, 255, 255, 0.95);
+  /* color: rgba(255, 255, 255, 0.8); */
 }
 
-/* user image */
+/* navbar dropdown item  */
+
+.dropdown-item {
+  padding-inline: 0px;
+  border-radius: 0.2rem;
+}
+
+.navbar-light .navbar-nav .dropdown-item:active {
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+.dark .navbar-nav .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: rgb(13, 7, 7);
+}
+
+.dark .navbar-nav .nav_dropdown_item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* responsive typography */
+
+.nav_link,
+.theme_link,
+.theme_dropdown_option {
+  font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.user_name {
+  font-size: clamp(1rem, 0.56vw + 0.8rem, 1.125rem);
+  font-weight: 400;
+}
+
+/* user name dropdown */
+
+/* username theme */
+.dark .user_name {
+  color: rgba(255, 255, 255, 0.9);
+}
+.light .user_name {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* username image  */
 .user_link .profile-img,
 .user_link .default-profile-img {
   width: 2.5rem;
@@ -243,16 +238,9 @@ button.nav-link:active:focus,
 .dark .dropdown_img .profile-img:hover {
   box-shadow: 0px 0px 10px 6px black;
 }
+
 .light .dropdown_img .profile-img:hover {
   box-shadow: 3px 3px 8px 0px rgb(0, 0, 0, 0.7);
-}
-
-/* username theme */
-.dark .user_name {
-  color: rgba(255, 255, 255, 0.9);
-}
-.light .user_name {
-  color: rgba(0, 0, 0, 0.9);
 }
 
 /* user dropdown btn style */

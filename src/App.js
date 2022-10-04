@@ -52,10 +52,10 @@ function App() {
           <AuthProvider>
             <Router>
               <Switch>
-                <Route exact path="/">
+                <Route path="/home">
                   <Home />
                 </Route>
-                <Route path="/home">
+                <Route exact path="/">
                   <Home />
                 </Route>
                 <Route path="/explore">
