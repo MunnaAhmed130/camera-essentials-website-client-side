@@ -1,4 +1,6 @@
 /* nav and navbar */
+.navbar {
+}
 
 .nav {
   display: flex;
@@ -35,13 +37,14 @@
   margin: 0;
   /* opacity: 0.85; */
 }
+
 .light .nav-name {
   opacity: 0.9;
 }
 
 .dark .navbar .nav-name {
   color: white;
-  opacity: 0.8;
+  opacity: 0.95;
 }
 
 /* navbar links */
@@ -62,7 +65,8 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-.dark .navbar-nav a:hover {
+.dark .navbar-nav a:hover,
+.navbar-dark .navbar-nav .show > .nav-link {
   color: rgba(255, 255, 255, 0.75);
 }
 
@@ -70,22 +74,18 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-.nav_link,
-.theme_link {
-  padding-right: clamp(1em, 1em + 0.5vw, 1.5em);
-}
-
 .nav_link {
   line-height: 40px;
   letter-spacing: 2px;
   text-decoration: none;
-  padding-block: 0.5em;
+  padding: 0.5em;
+  padding-inline: 0.7em;
   transition: all 0.3s ease-in-out;
 }
 
 .theme_link {
   line-height: 40px;
-  padding-right: 1em;
+  /* padding-right: 1em; */
 }
 
 .navbar-brand,
@@ -111,6 +111,11 @@
 }
 
 /* dropdown button  */
+
+#user_card {
+  display: flex;
+  justify-content: center;
+}
 
 button.nav-link.dropdown-toggle {
   background-color: transparent;
@@ -245,7 +250,7 @@ button.nav-link:active:focus,
 
 /* user dropdown btn style */
 .btn_container button {
-  padding: 0.4em 0.8em;
+  padding: 0.4em 2em;
   font-weight: 300;
   font-size: clamp(0.75rem, 0.284vw + 0.69rem, 0.875rem);
   /* 12px,,14px */
@@ -260,17 +265,26 @@ button.nav-link:active:focus,
 /* media query */
 
 @media screen and (max-width: 767px) {
+  .nav_link,
+  .theme_link {
+    padding-inline: 0px;
+  }
   .theme_link .dropdown-menu.show {
-    margin-inline: auto;
-    left: 0px;
-    right: 4rem;
+    --theme-menu-width: 5rem;
+    --theme-menu-center: calc(calc(var(--theme-menu-width)) * -1);
+    left: 50%;
+    /* right: 50%; */
+    margin-inline: var(--theme-menu-center);
+    /* margin-inline: -80px; */
+    width: var(--theme-menu-width);
   }
 
   .user_dropdown .dropdown-menu.show {
-    width: min(100%, 15rem);
-    margin-inline: auto;
-    left: 0px;
-    right: 110px;
+    --user-menu-width: min(100%, 15rem);
+    --menu-center: calc(calc(var(--user-menu-width) / 2) * -1);
+    left: 50%;
+    margin-inline: var(--menu-center);
+    width: var(--user-menu-width);
   }
 }
 
