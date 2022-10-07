@@ -13,9 +13,9 @@ const User = () => {
   let name = user.displayName;
 
   // capitalize first letter of each word
-  // const userName = name.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
-  //   letter.toUpperCase()
-  // );
+  const userName = name.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+    letter.toUpperCase()
+  );
 
   // console.log(userName);
   return (
@@ -60,7 +60,7 @@ const User = () => {
           )}
         </div>
         <div className="dropdown_item ">
-          <h5 className="user_name">{name}</h5>
+          <h5 className="user_name">{userName}</h5>
         </div>
         <div className="btn_container">
           <Button

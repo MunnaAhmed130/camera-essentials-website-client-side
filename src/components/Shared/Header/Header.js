@@ -27,7 +27,7 @@ const Header = () => {
       // bg={darkMode ? "dark" : "light"}
       variant={darkMode ? "dark" : "light"}
       style={{ zIndex: 1090 }}
-      className=" justify-content-center"
+      className={`justify-content-center  ${darkMode ? "dark" : "light"}`}
     >
       {/* This div is a customizable container */}
       <div className="nav mx-0">

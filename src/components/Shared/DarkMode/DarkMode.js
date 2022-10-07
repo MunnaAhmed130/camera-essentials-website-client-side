@@ -20,6 +20,7 @@ const DarkMode = () => {
       >
         Dark
       </NavDropdown.Item>
+      <hr className="m-0" />
       <NavDropdown.Item
         href="#"
         className="theme_dropdown_option"
