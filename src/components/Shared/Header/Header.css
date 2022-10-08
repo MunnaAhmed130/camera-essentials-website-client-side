@@ -1,13 +1,14 @@
-/* nav and navbar */
 .navbar {
   --navbar-bg-color: rgba(128, 128, 128, 0.12);
   --nav-brand-color: rgba(0, 0, 0, 0.9);
-  --nav-link-color: rgba(0, 0, 0, 0.85);
+  --nav-link-color: rgba(0, 0, 0, 0.8);
   --nav-link-hover: rgba(0, 0, 0, 0.5);
   --nav-active-link: rgba(0, 0, 0, 0.5);
   --dropdown-menu-bg-color: rgba(255, 255, 255, 0.95);
   --dropdown-item-bg-color: rgba(0, 0, 0, 0.08);
   --dropdown-item-border: 1px solid rgba(0, 0, 0, 0.15);
+  --user-profile-img-box-shadow: -5px 9px 15px 0px rgb(0, 0, 0, 0.3);
+  --user-img-brightness: brightness(1);
 }
 
 .navbar.dark {
@@ -19,15 +20,17 @@
   --dropdown-menu-bg-color: rgb(31, 40, 52);
   --dropdown-item-bg-color: rgba(255, 255, 255, 0.1);
   --dropdown-item-border: 1px solid rgba(255, 255, 255, 0.1);
+  --user-profile-img-box-shadow: -12px 24px 24px 0px rgba(0, 0, 0, 0.5);
+  --user-img-brightness: brightness(0.95);
 }
 
+/* nav navbar */
 .nav {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
   width: min(100%, 80rem);
-  /* padding-inline: 1em; */
 }
 
 .navbar {
@@ -36,17 +39,13 @@
 }
 
 /* navbar brand  */
-
-.navbar-brand {
+.navbar .navbar-brand {
+  color: var(--nav-brand-color);
   padding: 0px;
   letter-spacing: 2px;
   font-weight: 600;
   font-size: clamp(1.25rem, 1.9887vw + 0.72rem, 2rem);
   margin: 0;
-}
-
-.navbar .nav-name {
-  color: var(--nav-brand-color);
 }
 
 /* navbar links */
@@ -102,8 +101,6 @@
   color: var(--nav-active-link);
 }
 
-/* dropdown button  */
-
 /* dropdown btn  */
 .nav-link,
 .theme_link,
@@ -138,16 +135,14 @@ button.nav-link:active:focus,
   box-shadow: none;
 }
 
-/* user dropdown toggle  */
+/* dropdown toggle  */
 .user_link.dropdown-toggle::after {
   font-size: 13px;
   margin-left: 0.6rem;
   vertical-align: 0.1rem;
 }
 
-/* theme dropdown toggle  */
 .theme_link .dropdown-toggle::after {
-  /* font-size: 16px; */
   margin-left: 0.5em;
   vertical-align: 0.2rem;
 }
@@ -155,6 +150,11 @@ button.nav-link:active:focus,
 /*  dropdown menu  */
 .navbar-nav .dropdown-menu {
   position: absolute;
+  background-color: var(--dropdown-menu-bg-color);
+}
+
+.dropdown-menu .hr-line {
+  color: var(--nav-link-color);
 }
 
 .theme_link .dropdown-menu.show {
@@ -169,17 +169,6 @@ button.nav-link:active:focus,
   text-align: center;
   width: 15rem;
   padding: 0.2rem;
-}
-
-.dark .dropdown-menu {
-  /* background-color: #26292d; */
-  background-color: var(--dropdown-menu-bg-color);
-  /* color: var(--nav-link-color); */
-}
-
-.light .dropdown-menu {
-  background-color: var(--dropdown-menu-bg-color);
-  /* color: rgba(255, 255, 255, 0.8); */
 }
 
 /* navbar dropdown item  */
@@ -198,7 +187,6 @@ button.nav-link:active:focus,
 }
 
 /* user name dropdown */
-
 /* username */
 .user_name {
   color: var(--nav-link-color);
@@ -206,37 +194,26 @@ button.nav-link:active:focus,
   font-weight: 500;
 }
 
-/* username image  */
+/* navbar user img  */
 .user_link .profile-img,
 .user_link .default-profile-img {
   width: 2.5rem;
   height: 2.5rem;
-  object-fit: cover;
+}
+
+.profile-img,
+.user-profile-img,
+.default-profile-img,
+.default-user-profile-img {
   border-radius: 50%;
-  /* margin-right: 10px; */
+  filter: var(--user-img-brightness);
 }
 
-.dark .default-profile-img,
-.dark .default-user-profile-img {
-  opacity: 0.8;
-}
-
-.dropdown_img .profile-img,
-.dropdown_img .default-user-profile-img {
+.user-profile-img,
+.default-user-profile-img {
   height: 6rem;
   width: 6em;
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
-
-  /* padding-block: 1rem; */
-}
-
-.dark .dropdown_img .profile-img:hover {
-  box-shadow: 0px 0px 10px 6px black;
-}
-
-.light .dropdown_img .profile-img:hover {
-  box-shadow: 3px 3px 8px 0px rgb(0, 0, 0, 0.7);
+  box-shadow: var(--user-profile-img-box-shadow);
 }
 
 /* user dropdown btn style */
@@ -245,7 +222,6 @@ button.nav-link:active:focus,
   font-weight: 500;
   /* font-size: clamp(0.75rem, 0.284vw + 0.69rem, 0.875rem); */
   font-size: 13px;
-  /* 12px,,14px */
   /* border: 1px solid rgb(255, 0, 0); */
   border-radius: 3px;
   /* color: rgb(255, 0, 0); */
@@ -255,7 +231,6 @@ button.nav-link:active:focus,
 }
 
 /* media query */
-
 @media screen and (max-width: 767px) {
   .nav_link,
   .theme_link {
@@ -266,9 +241,7 @@ button.nav-link:active:focus,
     --theme-menu-width: 5rem;
     --theme-menu-center: calc(calc(var(--theme-menu-width)) * -1);
     left: 50%;
-    /* right: 50%; */
     margin-inline: var(--theme-menu-center);
-    /* margin-inline: -80px; */
     width: var(--theme-menu-width);
   }
 
@@ -280,6 +253,3 @@ button.nav-link:active:focus,
     width: var(--user-menu-width);
   }
 }
-
-/* https://i.ibb.co/8rZ18cX/camera-and-shadow.jpg
-https://i.ibb.co/SxrRFS3/camera-g319964f60-1280.jpg */

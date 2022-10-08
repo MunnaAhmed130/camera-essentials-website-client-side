@@ -43,7 +43,7 @@ const User = () => {
         <div className="dropdown_img pt-5 pb-4">
           {user.photoURL ? (
             <img
-              className="profile-img "
+              className="user-profile-img "
               src={user.photoURL}
               alt="profile-pic"
             />
