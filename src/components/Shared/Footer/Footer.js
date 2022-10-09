@@ -24,7 +24,9 @@ const Footer = () => {
   // let darkImg = "https://i.ibb.co/BVcqW6j/one-camera-lens-on-dark-surface.jpg";
   return (
     <>
-      <footer className={`footer ${darkMode ? "dark-bg" : "light-bg"}`}>
+      <footer
+        className={`footer ${darkMode ? "dark-bg dark_footer" : "light-bg"}`}
+      >
         {/* <Container className="top-footer  "> */}
         <div className="main-footer">
           <div className="">

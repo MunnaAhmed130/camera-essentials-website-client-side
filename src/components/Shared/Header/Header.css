@@ -218,7 +218,7 @@ button.nav-link:active:focus,
 
 /* user dropdown btn style */
 .btn_container button {
-  padding: 0.4em 2em;
+  padding: 0.5em 2em;
   font-weight: 500;
   /* font-size: clamp(0.75rem, 0.284vw + 0.69rem, 0.875rem); */
   font-size: 13px;

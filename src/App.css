@@ -16,7 +16,6 @@
   color: rgba(255, 255, 255, 0.85);
   /* font-size: clamp(0.75rem, 0.284vw + 0.693rem, 0.875rem); */
   font-size: clamp(0.75rem, 0.142vw + 0.72159rem, 0.8125rem);
-
   /* font-size: 13px; */
   /* 12px/.75rem/320vw ,.142vw + .72159rem , 13px/.8125rem/1024vw */
   margin-bottom: 0.8em;
