@@ -6,7 +6,7 @@ h5,
 h6,
 a,
 button {
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* Banner */
@@ -14,15 +14,14 @@ button {
   --brightness: brightness(60%);
 }
 .banner.dark {
-  --brightness: brightness(35%);
+  --brightness: brightness(40%);
 }
 
 .carousel-item {
   position: relative;
 }
 
-.carousel .carousel-control-prev,
-.carousel .carousel-control-next {
+.carousel :is(.carousel-control-prev, .carousel-control-next) {
   display: none;
   opacity: 0;
 }
@@ -31,6 +30,7 @@ button {
   right: 0;
   left: 0;
 }
+
 .banner-info {
   position: absolute;
   top: 0;
@@ -43,17 +43,16 @@ button {
 }
 
 .banner-info h2 {
-  font-size: clamp(1.5rem, 5.68vw + 0.36rem, 4rem);
+  letter-spacing: 3px;
+  font-size: clamp(1.5rem, 4.09091vw + 0.681818rem, 3.75rem);
+  /* 24px - 60px 320 - 1200 */
+  text-transform: uppercase;
   margin-top: 4rem;
-  font-weight: 700;
-  max-width: 700px;
+  font-weight: 600;
+  margin-inline: auto;
 }
 
-/* 24px, ,64px */
-
 .banner_img {
-  /* height: 94vh;
-  max-height: 800px; */
   height: min(90vh, 53.125rem);
   object-fit: cover;
   object-position: center;
@@ -64,9 +63,12 @@ a.banner-btn {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.95);
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   /* 16px   / 1rem  /  320vw,       1.2784vw +  .744318rem  ,        25px / 1.5625rem / 1024vw  */
-  font-size: clamp(1rem, 1.2784vw + 0.744318rem, 1.5625rem);
-  padding: 0.5em 1em;
+  font-size: clamp(0.75rem, 0.714286vw + 0.607143rem, 1.25rem);
+  /* 12px - 20px 320vw - 1440vw*/
+  padding: 0.7em 1.8em;
   border-radius: 2px;
   margin-top: 1em;
   border: 1px solid rgba(255, 255, 255, 0.902);
@@ -83,20 +85,9 @@ a.banner-btn {
   color: black;
 }
 
-@media screen and (max-width: 500px) {
-  .banner-btn {
-    /* font-size: 1rem; */
-    /* padding: 0.8rem 3rem; */
-    /* border-radius: 50px; */
-    /* margin-top: 20px; */
-  }
-
-  .banner-style {
-    height: 500px;
-    object-fit: cover;
-    object-position: center;
-  }
+@media screen and (max-width: 1200px) {
 }
+
 /* Mid banner and iframe */
 .mid-banner {
   position: relative;
@@ -152,8 +143,7 @@ a.banner-btn {
   z-index: 1;
 }
 
-.credit p,
-.credit a {
+.credit :is(p, a) {
   /* margin-top: rem; */
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
   font-weight: 500;
@@ -169,8 +159,7 @@ a.banner-btn {
   text-decoration: none;
 }
 
-.dark .credit p,
-.dark .credit a {
+.dark .credit :is(p, a) {
   color: rgba(255, 255, 255, 0.8);
 }
 

@@ -134,6 +134,7 @@
 .dark .card_img_container .discount_ribbon {
   /* background-color: rgba(0, 72, 195, 0.73); */
   background-color: #5459a8b5;
+  background-color: #161f2b;
 }
 
 /* product delete price */
@@ -231,12 +232,7 @@
   }
 }
 
-.dark {
-  /* background-color: rgb(31, 41, 52); */
-  /* background-color: #161f2b; */
-  color: rgba(255, 255, 255, 0.8);
-}
-
+.dark,
 .dark a
 /* .dark .navbar-nav .nav-link */ {
   color: rgba(255, 255, 255, 0.8);

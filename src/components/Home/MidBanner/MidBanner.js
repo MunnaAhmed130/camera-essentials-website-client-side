@@ -15,8 +15,8 @@ const MidBanner = () => {
     start: 6,
     end: 47,
   };
-  var player;
 
+  var player;
   const opts = {
     height: "100%",
     width: "100%",
@@ -42,6 +42,7 @@ const MidBanner = () => {
       //   origin: "http://localhost:3000",
     },
   };
+
   const _onReady = (e) => {
     player = e.target;
     // player.j.i.playerVars.seekTo(10);
@@ -49,9 +50,9 @@ const MidBanner = () => {
     console.log(player);
     player.seekTo(section.start);
     player.playVideo();
-
     // console.log()
   };
+
   // console.log(YouTube.PlayerState);
   const onStateChange = (e) => {
     player = e.target;

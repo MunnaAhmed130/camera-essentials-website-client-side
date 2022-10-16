@@ -6,9 +6,9 @@ import "../Home/Home.css";
 const Banner = () => {
   const { darkMode } = useTheme();
   return (
-    <div className={`banner ${darkMode ? "dark" : "light"}`}>
+    <div className={`banner  ${darkMode ? "dark" : "light"}`}>
       <Carousel fade>
-        <Carousel.Item interval={5000}>
+        <Carousel.Item interval={5000} className="banner-style">
           <img
             className="banner_img d-block w-100"
             // src="https://i.ibb.co/qDgVpsB/d-ng-tr-n-qu-c-HRk-O49-Hle-Gc-unsplash.jpg"
@@ -18,7 +18,9 @@ const Banner = () => {
           />
           <Carousel.Caption className="banner-info">
             <div>
-              <h2>Capture Your Beautiful Moments</h2>
+              <h2>
+                Capture Your <br /> Beautiful Moments
+              </h2>
               <Button
                 className="banner-btn me-3"
                 href="http://localhost:3000/explore"
@@ -41,7 +43,9 @@ const Banner = () => {
           />
           <Carousel.Caption className="banner-info">
             <div>
-              <h2>Capture Your Beautiful Moments</h2>
+              <h2>
+                Capture Your <br /> Beautiful Moments
+              </h2>
               <Button
                 className="banner-btn me-3"
                 href="http://localhost:3000/explore"
