@@ -13,7 +13,7 @@
 
 .navbar.dark {
   --navbar-bg-color: #161f2b;
-  --nav-brand-color: rgba(255, 255, 255, 0.9);
+  --nav-brand-color: rgba(255, 255, 255, 0.95);
   --nav-link-color: rgba(255, 255, 255, 0.65);
   --nav-link-hover: rgba(255, 255, 255, 0.8);
   --nav-active-link: rgba(255, 255, 255, 0.45);

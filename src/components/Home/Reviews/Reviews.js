@@ -26,8 +26,8 @@ const Reviews = () => {
   // console.log(reviews.name)
   // console.log(reviews[0].ratingAsNumber);
   return (
-    <div className="reviews_container">
-      <div className="review_info">
+    <div className="reviews_section">
+      <div className="reviews_heading">
         <h2>Some Valuable Opinions</h2>
         <h3 className="text-uppercase">Reviews</h3>
       </div>
@@ -53,9 +53,9 @@ const Reviews = () => {
         onSlideChange={() => console.log("slide change")}
       >
         {/* <Row xs={1} sm={1} md={2} lg={3} xl={3} className="reviews"> */}
-        <div className="reviews">
+        <div className="reviews-container">
           {reviews.map((reviewer) => (
-            <SwiperSlide key={reviewer._id} className="reviews">
+            <SwiperSlide key={reviewer._id} className="review">
               {/* <Col className="single-review"> */}
               <div className="single-review">
                 {/* <div className="reviewer"> */}
