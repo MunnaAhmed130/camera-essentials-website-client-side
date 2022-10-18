@@ -16,7 +16,6 @@ import "swiper/css/scrollbar";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
-  // const [value, setValue] = React.useState(rating);
 
   useEffect(() => {
     fetch("https://limitless-reaches-30016.herokuapp.com/reviews/query?limit=3")
@@ -52,13 +51,10 @@ const Reviews = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
-        {/* <Row xs={1} sm={1} md={2} lg={3} xl={3} className="reviews"> */}
         <div className="reviews-container">
           {reviews.map((reviewer) => (
             <SwiperSlide key={reviewer._id} className="review">
-              {/* <Col className="single-review"> */}
               <div className="single-review">
-                {/* <div className="reviewer"> */}
                 {reviewer.img && (
                   <img
                     className="review-img"
@@ -67,9 +63,6 @@ const Reviews = () => {
                   />
                 )}
                 <h3>{reviewer.name}</h3>
-
-                {/* <br /> */}
-                {/* </div> */}
                 <h4>{reviewer.profession}</h4>
                 <Rating
                   name="read-only"
@@ -93,21 +86,12 @@ const Reviews = () => {
                   width={10000}
                   truncatedEndingComponent={"... "}
                 >
-                  {/* <p> */}
                   {reviewer.description}
-                  {/* </p> */}
                 </ShowMoreText>
-                {/* <p className="">{reviewer.description}</p> */}
               </div>
-              {/* </Col> */}
             </SwiperSlide>
           ))}
         </div>
-        {/* </Row> */}
-        {/* <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide> */}
       </Swiper>
     </div>
   );

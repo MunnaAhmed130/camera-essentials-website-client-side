@@ -1,3 +1,15 @@
+p,
+h1,
+h2,
+h3,
+h5,
+h4,
+h6,
+a,
+button {
+  letter-spacing: 1px;
+}
+
 /* app style  */
 .App {
   text-align: center;

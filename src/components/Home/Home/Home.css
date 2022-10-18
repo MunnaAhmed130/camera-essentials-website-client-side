@@ -1,14 +1,3 @@
-p,
-h1,
-h2,
-h3,
-h5,
-h6,
-a,
-button {
-  letter-spacing: 2px;
-}
-
 /* Banner */
 .banner {
   --brightness: brightness(70%);
@@ -321,26 +310,15 @@ a.banner-btn {
   width: min(35rem, 100%);
   padding-inline: 1em;
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
-
-  /* margin-inline: auto; */
-  /* text-align: justify; */
-  /* width: 100%; */
-  /* word-wrap: break-word; */
-}
-.description_text p {
-  width: 200px;
 }
 
 .single-review h3 {
   font-size: 1.3em;
-  /* display: inline-block; */
   margin-top: 3rem;
-  /* margin-right: 10px; */
 }
 
 .single-review h4 {
   font-size: 0.9em;
-  /* display: inline-block; */
 }
 
 /* see more text  */
