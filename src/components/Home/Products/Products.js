@@ -37,9 +37,11 @@ const Products = () => {
   // console.log(arr);
   return (
     <div className="products">
-      <h2 className="products-header">
-        Explore The World Of Fashionable Cameras
-      </h2>
+      <div className="products-header">
+        <h2>Explore Fashionable Cameras</h2>
+        <h6>Disc Up to 30%</h6>
+      </div>
+
       {products.length ? (
         <Row
           xs={1}

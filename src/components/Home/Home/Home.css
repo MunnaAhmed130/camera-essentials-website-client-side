@@ -321,6 +321,11 @@ a.banner-btn {
   font-size: 0.9em;
 }
 
+.single-review .rating,
+.single-review .empty_rating {
+  font-size: 1.2rem;
+}
+
 /* see more text  */
 .see_more {
   color: rgba(22, 32, 44, 0.5);

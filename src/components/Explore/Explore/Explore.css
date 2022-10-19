@@ -98,6 +98,12 @@
   width: min(45rem, 100%);
 }
 
+.explore-item .rating,
+.explore-item .empty_rating {
+  font-size: clamp(1.2845rem, 1.77556vw + 1.21rem, 1.4375rem);
+  /*20.5px/1.2845rem/320vw, 1.77556vw + 1.21rem, 23px/1.4375rem/1024vw */
+}
+
 .rating_dropdown .dropdown-menu.show {
   left: -5rem;
   text-align: center;
