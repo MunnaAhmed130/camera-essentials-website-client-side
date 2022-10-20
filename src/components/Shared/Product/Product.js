@@ -19,7 +19,7 @@ const Product = ({ product }) => {
   // https://images2.imgbox.com/1f/20/K6kMXzul_o.png
   return (
     <Col className="card_col">
-      <Card className="mt-3 card product">
+      <Card className="card product">
         <div className="card_img_container">
           <Card.Img
             variant="top"
