@@ -53,9 +53,10 @@ button {
 .products,
 .explore {
   background-color: var(--products-bg-color);
-  padding-top: clamp(0.875rem, 2.9545vw + 0.284rem, 2.5rem);
+  /* padding-top: clamp(0.875rem, 2.9545vw + 0.284rem, 2.5rem); */
+  padding-top: 70px;
   /* padding-bottom: 2.5rem; */
-  padding-bottom: 3rem;
+  padding-bottom: 70px;
   /* padding-inline: clamp(0.875rem, 0.284vw + 0.82rem, 1rem); */
   /* .875rem/14px/320vw , 2.9545vw + .284rem  ,2.5rem/40px/1200vw  */
 }
@@ -73,14 +74,10 @@ button {
 .explore .products-header {
   font-size: 20px;
   font-size: 48px;
-  /* text-transform: uppercase; */
   font-weight: 500;
   letter-spacing: 2px;
   font-size: var(--fs-heading);
   margin-bottom: 0.5em;
-  /* padding-block: var(--fs-normal); */
-  /* margin-block: 2rem; */
-  /* margin-block: 1rem; */
 }
 
 .products .products-header {
@@ -91,12 +88,12 @@ button {
   font-size: var(--fs-normal);
   letter-spacing: 3px;
   text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 
 /* product  */
 .product .card-body {
   padding: clamp(0.5rem, 1.13636vw + 0.22727rem, 1rem);
-  /* padding: 0.5rem; */
 }
 
 .dark .product {

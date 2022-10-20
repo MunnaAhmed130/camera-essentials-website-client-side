@@ -38,8 +38,8 @@ const Products = () => {
   return (
     <div className="products">
       <div className="products-header">
-        <h2>Explore Fashionable Cameras</h2>
-        <h6>Disc Up to 30%</h6>
+        <h2>Fashionable New Cameras</h2>
+        <h6>Discount Up to 30%</h6>
       </div>
 
       {products.length ? (
