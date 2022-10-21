@@ -2,7 +2,6 @@
 .banner {
   --brightness: brightness(70%);
   --banner-color: white;
-  --credit-color: rgba(22, 32, 44, 1);
   --banner-btn-color: white;
   --banner-btn-hover-color: black;
   --banner-btn-bg-color: transparent;
@@ -13,7 +12,6 @@
 .banner.dark {
   --brightness: brightness(40%);
   --banner-color: rgba(255, 255, 255, 0.95);
-  --credit-color: rgba(255, 255, 255, 0.8);
   --banner-btn-color: rgba(255, 255, 255, 0.95);
   --banner-btn-bg-hover-color: rgba(255, 255, 255, 0.95);
   --banner-border: 1px solid rgba(255, 255, 255, 0.95);
@@ -41,9 +39,14 @@
 
 .banner-info h2 {
   color: var(--banner-color);
-  letter-spacing: 3px;
-  font-size: clamp(1.25rem, 4.54545vw + 0.340909rem, 3.75rem);
+  letter-spacing: clamp(0.125rem, 1.16071vw + -0.107143rem, 0.9375rem);
+  /* word-spacing: clamp(0.125rem, 1.16071vw + -0.107143rem, 0.9375rem); */
+  /* font-size: clamp(1.25rem, 4.54545vw + 0.340909rem, 3.75rem); */
   /* 20px - 60px 320 - 1200 */
+  /* 20px - 65px 320 - 1200 */
+  /* 2px - 15px 320 - 1440 */
+  /* font-size: clamp(1.25rem, 4.46429vw + 0.357143rem, 4.375rem); */
+  font-size: clamp(1.25rem, 4.16667vw + 0.416667rem, 4.0625rem);
   text-transform: uppercase;
   margin-top: 4rem;
   font-weight: 600;
@@ -65,7 +68,9 @@ a.banner-btn {
   letter-spacing: 2px;
   font-size: clamp(0.75rem, 0.714286vw + 0.607143rem, 1.25rem);
   /* 12px - 20px 320vw - 1440vw*/
+  /* font-size: 21px; */
   padding: 0.7em 1.8em;
+  margin: 0.5em;
   border-radius: 2px;
   margin-top: 1em;
   border: var(--banner-border);
@@ -78,25 +83,23 @@ a.banner-btn {
   color: var(--banner-btn-hover-color);
 }
 
-@media screen and (max-width: 1200px) {
-}
-
 /* Mid banner and iframe */
 .mid-banner {
   --mid-banner-bg-color: #dbdbdbe7;
   --mid-banner-bg-opacity: 0.9;
   --iframe-container-box-shadow: 0 0.5rem 2rem rgba(66, 66, 66, 0.5);
+  --credit-color: rgba(22, 32, 44, 1);
 }
 
 .mid-banner.dark-mid-banner {
   --mid-banner-bg-color: #091e37;
   --mid-banner-bg-opacity: 0.88;
   --iframe-container-box-shadow: -0.2rem 0.7rem 2rem 0 rgba(24, 24, 24, 0.72);
+  --credit-color: rgba(255, 255, 255, 0.8);
 }
 
 .mid-banner {
   position: relative;
-  /* padding-top: 4rem; */
 }
 
 .mid-banner-container {
