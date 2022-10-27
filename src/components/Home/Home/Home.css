@@ -39,16 +39,13 @@
 
 .banner-info h2 {
   color: var(--banner-color);
-  letter-spacing: clamp(0.125rem, 1.16071vw + -0.107143rem, 0.9375rem);
-  /* word-spacing: clamp(0.125rem, 1.16071vw + -0.107143rem, 0.9375rem); */
-  /* font-size: clamp(1.25rem, 4.54545vw + 0.340909rem, 3.75rem); */
-  /* 20px - 60px 320 - 1200 */
-  /* 20px - 65px 320 - 1200 */
   /* 2px - 15px 320 - 1440 */
-  /* font-size: clamp(1.25rem, 4.46429vw + 0.357143rem, 4.375rem); */
+  letter-spacing: clamp(0.125rem, 1.16071vw + -0.107143rem, 0.9375rem);
+  /* 20px - 65px 320 - 1400 */
   font-size: clamp(1.25rem, 4.16667vw + 0.416667rem, 4.0625rem);
   text-transform: uppercase;
-  margin-top: 4rem;
+  /* 0 - 65px 320-1024vw */
+  margin-top: clamp(0rem, 9.09091vw + -1.81818rem, 4rem);
   font-weight: 600;
   margin-inline: auto;
 }
@@ -66,11 +63,11 @@ a.banner-btn {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: clamp(0.75rem, 0.714286vw + 0.607143rem, 1.25rem);
-  /* 12px - 20px 320vw - 1440vw*/
-  /* font-size: 21px; */
-  padding: 0.7em 1.8em;
-  margin: 0.5em;
+  /* 12px - 20px 320vw - 1024vw*/
+  font-size: clamp(0.75rem, 1.13636vw + 0.522727rem, 1.25rem);
+  padding: 0.7em 2em;
+  /* 8 - 32px 320 - 1024 */
+  margin: clamp(0.5rem, 3.40909vw + -0.181818rem, 2rem);
   border-radius: 2px;
   margin-top: 1em;
   border: var(--banner-border);
@@ -136,11 +133,12 @@ a.banner-btn {
 }
 
 .credit :is(p, a) {
-  font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  /* 13 - 16px 320 - 1024vw */
+  font-size: clamp(0.8125rem, 0.426136vw + 0.727273rem, 1rem);
   font-weight: 500;
   letter-spacing: 3px;
-  padding-block: clamp(2rem, 4.545vw + 1.09rem, 4rem);
   /* 32px/ 2rem /320vw , 4.545vw + 1.09rem ,64px/4rem/1024vw  */
+  padding-block: clamp(2rem, 4.545vw + 1.09rem, 4rem);
   color: var(--credit-color);
 }
 
@@ -151,13 +149,14 @@ a.banner-btn {
 
 .mid-banner-info p {
   letter-spacing: 3px;
-  font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  /* 13 - 16px 320 - 1024vw */
+  font-size: clamp(0.8125rem, 0.426136vw + 0.727273rem, 1rem);
   font-weight: 500;
 }
 
 .mid-banner-info h2 {
   font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
-  /* font-size: 2.5rem; */
+  /* font-size: 48px; */
   margin-bottom: 1em;
 }
 
