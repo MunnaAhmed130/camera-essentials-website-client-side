@@ -21,14 +21,15 @@ const Newsletter = () => {
         lg={2}
       >
         <Col className="newsletter-info ">
-          <div>
-            <h2>SUBSCRIBE TO OUR NEWLETTER</h2> <br />
-            <h3>GET UPDATE FOR NEWS, OFFERS</h3> <br />
-            <form>
-              <input type="email" placeholder="Email" />
-            </form>
-            <p className=" text-uppercase m-0">Don't worry, We don't spam</p>
+          <div className="newsletter-heading-container">
+            <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+            <h3>GET UPDATE FOR NEWS, OFFERS</h3>
           </div>
+          <form>
+            <input type="email" placeholder="Email" />
+          </form>
+          <p className=" text-uppercase m-0">Don't worry, We don't spam</p>
+          {/* </div> */}
         </Col>
         {/* <Col>
           <div className="newsletter-img-container">
