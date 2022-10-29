@@ -101,12 +101,18 @@ a.banner-btn {
 
 .mid-banner-container {
   background-size: cover;
-  padding-top: clamp(4rem, 9.09vw + 2.1818rem, 8rem);
-  /*64px/ 4rem/320vw, 9.09vw + 2.1818rem  , 8rem/128px/1024vw  */
+  /* 48 - 128px 320vw - 1024vw  */
+  padding-top: clamp(3rem, 11.3636vw + 0.727273rem, 8rem);
+  padding-top: clamp(3rem, 7.14286vw + 1.57143rem, 8rem);
+  /* padding-top: 3rem; */
+  /* 4rem 8rem  320vw 1024vw  */
+  /* padding-top: 120px; */
   /*80px, 6.3vw + 3.63rem  ,128px  */
   padding-inline: 1em;
   background-image: url("https://i.ibb.co/8rZ18cX/camera-and-shadow.jpg");
-  background-position: center;
+  background-position: center bottom;
+  /* background-position: top center; */
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
@@ -119,8 +125,6 @@ a.banner-btn {
   bottom: 0;
   position: absolute;
   z-index: 0;
-  /* background-position: center;
-  background-size: cover; */
   opacity: var(--mid-banner-bg-opacity);
   background-color: var(--mid-banner-bg-color);
 }
@@ -137,7 +141,7 @@ a.banner-btn {
   font-size: clamp(0.8125rem, 0.426136vw + 0.727273rem, 1rem);
   font-weight: 500;
   letter-spacing: 3px;
-  /* 32px/ 2rem /320vw , 4.545vw + 1.09rem ,64px/4rem/1024vw  */
+  /* 32px - 64px   320vw - 1024vw  */
   padding-block: clamp(2rem, 4.545vw + 1.09rem, 4rem);
   color: var(--credit-color);
 }
@@ -149,15 +153,13 @@ a.banner-btn {
 
 .mid-banner-info p {
   letter-spacing: 3px;
-  /* 13 - 16px 320 - 1024vw */
-  font-size: clamp(0.8125rem, 0.426136vw + 0.727273rem, 1rem);
+  font-size: var(--fs-sm-heading);
   font-weight: 500;
 }
 
 .mid-banner-info h2 {
-  font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
-  /* font-size: 48px; */
-  margin-bottom: 1em;
+  font-size: var(--fs-heading);
+  margin-bottom: 1.2em;
 }
 
 .iframe-container {
@@ -191,7 +193,6 @@ a.banner-btn {
 }
 
 /* Reviews  */
-
 .reviews_section {
   --reviews-section-bg-color: rgba(241, 241, 241, 0.572);
   --swiper-btn-color: #16202c70;
@@ -211,9 +212,6 @@ a.banner-btn {
   width: min(90%, 90rem);
   margin-inline: auto;
   padding-top: 10rem;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 
 .swiper .swiper-button-next::after,
@@ -235,34 +233,32 @@ a.banner-btn {
 
 /* reviews  */
 .review {
-  /* padding-bottom: 2rem; */
-  padding-top: 2.5rem;
-  /* padding-inline: 2em; */
+  padding-top: clamp(1.5rem, 2.27273vw + 1.04545rem, 2.5rem);
   /* background-color: rgba(128, 128, 128, 0.239); */
 }
 
 .reviews_heading {
-  /* padding-top: 2em; */
   margin-bottom: 1em;
 }
 
 .reviews_section {
-  /* padding-top: 3rem; */
-  padding-top: 4rem;
-  padding-bottom: 2rem;
-  /* padding-block: 2rem; */
+  /* 30 - 70px 320vw - 1024vw */
+  padding-top: clamp(1.875rem, 5.68182vw + 0.738636rem, 4.375rem);
+  /* 10 - 30px 320vw - 1024vw */
+  /* padding-bottom: clamp(0.625rem, 2.84091vw + 0.0568182rem, 1.875rem); */
+  padding-bottom: clamp(1rem, 2.27273vw + 0.545455rem, 2rem);
   background-color: var(--reviews-section-bg-color);
 }
 
 .reviews_heading h2 {
-  font-size: clamp(1.875rem, 2.5568vw + 1.36rem, 3rem);
+  font-size: var(--fs-heading);
   font-weight: 500;
   margin-bottom: 0.5em;
 }
 
 .reviews_heading h3 {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: var(--fs-sm-heading);
+  /* font-weight: 500; */
   letter-spacing: 3px;
 }
 

@@ -53,12 +53,8 @@ button {
 .products,
 .explore {
   background-color: var(--products-bg-color);
-  /* padding-top: clamp(0.875rem, 2.9545vw + 0.284rem, 2.5rem); */
-  padding-top: 70px;
-  /* padding-bottom: 2.5rem; */
-  padding-bottom: 70px;
-  /* padding-inline: clamp(0.875rem, 0.284vw + 0.82rem, 1rem); */
-  /* .875rem/14px/320vw , 2.9545vw + .284rem  ,2.5rem/40px/1200vw  */
+  /* 30 - 70px 320vw - 1024vw */
+  padding-block: clamp(1.875rem, 5.68182vw + 0.738636rem, 4.375rem);
 }
 
 .demo-products,
@@ -85,10 +81,11 @@ button {
 }
 
 .products .products-header h6 {
-  font-size: var(--fs-normal);
+  font-size: var(--fs-sm-heading);
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  /* 16 - 32px 320vw - 1024vw */
+  margin-bottom: clamp(1rem, 2.27273vw + 0.545455rem, 2rem);
 }
 
 /* product  */
@@ -139,7 +136,6 @@ button {
   background-color: var(--card-discount-ribbon-bg-color);
   color: white;
   font-size: 0.8rem;
-
   padding-top: 0.1em;
   padding-bottom: 0.3em;
   padding-inline: 0.2em;
@@ -174,11 +170,8 @@ button {
 }
 
 .card_price .dollar_sign {
-  font-size: clamp(
-    0.725rem,
-    0.2727vw + 0.67045rem,
-    0.875rem
-  ); /* 11.6px/.725rem, 14px/.875rem 320vw - 1200vw */
+  font-size: clamp(0.725rem, 0.2727vw + 0.67045rem, 0.875rem);
+  /* 11.6px/.725rem, 14px/.875rem 320vw - 1200vw */
   /* vertical-align: 0.025rem; */
   font-weight: 600;
 }
