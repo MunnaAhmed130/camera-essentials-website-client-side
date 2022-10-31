@@ -50,8 +50,7 @@ button {
   --dynamic-route-hover-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.253);
 }
 
-.products,
-.explore {
+:is(.products, .explore) {
   background-color: var(--products-bg-color);
   /* 30 - 70px 320vw - 1024vw */
   padding-block: clamp(1.875rem, 5.68182vw + 0.738636rem, 4.375rem);
