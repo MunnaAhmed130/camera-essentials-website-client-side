@@ -40,7 +40,7 @@ const Footer = () => {
               >
                 <Col xl={4} lg={4} className="p-0">
                   <div className="footer-section">
-                    <h4>Why Always Us</h4>
+                    <h4 className="mb-0">Why Always Us</h4>
                     <p className="p-0 m-0">
                       We provide quality product with best service for old and
                       new camera Models.

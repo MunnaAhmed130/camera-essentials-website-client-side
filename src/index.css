@@ -10,7 +10,7 @@
   /* 13 - 16px 320 - 1024vw */
   --fs-sm-heading: clamp(0.8125rem, 0.426136vw + 0.727273rem, 1rem);
   /* dark bg  */
-  --dark-footer-color: rgba(255, 255, 255, 0.55);
+  /* --dark-footer-color: rgba(255, 255, 255, 0.55); */
   /* --dark-auth-color: rgba(255, 255, 255, 0.9); */
 
   --dark-bg-color: rgb(35, 54, 75);
