@@ -96,7 +96,7 @@ const Footer = () => {
                   <div className="links information">
                     <h4>Information</h4>
                     <Link to="#">Privacy Policy</Link> <br />
-                    <Link to="$">Terms & Conditions</Link> <br />
+                    <Link to="#">Terms & Conditions</Link> <br />
                     <Link to="#">Disclaimer</Link> <br />
                     <Link to="#">Support</Link> <br />
                     <Link to="#">Account</Link> <br />

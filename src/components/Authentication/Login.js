@@ -24,13 +24,15 @@ const Login = () => {
     console.log(data);
     userLogin(data.email, data.password, location, history);
   };
+
   const handleGoogleSignIn = () => {
     googleSignIn(location, history);
   };
+
   return (
-    <div className={darkMode ? "dark" : "light"}>
+    <div className={darkMode ? "dark-auth" : "light"}>
       <Header />
-      <div className={`login ${darkMode ? "dark-bg" : "light-bg"}`}>
+      <div className={`login ${darkMode ? "dark-bg dark-auth" : "light-bg"}`}>
         <div className="login-form-container">
           <h2 className="login-heading">Please Login</h2>
           <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
@@ -49,7 +51,7 @@ const Login = () => {
             />{" "}
             <br />
             <p className="m-0">
-              By Signing in, you agree to{" "}
+              By Signing in, you agree to&nbsp;
               <a href="/login" alt="">
                 Terms and Conditions
               </a>{" "}

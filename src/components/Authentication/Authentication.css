@@ -1,19 +1,31 @@
 .login,
 .register {
+  --color: rgb(33, 37, 41);
   --border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   --border-bottom-focus: 1px solid rgba(0, 0, 0, 0.5);
-  --auth-color: rgba(0, 0, 0, 0.95);
+  --auth-color: var(--color);
   --placeholder-focus-color: transparent;
+  --auth-bg-color: white;
+  --auth-bg-opacity: 0.825;
+  --auth-heading: var(--color);
+  --auth-link-color: ;
+  --auth-btn-weight: 500;
 }
 
-.dark .login,
-.dark .register {
+.dark-auth :is(.login, .register) {
   --auth-color: rgba(255, 255, 255, 0.75);
   --dark-auth-link: rgba(255, 255, 255, 0.9);
   --border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   --border-bottom-focus: 1px solid rgba(255, 255, 255, 0.7);
   --placeholder-focus-color: transparent;
+  --auth-bg-color: #152131;
+  --auth-bg-color: #202f43;
+  --auth-bg-opacity: 0.9;
+  --auth-heading: rgba(255, 255, 255, 0.9);
+  --auth-link-color: ;
+  --auth-btn-weight: 400;
 }
+
 /*  auth background and theme */
 .login,
 .register {
@@ -22,16 +34,16 @@
   padding-block: clamp(3.5rem, 7.9545vw + 1.9rem, 7rem);
   /* padding-block: 3.5rem; */
   /* 56px/3.5rem/320vw , 7.9545vw + 1.9rem, 112px/7rem, 1024vw */
-  background-image: url("https://i.ibb.co/m8KzJs5/camera-and-lenses.jpg");
+  background-image: url("https://i.ibb.co/vBc1g11/conor-luddy-1638x2048.jpg");
   /* filter: brightness(90%); */
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center;
   background-size: cover;
   background-attachment: scroll;
 }
 
-.login.light-bg:after,
-.register.light-bg:after {
+.login:after,
+.register:after {
   content: "";
   top: 0;
   left: 0;
@@ -39,25 +51,9 @@
   bottom: 0;
   position: absolute;
   z-index: 0;
-  opacity: 0.825;
-  background-color: #ffffff;
-  /* background-color: #dbdbdbe7; */
-}
-
-.login.dark-bg:after,
-.register.dark-bg:after {
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: 0;
-  /* opacity: 0.2; */
-  /* background-color: #001f45dd; */
-  background-color: #152131;
-  opacity: 0.9;
-  /* background-color: #091e37; */
+  opacity: var(--auth-bg-opacity);
+  background-color: var(--auth-bg-color);
+  /* background-color: #202f43; */
 }
 
 /* auth form container */
@@ -65,7 +61,7 @@
 .register-form-container {
   max-width: 450px;
   width: min(clamp(20rem, 18.4659vw + 14.235rem, 28.125rem), 95%);
-  /* 320px/20rem/425vw , 18.4659vw + 14.235rem ,450px/28.125rem/1024vw */
+  /* 320px 425vw    450px 1024vw */
   padding-inline: 10px;
   margin-inline: auto;
   position: relative;
@@ -75,15 +71,11 @@
 /* auth heading  */
 .login-heading,
 .register-heading {
+  color: var(--auth-heading);
   /* margin-top: 50px; */
   margin-bottom: 0.5em;
   /* font-size: 2.5rem; */
   font-size: var(--fs-heading);
-}
-
-.dark .login-heading,
-.dark .register-heading {
-  color: rgba(255, 255, 255, 0.9);
 }
 
 /* auth form input  */
@@ -97,7 +89,7 @@
 }
 
 input::placeholder {
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--auth-color);
   font-weight: 500;
 }
 
@@ -105,48 +97,29 @@ input:focus-visible::placeholder {
   color: var(--placeholder-focus-color);
 }
 
-.register-form input[type="text"],
-.login-form input[type="email"],
-.register-form input[type="email"],
-.login-form input[type="password"],
-.register-form input[type="password"] {
+:is(.register-form, .login-form)
+  :is(input[type="text"], input[type="email"], input[type="password"]) {
   color: var(--auth-color);
   background-color: transparent;
   font-weight: 500;
   border: none;
   border-bottom: var(--border-bottom);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: 0;
 }
 
-.dark input[type="text"],
-.dark input[type="email"],
-.dark input[type="password"],
-.dark input::placeholder {
-  color: var(--auth-color);
-}
-
-/* .dark input[type="text"],
-.dark input[type="email"],
-.dark input[type="password"] {
-  border-bottom: var(--border-bottom);
-} */
-
-.login-form input:focus-visible,
-.register-form input:focus-visible {
+:is(.login-form, .register-form) input:focus-visible {
   /* outline: 0px solid rgb(96, 96, 96); */
   outline: none;
   border-bottom: var(--border-bottom-focus);
 }
 
 /* google autofil  */
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 50000s ease-in-out 0s, color 5000s 0s;
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   caret-color: var(--auth-color);
   -webkit-text-fill-color: var(--auth-color);
   border-bottom: var(--border-bottom);
@@ -158,17 +131,12 @@ input:-webkit-autofill:focus-visible {
 }
 
 /* auth links  */
-.login a,
-.register a {
+:is(.login, .register) a {
+  /* .login a, */
+  /* .register a { */
   text-decoration: none;
   font-weight: 700;
   color: var(--auth-color);
-}
-
-.dark .login a,
-.dark .register a {
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.95);
 }
 
 /* auth p  */
@@ -181,14 +149,8 @@ input:-webkit-autofill:focus-visible {
 .alt-sign-in,
 .register p {
   font-size: var(--fs-normal);
-  font-weight: 500;
+  font-weight: var(--auth-btn-weight);
   color: var(--auth-color);
-}
-
-.dark .login p,
-.dark .alt-sign-in,
-.dark .register p {
-  font-weight: 400;
 }
 
 /* auth btn  */

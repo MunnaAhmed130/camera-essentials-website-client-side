@@ -1,4 +1,5 @@
 .footer {
+  --footer-color: rgb(33, 37, 41);
   --footer-bg-color: rgb(232, 232, 232);
   --footer-icon-bg-color: rgba(221, 221, 221, 0.873);
   --footer-icon-color: rgb(62, 62, 62);
@@ -6,15 +7,19 @@
   --footer-icon-hover-box-shadow: 0 0.25rem 0.5rem rgba(103, 103, 103, 0.4);
   --footer-icon-hover-bg-color: rgba(233, 233, 233, 1);
   /* --footer-icon-bg-color: rgba(221, 221, 221, 0.873); */
+  --footer-bottom-border-top-color: rgba(0, 0, 0, 0.3);
 }
 
 .footer.dark_footer {
+  --blue-zodiac: rgb(29, 46, 70);
+  --footer-color: ;
   --footer-bg-color: #16202c;
-  --footer-icon-bg-color: rgb(32, 50, 70);
-  --footer-icon-hover-bg-color: rgb(28, 63, 100);
+  --footer-icon-bg-color: var(--blue-zodiac);
+  --footer-icon-hover-bg-color: var(--blue-zodiac);
   --footer-icon-color: rgba(255, 255, 255, 0.55);
   --footer-icon-box-shadow: 0 4px 3px 0 rgb(26, 26, 26);
   --footer-icon-hover-box-shadow: 0 4px 3px 0 rgb(26, 26, 26);
+  --footer-bottom-border-top-color: rgba(255, 255, 255, 0.3);
 }
 
 /* footer background image */
@@ -54,7 +59,7 @@
 .footer-info h4 {
   padding-bottom: 1rem;
   margin-bottom: 0;
-  color: black;
+  color: rgb(33, 37, 41);
   font-weight: 600;
   /* letter-spacing: 2px; */
 }
@@ -75,10 +80,13 @@
   color: rgba(0, 0, 0, 0.9);
 }
 
-.footer-info a,
-.footer-info p,
+.footer-info :is(a, p),
 .contacts p {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+.dark_footer.footer :is(a, p) {
   font-weight: 500;
 }
 
@@ -90,9 +98,10 @@
 
 /* icon links */
 .icon-links a {
+  --square-box: clamp(2.1875rem, 0.7102vw + 2.045rem, 2.5rem);
   display: inline-block;
-  height: clamp(2.1875rem, 0.7102vw + 2.045rem, 2.5rem);
-  width: clamp(2.1875rem, 0.7102vw + 2.045rem, 2.5rem);
+  height: var(--square-box);
+  width: var(--square-box);
   font-size: clamp(0.9375rem, 0.426136vw + 0.85227rem, 1.125rem);
   text-align: center;
   line-height: clamp(2.125rem, 0.71vw + 1.9829rem, 2.4375rem);
@@ -146,7 +155,6 @@
   display: inline-block;
 }
 
-/* .links, */
 @media screen and (min-width: 992px) {
   .information,
   .contacts {
@@ -156,38 +164,39 @@
 
 /* footer bottom */
 .footer-bottom {
-  /* border-top: 1px solid rgba(255, 255, 255, 0.3); */
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
-  font-size: 14px;
-  color: black;
-  font-weight: 500;
+  border-top: 1px solid var(--footer-bottom-border-top-color);
   /* color: var(--footer-color); */
 }
 
-.dark .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+.footer-bottom p {
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+}
+
+.dark_footer .footer-bottom {
+  /* border-top: 1px solid rgba(255, 255, 255, 0.3); */
   /* font-size: 1rem; */
   color: rgba(255, 255, 255, 0.875);
 }
 
 /* dark theme */
-.dark .footer h4 {
+.dark_footer.footer h4 {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.dark .footer-info a,
-.dark .footer-info p,
-.dark .contacts span {
+.dark_footer.footer h5 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dark_footer .footer-info a,
+.dark_footer .footer-info p,
+.dark_footer .contacts span {
   color: var(--dark-footer-color);
 }
 
-.dark .footer a,
-.dark .footer p {
-  font-weight: 400;
-}
-
-.dark .links a:hover,
-.dark .contacts p:hover {
+.dark_footer .links a:hover,
+.dark_footer .contacts p:hover {
   color: rgba(255, 255, 255, 0.9);
 }
 

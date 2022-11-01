@@ -24,9 +24,11 @@ const Register = () => {
     console.log(user);
   };
   return (
-    <div className={darkMode ? "dark" : "light"}>
+    <div className={darkMode ? "dark-auth dark" : "light"}>
       <Header />
-      <div className={`register ${darkMode ? "dark-bg" : "light-bg"}`}>
+      <div
+        className={`register ${darkMode ? "dark-bg dark-auth" : "light-bg"}`}
+      >
         <div className="register-form-container">
           <h2 className="register-heading">Please Register</h2>
           {/* {!isLoading && ( */}
