@@ -40,12 +40,12 @@ const Footer = () => {
               >
                 <Col xl={4} lg={4} className="p-0">
                   <div className="footer-section">
-                    <h4 className="mb-0">Why Always Us</h4>
+                    <h4 className="m-0">Why Always Us</h4>
                     <p className="p-0 m-0">
                       We provide quality product with best service for old and
                       new camera Models.
                     </p>
-                    <h5 className="py-3 m-0">Follow Us</h5>
+                    <h5 className="pt-3 m-0">Follow Us</h5>
                     <div className="icon-links">
                       <a
                         href="https://www.facebook.com"
@@ -85,22 +85,22 @@ const Footer = () => {
                 <Col xl={2} lg={2} className="p-0">
                   <div className="links">
                     <h4>Quick LInks</h4>
-                    <Link to="#">Service</Link> <br />
-                    <Link to="/explore">Explore</Link> <br />
-                    <Link to="#">About Us</Link> <br />
-                    <Link to="#">Shipping</Link> <br />
-                    <Link to="#">Contact</Link> <br />
+                    <Link to="#">Service</Link>
+                    <Link to="/explore">Explore</Link>
+                    <Link to="#">About Us</Link>
+                    <Link to="#">Shipping</Link>
+                    <Link to="#">Contact</Link>
                   </div>
                 </Col>
                 <Col xl={3} lg={3} className="p-0">
                   <div className="links information">
                     <h4>Information</h4>
-                    <Link to="#">Privacy Policy</Link> <br />
-                    <Link to="#">Terms & Conditions</Link> <br />
-                    <Link to="#">Disclaimer</Link> <br />
-                    <Link to="#">Support</Link> <br />
-                    <Link to="#">Account</Link> <br />
-                    <Link to="#">Return Policy</Link> <br />
+                    <Link to="#">Privacy Policy</Link>
+                    <Link to="#">Terms & Conditions</Link>
+                    <Link to="#">Disclaimer</Link>
+                    <Link to="#">Support</Link>
+                    <Link to="#">Account</Link>
+                    <Link to="#">Return Policy</Link>
                   </div>
                 </Col>
                 <Col xl={3} lg={3} className="p-0">
