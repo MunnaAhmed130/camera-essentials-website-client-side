@@ -92,11 +92,10 @@ const MidBanner = () => {
       }`}
     >
       <div className="mid-banner-container">
-        <div className="mid-banner-info ">
-          <p className="text-uppercase  ">post vlogs with camera x9</p>
+        <div className="mid-banner-heading-container ">
+          <p className="text-uppercase">post vlogs with camera x9</p>
           <h2>The Best Digital Camera</h2>
         </div>
-
         <div className="iframe-container">
           {/* <iframe
           className={`iframe ${viewportWidth > 500 ? "iframe_disable" : ""}`}

@@ -82,6 +82,7 @@ a.banner-btn {
 
 /* Mid banner and iframe */
 .mid-banner {
+  position: relative;
   --mid-banner-bg-color: #dbdbdbe7;
   --mid-banner-bg-opacity: 0.9;
   --iframe-container-box-shadow: 0 0.5rem 2rem rgba(66, 66, 66, 0.5);
@@ -95,23 +96,12 @@ a.banner-btn {
   --credit-color: rgba(255, 255, 255, 0.8);
 }
 
-.mid-banner {
-  position: relative;
-}
-
 .mid-banner-container {
-  background-size: cover;
-  /* 48 - 128px 320vw - 1024vw  */
-  padding-top: clamp(3rem, 11.3636vw + 0.727273rem, 8rem);
+  /* 48 - 128px 320vw - 1440vw  */
   padding-top: clamp(3rem, 7.14286vw + 1.57143rem, 8rem);
-  /* padding-top: 3rem; */
-  /* 4rem 8rem  320vw 1024vw  */
-  /* padding-top: 120px; */
-  /*80px, 6.3vw + 3.63rem  ,128px  */
   padding-inline: 1em;
   background-image: url("https://i.ibb.co/8rZ18cX/camera-and-shadow.jpg");
   background-position: center bottom;
-  /* background-position: top center; */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -129,37 +119,22 @@ a.banner-btn {
   background-color: var(--mid-banner-bg-color);
 }
 
-.iframe-container,
-.mid-banner-info,
-.credit {
-  position: relative;
-  z-index: 1;
-}
-
-.credit :is(p, a) {
-  /* 13 - 16px 320 - 1024vw */
-  font-size: clamp(0.8125rem, 0.426136vw + 0.727273rem, 1rem);
-  font-weight: 500;
-  letter-spacing: 3px;
-  /* 32px - 64px   320vw - 1024vw  */
-  padding-block: clamp(2rem, 4.545vw + 1.09rem, 4rem);
-  color: var(--credit-color);
-}
-
-.credit a {
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.mid-banner-info p {
+.mid-banner-heading-container p {
   letter-spacing: 3px;
   font-size: var(--fs-sm-heading);
   font-weight: 500;
 }
 
-.mid-banner-info h2 {
+.mid-banner-heading-container h2 {
   font-size: var(--fs-heading);
   margin-bottom: 1.2em;
+}
+
+.iframe-container,
+.mid-banner-heading-container,
+.credit {
+  position: relative;
+  z-index: 1;
 }
 
 .iframe-container {
@@ -178,18 +153,29 @@ a.banner-btn {
   left: 0;
   bottom: 0;
   right: 0;
+  border: 0;
   width: 100%;
   /* height: max(100%, 630px); */
   height: calc(100% + 120px);
   /* height: 630px; */
   margin-top: -60.3px;
   /* margin-top: -3.76875em; */
-  border: 0;
   pointer-events: none;
 }
 
-.iframe_disable {
-  pointer-events: none;
+.credit :is(p, a) {
+  /* 13 - 16px 320 - 1024vw */
+  font-size: clamp(0.8125rem, 0.426136vw + 0.727273rem, 1rem);
+  font-weight: 500;
+  letter-spacing: 3px;
+  /* 32px - 64px   320vw - 1024vw  */
+  padding-block: clamp(2rem, 4.545vw + 1.09rem, 4rem);
+  color: var(--credit-color);
+}
+
+.credit a {
+  font-weight: 600;
+  text-decoration: none;
 }
 
 /* Reviews  */

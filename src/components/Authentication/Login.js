@@ -58,7 +58,7 @@ const Login = () => {
               and <a href="/login">Privacy Policy</a>.
             </p>
             <Button
-              className="login-btn my-4"
+              className="login-btn mt-4 mb-3"
               type="submit"
               variant="contained"
             >
@@ -76,15 +76,13 @@ const Login = () => {
             </Alert>
           )}
           {error && <Alert severity="error">{error}</Alert>}
-          <div>
-            <span className="d-inline-block mb-1 alt-sign-in">
-              or Sign In using
-            </span>
-            {/* <hr /> */}
-          </div>
+          {/* <div> */}
+          <span className="d-block mb-1 alt-sign-in">or Sign In using</span>
+          {/* <hr /> */}
+          {/* </div> */}
 
           <Button
-            className="mb-4 login-btn"
+            className="mb-4 mt-3 google-login-btn login-btn"
             variant="contained"
             onClick={handleGoogleSignIn}
             type="submit"
