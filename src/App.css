@@ -1,12 +1,4 @@
-p,
-h1,
-h2,
-h3,
-h5,
-h4,
-h6,
-a,
-button {
+* {
   letter-spacing: 1px;
 }
 
@@ -14,7 +6,6 @@ button {
 .App {
   text-align: center;
   font-family: "Bai Jamjuree";
-  /* font-family: "Cantarell"; */
 }
 
 /* home products and explore */

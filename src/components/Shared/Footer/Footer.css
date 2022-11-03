@@ -15,7 +15,6 @@
 }
 
 .footer.dark_footer {
-  --blue-zodiac: rgb(29, 46, 70);
   --footer-heading-color: rgba(255, 255, 255, 0.9);
   --footer-bg-color: #16202c;
   --footer-icon-bg-color: var(--blue-zodiac);
