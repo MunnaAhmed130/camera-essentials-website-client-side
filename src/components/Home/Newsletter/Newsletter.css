@@ -1,23 +1,27 @@
 .newsletter {
+  --mirage: #171e2a;
+  --light-white: rgba(255, 255, 255, 0.3);
+  --newsletter-h2-color: var(--dark);
+  --newsletter-h3-color: var(--dark);
   --newsletter-color: black;
   --newsletter-bg-color: #f4f4f4e3;
   --newsletter-opacity: 0.95;
   --newsletter-input-color: rgba(0, 0, 0, 1);
   --newsletter-input-placeholder: rgba(30, 30, 30, 0.75);
-  --newsletter-input-border: 1px solid rgba(46, 46, 46, 0.9);
-  --newsletter-h2-color: var(--dark);
-  --newsletter-h3-color: var(--dark);
+  --newsletter-input-border: 1px solid var(--blue-zodiac);
+  --newsletter-btn-bg: var(--blue-zodiac);
 }
 
 .dark_newsletter.newsletter {
+  --newsletter-h2-color: rgba(255, 255, 255, 0.9);
+  --newsletter-h3-color: rgba(255, 255, 255, 0.85);
   --newsletter-color: rgba(255, 255, 255, 0.8);
   --newsletter-bg-color: #091e37;
   --newsletter-opacity: 0.85;
   --newsletter-input-color: rgba(255, 255, 255, 0.8);
   --newsletter-input-placeholder: rgba(255, 255, 255, 0.7);
-  --newsletter-input-border: 1px solid rgba(255, 255, 255, 0.4);
-  --newsletter-h2-color: rgba(255, 255, 255, 0.9);
-  --newsletter-h3-color: rgba(255, 255, 255, 0.85);
+  --newsletter-input-border: 1px solid var(--light-white);
+  --newsletter-btn-bg: var(--mirage);
 }
 
 /* newsletter background image  */
@@ -78,7 +82,7 @@
 
 .newsletter-form {
   --border-radius: 50px;
-  border: 1px solid black;
+  border: var(--newsletter-input-border);
   border-radius: var(--border-radius);
   width: max(50%, 300px);
   display: flex;
@@ -92,6 +96,7 @@
     width: 90%;
   }
 }
+
 /* newsletter input */
 .newsletter input[type="email"] {
   color: var(--newsletter-input-color);
@@ -111,10 +116,10 @@
   color: var(--newsletter-input-placeholder);
   /* font-weight: 500; */
 }
-/* 
+
 .newsletter input:focus-visible::placeholder {
   color: transparent;
-} */
+}
 
 .newsletter-info input:focus {
   outline: none;
@@ -122,13 +127,18 @@
 
 .newsletter button {
   flex-grow: 0;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
   border: none;
   font-size: clamp(0.75rem, 0.284091vw + 0.693182rem, 0.875rem);
-  padding-inline: 0.7em;
+  padding-inline: 2em;
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  background-color: var(--blue-zodiac);
+  background-color: var(--newsletter-btn-bg);
+  border-left: var(--newsletter-input-border);
+}
+
+.newsletter button:hover {
+  background-color: var(--newsletter-btn-bg);
 }
 
 .newsletter-info p {
