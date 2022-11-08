@@ -3,8 +3,10 @@
   --blue-zodiac: rgb(29, 46, 70);
   --main-color: rgba(136, 130, 171, 0.676);
   --dark-card-bg-color: rgba(28, 39, 55, 0.8);
+
   --light-card-box-shadow: 0 0.5rem 1rem rgba(128, 128, 128, 0.266);
   --dark-card-box-shadow: -7px 10px 9px 1px rgba(0, 0, 0, 0.15);
+
   /* font size  */
   --fs-normal: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
   /* 30 - 50px 320-1024vw  */

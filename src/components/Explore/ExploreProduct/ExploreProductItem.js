@@ -4,9 +4,11 @@ import { Row, Col, Container } from "react-bootstrap";
 import { Button, Rating } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import { Link } from "react-router-dom";
+import useTheme from "../../../Hooks/useTheme";
 
 const ExploreProductItem = ({ product }) => {
   const { user } = useAuth();
+  const { darkMode } = useTheme();
   const { price, discount, img, name, _id, description, rating } = product;
   const [open, setOpen] = useState(false);
 
@@ -22,7 +24,7 @@ const ExploreProductItem = ({ product }) => {
     // console.log(discountedPrice);
   }
   return (
-    <div className="explore-item">
+    <div className={`explore-item ${darkMode && "dark"} `}>
       <Container className="item_container" fluid>
         <Row xs={1} sm={1} md={2} lg={2} xl={2} xxl={2} className=" item_row">
           <Col md={12} lg={4} xl={4} xxl={4} className="item_img_container  ">
