@@ -46,7 +46,7 @@
   text-transform: uppercase;
   /* 0 - 65px 320-1024vw */
   margin-top: clamp(0rem, 9.09091vw + -1.81818rem, 4rem);
-  font-weight: 600;
+  font-weight: 700;
   margin-inline: auto;
 }
 
@@ -87,6 +87,7 @@ a.banner-btn {
   --mid-banner-bg-opacity: 0.9;
   --iframe-container-box-shadow: 0 0.5rem 2rem rgba(66, 66, 66, 0.5);
   --credit-color: rgba(22, 32, 44, 1);
+  --mid-banner-heading: var(--dark);
 }
 
 .mid-banner.dark-mid-banner {
@@ -94,6 +95,7 @@ a.banner-btn {
   --mid-banner-bg-opacity: 0.88;
   --iframe-container-box-shadow: -0.2rem 0.7rem 2rem 0 rgba(24, 24, 24, 0.72);
   --credit-color: rgba(255, 255, 255, 0.8);
+  --mid-banner-heading: rgba(255, 255, 255, 0.85);
 }
 
 .mid-banner-container {
@@ -123,9 +125,11 @@ a.banner-btn {
   letter-spacing: 3px;
   font-size: var(--fs-sm-heading);
   font-weight: 500;
+  color: var(--mid-banner-heading);
 }
 
 .mid-banner-heading-container h2 {
+  color: var(--mid-banner-heading);
   font-size: var(--fs-heading);
   margin-bottom: 1.2em;
 }
@@ -181,16 +185,20 @@ a.banner-btn {
 /* Reviews  */
 .reviews_section {
   --reviews-section-bg-color: rgba(241, 241, 241, 0.572);
+  --reviews-section-heading: var(--dark);
   --swiper-btn-color: #16202c70;
   --single-review-box-shadow: 0px 0.5rem 1rem rgba(128, 128, 128, 0.429);
   --single-review-bg-color: white;
+  --single-review-color: var(--dark);
 }
 
 .dark .reviews_section {
   --reviews-section-bg-color: rgb(35, 54, 75);
+  --reviews-section-heading: rgba(255, 255, 255, 0.9);
   --swiper-btn-color: black;
   --single-review-box-shadow: -7px 10px 9px 1px rgba(0, 0, 0, 0.15);
   --single-review-bg-color: #1c2837;
+  --single-review-color: rgba(255, 255, 255, 0.8);
 }
 
 /* swiper  */
@@ -225,6 +233,7 @@ a.banner-btn {
 
 .reviews_heading {
   margin-bottom: 1em;
+  color: var(--reviews-section-heading);
 }
 
 .reviews_section {
@@ -290,6 +299,7 @@ a.banner-btn {
   width: min(35rem, 100%);
   padding-inline: 1em;
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  color: var(--single-review-color);
 }
 
 .single-review h3 {
@@ -299,6 +309,11 @@ a.banner-btn {
 
 .single-review h4 {
   font-size: 0.9em;
+}
+
+.single-review h3,
+.single-review h4 {
+  color: var(--single-review-color);
 }
 
 .single-review .rating,
