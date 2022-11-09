@@ -58,8 +58,8 @@
 /* product section header style */
 .products .products-header h2,
 .explore .products-header {
-  font-size: 20px;
-  font-size: 48px;
+  /* font-size: 20px;
+  font-size: 48px; */
   font-weight: 500;
   letter-spacing: 2px;
   font-size: var(--fs-heading);
@@ -220,7 +220,7 @@
 
 .dark,
 .dark a {
-  color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 0.8); */
 }
 
 .dark .products-header {

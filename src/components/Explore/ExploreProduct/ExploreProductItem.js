@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useAuth from "../../../Hooks/useAuth";
+// import useAuth from "../../../Hooks/useAuth";
 import { Row, Col, Container } from "react-bootstrap";
 import { Button, Rating } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import useTheme from "../../../Hooks/useTheme";
 
 const ExploreProductItem = ({ product }) => {
-  const { user } = useAuth();
+  // const { user } = useAuth();
   const { darkMode } = useTheme();
   const { price, discount, img, name, _id, description, rating } = product;
   const [open, setOpen] = useState(false);
