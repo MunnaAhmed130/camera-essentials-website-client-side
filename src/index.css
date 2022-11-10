@@ -1,5 +1,6 @@
 :root {
   --dark: rgb(33, 37, 41);
+  --light: rgba(255, 255, 255, 0.9);
   --blue-zodiac: rgb(29, 46, 70);
   --main-color: rgba(136, 130, 171, 0.676);
   --dark-card-bg-color: rgba(28, 39, 55, 0.8);

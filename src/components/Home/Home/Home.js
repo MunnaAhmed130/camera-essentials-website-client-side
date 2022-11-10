@@ -11,7 +11,7 @@ import Reviews from "../Reviews/Reviews";
 const Home = () => {
   const { darkMode } = useTheme();
   return (
-    <div className={darkMode ? "dark" : "light"}>
+    <div className={`home ${darkMode && "dark"}`}>
       <Header />
       <Banner />
       <Products />

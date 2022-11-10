@@ -28,7 +28,7 @@ const Reviews = () => {
     <div className="reviews_section">
       <div className="reviews_heading">
         <h2>Some Valuable Opinions</h2>
-        <h3 className="text-uppercase">Reviews</h3>
+        <h6 className="text-uppercase">Reviews</h6>
       </div>
       <Swiper
         // install Swiper modules

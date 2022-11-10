@@ -77,6 +77,7 @@
 .products h6 {
   color: var(--products-h6);
   font-size: var(--fs-sm-heading);
+  font-weight: var(--h6-fw);
   letter-spacing: 3px;
   /* 16 - 32px 320vw - 1024vw */
   margin-bottom: clamp(1rem, 2.27273vw + 0.545455rem, 2rem);
