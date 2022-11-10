@@ -21,10 +21,7 @@ const Explore = () => {
     <div className={darkMode ? "dark" : "light"}>
       <Header />
       <div className="explore ">
-        <h2 className="products-header">
-          Explore the World of Fashionable Cameras
-        </h2>
-
+        <h2>Explore the World of Fashionable Cameras</h2>
         {products.length ? (
           <Row
             xs={1}

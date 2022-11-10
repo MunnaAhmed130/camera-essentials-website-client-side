@@ -93,7 +93,7 @@ const MidBanner = () => {
     >
       <div className="mid-banner-container">
         <div className="mid-banner-heading-container ">
-          <p className="text-uppercase">post vlogs with camera x9</p>
+          <h6 className="text-uppercase">post vlogs with camera x9</h6>
           <h2>The Best Digital Camera</h2>
         </div>
         <div className="iframe-container">

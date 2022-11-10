@@ -26,7 +26,7 @@
 .dark.explore-item {
   --title-color: rgba(255, 255, 255, 0.95);
   --item-img-opacity: 0.9;
-  --item-description-color: rgba(255, 255, 255, 0.6);
+  --item-description-color: rgba(255, 255, 255, 0.7);
   --card-rating-color: rgba(255, 166, 0, 0.95);
   --card-empty-color: rgba(255, 194, 133, 0.35);
   --item-btn-bg: rgba(0, 0, 0, 0.8);
@@ -150,10 +150,12 @@
   vertical-align: 0.4rem;
   font-weight: 600;
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
+  color: var(--item-description-color);
 }
 
 .rating_dropdown .dropdown-toggle::after {
   vertical-align: 0.4rem;
+  color: var(--item-description-color);
 }
 
 .item_btn_container button {
