@@ -81,6 +81,7 @@
   letter-spacing: 3px;
   /* 16 - 32px 320vw - 1024vw */
   margin-bottom: clamp(1rem, 2.27273vw + 0.545455rem, 2rem);
+  /* margin-bottom: 36px; */
 }
 
 /* product  */

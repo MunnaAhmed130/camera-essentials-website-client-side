@@ -38,18 +38,19 @@
   opacity: 0;
 }
 
-.banner-info {
+.banner__info {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
+  /* bottom: 0; */
   display: flex;
   align-items: center;
   justify-content: center;
   margin-inline: 10px;
 }
 
-.banner-info h2 {
+.banner__info h2 {
   color: var(--banner-color);
   color: white;
   /* 2px - 15px 320 - 1440 */
@@ -58,19 +59,26 @@
   font-size: clamp(1.25rem, 4.16667vw + 0.416667rem, 4.0625rem);
   text-transform: uppercase;
   /* 0 - 65px 320-1024vw */
-  margin-top: clamp(0rem, 9.09091vw + -1.81818rem, 4rem);
+  /* margin-top: clamp(0rem, 9.09091vw + -1.81818rem, 4rem); */
   font-weight: 700;
   margin-inline: auto;
 }
 
-.banner_img {
-  height: min(90vh, 53.125rem);
+.banner__img {
+  /* height: min(90vh, 53.125rem); */
+  /* height: 830px; */
+  height: clamp(30rem, 34.4828vw + 20.8405rem, 51.875rem);
   object-fit: cover;
-  object-position: center;
+  object-position: top center;
   filter: var(--brightness);
 }
 
-a.banner-btn {
+@media screen and (max-width: 425px) {
+  .banner__img {
+    height: 480px;
+  }
+}
+a.banner__btn {
   background-color: var(--banner-btn-bg-color);
   color: var(--banner-btn-color);
   font-weight: 600;
@@ -88,7 +96,7 @@ a.banner-btn {
   transition: 0.5 ease;
 }
 
-.banner-btn:hover {
+.banner__btn:hover {
   background-color: var(--banner-btn-bg-hover-color);
   border: var(--banner-border);
   color: var(--banner-btn-hover-color);

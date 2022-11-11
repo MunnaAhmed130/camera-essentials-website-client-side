@@ -62,8 +62,8 @@ const Reviews = () => {
                     alt="reviewer img"
                   />
                 )}
-                <h3>{reviewer.name}</h3>
-                <h4>{reviewer.profession}</h4>
+                <h3 className="reviewer_name">{reviewer.name}</h3>
+                <h4 className="">{reviewer.profession}</h4>
                 <Rating
                   name="read-only"
                   className="rating"
