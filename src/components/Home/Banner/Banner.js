@@ -10,7 +10,7 @@ const Banner = () => {
       <Carousel fade>
         <Carousel.Item interval={5000}>
           <img
-            className="banner__img d-block w-100"
+            className="banner__img banner__img1 d-block w-100"
             src="https://i.ibb.co/hRC0Lmg/camera-on-tripod-e1651041561801.jpg"
             alt="First slide"
           />
@@ -33,7 +33,7 @@ const Banner = () => {
         </Carousel.Item>
         <Carousel.Item interval={5000}>
           <img
-            className=" banner__img d-block w-100"
+            className=" banner__img banner__img2 d-block w-100"
             src="https://i.ibb.co/SQ4mNwN/patrick-dozk-Vh-Dyvh-Q-unsplash.jpg"
             alt="Second slide"
           />
