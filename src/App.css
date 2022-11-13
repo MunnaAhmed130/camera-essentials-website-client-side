@@ -8,7 +8,7 @@
   font-family: "Bai Jamjuree";
 }
 
-/* home products and explore */
+/* home products and explore products*/
 :is(.products, .explore) {
   --products-bg-color: white;
   --products-h1: var(--dark);
@@ -21,6 +21,12 @@
   --products-h1: rgba(255, 255, 255, 0.95);
   --products-h6: rgba(255, 255, 255, 0.85);
   --card-box-shadow: 0 0.5rem 1.1rem rgba(0, 0, 0, 0.5);
+}
+
+/* card col  */
+:is(.explore__products, .demo__products) .col {
+  padding-inline: 0.6rem;
+  padding-block: 0.6rem;
 }
 
 /* product card */
@@ -73,8 +79,6 @@
 /* product section header style */
 :is(.products, .explore__section) h2 {
   color: var(--products-h1);
-  /* font-size: 20px;
-  font-size: 48px; */
   font-weight: 500;
   letter-spacing: 2px;
   font-size: var(--fs-heading);
@@ -96,45 +100,44 @@
 }
 
 /* product  */
-.product .card-body {
-  padding: clamp(0.5rem, 1.13636vw + 0.22727rem, 1rem);
-}
-
 .product {
   color: var(--card-color);
   background-color: var(--card-bg-color);
-}
-
-/* product card */
-.card_col {
-  padding-inline: 0.6rem;
-  padding-block: 0.6rem;
-}
-
-.card {
   border: 1px solid transparent;
   box-shadow: var(--card-box-shadow);
 }
 
+.product .card-body {
+  padding: clamp(0.5rem, 1.13636vw + 0.22727rem, 1rem);
+}
+
 /* product img  */
-.product .card_img_container {
+.product .img-container {
   width: min(100%, 200px);
-  height: min(auto, 200px);
   margin-inline: auto;
   position: relative;
 }
 
-.card_img {
+.product__img {
   width: min(100%, 200px);
-  height: min(auto, 200px);
-  margin: auto;
+
+  /* height: min(auto, 200px); */
+  /* position: relative; */
+  margin-inline: auto;
   object-fit: cover;
   border-radius: 2px;
   opacity: var(--card-img-opacity);
 }
 
+@media screen and (max-width: 425px) {
+  .product__img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 /* product discount ribbon */
-.product .card_img_container .discount_ribbon {
+.product .img-container .discount-ribbon {
   position: absolute;
   top: 0;
   right: 0;
@@ -148,7 +151,7 @@
 }
 
 /* product card info */
-.card_name {
+.product__name {
   font-size: clamp(1rem, 0.568vw + 0.886rem, 1.25rem);
 }
 

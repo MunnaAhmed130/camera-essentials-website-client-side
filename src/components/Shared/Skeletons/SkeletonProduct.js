@@ -8,7 +8,7 @@ import SkeletonElements from "./SkeletonElements";
 const SkeletonProduct = () => {
   const { darkMode } = useTheme();
   return (
-    <div className={`product_container_col ${darkMode ? "dark" : "light"}`}>
+    <div className={`product_container_col ${darkMode && "dark"}`}>
       <div className="product_container mt-3">
         <SkeletonElements type="product_img" />
         <SkeletonElements type="title" />

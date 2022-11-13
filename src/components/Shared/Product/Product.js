@@ -18,22 +18,22 @@ const Product = ({ product }) => {
   // const productInfo = description.slice(0, 120);
   // https://images2.imgbox.com/1f/20/K6kMXzul_o.png
   return (
-    <Col className="card_col">
+    <Col>
       <Card className="product">
-        <div className="card_img_container">
+        <div className="img-container">
           <Card.Img
             variant="top"
             src={img}
             width="200"
             height="200"
-            className="card_img"
+            className="product__img"
           />
-          {discount && <span className="discount_ribbon">- {discount}%</span>}
+          {discount && <span className="discount-ribbon">- {discount}%</span>}
         </div>
 
-        <Card.Body className="product_card_body">
+        <Card.Body>
           <Link className="dynamic-route" to={`/explore_product/${_id}`}>
-            <Card.Title className="card_name">{name}</Card.Title>
+            <Card.Title className="product__name">{name}</Card.Title>
           </Link>
 
           <Rating

@@ -23,7 +23,7 @@ const ExploreProduct = () => {
 
   console.log(product);
   return (
-    <div className={`explore-product ${darkMode ? "dark" : "light"}`}>
+    <div className={`explore-product ${darkMode && "dark"}`}>
       <Header />
       <section className="explore-product-section">
         {/* <h2 className="purchase-heading">Place Your Order</h2> */}
