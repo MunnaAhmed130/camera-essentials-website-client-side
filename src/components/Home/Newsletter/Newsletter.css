@@ -1,5 +1,4 @@
 .newsletter {
-  --mirage: #171e2a;
   --light-white: rgba(255, 255, 255, 0.3);
   --newsletter-h2-color: var(--dark);
   --newsletter-h3-color: var(--dark);

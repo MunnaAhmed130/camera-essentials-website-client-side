@@ -25,7 +25,7 @@ const ExploreProduct = () => {
   return (
     <div className={`explore-product ${darkMode ? "dark" : "light"}`}>
       <Header />
-      <div className="explore-product-section">
+      <section className="explore-product-section">
         {/* <h2 className="purchase-heading">Place Your Order</h2> */}
         {product.name ? (
           <ExploreProductItem product={product}></ExploreProductItem>
@@ -33,7 +33,7 @@ const ExploreProduct = () => {
           <SkeletonProductItem></SkeletonProductItem>
         )}
         {/* <SkeletonProductItem></SkeletonProductItem> */}
-      </div>
+      </section>
       <Footer />
     </div>
   );

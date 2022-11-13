@@ -36,7 +36,7 @@ const Products = () => {
   // }
   // console.log(arr);
   return (
-    <div className="products">
+    <section className="products">
       <div className="products__heading__container">
         <h2>Fashionable New Cameras</h2>
         <h6 className="text-uppercase">Discount Up to 30%</h6>
@@ -50,7 +50,7 @@ const Products = () => {
           lg={3}
           xl={4}
           xxl={4}
-          className="demo-products"
+          className="demo__products"
         >
           {products.map((product) => (
             <Product key={product.name} product={product}></Product>
@@ -64,7 +64,7 @@ const Products = () => {
           md={3}
           sm={2}
           xs={1}
-          className="demo-products"
+          className="demo__products"
         >
           {/* {Array(limit).fill(<SkeletonProduct key={limit.}></SkeletonProduct>)} */}
           {limitArray.map((n) => (
@@ -77,7 +77,7 @@ const Products = () => {
           <SkeletonProduct key={n}></SkeletonProduct>
         ))}
       </Row> */}
-    </div>
+    </section>
   );
 };
 

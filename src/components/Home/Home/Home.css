@@ -65,7 +65,6 @@
 }
 
 .banner :is(.banner__img1, .banner__img2) {
-  /* .banner__img { */
   /* height: min(90vh, 53.125rem); */
   /* 480px / 425vw , 830px / 1440vw */
   height: clamp(30rem, 34.4828vw + 20.8405rem, 51.875rem);
