@@ -39,7 +39,7 @@ const Reviews = () => {
         loop={true}
         // autoplay
         autoplay={{
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         hashNavigation={{
@@ -51,47 +51,47 @@ const Reviews = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
-        <div className="reviews-container">
-          {reviews.map((reviewer) => (
-            <SwiperSlide key={reviewer._id} className="review">
-              <div className="single-review">
-                {reviewer.img && (
-                  <img
-                    className="review-img"
-                    src={reviewer.img}
-                    alt="reviewer img"
-                  />
-                )}
-                <h3 className="reviewer_name">{reviewer.name}</h3>
-                <h4 className="">{reviewer.profession}</h4>
-                <Rating
-                  name="read-only"
-                  className="rating"
-                  precision={0.1}
-                  emptyIcon={<StarIcon className="empty_rating" />}
-                  value={Number(reviewer.rating)}
-                  readOnly
+        {/* <div className="reviews-container"> */}
+        {reviews.map((reviewer) => (
+          <SwiperSlide key={reviewer._id} className="review__wrapper">
+            <div className="review">
+              {reviewer.img && (
+                <img
+                  className="review__img"
+                  src={reviewer.img}
+                  alt="reviewer img"
                 />
-                <br />
-                <ShowMoreText
-                  /* Default options */
-                  lines={3}
-                  more="Show more"
-                  less="Show less"
-                  className="description_text"
-                  anchorClass="see_more"
-                  // onClick={this.executeOnClick}
-                  expanded={false}
-                  // width less value looks bad in responsiveness
-                  width={10000}
-                  truncatedEndingComponent={"... "}
-                >
-                  {reviewer.description}
-                </ShowMoreText>
-              </div>
-            </SwiperSlide>
-          ))}
-        </div>
+              )}
+              <h3 className="reviewer_name">{reviewer.name}</h3>
+              <h4 className="">{reviewer.profession}</h4>
+              <Rating
+                name="read-only"
+                className="rating--filled"
+                precision={0.1}
+                emptyIcon={<StarIcon className="rating--empty" />}
+                value={Number(reviewer.rating)}
+                readOnly
+              />
+              <br />
+              <ShowMoreText
+                /* Default options */
+                lines={3}
+                more="Show more"
+                less="Show less"
+                className="description_text"
+                anchorClass="see_more"
+                // onClick={this.executeOnClick}
+                expanded={false}
+                // width less value looks bad in responsiveness
+                width={10000}
+                truncatedEndingComponent={"... "}
+              >
+                {reviewer.description}
+              </ShowMoreText>
+            </div>
+          </SwiperSlide>
+        ))}
+        {/* </div> */}
       </Swiper>
     </section>
   );
