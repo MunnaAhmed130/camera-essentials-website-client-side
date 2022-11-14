@@ -25,8 +25,8 @@ const Reviews = () => {
   // console.log(reviews.name)
   // console.log(reviews[0].ratingAsNumber);
   return (
-    <div className="reviews_section">
-      <div className="reviews_heading">
+    <section className="reviews">
+      <div className="heading__container">
         <h2>Some Valuable Opinions</h2>
         <h6 className="text-uppercase">Reviews</h6>
       </div>
@@ -93,7 +93,7 @@ const Reviews = () => {
           ))}
         </div>
       </Swiper>
-    </div>
+    </section>
   );
 };
 

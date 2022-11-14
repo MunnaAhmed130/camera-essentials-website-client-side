@@ -86,18 +86,14 @@ const MidBanner = () => {
   // let videoId = videoId_arr[i];
   // console.log(videoId);
   return (
-    <div
-      className={`mid-banner ${
-        darkMode ? "dark-mid-banner" : "light-mid-banner"
-      }`}
-    >
-      <div className="mid-banner-container">
-        <div className="mid-banner-heading-container ">
-          <h6 className="text-uppercase">post vlogs with camera x9</h6>
-          <h2>The Best Digital Camera</h2>
-        </div>
-        <div className="iframe-container">
-          {/* <iframe
+    <div className="mid-banner">
+      {/* <div className="mid-banner__container"> */}
+      <div className="heading__container ">
+        <h6 className="text-uppercase">post vlogs with camera x9</h6>
+        <h2>The Best Digital Camera</h2>
+      </div>
+      <div className="iframe__container">
+        {/* <iframe
           className={`iframe ${viewportWidth > 500 ? "iframe_disable" : ""}`}
           type="text/html"
           src="https://www.youtube-nocookie.com/embed/CPxdxcnMPHA?playlist=CPxdxcnMPHA,9JdigMAsi1A&amp;start=6&amp;end=47&amp;loop=1&amp;autoplay=1&amp;mute=1&amp;autopause=0&amp;controls=0&amp;rel=0&amp;playsinline=1&amp;vq=hd1080&amp;iv_load_policy=3&amp;origin=http://localhost:3000/&amp;enablejsapi=1&amp;modestbranding=1"
@@ -108,31 +104,28 @@ const MidBanner = () => {
           // muted
         ></iframe> */}
 
-          <YouTube
-            // className={`iframe ${viewportWidth > 500 ? "iframe_disable" : ""}`}
-            className="iframe"
-            // defer
-            videoId={videoId}
-            // videoId="CPxdxcnMPHA"
-            opts={opts}
-            onReady={(e) => _onReady(e)}
-            onStateChange={(e) => onStateChange(e)}
-            // onEnd={(e) => iframeOnEnd(e)}
-          />
-        </div>
-        <div className="credit">
-          <p className="m-0">
-            Credit:{" "}
-            <a
-              href="https://www.youtube.com/c/AUXOUT"
-              className="text-uppercase"
-            >
-              Auxout
-            </a>
-          </p>
-        </div>
+        <YouTube
+          // className={`iframe ${viewportWidth > 500 ? "iframe_disable" : ""}`}
+          className="iframe"
+          // defer
+          videoId={videoId}
+          // videoId="CPxdxcnMPHA"
+          opts={opts}
+          onReady={(e) => _onReady(e)}
+          onStateChange={(e) => onStateChange(e)}
+          // onEnd={(e) => iframeOnEnd(e)}
+        />
+      </div>
+      <div className="credit">
+        <p className="m-0">
+          Credit:{" "}
+          <a href="https://www.youtube.com/c/AUXOUT" className="text-uppercase">
+            Auxout
+          </a>
+        </p>
       </div>
     </div>
+    // </div>
   );
 };
 

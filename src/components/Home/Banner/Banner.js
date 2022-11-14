@@ -1,12 +1,10 @@
 import React from "react";
 import { Button, Carousel } from "react-bootstrap";
-import useTheme from "../../../Hooks/useTheme";
 import "../Home/Home.css";
 
 const Banner = () => {
-  const { darkMode } = useTheme();
   return (
-    <div className={`banner  ${darkMode ? "dark" : "light"}`}>
+    <div className="banner">
       <Carousel fade>
         <Carousel.Item interval={5000}>
           <img
@@ -20,7 +18,7 @@ const Banner = () => {
                 Capture Your <br /> Beautiful Moments
               </h2>
               <Button
-                className="banner__btn "
+                className="banner__btn"
                 href="http://localhost:3000/explore"
               >
                 Explore

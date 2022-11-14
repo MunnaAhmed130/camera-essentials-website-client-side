@@ -85,10 +85,6 @@
   margin-bottom: 0.5em;
 }
 
-.products .products-header {
-  margin-bottom: 1rem;
-}
-
 .products h6 {
   color: var(--products-h6);
   font-size: var(--fs-sm-heading);
@@ -136,7 +132,7 @@
 }
 
 /* product discount ribbon */
-.product .img-wrapper .discount-ribbon {
+.img-wrapper .discount-ribbon {
   position: absolute;
   top: 0;
   right: 0;
@@ -167,7 +163,7 @@
   color: var(--card-color);
 }
 
-.product__price .main-price {
+.product__price .price--main {
   font-size: clamp(1rem, 0.5681vw + 0.88636rem, 1.25rem);
   /* 18px/1.125rem/320vw, .22727vw + 1.0795rem,20px/1.25rem/1200vw */
   /* 16px/1rem/320vw, .5681vw + .88636rem,20px/1.25rem/1200vw */
@@ -185,8 +181,8 @@
 }
 
 /* product delete price */
-.product .deleted-price,
-.explore-item .deleted-price {
+.product .price--deleted,
+.explore-item .price--deleted {
   color: var(--card-delete-text-color);
 }
 

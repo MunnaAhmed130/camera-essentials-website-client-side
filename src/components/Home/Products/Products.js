@@ -37,7 +37,7 @@ const Products = () => {
   // console.log(arr);
   return (
     <section className="products">
-      <div className="products__heading__container">
+      <div className="heading__container">
         <h2>Fashionable New Cameras</h2>
         <h6 className="text-uppercase">Discount Up to 30%</h6>
       </div>
