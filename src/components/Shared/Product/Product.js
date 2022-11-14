@@ -20,7 +20,7 @@ const Product = ({ product }) => {
   return (
     <Col>
       <Card className="product">
-        <div className="img-container">
+        <div className="img-wrapper">
           <Card.Img
             variant="top"
             src={img}
@@ -37,24 +37,24 @@ const Product = ({ product }) => {
           </Link>
 
           <Rating
-            className="rating"
+            className="rating--filled"
             name="read-only"
             value={value}
             precision={0.1}
-            emptyIcon={<StarIcon className="empty_rating" />}
+            emptyIcon={<StarIcon className="rating--empty" />}
             readOnly
           />
           {!discount ? (
-            <p className="card_price">
-              Price: <span className="dollar_sign">&#x24;</span>
-              <span className="main_price">{price}</span>
+            <p className="product__price">
+              Price: <span className="dollar-sign">&#x24;</span>
+              <span className="price--main">{price}</span>
             </p>
           ) : (
-            <p className="card_price">
-              Price: <span className="dollar_sign">&#x24;</span>
-              <span className="main_price">{discountedPrice}</span>
+            <p className="product__price">
+              Price: <span className="dollar-sign">&#x24;</span>
+              <span className="price--main">{discountedPrice}</span>
               &nbsp;
-              <del className="delete-text">{price}</del>
+              <del className="price--deleted">{price}</del>
               {viewportWidth < 300 && <br />}
             </p>
           )}

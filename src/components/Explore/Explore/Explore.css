@@ -37,14 +37,14 @@
 }
 
 /* product img container  */
-.item_img_container {
+.item_img_wrapper {
   text-align: center;
   display: flex;
   justify-content: center;
   /* border: 1px solid black; */
 }
 
-.item_img {
+.item__img {
   opacity: var(--item-img-opacity);
   max-width: 100%;
   border-radius: 1px;
@@ -52,11 +52,11 @@
 }
 
 /* product item info  */
-.item-info {
+.item__info {
   text-align: left;
 }
 
-.item_title {
+.item__title {
   /* 1.5rem/320vw, 2.5rem/1400vw */
   font-size: clamp(1.5rem, 1.48148vw + 1.2037rem, 2.5rem);
   /* font-size: 1.5rem; */
@@ -77,12 +77,12 @@
    border: 1px solid black;
 } */
 
-.item_description {
+.item__description {
   color: var(--item-description-color);
 }
 
-.item_price,
-.item_description {
+.item__price,
+.item__description {
   font-weight: 500;
   /* .875rem/320vw, 1.0625rem/768vw */
   font-size: clamp(0.875rem, 0.6696vw + 0.741rem, 1.0625rem);
@@ -91,18 +91,17 @@
 }
 
 /* item price */
-.item_price {
+.item__price {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.item_price .dollar_sign {
+.item__price .dollar-sign {
   font-size: clamp(0.7185rem, 0.426136vw + 0.6335rem, 0.90625rem);
   /* 11.5px/.7185rem/320vw, .426136vw + .6335rem,14.5px/.90625rem/1024  */
   font-weight: 700;
 }
 
-.main_price,
-.discounted_price {
+.price--main {
   font-size: clamp(1.25rem, 0.71022vw + 1.1079rem, 1.5625rem);
   /* 20px/1.25rem/320vw,.71022vw +  1.1079rem , 25px/1.5625rem/1024vw */
   font-weight: 600;
@@ -111,21 +110,16 @@
   /* -5px/-.3125rem/320vw, -1.6335vw + -.26988rem  ,-6.5px/-.40625rem/1024vw  */
 }
 
-.main_price,
-.discounted_price {
-  /* color: rgba(0, 0, 0, 0.8); */
-}
-
-.item_price :is(.main_price, .discounted_price, .dollar_sign) {
+.item__price :is(.price--main, .dollar-sign) {
   color: var(--title-color);
 }
 
-.item_description {
+.item__description {
   width: min(45rem, 100%);
 }
 
-.explore-item .rating,
-.explore-item .empty_rating {
+.explore-item .rating--filled,
+.explore-item .rating--empty {
   font-size: clamp(1.2845rem, 1.77556vw + 1.21rem, 1.4375rem);
   /*20.5px/1.2845rem/320vw, 1.77556vw + 1.21rem, 23px/1.4375rem/1024vw */
 }
@@ -186,15 +180,15 @@
 }
 
 @media screen and (max-width: 991px) {
-  .item-info {
+  .item__info {
     text-align: center;
   }
 
-  .item_img_container {
+  .item_img_wapper {
     padding-bottom: 2rem;
   }
 
-  .item_description {
+  .item__description {
     margin-inline: auto;
   }
   .item_btn_container button {
@@ -209,7 +203,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .main_price,
+  .price--main,
   .discounted_price {
     vertical-align: -0.4rem;
   }

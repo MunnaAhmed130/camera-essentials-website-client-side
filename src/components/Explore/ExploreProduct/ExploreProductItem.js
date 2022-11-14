@@ -25,27 +25,27 @@ const ExploreProductItem = ({ product }) => {
   }
   return (
     <div className={`explore-item ${darkMode && "dark"} `}>
-      <Container className="item_container" fluid>
-        <Row xs={1} sm={1} md={2} lg={2} xl={2} xxl={2} className=" item_row">
-          <Col md={12} lg={4} xl={4} xxl={4} className="item_img_container  ">
-            <img className="item_img" src={img} alt="" />
+      <Container className="item__container" fluid>
+        <Row xs={1} sm={1} md={2} lg={2} xl={2} xxl={2} className=" item__row">
+          <Col md={12} lg={4} xl={4} xxl={4} className="item_img_wrapper">
+            <img className="item__img" src={img} alt="" />
           </Col>
-          <Col md={12} lg={8} xl={8} xxl={8} className="item_info_container">
-            <div className="item-info">
-              <h3 className="item_title">{name}</h3>
-              <p className="item_description">{description}</p>
+          <Col md={12} lg={8} xl={8} xxl={8} className="item__info__wrapper">
+            <div className="item__info">
+              <h3 className="item__title">{name}</h3>
+              <p className="item__description">{description}</p>
               {/* {discount ? <p>{discountedPrice}</p> : <p>{itemPrice}</p>} */}
               {!discount ? (
-                <p className="item_price">
-                  Price:&nbsp;<span className="dollar_sign">&#x24;</span>
-                  <span className="main_price">{itemPrice}</span>
+                <p className="item__price">
+                  Price:&nbsp;<span className="dollar-sign">&#x24;</span>
+                  <span className="price--main">{itemPrice}</span>
                 </p>
               ) : (
                 <p className="item_price">
                   Price:&nbsp;<span className="dollar_sign">&#x24;</span>
-                  <span className="discounted_price">{itemPrice}</span>
+                  <span className="price--main">{itemPrice}</span>
                   &nbsp;
-                  <del className="delete-text">{price}</del>
+                  <del className="price--deleted">{price}</del>
                   {/* {viewportWidth < 300 && <br />} */}
                 </p>
               )}
@@ -64,12 +64,12 @@ const ExploreProductItem = ({ product }) => {
                   onClick={() => setOpen(!open)}
                 >
                   <Rating
-                    className="rating"
+                    className="rating--filled"
                     // style={{ borderColor: "white" }}
                     name="read-only"
                     value={value}
                     precision={0.1}
-                    emptyIcon={<StarIcon className="empty_rating" />}
+                    emptyIcon={<StarIcon className="rating--empty" />}
                     readOnly
                   />
                 </div>
