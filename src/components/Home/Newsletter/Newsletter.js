@@ -1,26 +1,20 @@
 import { Button } from "@mui/material";
 import React from "react";
-import useTheme from "../../../Hooks/useTheme";
 import "./Newsletter.css";
 
 const Newsletter = () => {
-  const { darkMode } = useTheme();
   const submit = (e) => {
     e.preventDefault();
     document.getElementById("newsletter-email").value = "";
   };
   return (
-    <div
-      className={`newsletter ${
-        darkMode ? "dark_newsletter" : "light_newsletter"
-      }`}
-    >
-      <div className="newsletter-info ">
-        <div className="newsletter-heading-container">
+    <div className="newsletter">
+      <div className="newsletter__content ">
+        <div className="heading__container">
           <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
-          <h3>GET UPDATE FOR NEWS, OFFERS</h3>
+          <h6>GET UPDATE FOR NEWS, OFFERS</h6>
         </div>
-        <form onSubmit={(e) => submit(e)} className="newsletter-form">
+        <form onSubmit={(e) => submit(e)} className="newsletter__form">
           <input
             id="newsletter-email"
             type="email"
@@ -30,7 +24,7 @@ const Newsletter = () => {
           <Button type="submit">Subscribe</Button>
           {/* <button type="submit">SUBSCRIBE</button> */}
         </form>
-        <p className=" text-uppercase m-0">Don't worry, We don't spam</p>
+        <p className="text-uppercase m-0">Don't worry, We don't spam</p>
       </div>
     </div>
   );

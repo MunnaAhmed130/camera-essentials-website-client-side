@@ -13,10 +13,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import SkeletonReview from "../../Shared/Skeletons/SkeletonReview";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
-
+  const [rev, setRev] = useState([]);
   useEffect(() => {
     fetch("https://limitless-reaches-30016.herokuapp.com/reviews/query?limit=3")
       .then((res) => res.json())
@@ -52,7 +53,56 @@ const Reviews = () => {
         onSlideChange={() => console.log("slide change")}
       >
         {/* <div className="reviews-container"> */}
-        {reviews.map((reviewer) => (
+        {rev.length
+          ? reviews.map((reviewer) => (
+              <SwiperSlide key={reviewer._id} className="review__wrapper">
+                <div className="review">
+                  {reviewer.img && (
+                    <img
+                      className="review__img"
+                      src={reviewer.img}
+                      alt="reviewer img"
+                    />
+                  )}
+                  <h6 className="reviewer__name">{reviewer.name}</h6>
+                  <p className="">{reviewer.profession}</p>
+                  <Rating
+                    name="read-only"
+                    className="rating--filled"
+                    precision={0.1}
+                    emptyIcon={<StarIcon className="rating--empty" />}
+                    value={Number(reviewer.rating)}
+                    readOnly
+                  />
+                  <br />
+                  <ShowMoreText
+                    /* Default options */
+                    lines={3}
+                    more="Show more"
+                    less="Show less"
+                    className="review__description"
+                    anchorClass="see_more"
+                    // onClick={this.executeOnClick}
+                    expanded={false}
+                    // width less value looks bad in responsiveness
+                    width={10000}
+                    truncatedEndingComponent={"... "}
+                  >
+                    {reviewer.description}
+                  </ShowMoreText>
+                </div>
+              </SwiperSlide>
+            ))
+          : [1, 2, 3].map((n) => (
+              <SwiperSlide key={n} className="review__wrapper">
+                <div className="review">
+                  <SkeletonReview />
+                </div>
+              </SwiperSlide>
+              // <SkeletonProduct key={n}></SkeletonProduct>
+            ))}
+        <SkeletonReview />
+        {/* {reviews.map((reviewer) => (
           <SwiperSlide key={reviewer._id} className="review__wrapper">
             <div className="review">
               {reviewer.img && (
@@ -62,8 +112,8 @@ const Reviews = () => {
                   alt="reviewer img"
                 />
               )}
-              <h3 className="reviewer_name">{reviewer.name}</h3>
-              <h4 className="">{reviewer.profession}</h4>
+              <h6 className="reviewer__name">{reviewer.name}</h6>
+              <p className="">{reviewer.profession}</p>
               <Rating
                 name="read-only"
                 className="rating--filled"
@@ -74,11 +124,11 @@ const Reviews = () => {
               />
               <br />
               <ShowMoreText
-                /* Default options */
+                // Default options 
                 lines={3}
                 more="Show more"
                 less="Show less"
-                className="description_text"
+                className="review__description"
                 anchorClass="see_more"
                 // onClick={this.executeOnClick}
                 expanded={false}
@@ -90,7 +140,7 @@ const Reviews = () => {
               </ShowMoreText>
             </div>
           </SwiperSlide>
-        ))}
+        ))} */}
         {/* </div> */}
       </Swiper>
     </section>

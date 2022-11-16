@@ -11,14 +11,14 @@
   --newsletter-btn-bg: var(--blue-zodiac);
 }
 
-.dark_newsletter.newsletter {
+.dark .newsletter {
   --newsletter-h2-color: rgba(255, 255, 255, 0.9);
   --newsletter-h3-color: rgba(255, 255, 255, 0.85);
   --newsletter-color: rgba(255, 255, 255, 0.8);
   --newsletter-bg-color: #091e37;
   --newsletter-opacity: 0.85;
   --newsletter-input-color: rgba(255, 255, 255, 0.8);
-  --newsletter-input-placeholder: rgba(255, 255, 255, 0.7);
+  --newsletter-input-placeholder: rgba(255, 255, 255, 0.5);
   --newsletter-input-border: 1px solid var(--light-white);
   --newsletter-btn-bg: var(--mirage);
 }
@@ -48,7 +48,7 @@
 }
 
 /* newletter info  */
-.newsletter-info {
+.newsletter__content {
   position: relative;
   z-index: 1;
   width: min(900px, 100%);
@@ -57,29 +57,30 @@
 }
 
 /* newsletter heading  */
-.newsletter-heading-container {
+.newsletter .heading__container {
   /* 8 - 16  320 - 1024 */
   margin-bottom: clamp(0.5rem, 1.13636vw + 0.272727rem, 1rem);
 }
 
-.newsletter-info h2 {
+.newsletter__content h2 {
   display: inline-block;
   /* 28px /320vw -  48px/1024vw */
   font-size: clamp(1.75rem, 2.84091vw + 1.18182rem, 3rem);
   color: var(--newsletter-h2-color);
+  color: var(--section-h2);
   font-weight: 600;
   margin-bottom: 0.3em;
   letter-spacing: 2px;
 }
 
-.newsletter-info h3 {
+.newsletter__content h6 {
   display: inline-block;
   font-weight: 600;
   color: var(--newsletter-h3-color);
   font-size: clamp(0.9375rem, 1.13636vw + 0.710227rem, 1.4375rem);
 }
 
-.newsletter-form {
+.newsletter__form {
   --border-radius: 50px;
   border: var(--newsletter-input-border);
   border-radius: var(--border-radius);
@@ -91,7 +92,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .newsletter-form {
+  .newsletter__form {
     width: 90%;
   }
 }
@@ -120,7 +121,7 @@
   color: transparent;
 }
 
-.newsletter-info input:focus {
+.newsletter__content input:focus {
   outline: none;
 }
 
@@ -140,7 +141,7 @@
   background-color: var(--newsletter-btn-bg);
 }
 
-.newsletter-info p {
+.newsletter__content p {
   color: var(--newsletter-color);
   /* 12 - 14px 320vw - 1024vw  */
   font-size: clamp(0.75rem, 0.284091vw + 0.693182rem, 0.875rem);
@@ -151,7 +152,7 @@
 
 /* media query */
 @media screen and (min-width: 425px) {
-  .newsletter-info h2 {
+  .newsletter__content h2 {
     padding-inline: 1rem;
   }
 }

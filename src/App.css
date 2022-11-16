@@ -11,14 +11,14 @@
 /* home products and explore products*/
 :is(.products, .explore) {
   --products-bg-color: white;
-  --products-h1: var(--dark);
+  --products-h2: var(--dark);
   --products-h6: var(--dark);
   --card-box-shadow: 0 0.5rem 1rem rgba(128, 128, 128, 0.266);
 }
 
 .dark :is(.products, .explore__section) {
   --products-bg-color: rgb(35, 54, 75);
-  --products-h1: rgba(255, 255, 255, 0.95);
+  --products-h2: rgba(255, 255, 255, 1);
   --products-h6: rgba(255, 255, 255, 0.85);
   --card-box-shadow: 0 0.5rem 1.1rem rgba(0, 0, 0, 0.5);
 }
@@ -78,7 +78,7 @@
 
 /* product section header style */
 :is(.products, .explore__section) h2 {
-  color: var(--products-h1);
+  color: var(--products-h2);
   font-weight: 500;
   letter-spacing: 2px;
   font-size: var(--fs-heading);
