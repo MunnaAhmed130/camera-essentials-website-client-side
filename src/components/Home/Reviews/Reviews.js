@@ -53,7 +53,7 @@ const Reviews = () => {
         onSlideChange={() => console.log("slide change")}
       >
         {/* <div className="reviews-container"> */}
-        {rev.length
+        {reviews.length
           ? reviews.map((reviewer) => (
               <SwiperSlide key={reviewer._id} className="review__wrapper">
                 <div className="review">
@@ -95,13 +95,11 @@ const Reviews = () => {
             ))
           : [1, 2, 3].map((n) => (
               <SwiperSlide key={n} className="review__wrapper">
-                <div className="review">
-                  <SkeletonReview />
-                </div>
+                <SkeletonReview />
               </SwiperSlide>
-              // <SkeletonProduct key={n}></SkeletonProduct>
             ))}
-        <SkeletonReview />
+
+        {/* <SkeletonReview /> */}
         {/* {reviews.map((reviewer) => (
           <SwiperSlide key={reviewer._id} className="review__wrapper">
             <div className="review">
@@ -143,6 +141,29 @@ const Reviews = () => {
         ))} */}
         {/* </div> */}
       </Swiper>
+      {/* <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        spaceBetween={0}
+        slidesPerView={1}
+        loop={true}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        hashNavigation={{
+          watchState: true,
+        }}
+        navigation
+        pagination={{ clickable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+      >
+        {[1].map((n) => (
+          <SwiperSlide key={n} className="review__wrapper">
+            <SkeletonReview />
+          </SwiperSlide>
+        ))}
+      </Swiper> */}
     </section>
   );
 };

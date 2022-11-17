@@ -284,6 +284,7 @@ a.banner__btn {
 
 .review {
   --img-width: clamp(4.375rem, 0.892857vw + 4.19643rem, 5rem);
+  --img-center: calc(calc(var(--img-width) / 2) * -1);
   --review-box-shadow: 0px 0.5rem 1rem rgba(128, 128, 128, 0.429);
   --review-bg-color: white;
   --review-color: var(--dark);
@@ -319,9 +320,9 @@ a.banner__btn {
   /* margin-inline: 20rem; */
 }
 
+/* .skeleton.review__img, */
 .review__img {
   /* 70px/320vw, 80px/1200vw  */
-  --img-center: calc(calc(var(--img-width) / 2) * -1);
   position: absolute;
   top: var(--img-center);
   left: 50%;

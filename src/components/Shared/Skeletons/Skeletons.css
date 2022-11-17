@@ -6,6 +6,46 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.review--skeleton {
+  --img-color: rgb(182, 182, 182);
+}
+
+.dark .review--skeleton {
+  --img-color: #202d3e;
+}
+
+.skeleton.review {
+  position: relative;
+  /* height: 200px; */
+  background-color: var(--review-bg-color);
+  margin-bottom: 2.5rem;
+}
+
+.skeleton.review__info {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  width: min(35rem, 100%);
+  margin-inline: auto;
+  background-color: transparent;
+}
+
+.review .skeleton.title {
+  width: 10rem;
+  margin-inline: auto;
+}
+.review .skeleton.title + .skeleton.text {
+  width: 15rem;
+  margin-inline: auto;
+}
+
+.skeleton.review__img {
+  background-color: var(--img-color);
+  margin-block: 0;
+  border-radius: 50%;
+  margin-inline: calc(calc(var(--img-width) / 2) * -1);
+  /* background-color: white; */
+}
+
 .skeleton.title {
   height: 30px;
 }
