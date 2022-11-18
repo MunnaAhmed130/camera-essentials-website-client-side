@@ -9,12 +9,12 @@ const SkeletonProductItem = () => {
   let viewportWidth = window.innerWidth;
 
   return (
-    <div className={` product_item ${darkMode ? "dark" : "light"}`}>
+    <div className={` explore-item--skeleton explore-item product_item`}>
       <Container className="skeleton_item_container " fluid>
         <Row xs={1} sm={1} md={2} lg={2} xl={2} xxl={2} className=" item_row">
           <Col md={12} lg={4} xl={4} xxl={4} className="item_img_container  ">
             <SkeletonElements type="product_img">
-              <Shimmer></Shimmer>
+              {/* <Shimmer></Shimmer> */}
             </SkeletonElements>
           </Col>
           <Col
@@ -40,7 +40,6 @@ const SkeletonProductItem = () => {
                 <SkeletonElements type="text" />
               </div>
             )}
-
             <SkeletonElements type="price" />
             <SkeletonElements type="rating" />
             <div className="skeleton_btn_container">

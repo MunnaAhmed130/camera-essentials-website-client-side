@@ -98,48 +98,6 @@ const Reviews = () => {
                 <SkeletonReview />
               </SwiperSlide>
             ))}
-
-        {/* <SkeletonReview /> */}
-        {/* {reviews.map((reviewer) => (
-          <SwiperSlide key={reviewer._id} className="review__wrapper">
-            <div className="review">
-              {reviewer.img && (
-                <img
-                  className="review__img"
-                  src={reviewer.img}
-                  alt="reviewer img"
-                />
-              )}
-              <h6 className="reviewer__name">{reviewer.name}</h6>
-              <p className="">{reviewer.profession}</p>
-              <Rating
-                name="read-only"
-                className="rating--filled"
-                precision={0.1}
-                emptyIcon={<StarIcon className="rating--empty" />}
-                value={Number(reviewer.rating)}
-                readOnly
-              />
-              <br />
-              <ShowMoreText
-                // Default options 
-                lines={3}
-                more="Show more"
-                less="Show less"
-                className="review__description"
-                anchorClass="see_more"
-                // onClick={this.executeOnClick}
-                expanded={false}
-                // width less value looks bad in responsiveness
-                width={10000}
-                truncatedEndingComponent={"... "}
-              >
-                {reviewer.description}
-              </ShowMoreText>
-            </div>
-          </SwiperSlide>
-        ))} */}
-        {/* </div> */}
       </Swiper>
       {/* <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}

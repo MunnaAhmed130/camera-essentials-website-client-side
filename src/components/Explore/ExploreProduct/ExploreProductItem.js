@@ -49,41 +49,40 @@ const ExploreProductItem = ({ product }) => {
                   {/* {viewportWidth < 300 && <br />} */}
                 </p>
               )}
-              <div
+              {/* <div
                 id="user_card"
                 className={`nav-item dropdown rating_dropdown  ${
                   open && "show"
                 }`}
               >
-                {/* <div className="dropdown-btn" onClick={() => setOpen(!open)}> */}
-                <div
-                  // href="#"
-                  id="basic-nav-dropdown"
-                  className="dropdown-toggle "
-                  aria-expanded={open}
-                  onClick={() => setOpen(!open)}
-                >
-                  <Rating
-                    className="rating--filled"
-                    // style={{ borderColor: "white" }}
-                    name="read-only"
-                    value={value}
-                    precision={0.1}
-                    emptyIcon={<StarIcon className="rating--empty" />}
-                    readOnly
-                  />
-                </div>
-                {/* </div> */}
+                <div className="dropdown-btn" onClick={() => setOpen(!open)}>
+                  <div
+                    // href="#"
+                    id="basic-nav-dropdown"
+                    className="dropdown-toggle "
+                    aria-expanded={open}
+                    onClick={() => setOpen(!open)}
+                  > */}
+              <Rating
+                className="rating--filled"
+                // style={{ borderColor: "white" }}
+                name="read-only"
+                value={value}
+                precision={0.1}
+                emptyIcon={<StarIcon className="rating--empty" />}
+                readOnly
+              />
+              {/* </div> */}
+              {/* </div>
 
-                {/* {open && ( */}
-                <div className={`dropdown-menu ${open && "show"}`}>
-                  <div className="dropdown_img pt-5 pb-4"></div>
-                  <div className="dropdown_item ">
-                    {/* <h5 className="user_name">{userName}</h5> */}
+                {open && (
+                  <div className={`dropdown-menu ${open && "show"}`}>
+                    <div className="dropdown_img pt-5 pb-4"></div>
+                    <div className="dropdown_item ">
+                    </div>
                   </div>
-                </div>
-                {/* )} */}
-              </div>
+                )}
+              </div> */}
               <span className="rating_count">{rating} out of 960 Ratings</span>
               <br />
               <div className="item_btn_container">

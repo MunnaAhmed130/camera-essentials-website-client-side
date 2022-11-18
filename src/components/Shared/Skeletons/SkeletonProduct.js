@@ -6,11 +6,10 @@ import Shimmer from "./Shimmer";
 import SkeletonElements from "./SkeletonElements";
 
 const SkeletonProduct = () => {
-  const { darkMode } = useTheme();
   return (
-    <div className={`product_container_col ${darkMode && "dark"}`}>
-      <div className="product_container mt-3">
-        <SkeletonElements type="product_img" />
+    <div className={` col--skeleton col `}>
+      <div className="product--skeleton ">
+        <SkeletonElements type="img" />
         <SkeletonElements type="title" />
         <SkeletonElements type="text" />
         <SkeletonElements type="text" />

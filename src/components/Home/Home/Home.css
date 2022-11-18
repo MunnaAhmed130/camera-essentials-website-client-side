@@ -261,6 +261,7 @@ a.banner__btn {
   width: min(90%, 90rem);
   margin-inline: auto;
   padding-top: 10rem;
+  /* border: 1px solid black; */
 }
 
 .swiper .swiper-button-next::after,
@@ -288,6 +289,7 @@ a.banner__btn {
   --review-box-shadow: 0px 0.5rem 1rem rgba(128, 128, 128, 0.429);
   --review-bg-color: white;
   --review-color: var(--dark);
+  --review-title-color: var(--dark);
   --rating-fill-color: rgba(255, 189, 65, 0.95);
   --rating-empty-color: rgba(200, 200, 200, 0.5);
 }
@@ -296,6 +298,7 @@ a.banner__btn {
   --review-box-shadow: 0 0.5rem 1.1rem rgba(0, 0, 0, 0.5);
   --review-bg-color: #1c2837;
   --review-color: rgba(255, 255, 255, 0.8);
+  --review-title-color: rgba(255, 255, 255, 0.9);
   --rating-fill-color: rgba(255, 166, 0, 0.95);
   --rating-empty-color: rgba(255, 194, 133, 0.35);
 }
@@ -347,7 +350,7 @@ a.banner__btn {
 }
 
 .reviewer__name {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--review-title-color);
   font-size: 1.3em;
   margin-top: 3.5rem;
 }
@@ -355,6 +358,7 @@ a.banner__btn {
 .review p {
   font-size: 0.9em;
   margin-bottom: 0.5em;
+  font-weight: 500;
 }
 
 .review {
