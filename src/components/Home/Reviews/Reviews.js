@@ -99,7 +99,7 @@ const Reviews = () => {
               </SwiperSlide>
             ))}
       </Swiper>
-      {/* <Swiper
+      <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
@@ -121,7 +121,7 @@ const Reviews = () => {
             <SkeletonReview />
           </SwiperSlide>
         ))}
-      </Swiper> */}
+      </Swiper>
     </section>
   );
 };
