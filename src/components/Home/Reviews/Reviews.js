@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col } from "react-bootstrap";
 import { Rating } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 // import SingleReview from "../SingleReview/SingleReview";
@@ -17,7 +16,7 @@ import SkeletonReview from "../../Shared/Skeletons/SkeletonReview";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
-  const [rev, setRev] = useState([]);
+  // const [rev, setRev] = useState([]);
   useEffect(() => {
     fetch("https://limitless-reaches-30016.herokuapp.com/reviews/query?limit=3")
       .then((res) => res.json())
@@ -99,7 +98,7 @@ const Reviews = () => {
               </SwiperSlide>
             ))}
       </Swiper>
-      <Swiper
+      {/* <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
@@ -121,7 +120,7 @@ const Reviews = () => {
             <SkeletonReview />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> */}
     </section>
   );
 };
