@@ -162,12 +162,9 @@
   background-color: var(--item-bg);
 }
 
-.product_item .skeleton.product_img {
+.item__img {
   width: min(100%, 345px);
-  /* width: 345px; */
   height: 345px;
-  /* height: clamp(186px, 100vw + -1.5rem, 295px); */
-  /* 186px/210vw, 100vw + -1.5rem ,295px/319vw  */
   margin-inline: auto;
   position: relative;
   overflow: hidden;
@@ -186,7 +183,7 @@
   margin-bottom: 0.9rem;
 }
 
-.product_item .skeleton_item_description {
+.product_item .skeleton__item__description {
   width: min(45rem, 100%);
   margin-bottom: 1.7rem;
 }
@@ -202,7 +199,7 @@
   width: min(20rem, 100%);
 }
 
-.product_item .skeleton_btn_container {
+.product_item .skeleton__btn__container {
   text-align: left;
   /* display: inline-block; */
 }
@@ -221,33 +218,18 @@
 
 @media screen and (max-width: 991px) {
   .product_item .skeleton.title {
-    margin-inline: auto;
-    width: 90%;
+    width: min(37rem, 90%);
   }
 
-  /* .product_item, */
-  .product_item .skeleton.title,
-  .product_item .skeleton_item_description,
-  .product_item .skeleton.text,
-  .product_item .skeleton.price,
-  .product_item .skeleton.rating,
-  .product_item .skeleton_btn_container,
-  .product_item .skeleton_button {
+  .product_item :is(.title, .item__description, .price, .rating) {
     margin-inline: auto;
   }
 
-  .product_item .skeleton_btn_container {
+  .product_item .skeleton__btn__container {
     display: inline-block;
   }
-
-  /* .item_img_container {
-    padding-bottom: 2rem;
-  }
-
-  .item_description {
-    margin-inline: auto;
-  } */
 }
+
 @media screen and (min-width: 991px) {
   .product_item .skeleton.title {
     margin-top: 1.5rem;
@@ -267,24 +249,6 @@
   100% {
     background-color: rgba(0, 0, 0, 0.07);
   }
-} */
-
-/* themes  */
-
-/* .dark .product--skeleton > * {
-  background-color: rgba(97, 97, 97, 0.3);
-} */
-
-/* .dark .skeleton.btn {
-  background-color: rgba(19, 21, 26, 0.45);
-} */
-/* .dark .product--skeleton {
-  background-color: rgba(35, 42, 49, 0.75);
-  background-color: rgba(28, 39, 55, 0.8);
-} */
-
-/* .dark .product_item .shimmer {
-  background-color: rgba(24, 38, 52, 0.75);
 } */
 
 /* animation effects  */
@@ -308,10 +272,6 @@
 .dark .product--skeleton .shimmer {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
-/* .dark .shimmer {
-  background-color: rgba(255, 255, 255, 0.1);
-} */
 
 @keyframes loading {
   0% {
