@@ -99,7 +99,7 @@
   /* .875rem/320vw, 1.0625rem/768vw */
   font-size: clamp(0.875rem, 0.6696vw + 0.741rem, 1.0625rem);
   /* margin-bottom: clamp(0.75rem, 0.568vw + 0.636rem, 1rem); */
-  margin-bottom: 12px;
+  margin-bottom: 0.5em;
 }
 
 /* item price */
@@ -134,8 +134,8 @@
 
 .explore-item .rating--filled,
 .explore-item .rating--empty {
-  font-size: clamp(1.2845rem, 1.77556vw + 1.21rem, 1.4375rem);
-  /*20.5px/1.2845rem/320vw, 1.77556vw + 1.21rem, 23px/1.4375rem/1024vw */
+  font-size: clamp(1.25rem, 0.447094vw + 1.16058rem, 1.4375rem);
+  /*20px/1.2845rem/320vw, 1.77556vw + 1.21rem, 23px/1.4375rem/1024vw */
 }
 
 button.dropdown-toggle,
@@ -188,9 +188,7 @@ button.btn-primary:active:focus,
   background-color: var(--item-btn-bg);
   padding: 0.5em 1.5em;
   color: var(--item-btn-color);
-  font-size: 0.9375rem;
   font-size: clamp(0.8125rem, 0.297619vw + 0.752976rem, 0.9375rem);
-  /* font-weight: 600; */
 }
 
 .item_btn_container button:hover {
@@ -229,7 +227,6 @@ button.btn-primary:active:focus,
   }
 
   .item__img {
-    --img-size: clamp(12.5rem, 14.158vw + 9.66841rem, 18.4375rem);
     --img-size: clamp(12.5rem, 8.94188vw + 10.7116rem, 16.25rem);
     height: var(--img-size);
     width: var(--img-size);
