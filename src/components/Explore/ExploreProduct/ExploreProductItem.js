@@ -50,37 +50,10 @@ const ExploreProductItem = ({ product }) => {
                   {/* {viewportWidth < 300 && <br />} */}
                 </p>
               )}
-              {/* <div
-                id="user_card"
-                className={`nav-item dropdown rating_dropdown  ${
-                  open && "show"
-                }`}
-              >
-                <div className="dropdown-btn" onClick={() => setOpen(!open)}>
-                  <div
-                    // href="#"
-                    id="basic-nav-dropdown"
-                    className="dropdown-toggle "
-                    aria-expanded={open}
-                    onClick={() => setOpen(!open)}
-                  > */}
-              {/* </div> */}
-              {/* </div>
-                {open && (
-                  <div className={`dropdown-menu ${open && "show"}`}>
-                    <div className="dropdown_img pt-5 pb-4"></div>
-                    <div className="dropdown_item ">
-                    </div>
-                  </div>
-                )}
-              </div> */}
-
-              {/* <br /> */}
               <Dropdown>
                 <Dropdown.Toggle className="rating-dropdown">
                   <Rating
                     className="rating--filled"
-                    // style={{ borderColor: "white" }}
                     name="read-only"
                     value={value}
                     precision={0.1}
@@ -88,16 +61,8 @@ const ExploreProductItem = ({ product }) => {
                     readOnly
                   />
                 </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                  {/* <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">
-                    Something else
-                  </Dropdown.Item> */}
-                </Dropdown.Menu>
+                {/* rating dropdown content here */}
+                <Dropdown.Menu></Dropdown.Menu>
               </Dropdown>
 
               <span className="rating_count">{rating} out of 960 Ratings</span>
