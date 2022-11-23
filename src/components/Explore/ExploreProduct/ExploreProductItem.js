@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // import useAuth from "../../../Hooks/useAuth";
 import { Row, Col, Container, Dropdown } from "react-bootstrap";
 import { Button, Rating } from "@mui/material";
@@ -7,26 +7,19 @@ import { Link } from "react-router-dom";
 import useTheme from "../../../Hooks/useTheme";
 
 const ExploreProductItem = ({ product }) => {
-  // const { user } = useAuth();
   const { darkMode } = useTheme();
   const { price, discount, img, name, _id, description, rating } = product;
-  const [open, setOpen] = useState(false);
-
-  // eslint-disable-next-line no-unused-vars
-  const [value, setValue] = React.useState(rating);
-  console.log(value);
+  // console.log(rating);
 
   let itemPrice = price;
-  let discountedPrice;
   if (discount) {
-    discountedPrice = price - (price * discount) / 100;
-    itemPrice = discountedPrice;
-    // console.log(discountedPrice);
+    itemPrice = price - (price * discount) / 100;
   }
 
   return (
     <section className={`explore-item ${darkMode && "dark"} `}>
       <Container className="item__container" fluid>
+        {/* item row */}
         <Row xs={1} sm={1} md={2} lg={2} xl={2} xxl={2} className=" item__row">
           <Col md={12} lg={4} xl={4} xxl={4} className="item__img__wrapper">
             <img className="item__img" src={img} alt="product-img" />
@@ -35,37 +28,49 @@ const ExploreProductItem = ({ product }) => {
             <div className="item__info">
               <h3 className="item__title">{name}</h3>
               <p className="item__description">{description}</p>
-              {/* {discount ? <p>{discountedPrice}</p> : <p>{itemPrice}</p>} */}
               {!discount ? (
                 <p className="item__price">
-                  Price:&nbsp;<span className="dollar-sign">&#x24;</span>
+                  Price:&nbsp;
+                  <span className="dollar-sign">&#x24;</span>
                   <span className="price--main">{itemPrice}</span>
                 </p>
               ) : (
                 <p className="item__price">
-                  Price:&nbsp;<span className="dollar-sign">&#x24;</span>
-                  <span className="price--main">{itemPrice}</span>
-                  &nbsp;
+                  Price:&nbsp;
+                  <span className="dollar-sign">&#x24;</span>
+                  <span className="price--main">{itemPrice}</span>&nbsp;
                   <del className="price--deleted">{price}</del>
-                  {/* {viewportWidth < 300 && <br />} */}
                 </p>
               )}
-              <Dropdown>
+              <Dropdown className="">
                 <Dropdown.Toggle className="rating-dropdown">
                   <Rating
                     className="rating--filled"
                     name="read-only"
-                    value={value}
+                    value={rating}
                     precision={0.1}
                     emptyIcon={<StarIcon className="rating--empty" />}
                     readOnly
                   />
                 </Dropdown.Toggle>
                 {/* rating dropdown content here */}
-                <Dropdown.Menu></Dropdown.Menu>
+                <Dropdown.Menu>
+                  <span className="">{rating} out of 960 Ratings</span>
+                </Dropdown.Menu>
               </Dropdown>
+              <div className="quantity">
+                <label className="quantity__label" htmlFor="quantity-count">
+                  Quantity
+                </label>
+                <input
+                  type="number"
+                  name="number"
+                  id="quantity-count"
+                  max="4"
+                  defaultValue="1"
+                />
+              </div>
 
-              <span className="rating_count">{rating} out of 960 Ratings</span>
               <br />
               <div className="item_btn_container">
                 <Link className="dynamic-route " to={`/purchase/${_id}`}>
