@@ -67,6 +67,7 @@ const ExploreProductItem = ({ product }) => {
                   name="number"
                   id="quantity-count"
                   max="4"
+                  min="1"
                   defaultValue="1"
                 />
               </div>

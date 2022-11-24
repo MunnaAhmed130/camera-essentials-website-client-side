@@ -21,6 +21,7 @@
   --item-btn-color: rgba(255, 255, 255, 0.88);
   --item-btn-hover-color: rgba(255, 255, 255, 0.9);
   --item-btn-hover-box-shadow: 0 5px 5px rgba(128, 128, 128, 0.6);
+  --item-btn-hover-box-shadow: -4px 8px 5px rgba(128, 128, 128, 0.6);
 }
 
 .dark .explore-item {
@@ -33,8 +34,8 @@
   --item-btn-bg: rgba(0, 0, 0, 0.8);
   --item-btn-color: rgba(255, 255, 255, 0.7);
   --item-btn-hover-color: rgba(255, 255, 255, 0.8);
-  --item-btn-hover-box-shadow: -5px 12px 5px rgba(0, 0, 0, 0.253);
-  /* -7px 12px 2px rgba(0, 0, 0, 0.253) */
+  --item-btn-hover-box-shadow: -5px 8px 5px rgba(0, 0, 0, 0.253);
+  /* -8px 8px 5px rgba(0, 0, 0, 0.35) */
 }
 
 /* .item__container {
@@ -161,6 +162,29 @@ button.btn-primary:active:focus {
   font-weight: 600;
   font-size: clamp(0.875rem, 0.284vw + 0.82rem, 1rem);
   color: var(--item-description-color);
+}
+
+.quantity {
+  margin-top: 1rem;
+}
+.quantity__label {
+  padding-right: 0.5rem;
+  font-weight: 500;
+}
+
+input[type="number"] {
+  width: 5rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  /* background-color: rgb(27, 37, 48); */
+  /* background-color: rgba(255, 255, 255, 0.94); */
+  /* color: white; */
+  font-weight: 500;
+}
+
+input[type="number"]:focus {
+  outline: none;
 }
 
 .rating_dropdown .dropdown-toggle::after {
