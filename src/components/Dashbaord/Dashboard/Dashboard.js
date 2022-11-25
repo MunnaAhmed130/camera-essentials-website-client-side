@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Box } from "@mui/system";
-import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
+import { Switch, Route, Link, useRouteMatch, NavLink } from "react-router-dom";
 import AddAProduct from "../../Admin/AddAProduct/AddAProduct";
 import AllOrders from "../../Admin/AllOrders/AllOrders";
 import MyOrders from "../../User/MyOrders/MyOrders";
@@ -23,6 +23,7 @@ import Pay from "../../User/Pay/Pay";
 import Review from "../../User/Review/Review";
 import "./Dashboard.css";
 import useTheme from "../../../Hooks/useTheme";
+import DarkMode from "../../Shared/DarkMode/DarkMode";
 
 const drawerWidth = 240;
 
@@ -38,14 +39,18 @@ const Dashboard = (props) => {
   };
 
   const drawer = (
-    <div className={`${darkMode ? "dark" : "light"}`}>
+    <div className={darkMode ? "dark drawer" : "light"}>
+      {/* <div> */}
       <Toolbar />
       <Divider />
       <div className="side-links">
-        <div>
-          <Link to="/home">Home</Link> <br />
-          <Link to={`${url}`}>Dashboard Home</Link> <br />
-          {/* {!admin && (
+        {/* <div> */}
+        <NavLink activeClassName="active__link" to="/">
+          Home
+        </NavLink>{" "}
+        <br />
+        {/* <Link to={`${url}`}>Dashboard </Link> <br /> */}
+        {/* {!admin && (
             <Box>
               <Link to={`${url}/myOrders`}>My Orders</Link> <br />
               <Link to={`${url}/pay`}>Pay</Link> <br />
@@ -60,21 +65,31 @@ const Dashboard = (props) => {
               <Link to={`${url}/makeAdmin`}>Make Admin</Link>
             </Box>
           )} */}
-          <Box className="dashboard_link">
-            <Link to={`${url}/allOrders`}>All Orders</Link> <br />
-            <Link to={`${url}/addAProduct`}>Add A Product</Link> <br />
-            <Link to={`${url}/manageProducts`}>Manage Products</Link> <br />
-            <Link to={`${url}/makeAdmin`}>Make Admin</Link>
-            <br />
-            <Link to={`${url}/myOrders`}>My Orders</Link> <br />
-            <Link to={`${url}/pay`}>Pay</Link> <br />
-            <Link to={`${url}/review`}>Review</Link> <br />
-          </Box>
-          <Button onClick={logOut} variant="contained">
-            Log Out
-          </Button>
-        </div>
+        <Box className="dashboard_link">
+          <NavLink activeClassName="active__link" to={`${url}/allOrders`}>
+            All Orders
+          </NavLink>{" "}
+          <br />
+          <NavLink activeClassName="active__link" to={`${url}/addAProduct`}>
+            Add A Product
+          </NavLink>{" "}
+          <br />
+          <NavLink activeClassName="active__link" to={`${url}/manageProducts`}>
+            Manage Products
+          </NavLink>{" "}
+          <br />
+          <NavLink to={`${url}/makeAdmin`}>Make Admin</NavLink>
+          <br />
+          <NavLink to={`${url}/myOrders`}>My Orders</NavLink> <br />
+          <NavLink to={`${url}/pay`}>Pay</NavLink> <br />
+          <NavLink to={`${url}/review`}>Review</NavLink> <br />
+          {/* <Link to={`${url}/darkMode`}>DarkMode</Link> <br /> */}
+        </Box>
+        <Button onClick={logOut} variant="contained">
+          Log Out
+        </Button>
       </div>
+      {/* </div> */}
     </div>
   );
 
@@ -89,6 +104,8 @@ const Dashboard = (props) => {
           className="appbar"
           sx={{
             width: { sm: `calc(100% - ${drawerWidth}px)` },
+            // width: "100%",
+            // zIndex: 999,
             ml: { sm: `${drawerWidth}px` },
           }}
         >
@@ -102,15 +119,21 @@ const Dashboard = (props) => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" noWrap component="div">
-              Responsive drawer
+            <Typography
+              // variant="h6"
+              // noWrap
+              // component="div"
+              className="appbar-title"
+            >
+              Dashboard
             </Typography>
           </Toolbar>
         </AppBar>
         <Box
-          component="nav"
+          // component="nav"
           sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
           aria-label="mailbox folders"
+          // className="drawer"
         >
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           <Drawer
@@ -147,6 +170,7 @@ const Dashboard = (props) => {
         </Box>
         <Box
           component="main"
+          className="main_content"
           sx={{
             flexGrow: 1,
             p: 3,

@@ -12,7 +12,7 @@ const ManageProduct = ({ product, success, handleDeleteOrder }) => {
           <Card.Img variant="top" src={img} className="card-img" />
           <Card.Body>
             <Card.Title className="card-name">{name}</Card.Title>
-            <Card.Text className="card-description">{description}</Card.Text>
+            {/* <Card.Text className="card-description">{description}</Card.Text> */}
             <h6>Price: &#x24;{price}</h6>
             <Button
               onClick={() => handleDeleteOrder(_id)}

@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home/Home";
 import Explore from "./components/Explore/Explore/Explore";
@@ -20,9 +19,11 @@ import DarkThemeProvider from "./Context/ThemeProvider/DarkThemeProvider";
 import ExploreProduct from "./components/Explore/ExploreProduct/ExploreProduct";
 import Login from "./components/Authentication/Login";
 import Register from "./components/Authentication/Register";
+import "./App.css";
 // import useTheme from "./Hooks/useTheme";
 // Material UI
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+// import DarkMode from "./components/Shared/DarkMode/DarkMode";
 
 function App() {
   // const { darkMode } = useTheme();
@@ -45,6 +46,7 @@ function App() {
       ].join(","),
     },
   });
+
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
