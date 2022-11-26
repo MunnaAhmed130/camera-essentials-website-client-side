@@ -24,6 +24,7 @@ import Review from "../../User/Review/Review";
 import "./Dashboard.css";
 import useTheme from "../../../Hooks/useTheme";
 import DarkMode from "../../Shared/DarkMode/DarkMode";
+import DarkModeToggle from "../../Shared/DarkMode/DarkModeToggle";
 
 const drawerWidth = 240;
 
@@ -39,16 +40,13 @@ const Dashboard = (props) => {
   };
 
   const drawer = (
-    <div className={darkMode ? "dark drawer" : "light"}>
-      {/* <div> */}
+    <div className="drawer">
       <Toolbar />
       <Divider />
       <div className="side-links">
         {/* <div> */}
-        <NavLink activeClassName="active__link" to="/">
-          Home
-        </NavLink>{" "}
-        <br />
+        <DarkModeToggle />
+        <NavLink to="/">Home</NavLink> <br />
         {/* <Link to={`${url}`}>Dashboard </Link> <br /> */}
         {/* {!admin && (
             <Box>
@@ -68,35 +66,51 @@ const Dashboard = (props) => {
         <Box className="dashboard_link">
           <NavLink activeClassName="active__link" to={`${url}/allOrders`}>
             All Orders
-          </NavLink>{" "}
+          </NavLink>
           <br />
           <NavLink activeClassName="active__link" to={`${url}/addAProduct`}>
             Add A Product
-          </NavLink>{" "}
+          </NavLink>
           <br />
           <NavLink activeClassName="active__link" to={`${url}/manageProducts`}>
             Manage Products
-          </NavLink>{" "}
+          </NavLink>
           <br />
-          <NavLink to={`${url}/makeAdmin`}>Make Admin</NavLink>
+          <NavLink activeClassName="active__link" to={`${url}/makeAdmin`}>
+            Make Admin
+          </NavLink>
           <br />
-          <NavLink to={`${url}/myOrders`}>My Orders</NavLink> <br />
-          <NavLink to={`${url}/pay`}>Pay</NavLink> <br />
-          <NavLink to={`${url}/review`}>Review</NavLink> <br />
-          {/* <Link to={`${url}/darkMode`}>DarkMode</Link> <br /> */}
+          <NavLink activeClassName="active__link" to={`${url}/myOrders`}>
+            My Orders
+          </NavLink>
+          <br />
+          <NavLink activeClassName="active__link" to={`${url}/pay`}>
+            Pay
+          </NavLink>
+          <br />
+          <NavLink activeClassName="active__link" to={`${url}/review`}>
+            Review
+          </NavLink>
+          <br />
         </Box>
-        <Button onClick={logOut} variant="contained">
+        <Button
+          onClick={logOut}
+          variant="outlined"
+          color="error"
+          className="log-out"
+        >
           Log Out
         </Button>
       </div>
-      {/* </div> */}
     </div>
   );
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
+
   return (
-    <div className={darkMode ? "dark" : "light"}>
+    <div className={`dashboard ${darkMode && "dark"}`}>
+      {/* // <div> */}
       <Box className="" sx={{ display: "flex" }}>
         {/* <CssBaseline /> */}
         <AppBar

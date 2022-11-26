@@ -1,33 +1,17 @@
-.side-links a {
-  display: inline-block;
-  font-size: 1.1em;
-  font-weight: 500;
-  text-decoration: none;
-  margin: 5px 0px;
-  color: black;
-}
-
-.dashboard_link .active__links {
-  color: white;
-}
-
-.dark .side-links a {
-  color: rgba(255, 255, 255, 0.65);
-}
-
-.appbar-title {
-  /* margin-inline: auto; */
-}
-.dark .appbar {
-  background-color: rgba(35, 42, 49, 0.75);
-  background-color: #161f2b;
-  color: rgba(255, 255, 255, 0.8);
-  color: white;
-}
+/* drawer  */
 .drawer {
   height: 100vh;
 }
-.dark.drawer {
+
+.drawer .log-out {
+  margin-top: 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
+  /* border: 1px solid #d32f2f; */
+  /* background-color: transparent; */
+}
+
+.dark .drawer {
   background-color: rgba(35, 42, 49, 0.75);
   background-color: #161f2b;
 
@@ -39,17 +23,64 @@
   margin-left: 3em;
   text-align: left;
 }
+.side-links a {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 5px 0px;
+  color: black;
+}
+
+.dark .side-links a {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+:is(.side-links, .dashboard_links) a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.side-links a.active__link {
+  color: white;
+}
+
+/* appbar  */
+.dark .appbar {
+  background-color: rgba(35, 42, 49, 0.75);
+  background-color: #161f2b;
+  color: rgba(255, 255, 255, 0.8);
+  color: white;
+}
 
 .main_content {
-  height: 100vh;
+  /* height: 100vh; */
+}
+
+.dark .main_content {
+  background-color: rgb(35, 54, 75);
+}
+
+.product-orders {
   background-color: rgb(35, 54, 75);
 }
 
 /* dashboard home style */
+
 .dashboard__section {
-  /* height: 100vh; */
+  --appbar-height: 64px;
+  height: calc(100vh - var(--appbar-height));
 }
+
+@media screen and (max-width: 600px) {
+  .dashboard__section {
+    --appbar-height: 56px;
+  }
+}
+
 .dark .dashboard__section {
   /* background-color: black; */
   color: rgba(255, 255, 255, 0.8);
+}
+.dashboard__section h2 {
+  font-size: 2rem;
 }

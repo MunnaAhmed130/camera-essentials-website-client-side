@@ -12,6 +12,7 @@ const AllOrders = () => {
       .then((data) => setAllOrders(data));
   }, []);
   // console.log(allOrders)
+
   const handleDeleteOrder = (_id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
@@ -32,6 +33,7 @@ const AllOrders = () => {
         });
     }
   };
+
   return (
     <section className="product-orders">
       <h2 className="">All Order for admin</h2>
