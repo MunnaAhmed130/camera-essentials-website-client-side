@@ -2,7 +2,6 @@ import { Alert } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import AllOrder from "../AllOrder/AllOrder";
-import "./AllOrders.css";
 
 const AllOrders = () => {
   const [allOrders, setAllOrders] = useState([]);

@@ -1,7 +1,6 @@
 import { Button, Alert } from "@mui/material";
 import axios from "axios";
 import React, { useState } from "react";
-// import "./MakeAdmin.css";
 
 const MakeAdmin = () => {
   const [email, setEmail] = useState("");
@@ -22,6 +21,7 @@ const MakeAdmin = () => {
       });
     e.preventDefault();
   };
+
   return (
     <section className="make-admin">
       <h2 className="admin-heading">Make a New Admin</h2>

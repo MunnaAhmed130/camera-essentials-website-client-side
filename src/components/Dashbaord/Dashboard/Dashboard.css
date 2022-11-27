@@ -1,14 +1,30 @@
 /* dashboard */
 .dashboard {
   --dashboard-bg: white;
+  /* appbar */
+  --bar-color: var(--dark);
+  --bar-bg-color: rgb(236, 236, 236);
+  /* component */
+  --heading-color: var(--dark);
 }
 
 .dark.dashboard {
   --dashboard-bg: rgb(35, 54, 75);
+  /* appbar */
+  --bar-color: white;
+  --bar-bg-color: #161f2b;
+  /* component */
+  --heading-color: rgba(255, 255, 255, 0.85);
 }
+
 .dashboard {
   height: 100vh;
   background-color: var(--dashboard-bg);
+}
+
+.dashboard h2 {
+  font-size: 2.5rem;
+  color: var(--heading-color);
 }
 
 /* drawer  */
@@ -66,14 +82,6 @@
 
 /* appbar  */
 #appbar {
-  --bar-color: var(--dark);
-  --bar-bg-color: rgb(236, 236, 236);
-}
-.dark #appbar {
-  --bar-color: white;
-  --bar-bg-color: #161f2b;
-}
-#appbar {
   background-color: var(--bar-bg-color);
   color: var(--bar-color);
 }
@@ -82,37 +90,37 @@
   margin: 0;
 }
 
+/* main content */
 .main_content {
   background-color: var(--dashboard-bg);
 }
 
-.product-orders {
-  /* background-color: rgb(35, 54, 75); */
+/* product and order style */
+.product-orders h2 {
+  font-size: 2.5rem;
 }
 
-/* dashboard home style */
-
-/* .dashboard__section,
-.make-admin,
-.add-product {
-  --appbar-height: 64px;
-  height: calc(100vh - var(--appbar-height) - 48px);
+.dark .product-orders h2 {
+  color: rgba(255, 255, 255, 0.9);
 }
 
-@media screen and (max-width: 600px) {
-  .dashboard__section,
-  .make-admin,
-  .add-product {
-    --appbar-height: 56px;
-  }
+.single-order {
+  padding: 0.5rem;
 }
 
-.dark :is(.make-admin, .dashboard__section, .add-product) {
-  color: rgba(255, 255, 255, 0.8);
-} */
-.dashboard__section h2 {
-  font-size: 2rem;
+.dark .card {
+  background-color: rgba(28, 39, 55, 0.8);
 }
+.single-order .card-img {
+  width: min(100%, 180px);
+  margin-inline: auto;
+}
+
+.dark .single-order .title {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* manage product */
 
 /* make admin page */
 .admin-heading {
