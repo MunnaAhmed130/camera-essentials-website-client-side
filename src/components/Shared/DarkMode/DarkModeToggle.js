@@ -15,7 +15,7 @@ const DarkModeToggle = () => {
     console.log(value);
   };
   return (
-    <div>
+    <div className="checkbox__container">
       <input
         type="checkbox"
         className="checkbox"

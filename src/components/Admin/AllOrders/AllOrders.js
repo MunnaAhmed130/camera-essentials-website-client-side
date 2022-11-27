@@ -2,6 +2,7 @@ import { Alert } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import AllOrder from "../AllOrder/AllOrder";
+import "./AllOrders.css";
 
 const AllOrders = () => {
   const [allOrders, setAllOrders] = useState([]);
@@ -42,7 +43,7 @@ const AllOrders = () => {
           Your Order has been successfully deleted
         </Alert>
       )}
-      <Row xs={1} sm={2} md={2} lg={4} xl={4} className="g-4">
+      <Row xs={1} sm={2} md={3} lg={3} xl={4} xxl={5} className="g-4">
         {allOrders.map((allOrder) => (
           <AllOrder
             key={allOrder._id}

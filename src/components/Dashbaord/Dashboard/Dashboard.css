@@ -1,21 +1,24 @@
 /* drawer  */
 .drawer {
+  --color: black;
+  --bg-color: white;
+  --link-color: var(--dark);
+  --link-hover-color: black;
+  --link-active-color: black;
+}
+
+.dark.drawer {
+  --color: white;
+  --bg-color: #161f2b;
+  --link-color: rgba(255, 255, 255, 0.65);
+  --link-hover-color: rgba(255, 255, 255, 0.85);
+  --link-active-color: white;
+}
+
+.drawer {
   height: 100vh;
-}
-
-.drawer .log-out {
-  margin-top: 0.5rem;
-  border-radius: 3px;
-  font-weight: 600;
-  /* border: 1px solid #d32f2f; */
-  /* background-color: transparent; */
-}
-
-.dark .drawer {
-  background-color: rgba(35, 42, 49, 0.75);
-  background-color: #161f2b;
-
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color);
+  background-color: var(--bg-color);
 }
 
 .side-links {
@@ -23,30 +26,42 @@
   margin-left: 3em;
   text-align: left;
 }
+
 .side-links a {
   display: inline-block;
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
   margin: 5px 0px;
-  color: black;
-}
-
-.dark .side-links a {
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--link-color);
 }
 
 :is(.side-links, .dashboard_links) a:hover {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--link-hover-color);
 }
 
 .side-links a.active__link {
-  color: white;
+  color: var(--link-active-color);
+  font-weight: 600;
+}
+
+.drawer .log-out {
+  margin-top: 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
 }
 
 /* appbar  */
+#appbar {
+  background-color: rgb(236, 236, 236);
+  color: var(--dark);
+}
+
+.appbar-title {
+  margin: 0;
+}
 .dark .appbar {
-  background-color: rgba(35, 42, 49, 0.75);
+  /* background-color: rgba(35, 42, 49, 0.75); */
   background-color: #161f2b;
   color: rgba(255, 255, 255, 0.8);
   color: white;
@@ -61,14 +76,14 @@
 }
 
 .product-orders {
-  background-color: rgb(35, 54, 75);
+  /* background-color: rgb(35, 54, 75); */
 }
 
 /* dashboard home style */
 
 .dashboard__section {
   --appbar-height: 64px;
-  height: calc(100vh - var(--appbar-height));
+  height: calc(100vh - var(--appbar-height) - 48px);
 }
 
 @media screen and (max-width: 600px) {
