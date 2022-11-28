@@ -6,6 +6,11 @@
   --bar-bg-color: rgb(236, 236, 236);
   /* component */
   --heading-color: var(--dark);
+  /* card style  */
+  --card-title: var(--dark);
+  --card-bg-color: white;
+  --card-img-opacity: 1;
+  --card-box-shadow: 0 0.5rem 1rem rgba(128, 128, 128, 0.266);
 }
 
 .dark.dashboard {
@@ -14,7 +19,12 @@
   --bar-color: white;
   --bar-bg-color: #161f2b;
   /* component */
-  --heading-color: rgba(255, 255, 255, 0.85);
+  --heading-color: rgba(255, 255, 255, 0.95);
+  /* card style  */
+  --card-title: rgba(255, 255, 255, 0.85);
+  --card-bg-color: rgba(28, 39, 55, 0.8);
+  --card-img-opacity: 0.9;
+  --card-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 .dashboard {
@@ -25,6 +35,8 @@
 .dashboard h2 {
   font-size: 2.5rem;
   color: var(--heading-color);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 /* drawer  */
@@ -96,32 +108,42 @@
 }
 
 /* product and order style */
-.product-orders h2 {
-  font-size: 2.5rem;
-}
-
-.dark .product-orders h2 {
-  color: rgba(255, 255, 255, 0.9);
-}
-
 .single-order {
   padding: 0.5rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
 }
 
-.dark .card {
-  background-color: rgba(28, 39, 55, 0.8);
+.card {
+  box-shadow: var(--card-box-shadow);
+  border: 1px solid transparent;
+  background-color: var(--card-bg-color);
 }
+
 .single-order .card-img {
   width: min(100%, 180px);
   margin-inline: auto;
+  opacity: var(--card-img-opacity);
 }
 
-.dark .single-order .title {
-  color: rgba(255, 255, 255, 0.7);
+.single-order .title {
+  color: var(--card-title);
+  padding-bottom: 0.5rem;
+}
+
+/* add product  */
+input,
+textarea {
+  width: 80%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 
 /* manage product */
-
+.description,
+.see_more {
+  color: rgba(255, 255, 255, 0.85);
+}
 /* make admin page */
 .admin-heading {
   padding-top: 3em;
@@ -141,4 +163,25 @@
 .admin-form:focus {
   border: 1px solid transparent;
   outline: 1px solid transparent;
+}
+
+/* review */
+.review-form :is(input, textarea) {
+  border-radius: 3px;
+  border: 1px solid rgba(83, 80, 80, 0.402);
+  margin-bottom: 10px;
+  width: 70%;
+  max-width: 500px;
+  padding-inline: 10px;
+}
+
+.review-form textarea {
+  height: 100px;
+}
+
+@media screen and (max-width: 500px) {
+  .review-form input,
+  textarea {
+    width: 100%;
+  }
 }

@@ -34,8 +34,8 @@ const Dashboard = (props) => {
   const { admin, logOut } = useAuth();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  let viewportHeight = document.innerHeight;
-  console.log(viewportHeight);
+  // let viewportHeight = document.innerHeight;
+  // console.log(viewportHeight);
   let { path, url } = useRouteMatch();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);

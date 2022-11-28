@@ -9,7 +9,7 @@ const ManageProduct = ({ product, success, handleDeleteOrder }) => {
   return (
     // <div className="p-0">
     <Col className="single-order">
-      <Card className="m-1 ">
+      <Card className="">
         <Card.Img variant="top" src={img} className="card-img" />
         <Card.Body>
           <Card.Title className="title">{name}</Card.Title>
@@ -19,7 +19,7 @@ const ManageProduct = ({ product, success, handleDeleteOrder }) => {
             lines={2}
             more="Show more"
             less="Show less"
-            className="card-description"
+            className="description"
             anchorClass="see_more"
             // onClick={this.executeOnClick}
             expanded={false}

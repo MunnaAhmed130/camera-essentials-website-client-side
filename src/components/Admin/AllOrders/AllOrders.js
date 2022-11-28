@@ -42,7 +42,7 @@ const AllOrders = () => {
           Your Order has been successfully deleted
         </Alert>
       )}
-      <Row xs={1} sm={2} md={3} lg={3} xl={4} xxl={5} className="g-4">
+      <Row xs={1} sm={2} md={3} lg={3} xl={3} xxl={4} className="g-4">
         {allOrders.map((allOrder) => (
           <AllOrder
             key={allOrder._id}

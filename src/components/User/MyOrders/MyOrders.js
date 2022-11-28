@@ -51,8 +51,8 @@ const MyOrders = () => {
         sm={2}
         md={3}
         lg={3}
-        xl={4}
-        xxl={5}
+        xl={3}
+        xxl={4}
         className="gy-4 my-orders"
       >
         {orders.map((order) => (

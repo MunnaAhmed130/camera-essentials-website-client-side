@@ -28,15 +28,18 @@ const AddAProduct = () => {
         </Alert>
       )}
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("name")} placeholder="Product Name" /> <br />
-        <input {...register("img")} placeholder="Img Url" /> <br />
-        <input
+        <input {...register("name")} type="text" placeholder="Product Name" />
+        <br />
+        <input {...register("img")} type="text" placeholder="Img Url" /> <br />
+        <textarea
           type="text"
+          rows={5}
+          // cols={30}
           {...register("description")}
           placeholder="Short description"
-        />{" "}
+        />
         <br />
-        <input type="number" {...register("price")} placeholder="price" />{" "}
+        <input type="number" {...register("price")} placeholder="price" />
         <br />
         <Button type="submit" style={{ marginTop: "5px" }} variant="contained">
           Add
