@@ -114,7 +114,7 @@ const Dashboard = (props) => {
     <div className={`dashboard ${darkMode && "dark"}`}>
       {/* // <div> */}
       <Box className="" sx={{ display: "flex" }}>
-        {/* <CssBaseline /> */}
+        <CssBaseline />
         <AppBar
           position="fixed"
           id="appbar"

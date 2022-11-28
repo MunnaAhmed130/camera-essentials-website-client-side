@@ -27,7 +27,7 @@ const AddAProduct = () => {
           A New Product has been Successfully added
         </Alert>
       )}
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="add-product__form">
         <input {...register("name")} type="text" placeholder="Product Name" />
         <br />
         <input {...register("img")} type="text" placeholder="Img Url" /> <br />

@@ -17,10 +17,11 @@ const AllOrder = ({ allOrder, handleDeleteOrder }) => {
         <Card.Body>
           <Card.Title className="title">{allOrder?.productName}</Card.Title>
           {/* <Card.Text>{allOrder?.description}</Card.Text> */}
-          <Button style={{ marginRight: "5px" }} variant="outlined">
+          <Button className="order-btn" variant="outlined">
             Ship
           </Button>
           <Button
+            className="order-btn"
             variant="outlined"
             onClick={() => {
               handleDeleteOrder(allOrder?._id);

@@ -60,6 +60,8 @@
   height: 100vh;
   color: var(--color);
   background-color: var(--bg-color);
+  /* border-right: 1px solid white; */
+  /* outline: 1px solid black; */
 }
 
 .side-links {
@@ -131,15 +133,57 @@
   padding-bottom: 0.5rem;
 }
 
+button.order-btn {
+  margin: 5px;
+}
+
 /* add product  */
-input,
-textarea {
-  width: 80%;
+.add-product__form :is(input, textarea) {
+  width: min(80%, 50rem);
   margin-bottom: 1rem;
   padding: 0.5rem;
+  border: 1px solid black;
+}
+
+.add-product__form :is(input, textarea)::placeholder {
+  color: rgb(117, 117, 117);
+  font-weight: 500;
+}
+
+.add-product__form :is(input, textarea):focus::placeholder {
+  color: rgb(117, 117, 117);
+  font-weight: 500;
+  opacity: 0;
+}
+
+.add-product__form :is(input, textarea):focus {
+  outline: 0;
+}
+
+/* autofill style */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 50000s ease-in-out 0s, color 5000s 0s;
+  /* -webkit-background-clip: text; */
+  caret-color: var(--dark);
+  -webkit-text-fill-color: var(--dark);
+  /* border-bottom: 1px solid black; */
+  border: 1px solid black;
+}
+
+input:-webkit-autofill:focus-visible {
+  /* border-bottom: var(--border-bottom-focus); */
+  border: 1px solid black;
+
+  -webkit-text-fill-color: var(--dark);
 }
 
 /* manage product */
+.description {
+  text-align: center;
+}
 .description,
 .see_more {
   color: rgba(255, 255, 255, 0.85);
