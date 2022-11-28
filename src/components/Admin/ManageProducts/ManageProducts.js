@@ -11,7 +11,7 @@ const ManageProducts = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
-  console.log(products);
+  // console.log(products);
   const handleDeleteOrder = (_id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {

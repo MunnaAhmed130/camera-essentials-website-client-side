@@ -3,12 +3,6 @@ import React from "react";
 import { Col, Card } from "react-bootstrap";
 
 const AllOrder = ({ allOrder, handleDeleteOrder }) => {
-  // function size() {
-  // }
-  // let elemWidth = document.getElementById("col").clientWidth;
-  // console.log(elemWidth);
-
-  // size();
   return (
     // <div className="single-order">
     <Col className="single-order">
