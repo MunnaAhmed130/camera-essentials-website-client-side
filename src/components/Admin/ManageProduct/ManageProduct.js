@@ -39,9 +39,13 @@ const ManageProduct = ({ product, success, handleDeleteOrder }) => {
             emptyIcon={<StarIcon className="rating--empty" />}
             readOnly
           />
-          <p>Price: &#x24;{price}</p>
+          <p className="price">
+            Price: <span className="dollar-sign"></span>&#x24;
+            <span className="price--main">{price}</span>
+          </p>
           <Button
             onClick={() => handleDeleteOrder(_id)}
+            className="delete-btn"
             variant="outlined"
             color="error"
           >

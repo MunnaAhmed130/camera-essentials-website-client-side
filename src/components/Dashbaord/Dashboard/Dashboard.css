@@ -57,7 +57,7 @@
   --bg-color: #161f2b;
   --link-color: rgba(255, 255, 255, 0.65);
   --link-hover-color: rgba(255, 255, 255, 0.85);
-  --link-active-color: white;
+  --link-active-color: rgba(255, 255, 255, 0.85);
 }
 
 .drawer {
@@ -165,10 +165,8 @@ button.order-btn {
 }
 
 /* autofill style */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
+.dashboard
+  :is(input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active) {
   transition: background-color 50000s ease-in-out 0s, color 5000s 0s;
   /* -webkit-background-clip: text; */
   caret-color: var(--dark);
@@ -185,9 +183,15 @@ input:-webkit-autofill:focus-visible {
 }
 
 /* manage product */
+.manage-product .card-img {
+  margin-inline: 2rem;
+}
+
 .description {
   padding-bottom: 0.5rem;
   font-weight: var(--font-weight);
+  color: var(--card-color);
+  /* word-break: break-all; */
 }
 
 .title {
@@ -195,15 +199,17 @@ input:-webkit-autofill:focus-visible {
   font-weight: 600;
   /* margin: 0; */
 }
+
 .see_more {
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: underline;
+  color: #d32f2f;
+  /* opacity: 0.95; */
 }
 
-.description,
-.see_more {
-  color: var(--card-color);
+.see_more:hover {
+  opacity: 1;
 }
 
 .card__info {
@@ -216,7 +222,17 @@ input:-webkit-autofill:focus-visible {
 }
 
 .single-order :is(.rating--filled, .rating--empty) {
+  font-size: 1.3rem;
+}
+
+.single-order .price {
   font-size: 1.2rem;
+}
+
+button.delete-btn {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 
 /* make admin page */

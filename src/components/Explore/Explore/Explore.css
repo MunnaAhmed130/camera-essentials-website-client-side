@@ -111,7 +111,7 @@
   font-weight: 700;
 }
 
-.price--main {
+.item__price .price--main {
   font-size: clamp(1.25rem, 0.71022vw + 1.1079rem, 1.5625rem);
   /* 20px/1.25rem/320vw - 25px/1.5625rem/1024vw */
   font-weight: 600;
@@ -263,8 +263,7 @@ button.btn-primary:active:focus {
 }
 
 @media screen and (min-width: 768px) {
-  .price--main,
-  .discounted_price {
+  .item__price .price--main {
     vertical-align: -0.4rem;
   }
 }
