@@ -182,12 +182,22 @@ input:-webkit-autofill:focus-visible {
 
 /* manage product */
 .description {
-  text-align: center;
+  padding-bottom: 0.5rem;
 }
+
 .description,
 .see_more {
   color: rgba(255, 255, 255, 0.85);
 }
+
+.card__info p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.single-order :is(.rating--filled, .rating--empty) {
+  font-size: 1.2rem;
+}
+
 /* make admin page */
 .admin-heading {
   padding-top: 3em;

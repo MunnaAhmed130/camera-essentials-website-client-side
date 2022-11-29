@@ -21,7 +21,7 @@ const AddAProduct = () => {
 
   return (
     <div className="add-product">
-      <h2>Add a Product for admin</h2>
+      <h2>Add a Product</h2>
       {success && (
         <Alert severity="success">
           A New Product has been Successfully added

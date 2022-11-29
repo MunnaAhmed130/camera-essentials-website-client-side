@@ -1,11 +1,12 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Button, Rating } from "@mui/material";
 import { Card, Col } from "react-bootstrap";
+import StarIcon from "@mui/icons-material/Star";
 import ShowMoreShowLess from "../../Shared/ShowMoreShowLess/ShowMoreShowLess";
-import ShowMoreText from "react-show-more-text";
 
 const ManageProduct = ({ product, success, handleDeleteOrder }) => {
-  const { name, img, description, _id, price } = product;
+  const { name, img, description, _id, price, rating } = product;
+  console.log(product);
   var text = description.split("\n", 1);
   // var breakIndex = description.indexOf("\n");
   // var firstLine = description.substr(0, breakIndex);
@@ -16,7 +17,7 @@ const ManageProduct = ({ product, success, handleDeleteOrder }) => {
     <Col className="single-order">
       <Card className="">
         <Card.Img variant="top" src={img} className="card-img" />
-        <Card.Body>
+        <Card.Body className="card__info">
           <Card.Title className="title">{name}</Card.Title>
           {/* <Card.Text className="card-description ">{description}</Card.Text> */}
           <ShowMoreShowLess
@@ -30,7 +31,15 @@ const ManageProduct = ({ product, success, handleDeleteOrder }) => {
           >
             {description}
           </ShowMoreShowLess>
-          <h6>Price: &#x24;{price}</h6>
+          <Rating
+            className="rating--filled"
+            name="read-only"
+            value={rating}
+            precision={0.1}
+            emptyIcon={<StarIcon className="rating--empty" />}
+            readOnly
+          />
+          <p>Price: &#x24;{price}</p>
           <Button
             onClick={() => handleDeleteOrder(_id)}
             variant="outlined"

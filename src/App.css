@@ -30,7 +30,8 @@
 }
 
 /* product card */
-.product {
+.product,
+.manage-product {
   --card-color: var(--dark);
   --card-bg-color: white;
   --card-discount-ribbon-bg-color: orangered;
@@ -46,7 +47,8 @@
   --dynamic-route-hover-box-shadow: 0 5px 5px rgba(128, 128, 128, 0.6);
 }
 
-.dark .product {
+.dark .product,
+.dark .manage-product {
   --card-color: rgba(255, 255, 255, 0.8);
   --card-bg-color: rgba(28, 39, 55, 0.8);
   --card-discount-ribbon-bg-color: #161f2b;

@@ -33,7 +33,7 @@ const ManageProducts = () => {
   };
 
   return (
-    <div>
+    <div className="manage-product">
       <h2>Manage Products</h2>
       <Row xs={1} sm={1} md={2} lg={2} xl={2} xxl={2} className="">
         {products.map((product) => (
