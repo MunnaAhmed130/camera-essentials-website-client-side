@@ -22,7 +22,7 @@ const ManageProduct = ({ product, success, handleDeleteOrder }) => {
           {/* <Card.Text className="card-description ">{description}</Card.Text> */}
           <ShowMoreShowLess
             className="description"
-            limit={100}
+            limit={120}
             more="show more"
             less="show less"
             anchorClass="see_more"

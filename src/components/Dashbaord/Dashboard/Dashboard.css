@@ -8,9 +8,11 @@
   --heading-color: var(--dark);
   /* card style  */
   --card-title: var(--dark);
+  --card-color: black;
   --card-bg-color: white;
   --card-img-opacity: 1;
   --card-box-shadow: 0 0.5rem 1rem rgba(128, 128, 128, 0.266);
+  --font-weight: 500;
 }
 
 .dark.dashboard {
@@ -22,9 +24,11 @@
   --heading-color: rgba(255, 255, 255, 0.95);
   /* card style  */
   --card-title: rgba(255, 255, 255, 0.85);
+  --card-color: rgba(255, 255, 255, 0.85);
   --card-bg-color: rgba(28, 39, 55, 0.8);
   --card-img-opacity: 0.9;
   --card-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  --font-weight: 400;
 }
 
 .dashboard {
@@ -183,15 +187,32 @@ input:-webkit-autofill:focus-visible {
 /* manage product */
 .description {
   padding-bottom: 0.5rem;
+  font-weight: var(--font-weight);
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  /* margin: 0; */
+}
+.see_more {
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .description,
 .see_more {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--card-color);
+}
+
+.card__info {
+  text-align: left;
+  padding-inline: 2rem;
 }
 
 .card__info p {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--card-color);
 }
 
 .single-order :is(.rating--filled, .rating--empty) {

@@ -17,9 +17,16 @@ const ShowMoreShowLess = ({
 
   return (
     <div className={className}>
-      {limit && showMoreShowLess ? children : children.substr(0, limit)}
-      <span onClick={toggleBtn} className={anchorClass}>
-        {showMoreShowLess ? ` ${less}` : `${truncatedEndingComponent}${more}`}
+      {limit && showMoreShowLess ? children : children.substr(0, limit)}&nbsp;
+      <span onClick={toggleBtn}>
+        {showMoreShowLess ? (
+          <span className={anchorClass}>{`${less}`}</span>
+        ) : (
+          <span>
+            {`${truncatedEndingComponent}`}
+            <span className={anchorClass}>{`${more}`}</span>
+          </span>
+        )}
       </span>
     </div>
   );
