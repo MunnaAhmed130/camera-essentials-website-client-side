@@ -175,7 +175,7 @@ button.order-btn {
   border: 1px solid black;
 }
 
-input:-webkit-autofill:focus-visible {
+.dashboard input:-webkit-autofill:focus-visible {
   /* border-bottom: var(--border-bottom-focus); */
   border: 1px solid black;
 

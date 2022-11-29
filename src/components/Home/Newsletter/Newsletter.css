@@ -125,6 +125,13 @@
   outline: none;
 }
 
+/* autofill  */
+.newsletter__form
+  :is(input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active) {
+  transition: background-color 50000s ease-in-out 0s, color 5000s 0s;
+  caret-color: var(--newsletter-input-color);
+  -webkit-text-fill-color: var(--newsletter-input-color);
+}
 .newsletter button {
   flex-grow: 0;
   color: rgba(255, 255, 255, 0.8);

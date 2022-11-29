@@ -30,13 +30,25 @@
 }
 
 /* product card */
-.product,
-.manage-product {
+.product {
   --card-color: var(--dark);
   --card-bg-color: white;
   --card-discount-ribbon-bg-color: orangered;
   --card-img-opacity: 1;
   --card-color: #161f2b;
+}
+
+.dark .product {
+  --card-color: rgba(255, 255, 255, 0.8);
+  --card-bg-color: rgba(28, 39, 55, 0.8);
+  --card-discount-ribbon-bg-color: #161f2b;
+  --card-img-opacity: 0.9;
+  --card-color: rgba(255, 255, 255, 0.85);
+}
+
+.product,
+.explore-item,
+.manage-product {
   --card-delete-text-color: rgb(181, 181, 181);
   --card-rating-color: rgba(255, 189, 65, 0.95);
   --card-empty-color: rgba(200, 200, 200, 0.5);
@@ -47,13 +59,7 @@
   --dynamic-route-hover-box-shadow: 0 5px 5px rgba(128, 128, 128, 0.6);
 }
 
-.dark .product,
-.dark .manage-product {
-  --card-color: rgba(255, 255, 255, 0.8);
-  --card-bg-color: rgba(28, 39, 55, 0.8);
-  --card-discount-ribbon-bg-color: #161f2b;
-  --card-img-opacity: 0.9;
-  --card-color: rgba(255, 255, 255, 0.85);
+.dark :is(.product, .explore-item, .manage-product) {
   --card-delete-text-color: rgba(181, 181, 181, 0.5);
   --card-rating-color: rgba(255, 166, 0, 0.95);
   --card-empty-color: rgba(255, 194, 133, 0.35);
