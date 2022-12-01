@@ -3,6 +3,8 @@ import { Button, Rating } from "@mui/material";
 import { Card, Col } from "react-bootstrap";
 import StarIcon from "@mui/icons-material/Star";
 import ShowMoreShowLess from "../../Shared/ShowMoreShowLess/ShowMoreShowLess";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const ManageProduct = ({ product, success, handleDeleteOrder }) => {
   const { name, img, description, _id, price, rating } = product;
@@ -39,10 +41,16 @@ const ManageProduct = ({ product, success, handleDeleteOrder }) => {
             emptyIcon={<StarIcon className="rating--empty" />}
             readOnly
           />
+          <p className="m-0 pb-1">
+            {rating}
+            &nbsp;
+            <FontAwesomeIcon icon={faStar} /> out of 5&nbsp;
+            <FontAwesomeIcon icon={faStar} />
+          </p>
           <p className="price">
             Price: <span className="dollar-sign"></span>&#x24;
             <span className="price--main">{price}</span>
-          </p>
+          </p>{" "}
           <Button
             onClick={() => handleDeleteOrder(_id)}
             className="delete-btn"

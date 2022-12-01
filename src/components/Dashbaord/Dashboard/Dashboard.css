@@ -178,7 +178,6 @@ button.order-btn {
 .dashboard input:-webkit-autofill:focus-visible {
   /* border-bottom: var(--border-bottom-focus); */
   border: 1px solid black;
-
   -webkit-text-fill-color: var(--dark);
 }
 
@@ -226,7 +225,15 @@ button.order-btn {
 }
 
 .single-order .price {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  /* vertical-align: -1rem; */
+}
+
+/* .single-order :is(.dollar-sign, .price--main) */
+.single-order .price--main {
+  font-weight: 600;
+  font-size: 1.3rem;
+  vertical-align: -0.2rem;
 }
 
 button.delete-btn {
