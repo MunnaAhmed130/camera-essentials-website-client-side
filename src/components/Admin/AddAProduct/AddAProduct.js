@@ -10,7 +10,7 @@ const AddAProduct = () => {
     console.log(data.value);
     axios
       .post(
-        "https://camera-essentials-website-server-side.vercel.app/products",
+        "https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/products",
         data
       )
       .then((res) => {

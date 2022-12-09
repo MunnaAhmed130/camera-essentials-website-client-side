@@ -12,7 +12,7 @@ const MakeAdmin = () => {
     const user = { email };
     axios
       .put(
-        "https://camera-essentials-website-server-side.vercel.app/users/admin",
+        "https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/users/admin",
         user
       )
       .then((res) => {
