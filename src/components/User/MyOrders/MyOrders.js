@@ -11,7 +11,7 @@ const MyOrders = () => {
   const { user } = useAuth();
   useEffect(() => {
     fetch(
-      `https://limitless-reaches-30016.herokuapp.com/purchases/user?email=${user.email}`
+      `https://camera-essentials-website-server-side.vercel.app/purchases/user?email=${user.email}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -22,7 +22,7 @@ const MyOrders = () => {
   const handleDeleteOrder = (_id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      const url = `https://limitless-reaches-30016.herokuapp.com/purchases/${_id}`;
+      const url = `https://camera-essentials-website-server-side.vercel.app/purchases/${_id}`;
       fetch(url, {
         method: "DELETE",
       })

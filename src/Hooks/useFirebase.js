@@ -97,7 +97,9 @@ const useFirebase = () => {
   }, [auth]);
 
   useEffect(() => {
-    fetch(`https://limitless-reaches-30016.herokuapp.com/users/${user.email}`)
+    fetch(
+      `https://camera-essentials-website-server-side.vercel.app/users/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -118,13 +120,19 @@ const useFirebase = () => {
   const saveUser = (email, displayName) => {
     const user = { email, displayName };
     axios
-      .post("https://limitless-reaches-30016.herokuapp.com/users", user)
+      .post(
+        "https://camera-essentials-website-server-side.vercel.app/users",
+        user
+      )
       .then();
   };
   const saveGoogleUser = (email, displayName) => {
     const user = { email, displayName };
     axios
-      .put("https://limitless-reaches-30016.herokuapp.com/users", user)
+      .put(
+        "https://camera-essentials-website-server-side.vercel.app/users",
+        user
+      )
       .then();
   };
   return {

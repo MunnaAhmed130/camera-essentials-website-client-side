@@ -9,7 +9,10 @@ const AddAProduct = () => {
   const onSubmit = (data) => {
     console.log(data.value);
     axios
-      .post("https://limitless-reaches-30016.herokuapp.com/products", data)
+      .post(
+        "https://camera-essentials-website-server-side.vercel.app/products",
+        data
+      )
       .then((res) => {
         // console.log(res)
         if (res.data.insertedId) {

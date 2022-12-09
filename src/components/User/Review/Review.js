@@ -12,7 +12,10 @@ const Review = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("https://limitless-reaches-30016.herokuapp.com/reviews", data)
+      .post(
+        "https://camera-essentials-website-server-side.vercel.app/reviews",
+        data
+      )
       .then((res) => {
         console.log(res.data);
         if (res.data.insertedId) {

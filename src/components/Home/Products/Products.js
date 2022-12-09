@@ -15,11 +15,11 @@ const Products = () => {
   // });
   // console.log(viewportWidth);
   // console.log(count);
-
+  // https://camera-essentials-website-server-side.vercel.app/
   viewportWidth >= 1200 ? (limit = 8) : (limit = 6);
   useEffect(() => {
     fetch(
-      `https://limitless-reaches-30016.herokuapp.com/products/query?limit=${limit}`
+      `https://camera-essentials-website-server-side.vercel.app/products/query?limit=${limit}`
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));

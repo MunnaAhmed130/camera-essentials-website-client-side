@@ -11,7 +11,10 @@ const MakeAdmin = () => {
   const handleAdminSubmit = (e) => {
     const user = { email };
     axios
-      .put("https://limitless-reaches-30016.herokuapp.com/users/admin", user)
+      .put(
+        "https://camera-essentials-website-server-side.vercel.app/users/admin",
+        user
+      )
       .then((res) => {
         if (res.data.modifiedCount) {
           console.log(res.data);

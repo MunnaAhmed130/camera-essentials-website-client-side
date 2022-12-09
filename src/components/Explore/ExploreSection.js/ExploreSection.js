@@ -6,7 +6,7 @@ import SkeletonProduct from "../../Shared/Skeletons/SkeletonProduct";
 const ExploreSection = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://limitless-reaches-30016.herokuapp.com/products")
+    fetch("https://camera-essentials-website-server-side.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

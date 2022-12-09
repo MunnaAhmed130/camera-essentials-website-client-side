@@ -13,7 +13,7 @@ const ExploreProduct = () => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const url = `https://limitless-reaches-30016.herokuapp.com/products/${_id}`;
+      const url = `https://camera-essentials-website-server-side.vercel.app/products/${_id}`;
       const res = await fetch(url);
       const data = await res.json();
       setProduct(data);
