@@ -7,9 +7,7 @@ const AllOrders = () => {
   const [allOrders, setAllOrders] = useState([]);
   const [success, setSuccess] = useState(false);
   useEffect(() => {
-    fetch(
-      "https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/purchases"
-    )
+    fetch("https://camera-essentials-website-server-side.vercel.app/purchases")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, []);
@@ -18,7 +16,7 @@ const AllOrders = () => {
   const handleDeleteOrder = (_id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      const url = `https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/purchases/${_id}`;
+      const url = `https://camera-essentials-website-server-side.vercel.app/purchases/${_id}`;
       fetch(url, {
         method: "DELETE",
       })

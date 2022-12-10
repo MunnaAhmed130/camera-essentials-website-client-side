@@ -15,12 +15,12 @@ const Products = () => {
   // });
   // console.log(viewportWidth);
   // console.log(count);
-  // https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/
-  // https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/
+  // https://camera-essentials-website-server-side.vercel.app/
+  // https://camera-essentials-website-server-side.vercel.app/
   viewportWidth >= 1200 ? (limit = 8) : (limit = 6);
   useEffect(() => {
     fetch(
-      `https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/products/query?limit=${limit}`
+      `https://camera-essentials-website-server-side.vercel.app/products/query?limit=${limit}`
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));

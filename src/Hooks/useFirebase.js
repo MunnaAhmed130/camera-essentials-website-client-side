@@ -98,7 +98,7 @@ const useFirebase = () => {
 
   useEffect(() => {
     fetch(
-      `https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/users/${user.email}`
+      `https://camera-essentials-website-server-side.vercel.app/users/${user.email}`
     )
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
@@ -121,7 +121,7 @@ const useFirebase = () => {
     const user = { email, displayName };
     axios
       .post(
-        "https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/users",
+        "https://camera-essentials-website-server-side.vercel.app/users",
         user
       )
       .then();
@@ -130,7 +130,7 @@ const useFirebase = () => {
     const user = { email, displayName };
     axios
       .put(
-        "https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/users",
+        "https://camera-essentials-website-server-side.vercel.app/users",
         user
       )
       .then();

@@ -21,13 +21,13 @@ const Purchase = () => {
   const [success, setSuccess] = useState(false);
   // const [value, setValue] = React.useState(rating);
   // useEffect(() => {
-  //   fetch(`https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/products/${_id}`)
+  //   fetch(`https://camera-essentials-website-server-side.vercel.app/products/${_id}`)
   //     .then((res) => res.json())
   //     .then((data) => setProduct(data));
   // }, [_id]);
   useEffect(() => {
     const fetchData = async () => {
-      const url = `https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/products/${_id}`;
+      const url = `https://camera-essentials-website-server-side.vercel.app/products/${_id}`;
       const res = await fetch(url);
       const data = await res.json();
       setProduct(data);
@@ -83,7 +83,7 @@ const Purchase = () => {
     if (proceed) {
       axios
         .post(
-          "https://camera-essentials-website-server-side-cir7qf38f-munnaahmed130.vercel.app/purchases",
+          "https://camera-essentials-website-server-side.vercel.app/purchases",
           purchaseInfo
         )
         .then((res) => {
