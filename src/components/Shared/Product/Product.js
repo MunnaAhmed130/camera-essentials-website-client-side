@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Product = ({ product }) => {
   const { name, img, _id, rating, discount, price } = product;
 
-  const [value, setValue] = React.useState(rating);
+  // const [value, setValue] = React.useState(rating);
   // const discount = -20;
   const discountPrice = (price * discount) / 100;
   const discountedPrice = price - discountPrice;
@@ -39,7 +39,7 @@ const Product = ({ product }) => {
           <Rating
             className="rating--filled"
             name="read-only"
-            value={value}
+            value={rating}
             precision={0.1}
             emptyIcon={<StarIcon className="rating--empty" />}
             readOnly

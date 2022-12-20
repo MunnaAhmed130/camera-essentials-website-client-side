@@ -26,11 +26,10 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 // import DarkMode from "./components/Shared/DarkMode/DarkMode";
 
 function App() {
-  // const { darkMode } = useTheme();
-  let viewportWidth;
+  // let viewportWidth;
   // let setViewportWidth = function () {
-  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-  console.log(viewportWidth);
+  // viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  // console.log(viewportWidth);
   // };
   // window.addEventListener("onResize", function () {
   //   setViewportWidth();
