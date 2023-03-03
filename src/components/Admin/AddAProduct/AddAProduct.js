@@ -9,10 +9,7 @@ const AddAProduct = () => {
   const onSubmit = (data) => {
     console.log(data.value);
     axios
-      .post(
-        "https://camera-essentials-website-server-side.vercel.app/products",
-        data
-      )
+      .post("https://camera-store-server.vercel.app/products", data)
       .then((res) => {
         // console.log(res)
         if (res.data.insertedId) {

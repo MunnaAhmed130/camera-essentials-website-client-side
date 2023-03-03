@@ -11,7 +11,7 @@ const MyOrders = () => {
   const { user } = useAuth();
   useEffect(() => {
     fetch(
-      `https://camera-essentials-website-server-side.vercel.app/purchases/user?email=${user.email}`
+      `https://camera-store-server.vercel.app/purchases/user?email=${user.email}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -22,7 +22,7 @@ const MyOrders = () => {
   const handleDeleteOrder = (_id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      const url = `https://camera-essentials-website-server-side.vercel.app/purchases/${_id}`;
+      const url = `https://camera-store-server.vercel.app/purchases/${_id}`;
       fetch(url, {
         method: "DELETE",
       })

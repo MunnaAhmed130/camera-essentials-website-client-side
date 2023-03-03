@@ -3,7 +3,7 @@
 # Camera-store-related-niche-Website
 
 This project was deployed with [Firebase](https://camera-essentials.web.app/).
-This project server was deployed with [Heroku](https://camera-essentials-website-server-side.vercel.app/).
+This project server was deployed with [Heroku](https://camera-store-server.vercel.app/).
 
 This website helps you find the best camera according to your taste and flexible cost.It shows a variety of camera from old to new ,digital and analog.We work to give you a good time saving and charishing memories.
 

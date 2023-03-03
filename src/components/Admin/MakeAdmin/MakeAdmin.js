@@ -11,10 +11,7 @@ const MakeAdmin = () => {
   const handleAdminSubmit = (e) => {
     const user = { email };
     axios
-      .put(
-        "https://camera-essentials-website-server-side.vercel.app/users/admin",
-        user
-      )
+      .put("https://camera-store-server.vercel.app/users/admin", user)
       .then((res) => {
         if (res.data.modifiedCount) {
           console.log(res.data);

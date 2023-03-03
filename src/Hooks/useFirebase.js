@@ -97,9 +97,7 @@ const useFirebase = () => {
   }, [auth]);
 
   useEffect(() => {
-    fetch(
-      `https://camera-essentials-website-server-side.vercel.app/users/${user.email}`
-    )
+    fetch(`https://camera-store-server.vercel.app/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -119,21 +117,11 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName) => {
     const user = { email, displayName };
-    axios
-      .post(
-        "https://camera-essentials-website-server-side.vercel.app/users",
-        user
-      )
-      .then();
+    axios.post("https://camera-store-server.vercel.app/users", user).then();
   };
   const saveGoogleUser = (email, displayName) => {
     const user = { email, displayName };
-    axios
-      .put(
-        "https://camera-essentials-website-server-side.vercel.app/users",
-        user
-      )
-      .then();
+    axios.put("https://camera-store-server.vercel.app/users", user).then();
   };
   return {
     user,

@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Row } from "react-bootstrap";
 import Product from "../../Shared/Product/Product";
+// import { Row } from "react-bootstrap";
+// import Product from "../../Shared/Product/Product";
 import SkeletonProduct from "../../Shared/Skeletons/SkeletonProduct";
 
-const ExploreSection = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("https://camera-store-server.vercel.app/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
-
+const Dummy = ({ products }) => {
+  //   const products = [""];
+  let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  let limit;
+  viewportWidth >= 1200 ? (limit = 8) : (limit = 6);
+  let limitArray = [];
+  for (let i = 1; i <= limit; ++i) {
+    limitArray.push(i);
+  }
   return (
-    <section className="explore__section">
-      <h2>Explore the World of Fashionable Cameras</h2>
+    <div>
       {products.length ? (
         <Row
           xs={1}
@@ -22,7 +24,7 @@ const ExploreSection = () => {
           lg={3}
           xl={4}
           xxl={4}
-          className="explore__products"
+          className="demo__products"
         >
           {products.map((product) => (
             <Product key={product.name} product={product}></Product>
@@ -38,14 +40,14 @@ const ExploreSection = () => {
           xs={1}
           className="demo__products"
         >
-          {/* {Array(8).fill(<SkeletonProduct></SkeletonProduct>)} */}
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((n) => (
+          {/* {Array(limit).fill(<SkeletonProduct key={limit.}></SkeletonProduct>)} */}
+          {limitArray.map((n) => (
             <SkeletonProduct key={n}></SkeletonProduct>
           ))}
         </Row>
       )}
-    </section>
+    </div>
   );
 };
 
-export default ExploreSection;
+export default Dummy;

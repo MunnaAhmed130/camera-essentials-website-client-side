@@ -18,9 +18,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   // const [rev, setRev] = useState([]);
   useEffect(() => {
-    fetch(
-      "https://camera-essentials-website-server-side.vercel.app/reviews/query?limit=3"
-    )
+    fetch("https://camera-store-server.vercel.app/reviews/query?limit=3")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

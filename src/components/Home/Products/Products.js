@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import Product from "../../Shared/Product/Product";
 import SkeletonProduct from "../../Shared/Skeletons/SkeletonProduct";
+import Dummy from "./Dummy";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -15,12 +16,12 @@ const Products = () => {
   // });
   // console.log(viewportWidth);
   // console.log(count);
-  // https://camera-essentials-website-server-side.vercel.app/
-  // https://camera-essentials-website-server-side.vercel.app/
+  // https://camera-store-server.vercel.app/
+  // https://camera-store-server.vercel.app/
   viewportWidth >= 1200 ? (limit = 8) : (limit = 6);
   useEffect(() => {
     fetch(
-      `https://camera-essentials-website-server-side.vercel.app/products/query?limit=${limit}`
+      `https://camera-store-server.vercel.app/products/query?limit=${limit}`
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));
@@ -42,8 +43,9 @@ const Products = () => {
         <h2>Fashionable New Cameras</h2>
         <h6 className="text-uppercase">Discount Up to 30%</h6>
       </div>
+      <Dummy products={products} />
 
-      {products.length ? (
+      {/* {products.length ? (
         <Row
           xs={1}
           sm={2}
@@ -67,12 +69,12 @@ const Products = () => {
           xs={1}
           className="demo__products"
         >
-          {/* {Array(limit).fill(<SkeletonProduct key={limit.}></SkeletonProduct>)} */}
+          {Array(limit).fill(<SkeletonProduct key={limit.}></SkeletonProduct>)}
           {limitArray.map((n) => (
             <SkeletonProduct key={n}></SkeletonProduct>
           ))}
         </Row>
-      )}
+      )} */}
     </section>
   );
 };
