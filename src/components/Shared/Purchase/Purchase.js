@@ -20,20 +20,20 @@ const Purchase = () => {
   const [product, setProduct] = useState([]);
   const [success, setSuccess] = useState(false);
   // const [value, setValue] = React.useState(rating);
-  // useEffect(() => {
-  //   fetch(`https://camera-store-server.vercel.app/products/${_id}`)
-  //     .then((res) => res.json())
-  //     .then((data) => setProduct(data));
-  // }, [_id]);
   useEffect(() => {
-    const fetchData = async () => {
-      const url = `https://camera-store-server.vercel.app/products/${_id}`;
-      const res = await fetch(url);
-      const data = await res.json();
-      setProduct(data);
-    };
-    fetchData();
+    fetch(`https://camera-store-server.vercel.app/products/${_id}`)
+      .then((res) => res.json())
+      .then((data) => setProduct(data));
   }, [_id]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const url = `https://camera-store-server.vercel.app/products/${_id}`;
+  //     const res = await fetch(url);
+  //     const data = await res.json();
+  //     setProduct(data);
+  //   };
+  //   fetchData();
+  // }, [_id]);
 
   console.log(product);
   const { name, price, discount, description, rating } = product;
